@@ -1,0 +1,654 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="493.228346pt" height="447.874016pt" viewBox="0 0 493.228346 447.874016" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:date>2026-08-27T00:30:59.994865</dc:date>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.10.9, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 447.874016 
+L 493.228346 447.874016 
+L 493.228346 0 
+L 0 0 
+z
+" style="fill: #ffffff"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 408.886299 110.624882 
+L 481.213304 110.624882 
+L 481.213304 55.088504 
+L 408.886299 55.088504 
+L 408.886299 110.624882 
+z
+" clip-path="url(#pc511595498)" style="fill: none; stroke-dasharray: 1.4,1.4; stroke-dashoffset: 0; stroke: #c3c2b7; stroke-width: 0.7; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_3">
+    <path d="M 86.66022 126.702772 
+Q 86.66022 130.758359 86.66022 133.695913 
+" clip-path="url(#pc511595498)" style="fill: none; stroke: #4a3aa7; stroke-linecap: round"/>
+    <path d="M 87.86022 131.295913 
+L 86.66022 133.695913 
+L 85.46022 131.295913 
+z
+" clip-path="url(#pc511595498)" style="fill: #4a3aa7; stroke: #4a3aa7; stroke-linecap: round"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 216.477921 126.702772 
+Q 216.477921 130.758359 216.477921 133.695913 
+" clip-path="url(#pc511595498)" style="fill: none; stroke: #199e70; stroke-linecap: round"/>
+    <path d="M 217.677921 131.295913 
+L 216.477921 133.695913 
+L 215.277921 131.295913 
+z
+" clip-path="url(#pc511595498)" style="fill: #199e70; stroke: #199e70; stroke-linecap: round"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 346.295622 126.702772 
+Q 346.295622 130.758359 346.295622 133.695913 
+" clip-path="url(#pc511595498)" style="fill: none; stroke: #d95926; stroke-linecap: round"/>
+    <path d="M 347.495622 131.295913 
+L 346.295622 133.695913 
+L 345.095622 131.295913 
+z
+" clip-path="url(#pc511595498)" style="fill: #d95926; stroke: #d95926; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_1">
+    <path d="M 86.66022 136.310457 
+L 346.295622 136.310457 
+" clip-path="url(#pc511595498)" style="fill: none; stroke: #c3c2b7; stroke-width: 0.8; stroke-linecap: square"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 216.477921 137.811403 
+Q 216.477921 140.477513 216.477921 141.801983 
+" clip-path="url(#pc511595498)" style="fill: none; stroke: #0b0b0b; stroke-width: 1.2; stroke-linecap: round"/>
+    <path d="M 217.877921 139.001983 
+L 216.477921 141.801983 
+L 215.077921 139.001983 
+z
+" clip-path="url(#pc511595498)" style="fill: #0b0b0b; stroke: #0b0b0b; stroke-width: 1.2; stroke-linecap: round"/>
+   </g>
+   <g id="text_1">
+    <text style="font-weight: 700; font-size: 8.5px; font-family: 'Liberation Sans'; text-anchor: middle; fill: #0b0b0b" x="246.614173" y="25.149702" transform="rotate(-0 246.614173 25.149702)">The Reductive-Supply Index</text>
+   </g>
+   <g id="text_2">
+    <text style="font-size: 6.6px; font-family: 'Liberation Sans'; text-anchor: middle; fill: #898781" x="246.614173" y="38.351095" transform="rotate(-0 246.614173 38.351095)">one number per liver sample: how much reducing power the tissue can supply, minus how fast it is drained</text>
+   </g>
+   <g id="patch_7">
+    <path d="M 46.092189 113.401701 
+L 127.228252 113.401701 
+Q 141.137291 113.401701 141.137291 109.236472 
+L 141.137291 56.476913 
+Q 141.137291 52.311685 127.228252 52.311685 
+L 46.092189 52.311685 
+Q 32.18315 52.311685 32.18315 56.476913 
+L 32.18315 109.236472 
+Q 32.18315 113.401701 46.092189 113.401701 
+z
+" clip-path="url(#pc511595498)" style="fill: #e3e0f4; stroke: #4a3aa7; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_3">
+    <text style="font-weight: 700; font-size: 7.6px; font-family: 'Liberation Sans'; text-anchor: middle; fill: #4a3aa7" x="86.66022" y="61.91325" transform="rotate(-0 86.66022 61.91325)">SUPPLY</text>
+   </g>
+   <g id="text_4">
+    <text style="font-size: 6.2px; font-family: 'Liberation Sans'; fill: #0b0b0b" transform="translate(60.727752 72.79043)">mevalonate + CoQ</text>
+    <text style="font-size: 6.2px; font-family: 'Liberation Sans'; fill: #0b0b0b" transform="translate(69.601986 79.468605)">biosynthesis</text>
+   </g>
+   <g id="text_5">
+    <text style="font-size: 5.6px; font-family: 'Liberation Sans'; fill: #898781" transform="translate(53.060658 89.551128)">HMGCR · HMGCS1 · MVK</text>
+    <text style="font-size: 5.6px; font-family: 'Liberation Sans'; fill: #898781" transform="translate(52.435908 96.800503)">PMVK · MVD · IDI1 · FDPS</text>
+    <text style="font-size: 5.6px; font-family: 'Liberation Sans'; fill: #898781" transform="translate(55.228033 104.049878)">PDSS1/2 · COQ2–COQ9</text>
+   </g>
+   <g id="text_6">
+    <text style="font-weight: 700; font-size: 6.4px; font-family: 'Liberation Sans'; text-anchor: middle; fill: #4a3aa7" x="86.66022" y="119.902134" transform="rotate(-0 86.66022 119.902134)">weight + ½</text>
+   </g>
+   <g id="patch_8">
+    <path d="M 175.90989 113.401701 
+L 257.045953 113.401701 
+Q 270.954992 113.401701 270.954992 109.236472 
+L 270.954992 56.476913 
+Q 270.954992 52.311685 257.045953 52.311685 
+L 175.90989 52.311685 
+Q 162.00085 52.311685 162.00085 56.476913 
+L 162.00085 109.236472 
+Q 162.00085 113.401701 175.90989 113.401701 
+z
+" clip-path="url(#pc511595498)" style="fill: #d7f0e6; stroke: #199e70; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_7">
+    <text style="font-weight: 700; font-size: 7.6px; font-family: 'Liberation Sans'; text-anchor: middle; fill: #199e70" x="216.477921" y="61.91325" transform="rotate(-0 216.477921 61.91325)">REDUCTION</text>
+   </g>
+   <g id="text_8">
+    <text style="font-size: 6.2px; font-family: 'Liberation Sans'; fill: #0b0b0b" transform="translate(195.283609 72.79043)">reductases that</text>
+    <text style="font-size: 6.2px; font-family: 'Liberation Sans'; fill: #0b0b0b" transform="translate(189.593171 79.468605)">regenerate the pool</text>
+   </g>
+   <g id="text_9">
+    <text style="font-size: 5.6px; font-family: 'Liberation Sans'; fill: #898781" transform="translate(192.202359 93.175815)">CYB5R3 · CYB5R1</text>
+    <text style="font-size: 5.6px; font-family: 'Liberation Sans'; fill: #898781" transform="translate(188.164671 100.42519)">AIFM2 (FSP1) · NQO1</text>
+   </g>
+   <g id="text_10">
+    <text style="font-weight: 700; font-size: 6.4px; font-family: 'Liberation Sans'; text-anchor: middle; fill: #199e70" x="216.477921" y="119.902134" transform="rotate(-0 216.477921 119.902134)">weight + ½</text>
+   </g>
+   <g id="patch_9">
+    <path d="M 305.727591 113.401701 
+L 386.863654 113.401701 
+Q 400.772693 113.401701 400.772693 109.236472 
+L 400.772693 56.476913 
+Q 400.772693 52.311685 386.863654 52.311685 
+L 305.727591 52.311685 
+Q 291.818551 52.311685 291.818551 56.476913 
+L 291.818551 109.236472 
+Q 291.818551 113.401701 305.727591 113.401701 
+z
+" clip-path="url(#pc511595498)" style="fill: #fbe4d8; stroke: #d95926; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_11">
+    <text style="font-weight: 700; font-size: 7.6px; font-family: 'Liberation Sans'; text-anchor: middle; fill: #d95926" x="346.295622" y="61.91325" transform="rotate(-0 346.295622 61.91325)">DRAIN</text>
+   </g>
+   <g id="text_12">
+    <text style="font-size: 6.2px; font-family: 'Liberation Sans'; fill: #0b0b0b" transform="translate(327.689325 72.79043)">consumers of</text>
+    <text style="font-size: 6.2px; font-family: 'Liberation Sans'; fill: #0b0b0b" transform="translate(317.861841 79.468605)">reducing equivalents</text>
+   </g>
+   <g id="text_13">
+    <text style="font-size: 5.6px; font-family: 'Liberation Sans'; fill: #898781" transform="translate(322.54681 93.175815)">mARC1 (MTARC1)</text>
+    <text style="font-size: 5.6px; font-family: 'Liberation Sans'; fill: #898781" transform="translate(327.93856 100.42519)">mARC2 · POR</text>
+   </g>
+   <g id="text_14">
+    <text style="font-weight: 700; font-size: 6.4px; font-family: 'Liberation Sans'; text-anchor: middle; fill: #d95926" x="346.295622" y="119.902134" transform="rotate(-0 346.295622 119.902134)">weight −1</text>
+   </g>
+   <g id="patch_10">
+    <path d="M 160.841764 156.095291 
+L 272.114079 156.095291 
+Q 286.023118 156.095291 286.023118 151.930063 
+L 286.023118 148.459039 
+Q 286.023118 144.293811 272.114079 144.293811 
+L 160.841764 144.293811 
+Q 146.932724 144.293811 146.932724 148.459039 
+L 146.932724 151.930063 
+Q 146.932724 156.095291 160.841764 156.095291 
+z
+" clip-path="url(#pc511595498)" style="fill: #ffffff; stroke: #0b0b0b; stroke-width: 1.1; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_15">
+    <text style="font-size: 5.8px; font-family: 'Liberation Sans'; fill: #898781" transform="translate(427.639833 68.499337)">locked before</text>
+    <text style="font-size: 5.8px; font-family: 'Liberation Sans'; fill: #898781" transform="translate(429.092098 76.427937)">any analysis</text>
+    <text style="font-size: 5.8px; font-family: 'Liberation Sans'; fill: #898781" transform="translate(445.049802 84.356537)"/>
+    <text style="font-size: 5.8px; font-family: 'Liberation Sans'; fill: #898781" transform="translate(433.283052 92.285137)">SHA-256</text>
+    <text style="font-size: 5.8px; font-family: 'Liberation Sans'; fill: #898781" transform="translate(430.055442 100.213737)">7a2bf934…</text>
+   </g>
+   <g id="text_16">
+    <text style="font-weight: 700; font-size: 7px; font-family: 'Liberation Sans'; text-anchor: middle; fill: #0b0b0b" x="216.477921" y="152.004707" transform="rotate(-0 216.477921 152.004707)">RSI  =  ½(supply + reduction) − drain</text>
+   </g>
+  </g>
+  <g id="axes_2">
+   <g id="patch_11">
+    <path d="M 76.450394 253.048819 
+L 212.088189 253.048819 
+L 212.088189 185.867717 
+L 76.450394 185.867717 
+z
+" style="fill: #ffffff"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_2">
+      <defs>
+       <path id="m4957b686c7" d="M 0 0 
+L 0 2.5 
+" style="stroke: #000000; stroke-width: 0.6"/>
+      </defs>
+      <g>
+       <use xlink:href="#m4957b686c7" x="85.740654" y="253.048819" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_17">
+      <text style="font-size: 6px; font-family: 'Liberation Sans'; text-anchor: middle" x="85.740654" y="263.396944" transform="rotate(-0 85.740654 263.396944)">0.0</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_3">
+      <g>
+       <use xlink:href="#m4957b686c7" x="122.901693" y="253.048819" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_18">
+      <text style="font-size: 6px; font-family: 'Liberation Sans'; text-anchor: middle" x="122.901693" y="263.396944" transform="rotate(-0 122.901693 263.396944)">0.2</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_4">
+      <g>
+       <use xlink:href="#m4957b686c7" x="160.062733" y="253.048819" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_19">
+      <text style="font-size: 6px; font-family: 'Liberation Sans'; text-anchor: middle" x="160.062733" y="263.396944" transform="rotate(-0 160.062733 263.396944)">0.4</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_5">
+      <g>
+       <use xlink:href="#m4957b686c7" x="197.223773" y="253.048819" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_20">
+      <text style="font-size: 6px; font-family: 'Liberation Sans'; text-anchor: middle" x="197.223773" y="263.396944" transform="rotate(-0 197.223773 263.396944)">0.6</text>
+     </g>
+    </g>
+    <g id="text_21">
+     <text style="font-size: 6.6px; font-family: 'Liberation Sans'; text-anchor: middle" x="144.269291" y="273.424881" transform="rotate(-0 144.269291 273.424881)">Spearman ρ,  RSI vs disease severity</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_6">
+      <defs>
+       <path id="mc54b9fc001" d="M 0 0 
+L -2.5 0 
+" style="stroke: #000000; stroke-width: 0.6"/>
+      </defs>
+      <g>
+       <use xlink:href="#mc54b9fc001" x="76.450394" y="194.060534" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_22">
+      <text style="font-size: 6px; font-family: 'Liberation Sans'; text-anchor: end" x="70.450394" y="196.234596" transform="rotate(-0 70.450394 196.234596)">GSE135251</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_7">
+      <g>
+       <use xlink:href="#mc54b9fc001" x="76.450394" y="210.446169" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_23">
+      <text style="font-size: 6px; font-family: 'Liberation Sans'; text-anchor: end" x="70.450394" y="212.620231" transform="rotate(-0 70.450394 212.620231)">GSE130970</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_8">
+      <g>
+       <use xlink:href="#mc54b9fc001" x="76.450394" y="226.831803" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_24">
+      <text style="font-size: 6px; font-family: 'Liberation Sans'; text-anchor: end" x="70.450394" y="229.005866" transform="rotate(-0 70.450394 229.005866)">GSE167523</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_9">
+      <g>
+       <use xlink:href="#mc54b9fc001" x="76.450394" y="243.217438" style="stroke: #000000; stroke-width: 0.6"/>
+      </g>
+     </g>
+     <g id="text_25">
+      <text style="font-weight: 700; font-size: 6px; font-family: 'Liberation Sans'; text-anchor: end" x="70.450394" y="245.391501" transform="rotate(-0 70.450394 245.391501)">Pooled  (I² = 0%)</text>
+     </g>
+    </g>
+   </g>
+   <g id="line2d_10">
+    <path d="M 135.982379 194.060534 
+L 180.389822 194.060534 
+" clip-path="url(#p837c27feb3)" style="fill: none; stroke: #199e70; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_11">
+    <defs>
+     <path id="m3c659b30de" d="M -1.8 1.8 
+L 1.8 1.8 
+L 1.8 -1.8 
+L -1.8 -1.8 
+z
+" style="stroke: #199e70; stroke-linejoin: miter"/>
+    </defs>
+    <g clip-path="url(#p837c27feb3)">
+     <use xlink:href="#m3c659b30de" x="159.430996" y="194.060534" style="fill: #199e70; stroke: #199e70; stroke-linejoin: miter"/>
+    </g>
+   </g>
+   <g id="line2d_12">
+    <path d="M 117.06741 210.446169 
+L 191.965486 210.446169 
+" clip-path="url(#p837c27feb3)" style="fill: none; stroke: #199e70; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_13">
+    <g clip-path="url(#p837c27feb3)">
+     <use xlink:href="#m3c659b30de" x="157.944554" y="210.446169" style="fill: #199e70; stroke: #199e70; stroke-linejoin: miter"/>
+    </g>
+   </g>
+   <g id="line2d_14">
+    <path d="M 103.447889 226.831803 
+L 174.778505 226.831803 
+" clip-path="url(#p837c27feb3)" style="fill: none; stroke: #199e70; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_15">
+    <g clip-path="url(#p837c27feb3)">
+     <use xlink:href="#m3c659b30de" x="141.35215" y="226.831803" style="fill: #199e70; stroke: #199e70; stroke-linejoin: miter"/>
+    </g>
+   </g>
+   <g id="line2d_16">
+    <path d="M 137.208694 243.217438 
+L 171.02524 243.217438 
+" clip-path="url(#p837c27feb3)" style="fill: none; stroke: #0b0b0b; stroke-width: 1.6; stroke-linecap: round"/>
+   </g>
+   <g id="line2d_17">
+    <defs>
+     <path id="m319bc700d8" d="M -0 3.11127 
+L 3.11127 0 
+L 0 -3.11127 
+L -3.11127 -0 
+z
+" style="stroke: #0b0b0b; stroke-linejoin: miter"/>
+    </defs>
+    <g clip-path="url(#p837c27feb3)">
+     <use xlink:href="#m319bc700d8" x="154.860188" y="243.217438" style="fill: #0b0b0b; stroke: #0b0b0b; stroke-linejoin: miter"/>
+    </g>
+   </g>
+   <g id="line2d_18">
+    <path d="M 85.740654 253.048819 
+L 85.740654 185.867717 
+" clip-path="url(#p837c27feb3)" style="fill: none; stroke: #c3c2b7; stroke-width: 0.6; stroke-linecap: square"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 76.450394 253.048819 
+L 212.088189 253.048819 
+" style="fill: none; stroke: #000000; stroke-width: 0.6; stroke-linejoin: miter; stroke-linecap: square"/>
+   </g>
+   <g id="text_26">
+    <text style="font-size: 5.8px; font-family: 'Liberation Sans'; text-anchor: start; fill: #898781" x="216.157323" y="195.560378" transform="rotate(-0 216.157323 195.560378)">n = 216</text>
+   </g>
+   <g id="text_27">
+    <text style="font-size: 5.8px; font-family: 'Liberation Sans'; text-anchor: start; fill: #898781" x="216.157323" y="211.946012" transform="rotate(-0 216.157323 211.946012)">n = 78</text>
+   </g>
+   <g id="text_28">
+    <text style="font-size: 5.8px; font-family: 'Liberation Sans'; text-anchor: start; fill: #898781" x="216.157323" y="228.331647" transform="rotate(-0 216.157323 228.331647)">n = 98</text>
+   </g>
+   <g id="text_29">
+    <text style="font-weight: 700; font-size: 5.8px; font-family: 'Liberation Sans'; text-anchor: start; fill: #0b0b0b" x="216.157323" y="244.717282" transform="rotate(-0 216.157323 244.717282)">n = 392</text>
+   </g>
+   <g id="text_30">
+    <text style="font-weight: 700; font-size: 6.8px; font-family: 'Liberation Sans'" transform="translate(76.450394 173.543267)">H1 — RSI rises with MASLD severity:</text>
+    <text style="font-weight: 700; font-size: 6.8px; font-family: 'Liberation Sans'" transform="translate(76.450394 180.867717)">supported, replicated</text>
+   </g>
+  </g>
+  <g id="axes_3">
+   <g id="line2d_19">
+    <path d="M 268.809449 220.824283 
+L 480.897638 220.824283 
+" clip-path="url(#p787344046a)" style="fill: none; stroke: #c3c2b7; stroke-width: 0.7; stroke-linecap: square"/>
+   </g>
+   <g id="text_31">
+    <text style="font-weight: 700; font-size: 6.8px; font-family: 'Liberation Sans'; text-anchor: start; fill: #0b0b0b" x="268.809449" y="182.666678" transform="rotate(-0 268.809449 182.666678)">H2 — tumor vs adjacent liver:  supported in two cohorts</text>
+   </g>
+   <g id="text_32">
+    <text style="font-size: 6.4px; font-family: 'Liberation Sans'; text-anchor: start; fill: #0b0b0b" x="268.809449" y="194.391024" transform="rotate(-0 268.809449 194.391024)">Cliff's δ  +0.76 / +0.86   (52 and 213 matched pairs)</text>
+   </g>
+   <g id="text_33">
+    <text style="font-style: italic; font-size: 6.2px; font-family: 'Liberation Sans'; text-anchor: start; fill: #199e70" x="268.809449" y="205.017456" transform="rotate(-0 268.809449 205.017456)">carried by REDUCTION ↑ and DRAIN ↓ — not by supply</text>
+   </g>
+   <g id="text_34">
+    <text style="font-size: 5.9px; font-family: 'Liberation Sans'; text-anchor: start; fill: #898781" x="268.809449" y="214.32857" transform="rotate(-0 268.809449 214.32857)">identity-adjusted: REDUCTION keeps 71% / 84%, DRAIN only 41% / 25%</text>
+   </g>
+   <g id="text_35">
+    <text style="font-weight: 700; font-size: 6.8px; font-family: 'Liberation Sans'; text-anchor: start; fill: #0b0b0b" x="268.809449" y="231.96641" transform="rotate(-0 268.809449 231.96641)">H4 — RSI and overall survival:  not supported</text>
+   </g>
+   <g id="text_36">
+    <text style="font-size: 6.4px; font-family: 'Liberation Sans'; text-anchor: start; fill: #0b0b0b" x="268.809449" y="244.933606" transform="rotate(-0 268.809449 244.933606)">HR 0.99 per SD (0.62–1.56),  P = 0.95</text>
+   </g>
+   <g id="text_37">
+    <text style="font-size: 6px; font-family: 'Liberation Sans'; fill: #898781" transform="translate(268.809449 256.657952)">23 events: a strong effect is excluded, a modest one is not</text>
+    <text style="font-size: 6px; font-family: 'Liberation Sans'; fill: #898781" transform="translate(268.809449 264.859952)">(BCLC C/D in the same model: HR 4.56 — the model does see signal)</text>
+   </g>
+  </g>
+  <g id="axes_4">
+   <g id="patch_13">
+    <path d="M 14.79685 324.319011 
+L 478.431496 324.319011 
+L 478.431496 306.54737 
+L 14.79685 306.54737 
+z
+" clip-path="url(#p61904de6ec)" style="fill: #faf9f6"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 14.79685 345.422835 
+L 478.431496 345.422835 
+L 478.431496 327.651194 
+L 14.79685 327.651194 
+z
+" clip-path="url(#p61904de6ec)" style="fill: #faf9f6"/>
+   </g>
+   <g id="patch_15">
+    <path d="M 14.79685 366.526658 
+L 478.431496 366.526658 
+L 478.431496 348.755017 
+L 14.79685 348.755017 
+z
+" clip-path="url(#p61904de6ec)" style="fill: #faf9f6"/>
+   </g>
+   <g id="patch_16">
+    <path d="M 14.79685 387.630482 
+L 478.431496 387.630482 
+L 478.431496 369.858841 
+L 14.79685 369.858841 
+z
+" clip-path="url(#p61904de6ec)" style="fill: #faf9f6"/>
+   </g>
+   <g id="patch_17">
+    <path d="M 14.79685 408.734306 
+L 478.431496 408.734306 
+L 478.431496 390.962665 
+L 14.79685 390.962665 
+z
+" clip-path="url(#p61904de6ec)" style="fill: #faf9f6"/>
+   </g>
+   <g id="patch_18">
+    <path d="M 14.79685 429.838129 
+L 478.431496 429.838129 
+L 478.431496 412.066488 
+L 14.79685 412.066488 
+z
+" clip-path="url(#p61904de6ec)" style="fill: #faf9f6"/>
+   </g>
+   <g id="line2d_20">
+    <path d="M 14.79685 434.975244 
+L 478.431496 434.975244 
+" clip-path="url(#p61904de6ec)" style="fill: none; stroke: #c3c2b7; stroke-width: 0.8; stroke-linecap: square"/>
+   </g>
+   <g id="text_38">
+    <text style="font-weight: 700; font-size: 8px; font-family: 'Liberation Sans'; text-anchor: start" x="28.70589" y="294.989752" transform="rotate(-0 28.70589 294.989752)">Where the six pre-registered hypotheses landed</text>
+   </g>
+   <g id="text_39">
+    <text style="font-weight: 700; font-size: 7.4px; font-family: 'Liberation Sans'; text-anchor: start; fill: #0b0b0b" x="20.360466" y="313.320397" transform="rotate(-0 20.360466 313.320397)">H1</text>
+   </g>
+   <g id="text_40">
+    <text style="font-size: 6.8px; font-family: 'Liberation Sans'; text-anchor: start; fill: #0b0b0b" x="40.296756" y="313.165241" transform="rotate(-0 40.296756 313.165241)">RSI rises across the MASLD severity gradient</text>
+   </g>
+   <g id="text_41">
+    <text style="font-size: 5.8px; font-family: 'Liberation Sans'; text-anchor: start; fill: #898781" x="40.296756" y="321.514785" transform="rotate(-0 40.296756 321.514785)">pooled ρ = 0.372 (0.277–0.459), I² = 0%, n = 392, 3 cohorts</text>
+   </g>
+   <g id="patch_19">
+    <path d="M 403.090866 318.904214 
+L 465.681543 318.904214 
+Q 474.954236 318.904214 474.954236 316.127395 
+L 474.954236 311.684485 
+Q 474.954236 308.907666 465.681543 308.907666 
+L 403.090866 308.907666 
+Q 393.818173 308.907666 393.818173 311.684485 
+L 393.818173 316.127395 
+Q 393.818173 318.904214 403.090866 318.904214 
+z
+" clip-path="url(#p61904de6ec)" style="fill: #d7f0e6; stroke: #1d7a58; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_42">
+    <text style="font-weight: 700; font-size: 7.4px; font-family: 'Liberation Sans'; text-anchor: start; fill: #0b0b0b" x="20.360466" y="334.424221" transform="rotate(-0 20.360466 334.424221)">H2</text>
+   </g>
+   <g id="text_43">
+    <text style="font-size: 6.8px; font-family: 'Liberation Sans'; text-anchor: start; fill: #0b0b0b" x="40.296756" y="334.269064" transform="rotate(-0 40.296756 334.269064)">RSI higher in HCC tumor than adjacent liver</text>
+   </g>
+   <g id="text_44">
+    <text style="font-size: 5.8px; font-family: 'Liberation Sans'; text-anchor: start; fill: #898781" x="40.296756" y="342.618609" transform="rotate(-0 40.296756 342.618609)">Cliff's δ +0.76 and +0.86 in two cohorts; 50–63% survives adjustment for hepatocyte identity, carried by the reduction arm (71%, 84%)</text>
+   </g>
+   <g id="patch_20">
+    <path d="M 403.090866 340.008038 
+L 465.681543 340.008038 
+Q 474.954236 340.008038 474.954236 337.231219 
+L 474.954236 332.788309 
+Q 474.954236 330.01149 465.681543 330.01149 
+L 403.090866 330.01149 
+Q 393.818173 330.01149 393.818173 332.788309 
+L 393.818173 337.231219 
+Q 393.818173 340.008038 403.090866 340.008038 
+z
+" clip-path="url(#p61904de6ec)" style="fill: #d7f0e6; stroke: #1d7a58; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_45">
+    <text style="font-weight: 700; font-size: 7.4px; font-family: 'Liberation Sans'; text-anchor: start; fill: #0b0b0b" x="20.360466" y="355.528044" transform="rotate(-0 20.360466 355.528044)">H3</text>
+   </g>
+   <g id="text_46">
+    <text style="font-size: 6.8px; font-family: 'Liberation Sans'; text-anchor: start; fill: #0b0b0b" x="40.296756" y="355.372888" transform="rotate(-0 40.296756 355.372888)">field effect in adjacent non-tumor liver</text>
+   </g>
+   <g id="text_47">
+    <text style="font-size: 5.8px; font-family: 'Liberation Sans'; text-anchor: start; fill: #898781" x="40.296756" y="363.722433" transform="rotate(-0 40.296756 363.722433)">P = 0.060 — underpowered, 29 adjacent samples</text>
+   </g>
+   <g id="patch_21">
+    <path d="M 403.090866 361.111861 
+L 465.681543 361.111861 
+Q 474.954236 361.111861 474.954236 358.335043 
+L 474.954236 353.892132 
+Q 474.954236 351.115313 465.681543 351.115313 
+L 403.090866 351.115313 
+Q 393.818173 351.115313 393.818173 353.892132 
+L 393.818173 358.335043 
+Q 393.818173 361.111861 403.090866 361.111861 
+z
+" clip-path="url(#p61904de6ec)" style="fill: #f7e2df; stroke: #b0453a; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_48">
+    <text style="font-weight: 700; font-size: 7.4px; font-family: 'Liberation Sans'; text-anchor: start; fill: #0b0b0b" x="20.360466" y="376.631868" transform="rotate(-0 20.360466 376.631868)">H4</text>
+   </g>
+   <g id="text_49">
+    <text style="font-size: 6.8px; font-family: 'Liberation Sans'; text-anchor: start; fill: #0b0b0b" x="40.296756" y="376.476712" transform="rotate(-0 40.296756 376.476712)">RSI predicts overall survival</text>
+   </g>
+   <g id="text_50">
+    <text style="font-size: 5.8px; font-family: 'Liberation Sans'; text-anchor: start; fill: #898781" x="40.296756" y="384.826256" transform="rotate(-0 40.296756 384.826256)">HR 0.99 per SD; only 23 events — bounded null, not a refutation</text>
+   </g>
+   <g id="patch_22">
+    <path d="M 403.090866 382.215685 
+L 465.681543 382.215685 
+Q 474.954236 382.215685 474.954236 379.438866 
+L 474.954236 374.995956 
+Q 474.954236 372.219137 465.681543 372.219137 
+L 403.090866 372.219137 
+Q 393.818173 372.219137 393.818173 374.995956 
+L 393.818173 379.438866 
+Q 393.818173 382.215685 403.090866 382.215685 
+z
+" clip-path="url(#p61904de6ec)" style="fill: #f7e2df; stroke: #b0453a; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_51">
+    <text style="font-weight: 700; font-size: 7.4px; font-family: 'Liberation Sans'; text-anchor: start; fill: #0b0b0b" x="20.360466" y="397.735691" transform="rotate(-0 20.360466 397.735691)">H5</text>
+   </g>
+   <g id="text_52">
+    <text style="font-size: 6.8px; font-family: 'Liberation Sans'; text-anchor: start; fill: #0b0b0b" x="40.296756" y="397.580535" transform="rotate(-0 40.296756 397.580535)">NMD-target burden tracks RSI</text>
+   </g>
+   <g id="text_53">
+    <text style="font-size: 5.8px; font-family: 'Liberation Sans'; text-anchor: start; fill: #898781" x="40.296756" y="405.93008" transform="rotate(-0 40.296756 405.93008)">proxy correlates with mean expression at ρ 0.82–0.98; needs transcript-level data</text>
+   </g>
+   <g id="patch_23">
+    <path d="M 403.090866 403.319509 
+L 465.681543 403.319509 
+Q 474.954236 403.319509 474.954236 400.54269 
+L 474.954236 396.09978 
+Q 474.954236 393.322961 465.681543 393.322961 
+L 403.090866 393.322961 
+Q 393.818173 393.322961 393.818173 396.09978 
+L 393.818173 400.54269 
+Q 393.818173 403.319509 403.090866 403.319509 
+z
+" clip-path="url(#p61904de6ec)" style="fill: #eeece7; stroke: #898781; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_54">
+    <text style="font-weight: 700; font-size: 7.4px; font-family: 'Liberation Sans'; text-anchor: start; fill: #0b0b0b" x="20.360466" y="418.839515" transform="rotate(-0 20.360466 418.839515)">H6</text>
+   </g>
+   <g id="text_55">
+    <text style="font-size: 6.8px; font-family: 'Liberation Sans'; text-anchor: start; fill: #0b0b0b" x="40.296756" y="418.684359" transform="rotate(-0 40.296756 418.684359)">RSI tracks a ferroptosis-resistance signature</text>
+   </g>
+   <g id="text_56">
+    <text style="font-size: 5.8px; font-family: 'Liberation Sans'; text-anchor: start; fill: #898781" x="40.296756" y="427.033904" transform="rotate(-0 40.296756 427.033904)">positive with suppressors AND drivers — real but non-directional</text>
+   </g>
+   <g id="patch_24">
+    <path d="M 403.090866 424.423332 
+L 465.681543 424.423332 
+Q 474.954236 424.423332 474.954236 421.646513 
+L 474.954236 417.203603 
+Q 474.954236 414.426784 465.681543 414.426784 
+L 403.090866 414.426784 
+Q 393.818173 414.426784 393.818173 417.203603 
+L 393.818173 421.646513 
+Q 393.818173 424.423332 403.090866 424.423332 
+z
+" clip-path="url(#p61904de6ec)" style="fill: #f7e2df; stroke: #b0453a; stroke-width: 0.9; stroke-linejoin: miter"/>
+   </g>
+   <g id="text_57">
+    <text style="font-weight: 700; font-size: 6.4px; font-family: 'Liberation Sans'; text-anchor: start; fill: #0b0b0b" x="14.79685" y="444.472677" transform="rotate(-0 14.79685 444.472677)">Conclusion: RSI is a tissue-state index, not a prognostic biomarker. The index was not redefined after these results (pre-registered stopping rule §7).</text>
+   </g>
+   <g id="text_58">
+    <text style="font-weight: 700; font-size: 6.2px; font-family: 'Liberation Sans'; text-anchor: middle; fill: #0b0b0b" x="434.386205" y="315.509221" transform="rotate(-0 434.386205 315.509221)">supported</text>
+   </g>
+   <g id="text_59">
+    <text style="font-weight: 700; font-size: 6.2px; font-family: 'Liberation Sans'; text-anchor: middle; fill: #0b0b0b" x="434.386205" y="336.613045" transform="rotate(-0 434.386205 336.613045)">supported</text>
+   </g>
+   <g id="text_60">
+    <text style="font-weight: 700; font-size: 6.2px; font-family: 'Liberation Sans'; text-anchor: middle; fill: #0b0b0b" x="434.386205" y="357.716869" transform="rotate(-0 434.386205 357.716869)">not supported</text>
+   </g>
+   <g id="text_61">
+    <text style="font-weight: 700; font-size: 6.2px; font-family: 'Liberation Sans'; text-anchor: middle; fill: #0b0b0b" x="434.386205" y="378.820692" transform="rotate(-0 434.386205 378.820692)">not supported</text>
+   </g>
+   <g id="text_62">
+    <text style="font-weight: 700; font-size: 6.2px; font-family: 'Liberation Sans'; text-anchor: middle; fill: #0b0b0b" x="434.386205" y="399.924516" transform="rotate(-0 434.386205 399.924516)">not testable</text>
+   </g>
+   <g id="text_63">
+    <text style="font-weight: 700; font-size: 6.2px; font-family: 'Liberation Sans'; text-anchor: middle; fill: #0b0b0b" x="434.386205" y="421.02834" transform="rotate(-0 434.386205 421.02834)">not supported</text>
+   </g>
+  </g>
+  <g id="text_64">
+   <text style="font-weight: 700; font-size: 10px; font-family: 'Liberation Sans'; text-anchor: start" x="4.932283" y="8.061732" transform="rotate(-0 4.932283 8.061732)">a</text>
+  </g>
+  <g id="text_65">
+   <text style="font-weight: 700; font-size: 10px; font-family: 'Liberation Sans'; text-anchor: start" x="4.932283" y="165.713386" transform="rotate(-0 4.932283 165.713386)">b</text>
+  </g>
+  <g id="text_66">
+   <text style="font-weight: 700; font-size: 10px; font-family: 'Liberation Sans'; text-anchor: start" x="241.68189" y="165.713386" transform="rotate(-0 241.68189 165.713386)">c</text>
+  </g>
+  <g id="text_67">
+   <text style="font-weight: 700; font-size: 10px; font-family: 'Liberation Sans'; text-anchor: start" x="4.932283" y="283.952126" transform="rotate(-0 4.932283 283.952126)">d</text>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pc511595498">
+   <rect x="14.79685" y="13.43622" width="463.634646" height="138.840945"/>
+  </clipPath>
+  <clipPath id="p837c27feb3">
+   <rect x="76.450394" y="185.867717" width="135.637795" height="67.181102"/>
+  </clipPath>
+  <clipPath id="p787344046a">
+   <rect x="268.809449" y="176.910236" width="212.088189" height="82.856693"/>
+  </clipPath>
+  <clipPath id="p61904de6ec">
+   <rect x="14.79685" y="293.35748" width="463.634646" height="138.840945"/>
+  </clipPath>
+ </defs>
+</svg>

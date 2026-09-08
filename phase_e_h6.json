@@ -1,0 +1,144 @@
+{
+  "lock_hash": "7a2bf934fe6e51184a573057c93e0cda0f3e79e2c538224efb35cf728b680046",
+  "plan": "PREREGISTRATION 6d, fixed before any outcome was read",
+  "H6": {
+    "sets": {
+      "GOBP_NEGATIVE_REGULATION_OF_FERROPTOSIS": {
+        "n_original": 19,
+        "n_after_overlap_removal": 15,
+        "dropped_overlapping_with_RSI_panel": [
+          "AIFM2",
+          "GPX4",
+          "NQO1",
+          "SLC7A11"
+        ]
+      },
+      "GOBP_POSITIVE_REGULATION_OF_FERROPTOSIS": {
+        "n_original": 10,
+        "n_after_overlap_removal": 9,
+        "dropped_overlapping_with_RSI_panel": [
+          "ACSL4"
+        ]
+      },
+      "GOBP_FERROPTOSIS": {
+        "n_original": 31,
+        "n_after_overlap_removal": 26,
+        "dropped_overlapping_with_RSI_panel": [
+          "ACSL4",
+          "AIFM2",
+          "GPX4",
+          "NQO1",
+          "SLC7A11"
+        ]
+      },
+      "WP_FERROPTOSIS": {
+        "n_original": 64,
+        "n_after_overlap_removal": 56,
+        "dropped_overlapping_with_RSI_panel": [
+          "ACSL4",
+          "AIFM2",
+          "COQ2",
+          "GPX4",
+          "HMGCR",
+          "LPCAT3",
+          "POR",
+          "SLC7A11"
+        ]
+      }
+    },
+    "cohorts": {
+      "GSE135251": {
+        "GOBP_NEGATIVE_REGULATION_OF_FERROPTOSIS": {
+          "n_genes": 14,
+          "rho": 0.4389,
+          "p": 1.3924754559216935e-11,
+          "n": 216
+        },
+        "GOBP_POSITIVE_REGULATION_OF_FERROPTOSIS": {
+          "n_genes": 8,
+          "rho": 0.5024,
+          "p": 3.2582581280579986e-15,
+          "n": 216
+        },
+        "GOBP_FERROPTOSIS": {
+          "n_genes": 24,
+          "rho": 0.5509,
+          "p": 1.5189902530303496e-18,
+          "n": 216
+        },
+        "WP_FERROPTOSIS": {
+          "n_genes": 50,
+          "rho": 0.3498,
+          "p": 1.2990268005127413e-07,
+          "n": 216
+        }
+      },
+      "GSE130970": {
+        "GOBP_NEGATIVE_REGULATION_OF_FERROPTOSIS": {
+          "n_genes": 15,
+          "rho": 0.2089,
+          "p": 0.06647907946676196,
+          "n": 78
+        },
+        "GOBP_POSITIVE_REGULATION_OF_FERROPTOSIS": {
+          "n_genes": 8,
+          "rho": 0.1903,
+          "p": 0.09518846445001021,
+          "n": 78
+        },
+        "GOBP_FERROPTOSIS": {
+          "n_genes": 25,
+          "rho": 0.2564,
+          "p": 0.023447805297144585,
+          "n": 78
+        },
+        "WP_FERROPTOSIS": {
+          "n_genes": 54,
+          "rho": 0.1953,
+          "p": 0.08659550090409462,
+          "n": 78
+        }
+      },
+      "GSE167523": {
+        "GOBP_NEGATIVE_REGULATION_OF_FERROPTOSIS": {
+          "n_genes": 12,
+          "rho": 0.1714,
+          "p": 0.09158903020030187,
+          "n": 98
+        },
+        "GOBP_POSITIVE_REGULATION_OF_FERROPTOSIS": {
+          "n_genes": 5,
+          "rho": 0.2173,
+          "p": 0.03160087391760391,
+          "n": 98
+        },
+        "GOBP_FERROPTOSIS": {
+          "n_genes": 19,
+          "rho": 0.2088,
+          "p": 0.03904228930759001,
+          "n": 98
+        },
+        "WP_FERROPTOSIS": {
+          "n_genes": 48,
+          "rho": 0.0748,
+          "p": 0.46406092531119675,
+          "n": 98
+        }
+      },
+      "GSE164760": {
+        "GOBP_NEGATIVE_REGULATION_OF_FERROPTOSIS": {
+          "skipped": "only 1 genes present"
+        },
+        "GOBP_POSITIVE_REGULATION_OF_FERROPTOSIS": {
+          "skipped": "only 1 genes present"
+        },
+        "GOBP_FERROPTOSIS": {
+          "skipped": "only 2 genes present"
+        },
+        "WP_FERROPTOSIS": {
+          "skipped": "only 0 genes present"
+        }
+      }
+    }
+  }
+}

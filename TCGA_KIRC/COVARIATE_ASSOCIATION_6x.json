@@ -1,0 +1,11 @@
+{
+ "cohort": "TCGA_KIRC",
+ "n_pairs": 72,
+ "pearson_r": -0.1881,
+ "pearson_p": 0.11348260951674598,
+ "spearman_rho": -0.1735,
+ "spearman_p": 0.1450894136335994,
+ "r2": 0.0354,
+ "n_pairs_dK1_ge_0": 7,
+ "shared_genes_K1_C1": 0
+}
