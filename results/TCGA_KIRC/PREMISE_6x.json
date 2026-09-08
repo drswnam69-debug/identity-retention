@@ -1,0 +1,220 @@
+{
+ "plan": "PREREGISTRATION 6x premise check",
+ "amendment_sha256_of_text_as_written": "aba7b918a4c9842e5ea027fae14d61c6e279f5c4df2da235e9fbbfe3e732259c",
+ "cohort": "TCGA_KIRC",
+ "identity_covariate": "K1",
+ "n_pairs": 72,
+ "preparation": {
+  "plan": "PREREGISTRATION 6w",
+  "amendment_sha256_of_text_as_written": "f854c263bcffbdd80c249bbcbf59558480cd0b047f2073910e45be20a262498c",
+  "source_file": "TCGA-KIRC.star_tpm.tsv.gz",
+  "declared_unit": "log2(TPM + 1)",
+  "value_range": [
+   0.0,
+   17.8873
+  ],
+  "n_missing_values": 0,
+  "n_identifiers_in": 60660,
+  "n_unmapped_dropped": 0,
+  "n_duplicate_rows_collapsed": 1233,
+  "collapse_rule": "max across Ensembl identifiers on the log2 scale",
+  "alias_applied": [
+   "G6PC -> G6PC1"
+  ],
+  "n_symbols": 59427,
+  "n_tumor_01": 72,
+  "n_adjacent_11": 72,
+  "sample_types_discarded": {
+   "05": 1
+  },
+  "n_patients_multi_sample": 4,
+  "n_pairs": 72
+ },
+ "identity_genes": [
+  "LRP2",
+  "CUBN",
+  "SLC34A1",
+  "SLC5A2",
+  "SLC5A12",
+  "SLC22A6",
+  "SLC22A8",
+  "SLC22A12",
+  "SLC12A1",
+  "SLC12A3",
+  "UMOD",
+  "AQP1",
+  "AQP2",
+  "MIOX",
+  "ALDOB",
+  "GATM",
+  "NAT8",
+  "PAX2",
+  "PAX8",
+  "HNF1B",
+  "ESRRG",
+  "PPARGC1A"
+ ],
+ "coverage": {
+  "K1": {
+   "n_found": 22,
+   "n_defined": 22,
+   "missing": []
+  },
+  "C1": {
+   "n_found": 21,
+   "n_defined": 21,
+   "missing": []
+  },
+  "D1 (liver, not used)": {
+   "n_found": 22,
+   "n_defined": 22,
+   "missing": []
+  }
+ },
+ "identity_paired_delta": -0.8428,
+ "identity_p": 1.9252105375615755e-11,
+ "identity_direction": "LOWER in tumor",
+ "identity_confound_present": true,
+ "per_gene_identity": [
+  {
+   "gene": "AQP2",
+   "class": "effector",
+   "paired_delta": -1.856,
+   "p": 2.1344217428148756e-13
+  },
+  {
+   "gene": "SLC12A1",
+   "class": "effector",
+   "paired_delta": -1.8147,
+   "p": 2.1344217428148756e-13
+  },
+  {
+   "gene": "UMOD",
+   "class": "effector",
+   "paired_delta": -1.8141,
+   "p": 2.743436847525893e-13
+  },
+  {
+   "gene": "ESRRG",
+   "class": "regulator",
+   "paired_delta": -1.6715,
+   "p": 3.5222945447482915e-13
+  },
+  {
+   "gene": "SLC12A3",
+   "class": "effector",
+   "paired_delta": -1.5915,
+   "p": 5.328865346095478e-13
+  },
+  {
+   "gene": "PPARGC1A",
+   "class": "regulator",
+   "paired_delta": -1.4076,
+   "p": 1.7151467770072034e-11
+  },
+  {
+   "gene": "SLC22A8",
+   "class": "effector",
+   "paired_delta": -1.2555,
+   "p": 1.0535589469264804e-10
+  },
+  {
+   "gene": "SLC5A2",
+   "class": "effector",
+   "paired_delta": -1.1663,
+   "p": 3.4395421067210813e-09
+  },
+  {
+   "gene": "SLC34A1",
+   "class": "effector",
+   "paired_delta": -1.1377,
+   "p": 4.667630271588112e-09
+  },
+  {
+   "gene": "PAX8",
+   "class": "regulator",
+   "paired_delta": -1.106,
+   "p": 1.0758514492972252e-08
+  },
+  {
+   "gene": "ALDOB",
+   "class": "effector",
+   "paired_delta": -1.0738,
+   "p": 2.802226042822631e-09
+  },
+  {
+   "gene": "AQP1",
+   "class": "effector",
+   "paired_delta": -0.7747,
+   "p": 3.5649115485646444e-06
+  },
+  {
+   "gene": "SLC22A6",
+   "class": "effector",
+   "paired_delta": -0.7392,
+   "p": 1.4026192854212107e-05
+  },
+  {
+   "gene": "SLC22A12",
+   "class": "effector",
+   "paired_delta": -0.7316,
+   "p": 2.835094026934126e-05
+  },
+  {
+   "gene": "GATM",
+   "class": "effector",
+   "paired_delta": -0.571,
+   "p": 0.000513452739793545
+  },
+  {
+   "gene": "MIOX",
+   "class": "effector",
+   "paired_delta": -0.4651,
+   "p": 0.003046821453499689
+  },
+  {
+   "gene": "PAX2",
+   "class": "regulator",
+   "paired_delta": -0.4236,
+   "p": 0.04759937095990261
+  },
+  {
+   "gene": "HNF1B",
+   "class": "regulator",
+   "paired_delta": -0.1814,
+   "p": 0.3070989634057838
+  },
+  {
+   "gene": "SLC5A12",
+   "class": "effector",
+   "paired_delta": -0.1338,
+   "p": 0.3752686739199397
+  },
+  {
+   "gene": "NAT8",
+   "class": "effector",
+   "paired_delta": 0.3093,
+   "p": 0.0839162500632699
+  },
+  {
+   "gene": "CUBN",
+   "class": "effector",
+   "paired_delta": 0.4707,
+   "p": 0.0014077681663398614
+  },
+  {
+   "gene": "LRP2",
+   "class": "effector",
+   "paired_delta": 0.5926,
+   "p": 0.00012962238477238689
+  }
+ ],
+ "effector_mean": -0.8089,
+ "regulator_mean": -0.958,
+ "n_effectors_falling": 14,
+ "n_regulators_falling": 5,
+ "C1_paired_delta": 0.9556,
+ "C1_p": 7.580244765130387e-12,
+ "C1_rise_predicted": true,
+ "C1_prediction_confirmed": true
+}

@@ -1,0 +1,918 @@
+{
+ "plan": "PREREGISTRATION 6v part A",
+ "amendment_sha256_of_text_as_written": "4b434bd2dc2af88fe04eb90cb04ec2a6e6dff39ed4de772b8261e5be5aead827",
+ "cohort": "TCGA_LUAD",
+ "n_pairs": 58,
+ "B": 2000,
+ "seed": 20260907,
+ "n_evaluable": 36,
+ "n_unstable": 1,
+ "unstable_names": [
+  "MCCLUNG_CREB1_TARGETS_UP"
+ ],
+ "n_below_50_point": 12,
+ "n_below_50_interval": 0,
+ "below_50_interval_names": [],
+ "median_ci_width": 1.4106,
+ "iqr_ci_width": [
+  1.0591,
+  2.3038
+ ],
+ "n_ci_contains_1": 28,
+ "own_modules": {},
+ "signatures": [
+  {
+   "name": "BLANCO_MELO_COVID19_SARS_COV_2_POS_PATIENT_LUNG_TISSUE_DN",
+   "n_genes": 175,
+   "n_on_platform": 171,
+   "unadjusted_mean_delta": -0.2566,
+   "wilcoxon_p": 0.0016922364394889745,
+   "status": "ok",
+   "retention_D1": 1.323,
+   "retention_joint": 0.8834,
+   "unadjusted_boot_ci95": [
+    -0.3974,
+    -0.1134
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.0536,
+    2.0849
+   ],
+   "boot_median_retention_joint": 0.884,
+   "ci95_retention_D1": [
+    0.3003,
+    2.4346
+   ],
+   "boot_median_retention_D1": 1.3012
+  },
+  {
+   "name": "BLANCO_MELO_COVID19_SARS_COV_2_POS_PATIENT_LUNG_TISSUE_UP",
+   "n_genes": 174,
+   "n_on_platform": 169,
+   "unadjusted_mean_delta": -0.25,
+   "wilcoxon_p": 2.576794739093419e-05,
+   "status": "ok",
+   "retention_D1": 0.8687,
+   "retention_joint": 0.104,
+   "unadjusted_boot_ci95": [
+    -0.3531,
+    -0.1474
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.0092,
+    0.781
+   ],
+   "boot_median_retention_joint": 0.2165,
+   "ci95_retention_D1": [
+    0.1442,
+    1.758
+   ],
+   "boot_median_retention_D1": 0.8747
+  },
+  {
+   "name": "CHEN_LUNG_CANCER_SURVIVAL",
+   "n_genes": 28,
+   "n_on_platform": 28,
+   "unadjusted_mean_delta": 0.2662,
+   "wilcoxon_p": 2.953832562657818e-05,
+   "status": "ok",
+   "retention_D1": 0.4681,
+   "retention_joint": 0.6909,
+   "unadjusted_boot_ci95": [
+    0.1509,
+    0.3811
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.0476,
+    1.3471
+   ],
+   "boot_median_retention_joint": 0.6868,
+   "ci95_retention_D1": [
+    0.022,
+    1.1606
+   ],
+   "boot_median_retention_D1": 0.4924
+  },
+  {
+   "name": "DING_LUNG_CANCER_BY_MUTATION_RATE",
+   "n_genes": 20,
+   "n_on_platform": 20,
+   "unadjusted_mean_delta": -0.2152,
+   "wilcoxon_p": 0.004887697086017624,
+   "status": "ok",
+   "retention_D1": 1.3613,
+   "retention_joint": 0.5097,
+   "unadjusted_boot_ci95": [
+    -0.3567,
+    -0.0774
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.034,
+    2.001
+   ],
+   "boot_median_retention_joint": 0.5865,
+   "ci95_retention_D1": [
+    0.2662,
+    2.8494
+   ],
+   "boot_median_retention_D1": 1.3384
+  },
+  {
+   "name": "DING_LUNG_CANCER_EXPRESSION_BY_COPY_NUMBER",
+   "n_genes": 100,
+   "n_on_platform": 100,
+   "unadjusted_mean_delta": 0.2507,
+   "wilcoxon_p": 0.02082783589976717,
+   "status": "ok",
+   "retention_D1": 0.3171,
+   "retention_joint": 0.0881,
+   "unadjusted_boot_ci95": [
+    0.0732,
+    0.4309
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.02,
+    2.7542
+   ],
+   "boot_median_retention_joint": 0.4949,
+   "ci95_retention_D1": [
+    0.0196,
+    3.1656
+   ],
+   "boot_median_retention_D1": 0.4684
+  },
+  {
+   "name": "DING_LUNG_CANCER_MUTATED_SIGNIFICANTLY",
+   "n_genes": 26,
+   "n_on_platform": 26,
+   "unadjusted_mean_delta": -0.187,
+   "wilcoxon_p": 0.00355695359914004,
+   "status": "ok",
+   "retention_D1": 1.3797,
+   "retention_joint": 0.4498,
+   "unadjusted_boot_ci95": [
+    -0.3044,
+    -0.0675
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.0262,
+    2.0719
+   ],
+   "boot_median_retention_joint": 0.602,
+   "ci95_retention_D1": [
+    0.3045,
+    2.6577
+   ],
+   "boot_median_retention_D1": 1.3739
+  },
+  {
+   "name": "DONG_LUNG_ADENOCARCINOMA_FERROPTOSIS_LNCRNA",
+   "n_genes": 15,
+   "n_on_platform": 14,
+   "unadjusted_mean_delta": 0.1182,
+   "wilcoxon_p": 0.04452236247718855,
+   "status": "ok",
+   "retention_D1": 0.3274,
+   "retention_joint": 0.5304,
+   "unadjusted_boot_ci95": [
+    0.0151,
+    0.2203
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.0373,
+    5.5949
+   ],
+   "boot_median_retention_joint": 0.7699,
+   "ci95_retention_D1": [
+    0.0227,
+    7.1414
+   ],
+   "boot_median_retention_D1": 0.6007
+  },
+  {
+   "name": "FALVELLA_SMOKERS_WITH_LUNG_CANCER",
+   "n_genes": 81,
+   "n_on_platform": 80,
+   "unadjusted_mean_delta": -0.2459,
+   "wilcoxon_p": 5.9595325999386544e-05,
+   "status": "ok",
+   "retention_D1": 0.9651,
+   "retention_joint": 0.4657,
+   "unadjusted_boot_ci95": [
+    -0.3543,
+    -0.1322
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.0233,
+    1.2712
+   ],
+   "boot_median_retention_joint": 0.5081,
+   "ci95_retention_D1": [
+    0.1542,
+    1.6101
+   ],
+   "boot_median_retention_D1": 0.9641
+  },
+  {
+   "name": "HATADA_METHYLATED_IN_LUNG_CANCER_DN",
+   "n_genes": 35,
+   "n_on_platform": 35,
+   "unadjusted_mean_delta": 0.1757,
+   "wilcoxon_p": 0.0014426646573894863,
+   "status": "ok",
+   "retention_D1": 0.0597,
+   "retention_joint": 0.5599,
+   "unadjusted_boot_ci95": [
+    0.0742,
+    0.2745
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.041,
+    1.2883
+   ],
+   "boot_median_retention_joint": 0.5754,
+   "ci95_retention_D1": [
+    0.0201,
+    1.7695
+   ],
+   "boot_median_retention_D1": 0.3547
+  },
+  {
+   "name": "HATADA_METHYLATED_IN_LUNG_CANCER_UP",
+   "n_genes": 377,
+   "n_on_platform": 373,
+   "unadjusted_mean_delta": -0.2103,
+   "wilcoxon_p": 3.49911552471793e-05,
+   "status": "ok",
+   "retention_D1": 1.2927,
+   "retention_joint": 0.7041,
+   "unadjusted_boot_ci95": [
+    -0.3009,
+    -0.1207
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.083,
+    1.4936
+   ],
+   "boot_median_retention_joint": 0.6939,
+   "ci95_retention_D1": [
+    0.6172,
+    2.1273
+   ],
+   "boot_median_retention_D1": 1.275
+  },
+  {
+   "name": "HEBERT_MATRISOME_TNBC_LUNG_METASTASIS",
+   "n_genes": 23,
+   "n_on_platform": 23,
+   "unadjusted_mean_delta": -0.3438,
+   "wilcoxon_p": 0.00014159577907294326,
+   "status": "ok",
+   "retention_D1": 1.2424,
+   "retention_joint": 0.4311,
+   "unadjusted_boot_ci95": [
+    -0.519,
+    -0.1708
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.025,
+    1.288
+   ],
+   "boot_median_retention_joint": 0.4882,
+   "ci95_retention_D1": [
+    0.2447,
+    2.2932
+   ],
+   "boot_median_retention_D1": 1.252
+  },
+  {
+   "name": "LANDEMAINE_LUNG_METASTASIS",
+   "n_genes": 21,
+   "n_on_platform": 21,
+   "unadjusted_mean_delta": 0.5005,
+   "wilcoxon_p": 7.318824535224064e-10,
+   "status": "ok",
+   "retention_D1": 0.4853,
+   "retention_joint": 0.5526,
+   "unadjusted_boot_ci95": [
+    0.3783,
+    0.6294
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.0845,
+    1.1628
+   ],
+   "boot_median_retention_joint": 0.5491,
+   "ci95_retention_D1": [
+    0.0654,
+    0.9503
+   ],
+   "boot_median_retention_D1": 0.4824
+  },
+  {
+   "name": "LI_AMPLIFIED_IN_LUNG_CANCER",
+   "n_genes": 183,
+   "n_on_platform": 182,
+   "unadjusted_mean_delta": 0.8313,
+   "wilcoxon_p": 3.892994595580846e-11,
+   "status": "ok",
+   "retention_D1": 0.8298,
+   "retention_joint": 0.7844,
+   "unadjusted_boot_ci95": [
+    0.74,
+    0.9296
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.5453,
+    0.9846
+   ],
+   "boot_median_retention_joint": 0.7824,
+   "ci95_retention_D1": [
+    0.608,
+    1.04
+   ],
+   "boot_median_retention_D1": 0.8302
+  },
+  {
+   "name": "LI_LUNG_CANCER",
+   "n_genes": 41,
+   "n_on_platform": 40,
+   "unadjusted_mean_delta": 0.3387,
+   "wilcoxon_p": 2.908129988895031e-07,
+   "status": "ok",
+   "retention_D1": 0.3791,
+   "retention_joint": 0.5867,
+   "unadjusted_boot_ci95": [
+    0.2387,
+    0.443
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.0819,
+    1.1219
+   ],
+   "boot_median_retention_joint": 0.5801,
+   "ci95_retention_D1": [
+    0.0176,
+    0.8464
+   ],
+   "boot_median_retention_D1": 0.3869
+  },
+  {
+   "name": "LOCKWOOD_AMPLIFIED_IN_LUNG_CANCER",
+   "n_genes": 215,
+   "n_on_platform": 213,
+   "unadjusted_mean_delta": 0.3529,
+   "wilcoxon_p": 6.975555861136655e-06,
+   "status": "ok",
+   "retention_D1": 0.4333,
+   "retention_joint": 0.5656,
+   "unadjusted_boot_ci95": [
+    0.2247,
+    0.4947
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.0383,
+    1.4495
+   ],
+   "boot_median_retention_joint": 0.5724,
+   "ci95_retention_D1": [
+    0.0297,
+    1.0279
+   ],
+   "boot_median_retention_D1": 0.4539
+  },
+  {
+   "name": "MCCLUNG_COCAINE_REWARD_5D",
+   "n_genes": 75,
+   "n_on_platform": 74,
+   "unadjusted_mean_delta": -0.2043,
+   "wilcoxon_p": 0.00032274993667746703,
+   "status": "ok",
+   "retention_D1": 1.3288,
+   "retention_joint": 0.6328,
+   "unadjusted_boot_ci95": [
+    -0.3101,
+    -0.099
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.0443,
+    1.5114
+   ],
+   "boot_median_retention_joint": 0.6407,
+   "ci95_retention_D1": [
+    0.4341,
+    2.3558
+   ],
+   "boot_median_retention_D1": 1.3182
+  },
+  {
+   "name": "MCCLUNG_COCAIN_REWARD_4WK",
+   "n_genes": 74,
+   "n_on_platform": 74,
+   "unadjusted_mean_delta": -0.1098,
+   "wilcoxon_p": 0.04878938916963894,
+   "status": "ok",
+   "retention_D1": 1.1628,
+   "retention_joint": 0.193,
+   "unadjusted_boot_ci95": [
+    -0.2185,
+    -0.0025
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.03,
+    6.8781
+   ],
+   "boot_median_retention_joint": 0.7198,
+   "ci95_retention_D1": [
+    0.0739,
+    5.3014
+   ],
+   "boot_median_retention_D1": 1.2351
+  },
+  {
+   "name": "MCCLUNG_CREB1_TARGETS_DN",
+   "n_genes": 56,
+   "n_on_platform": 55,
+   "unadjusted_mean_delta": -0.3933,
+   "wilcoxon_p": 8.987389313509483e-08,
+   "status": "ok",
+   "retention_D1": 1.2246,
+   "retention_joint": 0.9828,
+   "unadjusted_boot_ci95": [
+    -0.4953,
+    -0.2856
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.3231,
+    1.6064
+   ],
+   "boot_median_retention_joint": 0.9783,
+   "ci95_retention_D1": [
+    0.6928,
+    1.8098
+   ],
+   "boot_median_retention_D1": 1.219
+  },
+  {
+   "name": "MCCLUNG_CREB1_TARGETS_UP",
+   "n_genes": 101,
+   "n_on_platform": 100,
+   "unadjusted_mean_delta": -0.0967,
+   "wilcoxon_p": 0.027074615955331192,
+   "status": "ok",
+   "retention_D1": 3.1134,
+   "retention_joint": 1.9377,
+   "unadjusted_boot_ci95": [
+    -0.1884,
+    0.0004
+   ],
+   "ratio_unstable": true,
+   "ci95_retention_joint": null,
+   "ci95_retention_D1": null
+  },
+  {
+   "name": "MCCLUNG_DELTA_FOSB_TARGETS_8WK",
+   "n_genes": 49,
+   "n_on_platform": 49,
+   "unadjusted_mean_delta": -0.168,
+   "wilcoxon_p": 0.015542555286149468,
+   "status": "ok",
+   "retention_D1": 1.5763,
+   "retention_joint": 0.5393,
+   "unadjusted_boot_ci95": [
+    -0.2995,
+    -0.0292
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.0325,
+    2.965
+   ],
+   "boot_median_retention_joint": 0.7195,
+   "ci95_retention_D1": [
+    0.2471,
+    4.9596
+   ],
+   "boot_median_retention_D1": 1.5568
+  },
+  {
+   "name": "MCDOWELL_ACUTE_LUNG_INJURY_DN",
+   "n_genes": 47,
+   "n_on_platform": 46,
+   "unadjusted_mean_delta": -0.6838,
+   "wilcoxon_p": 9.389072770085713e-11,
+   "status": "ok",
+   "retention_D1": 0.7018,
+   "retention_joint": 0.4265,
+   "unadjusted_boot_ci95": [
+    -0.7787,
+    -0.5872
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.2116,
+    0.5666
+   ],
+   "boot_median_retention_joint": 0.4158,
+   "ci95_retention_D1": [
+    0.4663,
+    0.907
+   ],
+   "boot_median_retention_D1": 0.6969
+  },
+  {
+   "name": "REN_ALVEOLAR_RHABDOMYOSARCOMA_UP",
+   "n_genes": 97,
+   "n_on_platform": 96,
+   "unadjusted_mean_delta": -0.3472,
+   "wilcoxon_p": 5.802247529210362e-07,
+   "status": "ok",
+   "retention_D1": 1.1884,
+   "retention_joint": 0.8376,
+   "unadjusted_boot_ci95": [
+    -0.4513,
+    -0.2382
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.1289,
+    1.5022
+   ],
+   "boot_median_retention_joint": 0.8277,
+   "ci95_retention_D1": [
+    0.5738,
+    1.84
+   ],
+   "boot_median_retention_D1": 1.1693
+  },
+  {
+   "name": "SHEDDEN_LUNG_CANCER_GOOD_SURVIVAL_A12",
+   "n_genes": 319,
+   "n_on_platform": 310,
+   "unadjusted_mean_delta": 0.1225,
+   "wilcoxon_p": 0.0013310336840449651,
+   "status": "ok",
+   "retention_D1": 0.3966,
+   "retention_joint": 1.4242,
+   "unadjusted_boot_ci95": [
+    0.0492,
+    0.2015
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.5796,
+    3.8732
+   ],
+   "boot_median_retention_joint": 1.399,
+   "ci95_retention_D1": [
+    0.0298,
+    1.6681
+   ],
+   "boot_median_retention_D1": 0.5528
+  },
+  {
+   "name": "SHEDDEN_LUNG_CANCER_GOOD_SURVIVAL_A4",
+   "n_genes": 196,
+   "n_on_platform": 195,
+   "unadjusted_mean_delta": -0.477,
+   "wilcoxon_p": 3.569439365376649e-07,
+   "status": "ok",
+   "retention_D1": 0.352,
+   "retention_joint": 0.448,
+   "unadjusted_boot_ci95": [
+    -0.6147,
+    -0.3328
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.0308,
+    1.1634
+   ],
+   "boot_median_retention_joint": 0.4818,
+   "ci95_retention_D1": [
+    0.0281,
+    0.9697
+   ],
+   "boot_median_retention_D1": 0.3808
+  },
+  {
+   "name": "SHEDDEN_LUNG_CANCER_GOOD_SURVIVAL_A5",
+   "n_genes": 68,
+   "n_on_platform": 68,
+   "unadjusted_mean_delta": -0.1809,
+   "wilcoxon_p": 0.04790954183315659,
+   "status": "ok",
+   "retention_D1": 0.998,
+   "retention_joint": 0.4092,
+   "unadjusted_boot_ci95": [
+    -0.3494,
+    -0.0135
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.0404,
+    4.4246
+   ],
+   "boot_median_retention_joint": 0.7396,
+   "ci95_retention_D1": [
+    0.0724,
+    4.2738
+   ],
+   "boot_median_retention_D1": 1.0464
+  },
+  {
+   "name": "SHEDDEN_LUNG_CANCER_POOR_SURVIVAL_A6",
+   "n_genes": 461,
+   "n_on_platform": 461,
+   "unadjusted_mean_delta": 0.8666,
+   "wilcoxon_p": 2.721165565533036e-10,
+   "status": "ok",
+   "retention_D1": 0.1781,
+   "retention_joint": 0.2849,
+   "unadjusted_boot_ci95": [
+    0.6822,
+    1.0604
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.0318,
+    0.5599
+   ],
+   "boot_median_retention_joint": 0.2797,
+   "ci95_retention_D1": [
+    0.0083,
+    0.4138
+   ],
+   "boot_median_retention_D1": 0.1818
+  },
+  {
+   "name": "SMID_BREAST_CANCER_RELAPSE_IN_LUNG_DN",
+   "n_genes": 38,
+   "n_on_platform": 38,
+   "unadjusted_mean_delta": -0.3745,
+   "wilcoxon_p": 5.358061656374043e-08,
+   "status": "ok",
+   "retention_D1": 0.8594,
+   "retention_joint": 0.6035,
+   "unadjusted_boot_ci95": [
+    -0.4645,
+    -0.2805
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.0737,
+    0.9711
+   ],
+   "boot_median_retention_joint": 0.5906,
+   "ci95_retention_D1": [
+    0.427,
+    1.1473
+   ],
+   "boot_median_retention_D1": 0.8552
+  },
+  {
+   "name": "SMID_BREAST_CANCER_RELAPSE_IN_LUNG_UP",
+   "n_genes": 22,
+   "n_on_platform": 22,
+   "unadjusted_mean_delta": 0.4268,
+   "wilcoxon_p": 3.7270010094407907e-06,
+   "status": "ok",
+   "retention_D1": 0.4386,
+   "retention_joint": 0.1338,
+   "unadjusted_boot_ci95": [
+    0.2821,
+    0.572
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.0068,
+    0.6757
+   ],
+   "boot_median_retention_joint": 0.1654,
+   "ci95_retention_D1": [
+    0.0358,
+    1.2383
+   ],
+   "boot_median_retention_D1": 0.4327
+  },
+  {
+   "name": "STEARMAN_LUNG_CANCER_EARLY_VS_LATE_DN",
+   "n_genes": 63,
+   "n_on_platform": 63,
+   "unadjusted_mean_delta": -0.1658,
+   "wilcoxon_p": 0.00031328107926265205,
+   "status": "ok",
+   "retention_D1": 0.3075,
+   "retention_joint": 0.6627,
+   "unadjusted_boot_ci95": [
+    -0.256,
+    -0.0702
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.0331,
+    2.8719
+   ],
+   "boot_median_retention_joint": 0.6759,
+   "ci95_retention_D1": [
+    0.0234,
+    1.6337
+   ],
+   "boot_median_retention_D1": 0.4652
+  },
+  {
+   "name": "STEARMAN_LUNG_CANCER_EARLY_VS_LATE_UP",
+   "n_genes": 127,
+   "n_on_platform": 127,
+   "unadjusted_mean_delta": -0.1621,
+   "wilcoxon_p": 0.021698409147981424,
+   "status": "ok",
+   "retention_D1": 2.0887,
+   "retention_joint": 1.1496,
+   "unadjusted_boot_ci95": [
+    -0.3028,
+    -0.0185
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.0618,
+    5.918
+   ],
+   "boot_median_retention_joint": 1.2183,
+   "ci95_retention_D1": [
+    0.6272,
+    7.796
+   ],
+   "boot_median_retention_D1": 2.1086
+  },
+  {
+   "name": "SWEET_LUNG_CANCER_KRAS_DN",
+   "n_genes": 420,
+   "n_on_platform": 420,
+   "unadjusted_mean_delta": -0.6499,
+   "wilcoxon_p": 2.461650131626648e-10,
+   "status": "ok",
+   "retention_D1": 1.0563,
+   "retention_joint": 0.7461,
+   "unadjusted_boot_ci95": [
+    -0.7517,
+    -0.5472
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.4993,
+    0.9332
+   ],
+   "boot_median_retention_joint": 0.743,
+   "ci95_retention_D1": [
+    0.7808,
+    1.3
+   ],
+   "boot_median_retention_D1": 1.0558
+  },
+  {
+   "name": "WIKMAN_ASBESTOS_LUNG_CANCER_DN",
+   "n_genes": 30,
+   "n_on_platform": 30,
+   "unadjusted_mean_delta": -0.204,
+   "wilcoxon_p": 0.008007481496040393,
+   "status": "ok",
+   "retention_D1": 1.1288,
+   "retention_joint": 0.1235,
+   "unadjusted_boot_ci95": [
+    -0.3396,
+    -0.0601
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.0235,
+    2.5854
+   ],
+   "boot_median_retention_joint": 0.5266,
+   "ci95_retention_D1": [
+    0.1316,
+    2.5842
+   ],
+   "boot_median_retention_D1": 1.1309
+  },
+  {
+   "name": "WIKMAN_ASBESTOS_LUNG_CANCER_UP",
+   "n_genes": 15,
+   "n_on_platform": 15,
+   "unadjusted_mean_delta": -0.2862,
+   "wilcoxon_p": 3.870821421750342e-05,
+   "status": "ok",
+   "retention_D1": 0.8146,
+   "retention_joint": 0.6123,
+   "unadjusted_boot_ci95": [
+    -0.4075,
+    -0.1568
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.0383,
+    1.4757
+   ],
+   "boot_median_retention_joint": 0.6271,
+   "ci95_retention_D1": [
+    0.0715,
+    1.5634
+   ],
+   "boot_median_retention_D1": 0.8036
+  },
+  {
+   "name": "ZHONG_SECRETOME_OF_LUNG_CANCER_AND_ENDOTHELIUM",
+   "n_genes": 67,
+   "n_on_platform": 67,
+   "unadjusted_mean_delta": 0.2329,
+   "wilcoxon_p": 6.363144643046134e-05,
+   "status": "ok",
+   "retention_D1": 0.3237,
+   "retention_joint": 0.7234,
+   "unadjusted_boot_ci95": [
+    0.1377,
+    0.3328
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.0804,
+    1.6151
+   ],
+   "boot_median_retention_joint": 0.718,
+   "ci95_retention_D1": [
+    0.0215,
+    1.0169
+   ],
+   "boot_median_retention_D1": 0.3841
+  },
+  {
+   "name": "ZHONG_SECRETOME_OF_LUNG_CANCER_AND_FIBROBLAST",
+   "n_genes": 131,
+   "n_on_platform": 130,
+   "unadjusted_mean_delta": 0.2378,
+   "wilcoxon_p": 7.989117541711779e-05,
+   "status": "ok",
+   "retention_D1": 0.3979,
+   "retention_joint": 0.7571,
+   "unadjusted_boot_ci95": [
+    0.1397,
+    0.34
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.1154,
+    1.6278
+   ],
+   "boot_median_retention_joint": 0.7523,
+   "ci95_retention_D1": [
+    0.0283,
+    1.0896
+   ],
+   "boot_median_retention_D1": 0.4252
+  },
+  {
+   "name": "ZHONG_SECRETOME_OF_LUNG_CANCER_AND_MACROPHAGE",
+   "n_genes": 76,
+   "n_on_platform": 75,
+   "unadjusted_mean_delta": 0.3055,
+   "wilcoxon_p": 3.7181047247610505e-07,
+   "status": "ok",
+   "retention_D1": 0.642,
+   "retention_joint": 0.8705,
+   "unadjusted_boot_ci95": [
+    0.2203,
+    0.3979
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.4064,
+    1.4418
+   ],
+   "boot_median_retention_joint": 0.8666,
+   "ci95_retention_D1": [
+    0.121,
+    1.1227
+   ],
+   "boot_median_retention_D1": 0.6465
+  }
+ ],
+ "own_modules_note": "Removed under PREREGISTRATION 6y, which fixed before the lung matrix was obtained that no REDUCTION, DRAIN, SUPPLY or composite result from lung would be reported. The shared code path computes them as its built-in control step; the values were discarded and are not reported anywhere."
+}

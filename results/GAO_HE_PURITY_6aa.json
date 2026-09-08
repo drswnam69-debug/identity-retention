@@ -1,0 +1,55 @@
+{
+ "plan": "PREREGISTRATION 6aa part B",
+ "amendment_sha256_of_text_as_written": "2cbe2a9ab7928f33899312e5d52f72f7142859b4c0e453e5bbb0a53b2eebe42e",
+ "n_pairs_total": 159,
+ "n_pairs_with_purity": 159,
+ "purity_median": 0.9,
+ "purity_range": [
+  0.5,
+  0.99
+ ],
+ "purity_vs_C1": {
+  "rho": -0.5443,
+  "p": 1.2077886944110975e-13
+ },
+ "purity_vs_D1": {
+  "rho": 0.115,
+  "p": 0.14899059202262036
+ },
+ "modules": {
+  "REDUCTION": {
+   "unadjusted_shift": -0.0686,
+   "retention_without_purity": 1.8511,
+   "retention_with_purity": 0.6083,
+   "move": 1.2428,
+   "purity_coefficient": {
+    "beta": 1.6651,
+    "se": 0.6183,
+    "ci95": [
+     0.4437,
+     2.8865
+    ],
+    "t": 2.693,
+    "p": 0.007859101164589405
+   }
+  },
+  "DRAIN": {
+   "unadjusted_shift": -0.9443,
+   "retention_without_purity": 1.1088,
+   "retention_with_purity": 1.0162,
+   "move": 0.0926,
+   "purity_coefficient": {
+    "beta": 1.7084,
+    "se": 0.5128,
+    "ci95": [
+     0.6955,
+     2.7213
+    ],
+    "t": 3.332,
+    "p": 0.001078779405779176
+   }
+  }
+ },
+ "move_threshold": 0.1,
+ "verdict": "PARTLY_CONFOUNDED_WITH_PURITY"
+}

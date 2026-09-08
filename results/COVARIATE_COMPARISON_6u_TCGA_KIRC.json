@@ -1,0 +1,239 @@
+{
+ "plan": "PREREGISTRATION 6u",
+ "amendment_sha256_of_text_as_written": "c9544b3d03205d48d6ec869971a57570fa2f07c1ce4bab11e29d20af2e06c1f0",
+ "cohort": "TCGA_KIRC",
+ "n_pairs": 72,
+ "covariate_association": {
+  "pearson_r": -0.1881,
+  "pearson_p": 0.11348260951674598,
+  "spearman_rho": -0.1735,
+  "spearman_p": 0.1450894136335994,
+  "r2_dD1_on_dC1": 0.0354,
+  "shared_genes_D1_C1": 0
+ },
+ "own_modules": {},
+ "n_evaluable": 15,
+ "retention_identity_only": {
+  "median": 0.6661,
+  "q1": 0.5167,
+  "q3": 0.788,
+  "n_below_50pct": 3
+ },
+ "retention_composition_only": {
+  "median": 0.6511,
+  "q1": 0.2812,
+  "q3": 0.9936,
+  "n_below_50pct": 6
+ },
+ "agreement": {
+  "spearman_rho": -0.2107,
+  "spearman_p": 0.45095786521528514,
+  "median_difference_D1_minus_C1": 0.0096,
+  "median_absolute_difference": 0.4938,
+  "iqr_difference": [
+   -0.6097,
+   0.4246
+  ],
+  "n_reclassified_at_50pct": 9,
+  "prop_reclassified": 0.6,
+  "reclassified_names": [
+   "FLECHNER_BIOPSY_KIDNEY_TRANSPLANT_REJECTED_VS_OK_DN",
+   "FLECHNER_BIOPSY_KIDNEY_TRANSPLANT_REJECTED_VS_OK_UP",
+   "FLECHNER_PBL_KIDNEY_TRANSPLANT_OK_VS_DONOR_UP",
+   "FLECHNER_PBL_KIDNEY_TRANSPLANT_REJECTED_VS_OK_DN",
+   "LI_WILMS_TUMOR_VS_FETAL_KIDNEY_1_DN",
+   "LI_WILMS_TUMOR_VS_FETAL_KIDNEY_2_UP",
+   "RODWELL_AGING_KIDNEY_NO_BLOOD_UP",
+   "RODWELL_AGING_KIDNEY_UP",
+   "SU_KIDNEY"
+  ]
+ },
+ "discordant": {
+  "composition_ge90_identity_lt50": [
+   "FLECHNER_BIOPSY_KIDNEY_TRANSPLANT_REJECTED_VS_OK_DN",
+   "LI_WILMS_TUMOR_VS_FETAL_KIDNEY_2_UP"
+  ],
+  "identity_ge90_composition_lt50": []
+ },
+ "criteria": {
+  "rho_covariate_ge": 0.7,
+  "rho_retention_ge": 0.7,
+  "median_abs_diff_lt": 0.1,
+  "reclass_frac_lt": 0.1,
+  "met": {
+   "covariate_rho": false,
+   "retention_rho": false,
+   "median_abs_diff": false,
+   "reclass": false
+  }
+ },
+ "verdict": "DISTINCT",
+ "signatures": [
+  {
+   "name": "FLECHNER_BIOPSY_KIDNEY_TRANSPLANT_OK_VS_DONOR_DN",
+   "n_genes": 24,
+   "n_on_platform": 24,
+   "unadjusted_mean_delta": 0.345,
+   "wilcoxon_p": 6.929582416243397e-05,
+   "status": "ok",
+   "retention_D1": 0.6661,
+   "retention_C1": 0.6511,
+   "retention_joint": 0.6916
+  },
+  {
+   "name": "FLECHNER_BIOPSY_KIDNEY_TRANSPLANT_OK_VS_DONOR_UP",
+   "n_genes": 561,
+   "n_on_platform": 557,
+   "unadjusted_mean_delta": 0.2021,
+   "wilcoxon_p": 0.01899200423713992,
+   "status": "ok",
+   "retention_D1": 0.7758,
+   "retention_C1": 1.6807,
+   "retention_joint": 1.4848
+  },
+  {
+   "name": "FLECHNER_BIOPSY_KIDNEY_TRANSPLANT_REJECTED_VS_OK_DN",
+   "n_genes": 552,
+   "n_on_platform": 547,
+   "unadjusted_mean_delta": -0.3241,
+   "wilcoxon_p": 1.0299365403762655e-05,
+   "status": "ok",
+   "retention_D1": 0.058,
+   "retention_C1": 1.3624,
+   "retention_joint": 0.4394
+  },
+  {
+   "name": "FLECHNER_BIOPSY_KIDNEY_TRANSPLANT_REJECTED_VS_OK_UP",
+   "n_genes": 88,
+   "n_on_platform": 88,
+   "unadjusted_mean_delta": 1.1827,
+   "wilcoxon_p": 9.086095881838163e-13,
+   "status": "ok",
+   "retention_D1": 0.8095,
+   "retention_C1": 0.2381,
+   "retention_joint": 0.1893
+  },
+  {
+   "name": "FLECHNER_PBL_KIDNEY_TRANSPLANT_OK_VS_DONOR_DN",
+   "n_genes": 42,
+   "n_on_platform": 42,
+   "unadjusted_mean_delta": 0.3594,
+   "wilcoxon_p": 0.0007598625459485163,
+   "status": "ok",
+   "retention_D1": 0.5022,
+   "retention_C1": 0.9104,
+   "retention_joint": 1.0493
+  },
+  {
+   "name": "FLECHNER_PBL_KIDNEY_TRANSPLANT_OK_VS_DONOR_UP",
+   "n_genes": 152,
+   "n_on_platform": 151,
+   "unadjusted_mean_delta": 0.4868,
+   "wilcoxon_p": 2.866617952175261e-06,
+   "status": "ok",
+   "retention_D1": 0.6142,
+   "retention_C1": 0.3389,
+   "retention_joint": 0.4665
+  },
+  {
+   "name": "FLECHNER_PBL_KIDNEY_TRANSPLANT_REJECTED_VS_OK_DN",
+   "n_genes": 51,
+   "n_on_platform": 51,
+   "unadjusted_mean_delta": 0.4773,
+   "wilcoxon_p": 2.0595383344029605e-06,
+   "status": "ok",
+   "retention_D1": 0.7839,
+   "retention_C1": 0.2231,
+   "retention_joint": 0.2273
+  },
+  {
+   "name": "FLECHNER_PBL_KIDNEY_TRANSPLANT_REJECTED_VS_OK_UP",
+   "n_genes": 65,
+   "n_on_platform": 65,
+   "unadjusted_mean_delta": 0.4265,
+   "wilcoxon_p": 7.794502508183921e-05,
+   "status": "ok",
+   "retention_D1": 0.5311,
+   "retention_C1": 0.5215,
+   "retention_joint": 0.692
+  },
+  {
+   "name": "LI_WILMS_TUMOR_VS_FETAL_KIDNEY_1_DN",
+   "n_genes": 164,
+   "n_on_platform": 164,
+   "unadjusted_mean_delta": 0.6511,
+   "wilcoxon_p": 4.076602277189357e-09,
+   "status": "ok",
+   "retention_D1": 0.5426,
+   "retention_C1": 0.0488,
+   "retention_joint": 0.2767
+  },
+  {
+   "name": "LI_WILMS_TUMOR_VS_FETAL_KIDNEY_2_UP",
+   "n_genes": 27,
+   "n_on_platform": 27,
+   "unadjusted_mean_delta": 0.2988,
+   "wilcoxon_p": 0.0007295152015337355,
+   "status": "ok",
+   "retention_D1": 0.165,
+   "retention_C1": 1.1268,
+   "retention_joint": 1.7845
+  },
+  {
+   "name": "RODWELL_AGING_KIDNEY_DN",
+   "n_genes": 148,
+   "n_on_platform": 143,
+   "unadjusted_mean_delta": -0.7099,
+   "wilcoxon_p": 4.988017141581901e-11,
+   "status": "ok",
+   "retention_D1": 0.8737,
+   "retention_C1": 1.0126,
+   "retention_joint": 0.9069
+  },
+  {
+   "name": "RODWELL_AGING_KIDNEY_NO_BLOOD_DN",
+   "n_genes": 148,
+   "n_on_platform": 144,
+   "unadjusted_mean_delta": -0.7265,
+   "wilcoxon_p": 4.625515853946965e-11,
+   "status": "ok",
+   "retention_D1": 0.8481,
+   "retention_C1": 0.9747,
+   "retention_joint": 0.8532
+  },
+  {
+   "name": "RODWELL_AGING_KIDNEY_NO_BLOOD_UP",
+   "n_genes": 223,
+   "n_on_platform": 223,
+   "unadjusted_mean_delta": 0.5655,
+   "wilcoxon_p": 8.252938896239018e-09,
+   "status": "ok",
+   "retention_D1": 0.6798,
+   "retention_C1": 0.3243,
+   "retention_joint": 0.4002
+  },
+  {
+   "name": "RODWELL_AGING_KIDNEY_UP",
+   "n_genes": 500,
+   "n_on_platform": 493,
+   "unadjusted_mean_delta": 0.9196,
+   "wilcoxon_p": 4.724850797127551e-12,
+   "status": "ok",
+   "retention_D1": 0.7921,
+   "retention_C1": 0.0977,
+   "retention_joint": 0.0545
+  },
+  {
+   "name": "SU_KIDNEY",
+   "n_genes": 15,
+   "n_on_platform": 15,
+   "unadjusted_mean_delta": -0.6217,
+   "wilcoxon_p": 2.2448799291044376e-11,
+   "status": "ok",
+   "retention_D1": 0.0248,
+   "retention_C1": 0.8359,
+   "retention_joint": 0.056
+  }
+ ],
+ "own_modules_note": "Removed under PREREGISTRATION 6x, which fixed before the kidney matrix was opened that no REDUCTION, DRAIN, SUPPLY or composite result from kidney would be computed or reported. The shared benchmark code path computes them as its built-in positive-control step; the values were discarded unread into the manuscript and are not reported anywhere."
+}
