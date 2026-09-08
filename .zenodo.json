@@ -1,0 +1,23 @@
+{
+  "title": "retentionfrac: the identity-retention fraction for paired tumor-adjacent expression contrasts",
+  "upload_type": "software",
+  "license": "mit",
+  "creators": [
+    {
+      "name": "Nam, Soon Woo",
+      "orcid": "0000-0001-5562-4775",
+      "affiliation": "Incheon St. Mary's Hospital, College of Medicine, The Catholic University of Korea"
+    }
+  ],
+  "description": "<p>Analysis code, gene sets, result files and the locked protocol for the study <em>How much of a tumor expression signature is dedifferentiation? A pre-registered measure in three tissues and its failure to transfer between transcriptome and proteome</em>. Includes <code>retentionfrac</code>, a one-function Python package that computes the identity-retention fraction with a bootstrap interval and refuses to return a value when the identity premise or the ratio-stability guard fails.</p>",
+  "keywords": [
+    "dedifferentiation",
+    "gene expression signature",
+    "tumor purity",
+    "pre-registration",
+    "reproducibility",
+    "proteomics",
+    "hepatocellular carcinoma"
+  ],
+  "access_right": "open"
+}
