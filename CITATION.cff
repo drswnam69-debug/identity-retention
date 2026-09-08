@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: "If you use this software or these analyses, please cite both the software and the article."
+title: "retentionfrac: the identity-retention fraction for paired tumor-adjacent expression contrasts"
+abstract: >-
+  A single-function Python package and the complete pre-registered analysis
+  pipeline behind it. The identity-retention fraction is the intercept of the
+  paired-difference regression of a signature on a tissue-identity score built
+  from disjoint genes, expressed as a share of the unadjusted paired shift. The
+  function checks the identity premise and the stability of the ratio before it
+  returns a value, and refuses to return one when either fails.
+type: software
+license: MIT
+version: 1.0.0
+date-released: "2026-09-08"
+authors:
+  - family-names: Nam
+    given-names: Soon Woo
+    orcid: "https://orcid.org/0000-0001-5562-4775"
+    affiliation: >-
+      Hepatobiliary Unit, Division of Gastroenterology, Department of Internal
+      Medicine, Incheon St. Mary's Hospital, College of Medicine, The Catholic
+      University of Korea, Seoul, Republic of Korea
+    email: drswnam@catholic.ac.kr
+keywords:
+  - dedifferentiation
+  - gene expression signature
+  - tumor purity
+  - pre-registration
+  - reproducibility
+  - proteomics
+repository-code: "https://github.com/REPLACE-WITH-YOUR-USERNAME/identity-retention"
