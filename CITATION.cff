@@ -1,6 +1,6 @@
 cff-version: 1.2.0
 message: "If you use this software or these analyses, please cite both the software and the article."
-title: "retentionfrac: the identity-retention fraction for paired tumor-adjacent expression contrasts"
+title: "identity-retention: the pre-registered pipeline for the identity-retention fraction in paired tumor-adjacent expression contrasts, with the retentionfrac package"
 abstract: >-
   A single-function Python package and the complete pre-registered analysis
   pipeline behind it. The identity-retention fraction is the intercept of the
