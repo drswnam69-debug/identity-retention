@@ -12,6 +12,20 @@ import matplotlib.pyplot as plt
 from matplotlib import gridspec
 from PIL import Image
 
+
+import os as _os, sys as _sys
+_here = _os.path.dirname(_os.path.abspath(__file__))
+_cands = [_here, _os.path.join(_here, "rsi", "code"), _os.path.join(_here, "code"),
+          _os.path.join(_os.path.dirname(_here), "code")]
+if _os.environ.get("IR_ROOT"):
+    _cands.insert(0, _os.path.join(_os.environ["IR_ROOT"], "code"))
+for _c in _cands:
+    if _os.path.exists(_os.path.join(_c, "paths.py")):
+        if _c not in _sys.path:
+            _sys.path.insert(0, _c)
+        break
+from paths import ROOT as IR_ROOT, RESULTS as IR_RESULTS, GENESETS as IR_GENESETS, \
+    DATA as IR_DATA, CODE as IR_CODE, FIGURES as IR_FIGURES, DOCS as IR_DOCS
 plt.rcParams.update({
     "font.family": "Liberation Sans",
     "font.size": 7.2,
@@ -40,7 +54,7 @@ C = {
 # Read from the archive, not from an upload directory. This script used to
 # read its input from outside the deposited tree, so the figure could not be
 # regenerated from the deposit alone.
-D = json.load(open("/home/claude/rsi/results/FIG4_INPUTS.json"))
+D = json.load(open(f"{IR_RESULTS}/FIG4_INPUTS.json"))
 COH = ["GSE76427", "GSE14520"]
 LAB = {"GSE76427": "GSE76427\n(52 pairs)", "GSE14520": "GSE14520\n(213 pairs)"}
 
@@ -188,7 +202,7 @@ panel_label(fig, 0.006, 0.985, "a")
 panel_label(fig, 0.425, 0.985, "b")
 panel_label(fig, 0.006, 0.495, "c")
 
-stem = "/home/claude/Figure3_dissociation"
+stem = f"{IR_DOCS}/Figure3_dissociation"
 fig.savefig(stem + ".png", dpi=300, facecolor="white")
 fig.savefig(stem + ".svg", facecolor="white")
 plt.close(fig)

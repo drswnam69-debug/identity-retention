@@ -10,6 +10,20 @@ from matplotlib import gridspec
 import numpy as np
 from PIL import Image
 
+
+import os as _os, sys as _sys
+_here = _os.path.dirname(_os.path.abspath(__file__))
+_cands = [_here, _os.path.join(_here, "rsi", "code"), _os.path.join(_here, "code"),
+          _os.path.join(_os.path.dirname(_here), "code")]
+if _os.environ.get("IR_ROOT"):
+    _cands.insert(0, _os.path.join(_os.environ["IR_ROOT"], "code"))
+for _c in _cands:
+    if _os.path.exists(_os.path.join(_c, "paths.py")):
+        if _c not in _sys.path:
+            _sys.path.insert(0, _c)
+        break
+from paths import ROOT as IR_ROOT, RESULTS as IR_RESULTS, GENESETS as IR_GENESETS, \
+    DATA as IR_DATA, CODE as IR_CODE, FIGURES as IR_FIGURES, DOCS as IR_DOCS
 plt.rcParams.update({
     "font.family": "Liberation Sans", "font.size": 7.2,
     "svg.fonttype": "none", "pdf.fonttype": 42, "axes.linewidth": 0.6,
@@ -20,15 +34,19 @@ MM = 1 / 25.4
 C = {"red": "#199e70", "dra": "#d95926", "ink": "#0b0b0b", "muted": "#898781",
      "rule": "#c3c2b7", "tx": "#4a3aa7", "pr": "#256abf", "bad": "#d03b3b"}
 
-G = json.load(open("/home/claude/rsi/results/PROTEIN_VALIDATION_6s_Gao2019.json"))
-J = json.load(open("/home/claude/rsi/results/PROTEIN_VALIDATION_6s_Jiang2019.json"))
+G = json.load(open(f"{IR_RESULTS}/PROTEIN_VALIDATION_6s_Gao2019.json"))
+J = json.load(open(f"{IR_RESULTS}/PROTEIN_VALIDATION_6s_Jiang2019.json"))
 
 SETS = ["GSE14520\ntranscript\n213 pairs", "Gao 2019\nprotein\n159 pairs",
         "Jiang 2019\nprotein\n124 pairs"]
 
-CYB5R3 = [(+0.555, "9.0 \u00d7 10\u207b\u00b9\u2070"),
-          (-0.387, "3.0 \u00d7 10\u207b\u2074"),
-          (+0.521, "1.2 \u00d7 10\u207b\u2076")]
+# Liberation Sans has no superscript minus (U+207B) or superscript zero
+# (U+2070); written as literal characters they print as empty boxes, which is
+# how "10 to the minus ten" came to render as "10 1 0". Mathtext renders the
+# exponent from matplotlib's own math font, which carries both.
+CYB5R3 = [(+0.555, r"$9.1 \times 10^{-10}$"),
+          (-0.387, r"$3.0 \times 10^{-4}$"),
+          (+0.521, r"$1.2 \times 10^{-6}$")]
 RED = [+0.858, G["modules"]["REDUCTION"]["unadjusted_mean_delta"],
        J["modules"]["REDUCTION"]["unadjusted_mean_delta"]]
 DRA = [-0.800, G["modules"]["DRAIN"]["unadjusted_mean_delta"],
@@ -150,7 +168,7 @@ for xx, yy, L in [(0.004, 0.985, "a"), (0.505, 0.985, "b"),
     fig.text(xx, yy, L, fontsize=10, fontweight="bold", color=C["ink"],
              ha="left", va="top")
 
-stem = "/home/claude/Figure5_level_transfer"
+stem = f"{IR_DOCS}/Figure5_level_transfer"
 fig.savefig(stem + ".png", dpi=300, facecolor="white")
 fig.savefig(stem + ".svg", facecolor="white")
 plt.close(fig)

@@ -5,13 +5,27 @@ import matplotlib.pyplot as plt
 from matplotlib import gridspec
 import numpy as np, pandas as pd
 from PIL import Image
+
+import os as _os, sys as _sys
+_here = _os.path.dirname(_os.path.abspath(__file__))
+_cands = [_here, _os.path.join(_here, "rsi", "code"), _os.path.join(_here, "code"),
+          _os.path.join(_os.path.dirname(_here), "code")]
+if _os.environ.get("IR_ROOT"):
+    _cands.insert(0, _os.path.join(_os.environ["IR_ROOT"], "code"))
+for _c in _cands:
+    if _os.path.exists(_os.path.join(_c, "paths.py")):
+        if _c not in _sys.path:
+            _sys.path.insert(0, _c)
+        break
+from paths import ROOT as IR_ROOT, RESULTS as IR_RESULTS, GENESETS as IR_GENESETS, \
+    DATA as IR_DATA, CODE as IR_CODE, FIGURES as IR_FIGURES, DOCS as IR_DOCS
 plt.rcParams.update({"font.family":"Liberation Sans","font.size":7.2,"svg.fonttype":"none",
     "pdf.fonttype":42,"axes.linewidth":0.6,"xtick.major.width":0.6,"ytick.major.width":0.6,
     "xtick.major.size":2.5,"ytick.major.size":2.5})
 MM=1/25.4
 C={"ink":"#0b0b0b","muted":"#898781","rule":"#c3c2b7","pt":"#8d9bb5","id":"#4a3aa7",
    "co":"#c99a12","red":"#199e70","dra":"#d95926","bad":"#d03b3b"}
-R="/home/claude/rsi"
+R=f"{IR_ROOT}"
 G=json.load(open(f"{R}/results/GAO_MRNA_PROTEIN_6aa.json"))
 H=json.load(open(f"{R}/results/GAO_HE_PURITY_6aa.json"))
 corr=pd.read_csv(f"{R}/data/gao_mrna_protein_corr.tsv",sep="\t")
@@ -70,7 +84,10 @@ ax.bar(np.arange(2),vals,width=0.5,color=cols,edgecolor="none",zorder=3)
 ax.axhline(0,lw=0.7,color=C["ink"])
 for i,(v,pv) in enumerate(zip(vals,ps)):
     ax.text(i,v+(0.035 if v>0 else -0.035),
-            (f"ρ = {v:+.3f}\nP = {pv:.2g}" if pv>=1e-3 else f"ρ = {v:+.3f}\nP = {pv:.1e}").replace("-","\u2212"),
+            (f"\u03c1 = {v:+.3f}\n$P$ = {pv:.2g}" if pv >= 1e-3 else
+             "\u03c1 = %+.3f\n$P$ = %.1f \u00d7 10$^{%d}$"
+             % (v, float(f"{pv:.1e}".split("e")[0]), int(f"{pv:.1e}".split("e")[1]))
+             ).replace("-", "\u2212").replace("$^{\u2212", "$^{-"),
             ha="center",va="bottom" if v>0 else "top",fontsize=7.2,color=C["ink"])
 ax.set_xticks(np.arange(2)); ax.set_xticklabels(xs,fontsize=7.2)
 ax.set_ylim(-0.80,0.46)
@@ -78,12 +95,13 @@ ax.set_ylabel("Spearman ρ with tumor purity\nread from H&E by a pathologist")
 ax.text(0.02,0.985,f"{H['n_pairs_with_purity']} cases\npurity 0.50 to 0.99",
         transform=ax.transAxes,fontsize=7.2,color=C["muted"],ha="left",va="top",
         linespacing=1.25)
-ax.set_title("Purity tracks composition, not identity",fontsize=7.2,pad=4,color=C["muted"])
+ax.set_title("Purity tracks the composition covariate,\nnot the identity covariate",
+             fontsize=7.2, pad=4, color=C["muted"], linespacing=1.3)
 for s in ("top","right"): ax.spines[s].set_visible(False)
 
 for xx,L in [(0.004,"a"),(0.340,"b"),(0.672,"c")]:
     fig.text(xx,0.985,L,fontsize=10,fontweight="bold",color=C["ink"],ha="left",va="top")
-stem="/home/claude/Figure11_gao_proteogenomic"
+stem=f"{IR_DOCS}/Figure11_gao_proteogenomic"
 fig.savefig(stem+".png",dpi=300,facecolor="white"); fig.savefig(stem+".svg",facecolor="white")
 plt.close(fig)
 im=Image.open(stem+".png").convert("RGB")

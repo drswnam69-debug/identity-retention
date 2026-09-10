@@ -14,6 +14,19 @@ import numpy as np
 import pandas as pd
 from PIL import Image
 
+import os as _os, sys as _sys
+_here = _os.path.dirname(_os.path.abspath(__file__))
+_cands = [_here, _os.path.join(_here, "rsi", "code"), _os.path.join(_here, "code"),
+          _os.path.join(_os.path.dirname(_here), "code")]
+if _os.environ.get("IR_ROOT"):
+    _cands.insert(0, _os.path.join(_os.environ["IR_ROOT"], "code"))
+for _c in _cands:
+    if _os.path.exists(_os.path.join(_c, "paths.py")):
+        if _c not in _sys.path:
+            _sys.path.insert(0, _c)
+        break
+from paths import ROOT as IR_ROOT, RESULTS as IR_RESULTS, GENESETS as IR_GENESETS, \
+    DATA as IR_DATA, CODE as IR_CODE, FIGURES as IR_FIGURES, DOCS as IR_DOCS
 plt.rcParams.update({
     "font.family": "Liberation Sans", "font.size": 7.2,
     "svg.fonttype": "none", "pdf.fonttype": 42, "axes.linewidth": 0.6,
@@ -25,7 +38,7 @@ C = {"red": "#199e70", "dra": "#d95926", "ink": "#0b0b0b", "muted": "#898781",
      "rule": "#c3c2b7", "id": "#4a3aa7", "co": "#c99a12", "bad": "#d03b3b",
      "pt": "#8d9bb5"}
 
-R = "/home/claude/rsi"
+R = f"{IR_ROOT}"
 D = json.load(open(f"{R}/results/COVARIATE_COMPARISON_6u_GSE14520.json"))
 ok = D["signatures"]
 rd = np.array([r["retention_D1"] for r in ok], float)
@@ -35,6 +48,7 @@ AG = D["agreement"]
 
 # --- rebuild the two paired covariate vectors by the study's own code path ---
 sys.path.insert(0, f"{R}/code")
+
 os.chdir(R)
 def _load(n, f):
     s = importlib.util.spec_from_file_location(n, f"{R}/code/{f}")
@@ -60,7 +74,7 @@ dD1 = paired(_bm.zmean(expr, _da.D1)[0])
 dC1 = paired(_bm.zmean(expr, _ca.C1)[0])
 r_check = float(np.corrcoef(dD1, dC1)[0, 1])
 assert abs(r_check - A["pearson_r"]) < 1e-3, (r_check, A["pearson_r"])
-os.chdir("/home/claude")
+os.chdir(IR_DOCS)
 
 fig = plt.figure(figsize=(174 * MM, 66 * MM))
 gs = gridspec.GridSpec(1, 3, figure=fig, left=0.062, right=0.988,
@@ -92,23 +106,31 @@ ax.hist(rc, bins=bins, color=C["co"], alpha=0.62, edgecolor="white", lw=0.4,
 ax.hist(rd, bins=bins, color=C["id"], alpha=0.62, edgecolor="white", lw=0.4,
         label="identity-adjusted retention", zorder=3)
 ax.axvline(0.5, ls=(0, (3, 2)), lw=0.8, color=C["ink"], zorder=4)
+# The negative control of 6ae gives this contrast its scale: a random covariate
+# that does not move leaves 1.033 and one matched to D1's fall leaves 0.697.
+for xv, lab in ((1.033, "random, no shift\n1.033 (\u00a76ae)"),
+                (0.697, "random, matched\nto D1 0.697 (\u00a76ae)")):
+    ax.axvline(xv, ls=(0, (1.2, 1.6)), lw=0.9, color=C["muted"], zorder=4)
 ax.set_xlim(0, 2.0)
+
 n_hi = int(sum(1 for v in list(rd) + list(rc) if v > 2.0))
-ax.text(1.98, ax.get_ylim()[1] * 0.62, f"axis trimmed at 2.0;\n{n_hi} values lie above it",
-        fontsize=7.2, color=C["muted"], ha="right", va="top", linespacing=1.3)
+ax.text(1.98, ax.get_ylim()[1] * 0.40, f"axis trimmed at 2.0;\n{n_hi} values lie above it",
+        fontsize=7.2, color=C["muted"], ha="right", va="top", linespacing=1.3,
+        bbox=dict(boxstyle="round,pad=0.18", fc="white", ec="none", alpha=0.85))
 ax.set_xlabel("Retention fraction, single-covariate model")
 ax.set_ylabel("Published liver signatures")
 ax.legend(frameon=False, fontsize=7.2, loc="upper left", handlelength=0.85,
           borderpad=0.1, labelspacing=0.22, handletextpad=0.4,
           bbox_to_anchor=(-0.015, 1.02))
-ax.text(0.985, 0.985,
+ax.text(0.985, 0.72,
         f"below 50%\ncomposition {D['retention_composition_only']['n_below_50pct']}"
         f"\nidentity {D['retention_identity_only']['n_below_50pct']}",
         transform=ax.transAxes, fontsize=7.2, color=C["ink"], ha="right",
         va="top")
 ax.set_title(f"medians {D['retention_composition_only']['median']:.3f} "
-             f"and {D['retention_identity_only']['median']:.3f}",
-             fontsize=7.2, pad=4, color=C["muted"])
+             f"and {D['retention_identity_only']['median']:.3f}\ndotted: "
+             f"\u00a76ae random covariates, 1.033 and 0.697",
+             fontsize=7.2, pad=4, color=C["muted"], linespacing=1.3)
 for s in ("top", "right"):
     ax.spines[s].set_visible(False)
 
@@ -121,8 +143,9 @@ ax.axhline(0.5, ls=(0, (3, 2)), lw=0.7, color=C["ink"], alpha=0.55, zorder=2)
 disc = (rc >= 0.90) & (rd < 0.50)
 ax.scatter(rc[~disc], rd[~disc], s=11, color=C["pt"], edgecolor="white",
            lw=0.35, zorder=3)
-ax.scatter(rc[disc], rd[disc], s=13, color=C["bad"], edgecolor="white",
-           lw=0.35, zorder=4)
+# colour alone carried this distinction; the marker carries it too now
+ax.scatter(rc[disc], rd[disc], s=18, marker="s", color=C["bad"],
+           edgecolor="white", lw=0.35, zorder=4)
 for mod, col, lab in [("REDUCTION", C["red"], "REDUCTION"),
                       ("DRAIN", C["dra"], "DRAIN")]:
     m = D["own_modules"][mod]
@@ -135,6 +158,10 @@ for mod, col, lab in [("REDUCTION", C["red"], "REDUCTION"),
                 va="center",
                 arrowprops=dict(arrowstyle="-", lw=0.7, color=col,
                                 shrinkA=1, shrinkB=4))
+_off = int(((rc > lim) | (rd > lim)).sum())
+ax.text(lim - 0.02, 0.06, f"axes trimmed at {lim};\n{_off} of {len(rc)} signatures\nlie outside",
+        fontsize=7.2, color=C["muted"], ha="right", va="bottom", linespacing=1.3,
+        bbox=dict(boxstyle="round,pad=0.18", fc="white", ec="none", alpha=0.85))
 ax.text(0.02, 1.76, f"{int(disc.sum())} signatures kept by\ncomposition "
         f"adjustment,\nremoved by identity", fontsize=7.2, color=C["bad"],
         bbox=dict(facecolor="white", edgecolor="none", alpha=0.9, pad=1.5),
@@ -153,7 +180,7 @@ for xx, L in [(0.004, "a"), (0.337, "b"), (0.670, "c")]:
     fig.text(xx, 0.985, L, fontsize=10, fontweight="bold", color=C["ink"],
              ha="left", va="top")
 
-stem = "/home/claude/Figure6_covariate_comparison"
+stem = f"{IR_DOCS}/Figure6_covariate_comparison"
 fig.savefig(stem + ".png", dpi=300, facecolor="white")
 fig.savefig(stem + ".svg", facecolor="white")
 plt.close(fig)

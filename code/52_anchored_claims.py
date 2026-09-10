@@ -16,7 +16,21 @@ import re
 import statistics as st
 import numpy as np
 
-RESULTS = "/home/claude/rsi/results"
+
+import os as _os, sys as _sys
+_here = _os.path.dirname(_os.path.abspath(__file__))
+_cands = [_here, _os.path.join(_here, "rsi", "code"), _os.path.join(_here, "code"),
+          _os.path.join(_os.path.dirname(_here), "code")]
+if _os.environ.get("IR_ROOT"):
+    _cands.insert(0, _os.path.join(_os.environ["IR_ROOT"], "code"))
+for _c in _cands:
+    if _os.path.exists(_os.path.join(_c, "paths.py")):
+        if _c not in _sys.path:
+            _sys.path.insert(0, _c)
+        break
+from paths import ROOT as IR_ROOT, RESULTS as IR_RESULTS, GENESETS as IR_GENESETS, \
+    DATA as IR_DATA, CODE as IR_CODE, FIGURES as IR_FIGURES, DOCS as IR_DOCS
+RESULTS = f"{IR_RESULTS}"
 
 
 
@@ -92,8 +106,8 @@ def build_anchors():
     add("liver IQR high", r"interquartile range [\d.]+ to ([\d.]+); Supplementary Tables", np.percentile(r14, 75))
     add("liver n below 50%", r"\*\*(\d+) of 119 \(25%\)\*\* fell below 50%", sum(v < .5 for v in r14), tol=0.5)
     add("liver n evaluable", r"Across those (\d+) signatures the identity-retention", len(B14), tol=0.5)
-    add("liver range low", r"ranged from ([\d.]+) to [\d.]+, median 0\.758", min(r14))
-    add("liver range high", r"ranged from [\d.]+ to ([\d.]+), median 0\.758", max(r14))
+    add("liver range low", r"ranged (?:from )?([\d.]+) to [\d.]+, median 0\.758", min(r14))
+    add("liver range high", r"ranged (?:from )?[\d.]+ to ([\d.]+), median 0\.758", max(r14))
 
     # ---- this study's own modules
     add("REDUCTION joint GSE14520", r"REDUCTION retained \*\*(\d+)%\*\* \(intercept \+0\.764",
@@ -177,7 +191,7 @@ def build_anchors():
         abs(GAO["modules"]["REDUCTION"]["unadjusted_mean_delta"]))
     add("mRNA-protein rho", r"\*\*ρ = \+([\d.]+) \(\*P\* = 0\.36\)\*\*", MR["spearman_rho"])
     add("purity vs C1", r"Spearman ρ = \*\*−([\d.]+)\*\*, \*P\* = 1\.2 × 10⁻¹³", abs(HE["purity_vs_C1"]["rho"]))
-    add("purity vs D1", r"\(ρ = \+([\d.]+), \*P\* = 0\.15\)", HE["purity_vs_D1"]["rho"])
+    add("purity vs D1", r"associated \(ρ = \+([\d.]+), \*P\* = 0\.15", HE["purity_vs_D1"]["rho"])
     add("MS abundance rho", r"gives Spearman ρ = \*\*−([\d.]+)\*\*", abs(MS_["predictors"]["mean_abundance"]["spearman_rho"]))
     add("MS coverage rho", r"proteome coverage ρ = \*\*\+([\d.]+)\*\*", MS_["predictors"]["coverage"]["spearman_rho"], tol=0.0006)
     add("CYB5R3 percentile", r"\*\*(\d+)th percentile of abundance\*\*", MS_["own_modules"]["CYB5R3"]["percentile"], tol=0.5)
@@ -239,6 +253,33 @@ def build_anchors():
     add("6ae no-shift median",
         r"does not move between tumor and adjacent tissue leaves a median of (\d+\.\d+)",
         nc["other_pools"]["no_tumor_shift"]["median_of_medians"])
+    RFS = J("MISSING_REGISTERED_6d.json")["rfs_secondary"]
+    add("RFS hazard ratio", r"hazard ratio of \*\*(\d+\.\d+)\*\* per standard deviation",
+        RFS["hr_per_sd"], tol=0.006)
+    add("RFS events", r"(\d+) events against 23", RFS["events"], tol=0.5)
+    add("RFS n", r"recurrence data for (\d+) of the patients", RFS["n"], tol=0.5)
+    HR = J("HC3_AND_REVERSALS.json")
+    add("HC3 GSE14520 increase",
+        r"In GSE14520 the increase is \*\*(\d+)%\*\*, 0\.068 to 0\.102",
+        HR["hc3"]["GSE14520"]["se_increase_pct"], tol=0.6)
+    add("HC3 GSE76427 recomputed",
+        r"recomputation gives (\d+)% instead, 0\.140 to 0\.179",
+        HR["hc3"]["GSE76427"]["se_increase_pct"], tol=0.6)
+    add("HC3 GSE14520 lower",
+        r"the interval is (\d+\.\d+) to 0\.992 in GSE14520",
+        HR["hc3"]["GSE14520"]["ci95_hc3_t"][0])
+    add("HC3 GSE76427 lower",
+        r"and (\d+\.\d+) to 0\.882 in GSE76427",
+        HR["hc3"]["GSE76427"]["ci95_hc3_t"][0])
+    add("reversals GSE14520",
+        r"(\d+) of 119 in GSE14520 and 6 of 103 in TCGA-LIHC",
+        HR["sign_reversals"]["GSE14520"]["n_sign_reversal"], tol=0.5)
+    add("reversals TCGA_LIHC",
+        r"in GSE14520 and (\d+) of 103 in TCGA-LIHC",
+        HR["sign_reversals"]["TCGA_LIHC"]["n_sign_reversal"], tol=0.5)
+    add("reversals kidney",
+        r"the majority in kidney at (\d+) of 15",
+        HR["sign_reversals"]["TCGA_KIRC"]["n_sign_reversal"], tol=0.5)
     add("6ae rising median",
         r"one drawn from genes rising in tumor leaves (\d+\.\d+)",
         nc["other_pools"]["rises_in_tumor"]["median_of_medians"])
@@ -552,7 +593,7 @@ def run_literature(ms: str):
 
 
 if __name__ == "__main__":
-    txt = open("/home/claude/manuscript_v4.md", encoding="utf-8").read()
+    txt = open(f"{IR_DOCS}/manuscript_v4.md", encoding="utf-8").read()
     n, fails, missing = run(txt)
     print(f"{n} anchored claims checked against the archive")
     for f in fails:

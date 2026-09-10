@@ -10,6 +10,20 @@ from matplotlib import gridspec
 import numpy as np
 from PIL import Image
 
+
+import os as _os, sys as _sys
+_here = _os.path.dirname(_os.path.abspath(__file__))
+_cands = [_here, _os.path.join(_here, "rsi", "code"), _os.path.join(_here, "code"),
+          _os.path.join(_os.path.dirname(_here), "code")]
+if _os.environ.get("IR_ROOT"):
+    _cands.insert(0, _os.path.join(_os.environ["IR_ROOT"], "code"))
+for _c in _cands:
+    if _os.path.exists(_os.path.join(_c, "paths.py")):
+        if _c not in _sys.path:
+            _sys.path.insert(0, _c)
+        break
+from paths import ROOT as IR_ROOT, RESULTS as IR_RESULTS, GENESETS as IR_GENESETS, \
+    DATA as IR_DATA, CODE as IR_CODE, FIGURES as IR_FIGURES, DOCS as IR_DOCS
 plt.rcParams.update({
     "font.family": "Liberation Sans", "font.size": 7.2,
     "svg.fonttype": "none", "pdf.fonttype": 42, "axes.linewidth": 0.6,
@@ -21,7 +35,7 @@ C = {"red": "#199e70", "dra": "#d95926", "ink": "#0b0b0b", "muted": "#898781",
      "rule": "#c3c2b7", "pt": "#8d9bb5", "bad": "#d03b3b", "big": "#4a3aa7",
      "small": "#c99a12"}
 
-R = "/home/claude/rsi/results"
+R = f"{IR_RESULTS}"
 A = json.load(open(f"{R}/RETENTION_INTERVALS_6v_GSE14520.json"))
 A2 = json.load(open(f"{R}/RETENTION_INTERVALS_6v_GSE76427.json"))
 S = json.load(open(f"{R}/ESTIMATOR_SIMULATION_6v.json"))
@@ -66,7 +80,8 @@ ax.set_ylim(-0.05, 2.45)
 n_clip = int(sum(1 for r in sig if r.get("ci95_retention_joint", [0, 0])[1] > 2.45))
 ax.text(len(sig) * 0.99, 0.02,
         f"axis trimmed at 2.45; {n_clip} intervals extend above it",
-        fontsize=7.2, color=C["muted"], ha="right", va="bottom")
+        fontsize=7.2, color=C["muted"], ha="right", va="bottom",
+        bbox=dict(boxstyle="round,pad=0.18", fc="white", ec="none", alpha=0.85))
 ax.set_xlabel("Signatures, ranked by retention")
 ax.set_ylabel("Identity-retention fraction\nwith 95% bootstrap interval")
 ax.set_title(f"GSE14520, {A['n_pairs']} pairs", fontsize=7.2, pad=4,
@@ -89,11 +104,13 @@ for arr, col in ((w2, C["small"]), (w1, C["big"])):
     ax.axvline(np.median(arr), lw=1.1, color=col, ls=":", zorder=4)
 ax.legend(frameon=False, fontsize=7.2, loc="upper right", handlelength=0.9,
           borderpad=0.1, labelspacing=0.22, handletextpad=0.4)
-ax.text(0.985, 0.60, f"median width\n{np.median(w1):.3f} and {np.median(w2):.3f}\n"
-        f"supported below 50%\n{A['n_below_50_interval']} and "
-        f"{A2['n_below_50_interval']}",
+ax.text(0.985, 0.60,
+        f"GSE14520  width {np.median(w1):.3f}, {A['n_below_50_interval']} "
+        f"supported below 50%\n"
+        f"GSE76427  width {np.median(w2):.3f}, {A2['n_below_50_interval']} "
+        f"supported below 50%",
         transform=ax.transAxes, fontsize=7.2, color=C["ink"], ha="right",
-        va="top")
+        va="top", linespacing=1.35)
 ax.set_xlabel("Width of the 95% interval")
 ax.set_ylabel("Signatures")
 ax.set_title("Precision depends on the number of pairs", fontsize=7.2, pad=4,
@@ -106,14 +123,18 @@ ax = fig.add_subplot(gs[1, 0])
 cells = [c for c in S["cells"] if c["mu"] == 0.50 and c["comp_share"] == 0.0]
 sigmas = sorted({c["sigma"] for c in cells})
 cols = {0.25: "#199e70", 0.50: "#4a3aa7", 1.00: "#d03b3b"}
+# The three noise levels were separated by color alone, and the pair carrying
+# the contrast was green against red. Marker and dash carry it too now.
+MARK = {0.25: "o", 0.50: "s", 1.00: "^"}
+DASH = {0.25: "-", 0.50: (0, (4, 1.6)), 1.00: (0, (1.4, 1.4))}
 ax.plot([0, 1.1], [0, 1.1], lw=0.9, color=C["rule"], zorder=1)
 for s in sigmas:
     cc = sorted([c for c in cells if c["sigma"] == s], key=lambda c: c["tau"])
     t = [c["tau"] for c in cc]; m = [c["median_estimate"] for c in cc]
     q1 = [c["iqr_estimate"][0] for c in cc]; q3 = [c["iqr_estimate"][1] for c in cc]
     ax.fill_between(t, q1, q3, color=cols[s], alpha=0.13, lw=0, zorder=2)
-    ax.plot(t, m, "-o", lw=1.1, ms=3.2, color=cols[s], zorder=3,
-            label=f"σ = {s:.2f}")
+    ax.plot(t, m, lw=1.1, ms=3.4, color=cols[s], zorder=3,
+            marker=MARK[s], ls=DASH[s], label=f"σ = {s:.2f}")
 ax.annotate("upward bias only where\ntrue retention is near zero\nand noise is high",
             xy=(0.10, 0.154), xytext=(0.30, 0.10), fontsize=7.2, color=C["bad"],
             ha="left", va="center",
@@ -135,7 +156,7 @@ ax.axhspan(0.92, 0.97, color=C["rule"], alpha=0.30, lw=0, zorder=1)
 ax.axhline(0.95, lw=0.8, color=C["ink"], ls=(0, (3, 2)), zorder=2)
 jit = {0.25: -0.022, 0.50: 0.0, 1.00: 0.022}
 for c in S["cells"]:
-    ax.plot(c["tau"] + jit[c["sigma"]], c["coverage_95"], "o", ms=3.6,
+    ax.plot(c["tau"] + jit[c["sigma"]], c["coverage_95"], MARK[c["sigma"]], ms=3.6,
             color=cols[c["sigma"]], alpha=0.85, zorder=3,
             markeredgecolor="white", markeredgewidth=0.35)
 ax.text(1.09, 0.9015, "shaded: the 0.92 to 0.97 band fixed in §6v",
@@ -155,7 +176,7 @@ for xx, yy, L in [(0.004, 0.985, "a"), (0.505, 0.985, "b"),
     fig.text(xx, yy, L, fontsize=10, fontweight="bold", color=C["ink"],
              ha="left", va="top")
 
-stem = "/home/claude/Figure7_uncertainty_and_recovery"
+stem = f"{IR_DOCS}/Figure7_uncertainty_and_recovery"
 fig.savefig(stem + ".png", dpi=300, facecolor="white")
 fig.savefig(stem + ".svg", facecolor="white")
 plt.close(fig)

@@ -21,10 +21,24 @@ import sys
 import numpy as np
 import pandas as pd
 
-sys.path.insert(0, "/home/claude/rsi/code")
+import os as _os, sys as _sys
+_here = _os.path.dirname(_os.path.abspath(__file__))
+_cands = [_here, _os.path.join(_here, "rsi", "code"), _os.path.join(_here, "code"),
+          _os.path.join(_os.path.dirname(_here), "code")]
+if _os.environ.get("IR_ROOT"):
+    _cands.insert(0, _os.path.join(_os.environ["IR_ROOT"], "code"))
+for _c in _cands:
+    if _os.path.exists(_os.path.join(_c, "paths.py")):
+        if _c not in _sys.path:
+            _sys.path.insert(0, _c)
+        break
+from paths import ROOT as IR_ROOT, RESULTS as IR_RESULTS, GENESETS as IR_GENESETS, \
+    DATA as IR_DATA, CODE as IR_CODE, FIGURES as IR_FIGURES, DOCS as IR_DOCS
+sys.path.insert(0, f"{IR_ROOT}/code")
 import rsi_config as cfg  # noqa: E402
 
-RES = "/home/claude/rsi/results"
+
+RES = f"{IR_RESULTS}"
 TUMOR = {"GSE14520": "HCC tumor",
          "GSE76427": "primary hepatocellular carcinoma tumor"}
 D1 = ["ALB", "TTR", "TF", "SERPINA1", "AHSG", "APOH", "FGA", "FGB", "FGG", "F2",

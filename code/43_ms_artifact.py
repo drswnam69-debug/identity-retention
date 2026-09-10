@@ -12,15 +12,29 @@ import json, os, sys, importlib.util
 import numpy as np, pandas as pd
 from scipy.stats import spearmanr
 
+import os as _os, sys as _sys
+_here = _os.path.dirname(_os.path.abspath(__file__))
+_cands = [_here, _os.path.join(_here, "rsi", "code"), _os.path.join(_here, "code"),
+          _os.path.join(_os.path.dirname(_here), "code")]
+if _os.environ.get("IR_ROOT"):
+    _cands.insert(0, _os.path.join(_os.environ["IR_ROOT"], "code"))
+for _c in _cands:
+    if _os.path.exists(_os.path.join(_c, "paths.py")):
+        if _c not in _sys.path:
+            _sys.path.insert(0, _c)
+        break
+from paths import ROOT as IR_ROOT, RESULTS as IR_RESULTS, GENESETS as IR_GENESETS, \
+    DATA as IR_DATA, CODE as IR_CODE, FIGURES as IR_FIGURES, DOCS as IR_DOCS
 HERE=os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0,HERE)
 def _l(n,f):
     s=importlib.util.spec_from_file_location(n,os.path.join(HERE,f))
     m=importlib.util.module_from_spec(s); s.loader.exec_module(m); return m
 import rsi_config as cfg
+
 ALIAS={"MTARC1":"MARC1","MTARC2":"MARC2","G6PC1":"G6PC"}
 RHO=-0.30
 
-df=pd.read_csv("/home/claude/gao_proteins.tsv",sep="\t",index_col=0,low_memory=False)
+df=pd.read_csv(f"{IR_DOCS}/gao_proteins.tsv",sep="\t",index_col=0,low_memory=False)
 df.index=[str(i).strip() for i in df.index]
 df=df[[c for c in df.columns if str(c).strip()]].apply(pd.to_numeric,errors="coerce")
 abund=df.mean(axis=1)

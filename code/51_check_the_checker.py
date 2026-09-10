@@ -6,7 +6,31 @@ copies of the manuscript and confirms each one is caught.
 """
 import os, re, shutil, subprocess, sys, tempfile
 
-HOME = "/home/claude"
+
+import os as _os, sys as _sys
+import os as _os, sys as _sys
+_here = _os.path.dirname(_os.path.abspath(__file__))
+_cands = [_here, _os.path.join(_here, "rsi", "code"), _os.path.join(_here, "code"),
+          _os.path.join(_os.path.dirname(_here), "code")]
+if _os.environ.get("IR_ROOT"):
+    _cands.insert(0, _os.path.join(_os.environ["IR_ROOT"], "code"))
+for _c in _cands:
+    if _os.path.exists(_os.path.join(_c, "paths.py")):
+        if _c not in _sys.path:
+            _sys.path.insert(0, _c)
+        break
+from paths import ROOT as IR_ROOT, RESULTS as IR_RESULTS, GENESETS as IR_GENESETS, \
+    DATA as IR_DATA, CODE as IR_CODE, FIGURES as IR_FIGURES, DOCS as IR_DOCS
+_here = _os.path.dirname(_os.path.abspath(__file__))
+for _c in (_here, _os.path.join(_here, "rsi", "code"), _os.path.join(_here, "code"),
+           _os.path.join(_os.path.dirname(_here), "code")):
+    if _os.path.exists(_os.path.join(_c, "paths.py")):
+        if _c not in _sys.path:
+            _sys.path.insert(0, _c)
+        break
+from paths import ROOT as IR_ROOT, RESULTS as IR_RESULTS, CODE as IR_CODE, DOCS as IR_DOCS
+
+HOME = IR_DOCS
 SRC = f"{HOME}/manuscript_v4.md"
 CHK = f"{HOME}/rsi/code/50_consistency_check.py"
 
@@ -15,15 +39,26 @@ MUTATIONS = [
     ("alt text describing the wrong figure",
      "**Figure 8.** Four panels on precision and estimator behavior",
      "**Figure 9.** Four panels on precision and estimator behavior",
-     "/home/claude/submission_GigaScience/06_Figure_alt_text.md"),
+     f"{IR_DOCS}/submission_GigaScience/06_Figure_alt_text.md"),
     ("the cover letter claiming a benchmark the manuscript declines",
      "The premise check and the ratio-stability guard live inside that function",
      "Adjusting for identity is not what adjusting for tumor purity does. "
      "The premise check and the ratio-stability guard live inside that function",
-     "/home/claude/CoverLetter_GigaScience.md"),
+     f"{IR_DOCS}/CoverLetter_GigaScience.md"),
     ("a literature-sourced percentage silently changed",
      "cirrhosis was recorded in **54%** of the 115 patients",
      "cirrhosis was recorded in **58%** of the 115 patients"),
+    ("the non-replication dropped from the abstract",
+     "nor did the worked example replicate on RNA sequencing, and one",
+     "and one"),
+    ("an amendment that fixes an outcome dropped from the manuscript",
+     "\u00a76ab", "that amendment"),
+    ("the letter's word count left stale",
+     "about 20,400 words with 12 figures", "about 15,000 words with 12 figures",
+     f"{IR_DOCS}/CoverLetter_GigaScience.md"),
+    ("a figure script using a glyph the font lacks",
+     'r"$9.1 \\times 10^{-10}$"', '"9.1 \\u00d7 10\\u207b\\u00b9\\u2070"',
+     f"{IR_DOCS}/make_figure5.py"),
     ("a British spelling the old word list missed",
      "the dotted gray lines mark", "the dotted grey lines mark"),
     ("Acknowledgements in the British form",
@@ -39,7 +74,7 @@ MUTATIONS = [
     ("a British spelling left in the cover letter",
      "A tumor specimen and the adjacent tissue",
      "A tumour specimen and the adjacent tissue",
-     "/home/claude/CoverLetter_GigaScience.md"),
+     f"{IR_DOCS}/CoverLetter_GigaScience.md"),
     ("the cover letter left disagreeing with the manuscript's amendment count",
      "Five amendments in all are not pre-registered",
      "Six amendments in all are not pre-registered"),
@@ -101,7 +136,12 @@ MUTATIONS = [
 
 
 def run(path: str) -> str:
+    # The checker copy runs from a temporary directory, so the archive cannot be
+    # found by walking up from it. IR_ROOT and IR_DOCS say where both are; this
+    # is also the exercise that proves those overrides work.
     env = dict(os.environ)
+    env["IR_ROOT"] = IR_ROOT
+    env["IR_DOCS"] = IR_DOCS
     src = open(CHK, encoding="utf-8").read().replace(
         f'MS = f"{{HOME}}/manuscript_v4.md"', f'MS = "{path}"')
     tmp = path + ".checker.py"
@@ -136,9 +176,9 @@ def main() -> int:
             continue
         p = os.path.join(tmpdir, "manuscript_v4.md")
         open(p, "w", encoding="utf-8").write(base if target else
-                                             src.replace(old, new, 1))
+                                             src.replace(old, new))
         if target:
-            open(target, "w", encoding="utf-8").write(src.replace(old, new, 1))
+            open(target, "w", encoding="utf-8").write(src.replace(old, new))
         try:
             out = run(p)
         finally:

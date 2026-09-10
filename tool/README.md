@@ -65,3 +65,20 @@ Adjusting for non-parenchymal content is not this. In one liver cohort it remove
 essentially nothing (median 1.03 of the shift left standing) where identity
 adjustment left 0.70; in lung it removed *more* than identity adjustment did.
 Pass `composition_genes` to include it alongside, not instead.
+
+## Arguments worth knowing about
+
+`min_genes` defaults to **10**. A signature with fewer symbols on the platform
+gets no fraction and a stated reason, which is deliberate: a mean over three
+genes is not a signature score. The source study's own modules have three and
+four genes, so the pipeline calls the function with `min_genes=2` and reports
+them as a worked example rather than as a benchmarked signature. If you are
+scoring a small module, set it yourself and know that you have.
+
+`n_boot` defaults to 2000. Setting it to 0 returns the point estimate with no
+interval and judges stability from the paired shift's own standard error
+instead of from a bootstrap; the returned notes say so.
+
+`composition_genes` is optional. Passing it fits the joint model, which is what
+the source study reports as its primary; omitting it fits the identity-only
+model, whose values that study labels as such.

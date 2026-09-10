@@ -9,6 +9,20 @@ import numpy as np
 from scipy.stats import spearmanr
 from PIL import Image
 
+
+import os as _os, sys as _sys
+_here = _os.path.dirname(_os.path.abspath(__file__))
+_cands = [_here, _os.path.join(_here, "rsi", "code"), _os.path.join(_here, "code"),
+          _os.path.join(_os.path.dirname(_here), "code")]
+if _os.environ.get("IR_ROOT"):
+    _cands.insert(0, _os.path.join(_os.environ["IR_ROOT"], "code"))
+for _c in _cands:
+    if _os.path.exists(_os.path.join(_c, "paths.py")):
+        if _c not in _sys.path:
+            _sys.path.insert(0, _c)
+        break
+from paths import ROOT as IR_ROOT, RESULTS as IR_RESULTS, GENESETS as IR_GENESETS, \
+    DATA as IR_DATA, CODE as IR_CODE, FIGURES as IR_FIGURES, DOCS as IR_DOCS
 plt.rcParams.update({
     "font.family": "Liberation Sans", "font.size": 7.2,
     "svg.fonttype": "none", "pdf.fonttype": 42, "axes.linewidth": 0.6,
@@ -19,7 +33,7 @@ MM = 1 / 25.4
 C = {"red": "#199e70", "dra": "#d95926", "ink": "#0b0b0b", "muted": "#898781",
      "rule": "#c3c2b7", "arr": "#4a3aa7", "seq": "#c99a12", "bad": "#d03b3b",
      "pt": "#8d9bb5"}
-R = "/home/claude/rsi/results"
+R = f"{IR_RESULTS}"
 G = json.load(open(f"{R}/SIGNATURE_BENCHMARK_GSE14520.json"))
 T = json.load(open(f"{R}/SIGNATURE_BENCHMARK_TCGA_LIHC.json"))
 K = json.load(open(f"{R}/TCGA_LIHC/CONSOLIDATED_6w.json"))
@@ -52,7 +66,8 @@ ax.set_ylim(0, 34)
 n_off = int((gv > 2.0).sum() + (tv > 2.0).sum())
 ax.text(0.985, 0.30, f"axis trimmed at 2.0;\n{n_off} of {len(gv) + len(tv)} sets lie above it",
         transform=ax.transAxes, fontsize=7.2, color=C["muted"], ha="right", va="top",
-        linespacing=1.3)
+        linespacing=1.3,
+        bbox=dict(boxstyle="round,pad=0.18", fc="white", ec="none", alpha=0.85))
 ax.set_xlabel("Identity-retention fraction")
 ax.set_ylabel("Published liver signatures")
 ax.set_title("The distribution replicates across platform", fontsize=7.2,
@@ -72,6 +87,10 @@ ax.axvline(0.5, ls=(0, (3, 2)), lw=0.7, color=C["ink"], alpha=0.5, zorder=2)
 ax.axhline(0.5, ls=(0, (3, 2)), lw=0.7, color=C["ink"], alpha=0.5, zorder=2)
 ax.scatter(x, y, s=12, color=C["pt"], edgecolor="white", lw=0.35, zorder=3)
 ax.set_xlim(0, lim); ax.set_ylim(0, lim)
+_off = int(((x > lim) | (y > lim)).sum())
+ax.text(lim - 0.03, 0.05, f"axes trimmed at {lim};\n{_off} of {len(x)} lie outside",
+        fontsize=7.2, color=C["muted"], ha="right", va="bottom", linespacing=1.3,
+        bbox=dict(boxstyle="round,pad=0.18", fc="white", ec="none", alpha=0.85))
 ax.set_aspect("equal", adjustable="box")
 ax.set_xlabel("Retention in GSE14520 (array)")
 ax.set_ylabel("Retention in TCGA-LIHC (RNA-seq)")
@@ -159,7 +178,7 @@ for xx_, yy_, L in [(0.004, 0.985, "a"), (0.505, 0.985, "b"),
     fig.text(xx_, yy_, L, fontsize=10, fontweight="bold", color=C["ink"],
              ha="left", va="top")
 
-stem = "/home/claude/Figure8_third_cohort"
+stem = f"{IR_DOCS}/Figure8_third_cohort"
 fig.savefig(stem + ".png", dpi=300, facecolor="white")
 fig.savefig(stem + ".svg", facecolor="white")
 plt.close(fig)

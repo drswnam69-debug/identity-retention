@@ -21,6 +21,19 @@ import numpy as np
 import pandas as pd
 from scipy.stats import wilcoxon
 
+import os as _os, sys as _sys
+_here = _os.path.dirname(_os.path.abspath(__file__))
+_cands = [_here, _os.path.join(_here, "rsi", "code"), _os.path.join(_here, "code"),
+          _os.path.join(_os.path.dirname(_here), "code")]
+if _os.environ.get("IR_ROOT"):
+    _cands.insert(0, _os.path.join(_os.environ["IR_ROOT"], "code"))
+for _c in _cands:
+    if _os.path.exists(_os.path.join(_c, "paths.py")):
+        if _c not in _sys.path:
+            _sys.path.insert(0, _c)
+        break
+from paths import ROOT as IR_ROOT, RESULTS as IR_RESULTS, GENESETS as IR_GENESETS, \
+    DATA as IR_DATA, CODE as IR_CODE, FIGURES as IR_FIGURES, DOCS as IR_DOCS
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 
@@ -37,6 +50,7 @@ _ca = _load("compadj", "18_composition_adjust.py")
 ols_ci, D1, D2_EXTRA = _da.ols_ci, _da.D1, _da.D2_EXTRA
 C1 = _ca.C1
 import rsi_config as cfg  # noqa: E402
+
 
 # Symbols retired in the 2019 annotation used by the source table. Only
 # unambiguous, one-to-one renames, applied so that a locked gene list written in
@@ -71,7 +85,7 @@ def zmean(mat: pd.DataFrame, genes):
 
 
 def main() -> None:
-    src = sys.argv[1] if len(sys.argv) > 1 else "/home/claude/gao_proteins.tsv"
+    src = sys.argv[1] if len(sys.argv) > 1 else f"{IR_DOCS}/gao_proteins.tsv"
     label = sys.argv[2] if len(sys.argv) > 2 else "Gao2019"
     df = pd.read_csv(src, sep="\t", index_col=0, low_memory=False)
     df.index = [str(i).strip() for i in df.index]

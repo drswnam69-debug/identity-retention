@@ -25,6 +25,7 @@ benchmark, and neither changes a reported value on its own.
 """
 from __future__ import annotations
 
+import csv
 import json
 import os
 import sys
@@ -32,9 +33,23 @@ import sys
 import numpy as np
 import pandas as pd
 
-sys.path.insert(0, "/home/claude/rsi/code")
-RES = "/home/claude/rsi/results"
-GS = "/home/claude/rsi/genesets"
+import os as _os, sys as _sys
+_here = _os.path.dirname(_os.path.abspath(__file__))
+_cands = [_here, _os.path.join(_here, "rsi", "code"), _os.path.join(_here, "code"),
+          _os.path.join(_os.path.dirname(_here), "code")]
+if _os.environ.get("IR_ROOT"):
+    _cands.insert(0, _os.path.join(_os.environ["IR_ROOT"], "code"))
+for _c in _cands:
+    if _os.path.exists(_os.path.join(_c, "paths.py")):
+        if _c not in _sys.path:
+            _sys.path.insert(0, _c)
+        break
+from paths import ROOT as IR_ROOT, RESULTS as IR_RESULTS, GENESETS as IR_GENESETS, \
+    DATA as IR_DATA, CODE as IR_CODE, FIGURES as IR_FIGURES, DOCS as IR_DOCS
+sys.path.insert(0, f"{IR_ROOT}/code")
+
+RES = f"{IR_RESULTS}"
+GS = f"{IR_GENESETS}"
 SEED = 20260909
 N_DRAWS = 200
 
@@ -125,6 +140,10 @@ def main():
           f"D1's mean fall and within 1.5 of its mean expression")
     rng = np.random.default_rng(SEED)
     meds, below, corr = [], [], []
+    # Figure 12 plots one point per draw. Recording the draws here, inside the
+    # run that writes the summary, is what keeps the figure and the archive
+    # from describing two different realizations of the same pools.
+    draws = []
     for _ in range(N_DRAWS):
         pick = list(rng.choice(cand, size=len(d1_present), replace=False))
         d_r = score(dz, index, pick)
@@ -139,6 +158,8 @@ def main():
         vals = np.array(vals)
         meds.append(float(np.median(vals)))
         below.append(int((vals < 0.5).sum()))
+        draws.append(("matched", round(float(d_r.mean()), 6),
+                      round(float(np.median(vals)), 6), int((vals < 0.5).sum())))
         common = [base[s["name"]] for s in ok
                   if s["name"] in base and len([x for x in sets.get(s["name"], [])
                                                 if x in index]) >= 10]
@@ -158,6 +179,18 @@ def main():
     p_med = float((np.array(meds) <= real_med).mean())
     print(f"     fraction of random covariates giving a median at or below "
           f"D1's: {p_med:.3f}")
+
+    # C1 on its own, the comparator Figure 12b marks beside D1
+    X_c1 = np.column_stack([ones, d_c1])
+    c1_vals = []
+    for s in ok:
+        g = [x for x in sets.get(s["name"], []) if x in index]
+        if len(g) < 10:
+            continue
+        c1_vals.append(retention(score(dz, index, g), X_c1)[0])
+    c1_vals = np.array(c1_vals)
+    c1_med = float(np.median(c1_vals))
+    c1_below = int((c1_vals < 0.5).sum())
 
     # ---- A2. what governs what a covariate removes? -------------------------
     # If a matched falling covariate behaves like D1, the next question is
@@ -181,6 +214,9 @@ def main():
                 vals.append(retention(score(dz, index, g), Xr)[0])
             vals = np.array(vals)
             m2.append(float(np.median(vals))); b2.append(int((vals < 0.5).sum()))
+            dr = score(dz, index, pick)
+            draws.append((label, round(float(dr.mean()), 6),
+                          round(float(np.median(vals)), 6), int((vals < 0.5).sum())))
         arm_out[label] = {"pool_size": len(cands),
                           "median_of_medians": round(float(np.median(m2)), 4),
                           "median_ci95": [round(float(np.percentile(m2, 2.5)), 4),
@@ -243,6 +279,20 @@ def main():
                    float(pd.Series(lin).corr(pd.Series(quad), method="spearman")), 4)}}
     with open(f"{RES}/NEGATIVE_CONTROL_6ae.json", "w") as fh:
         json.dump(out, fh, indent=1)
+    # the per-draw record Figure 12 is drawn from, and the two study covariates
+    # it marks, both written by the run that wrote the summary above
+    with open(f"{RES}/NEGATIVE_CONTROL_6ae_draws.csv", "w", newline="") as fh:
+        w = csv.writer(fh)
+        w.writerow(["pool", "covariate_mean_paired_shift",
+                    "median_retention", "n_below_50"])
+        w.writerows(draws)
+    with open(f"{RES}/NEGATIVE_CONTROL_6ae_reference.json", "w") as fh:
+        json.dump({"D1": {"shift": round(float(d_d1.mean()), 4),
+                          "median": round(real_med, 4),
+                          "n_below_50": real_below},
+                   "C1_alone": {"shift": round(float(d_c1.mean()), 4),
+                                "median": round(c1_med, 4),
+                                "n_below_50": c1_below}}, fh, indent=1)
     print("\nwrote results/NEGATIVE_CONTROL_6ae.json")
 
 

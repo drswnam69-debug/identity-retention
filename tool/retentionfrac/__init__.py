@@ -19,7 +19,7 @@ from typing import Sequence
 import numpy as np
 
 __all__ = ["identity_retention", "RetentionResult"]
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 
 
 @dataclass
@@ -154,16 +154,28 @@ def identity_retention(expr, tumor_samples: Sequence, adjacent_samples: Sequence
     unadj = float(d_sig.mean())
     a0 = _ols_intercept(d_sig, X)
 
-    rng = np.random.default_rng(seed)
-    IDX = rng.integers(0, n, size=(n_boot, n))
-    den = d_sig[IDX].mean(axis=1)
-    d_lo, d_hi = np.percentile(den, [2.5, 97.5])
-    stable = not (d_lo <= 0.0 <= d_hi)
+    # n_boot = 0 asks for the point estimate without an interval. It used to
+    # reach np.percentile on an empty array and raise IndexError, which is a
+    # poor answer to a reasonable request; the stability guard then falls back
+    # to the sign test on the paired shift itself.
+    if n_boot and n_boot > 0:
+        rng = np.random.default_rng(seed)
+        IDX = rng.integers(0, n, size=(n_boot, n))
+        den = d_sig[IDX].mean(axis=1)
+        d_lo, d_hi = np.percentile(den, [2.5, 97.5])
+        stable = not (d_lo <= 0.0 <= d_hi)
+    else:
+        IDX = None
+        se = float(np.std(d_sig, ddof=1) / np.sqrt(n)) if n > 1 else float("inf")
+        stable = abs(float(d_sig.mean())) > 1.96 * se
+        notes.append("no bootstrap was requested, so the interval is not "
+                     "reported and stability is judged from the paired shift's "
+                     "own standard error")
     if not stable:
         notes.append("the unadjusted shift is not reliably different from zero, "
                      "so the ratio has no stable interval; nothing to retain")
     ci = None
-    if stable:
+    if stable and IDX is not None:
         Xb = X[IDX]
         beta = np.linalg.solve(np.einsum("bij,bik->bjk", Xb, Xb),
                                np.einsum("bij,bi->bj", Xb, d_sig[IDX])[..., None])[..., 0]

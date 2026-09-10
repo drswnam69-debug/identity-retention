@@ -8,6 +8,20 @@ from matplotlib import gridspec
 import numpy as np
 from PIL import Image
 
+
+import os as _os, sys as _sys
+_here = _os.path.dirname(_os.path.abspath(__file__))
+_cands = [_here, _os.path.join(_here, "rsi", "code"), _os.path.join(_here, "code"),
+          _os.path.join(_os.path.dirname(_here), "code")]
+if _os.environ.get("IR_ROOT"):
+    _cands.insert(0, _os.path.join(_os.environ["IR_ROOT"], "code"))
+for _c in _cands:
+    if _os.path.exists(_os.path.join(_c, "paths.py")):
+        if _c not in _sys.path:
+            _sys.path.insert(0, _c)
+        break
+from paths import ROOT as IR_ROOT, RESULTS as IR_RESULTS, GENESETS as IR_GENESETS, \
+    DATA as IR_DATA, CODE as IR_CODE, FIGURES as IR_FIGURES, DOCS as IR_DOCS
 plt.rcParams.update({
     "font.family": "Liberation Sans", "font.size": 7.2,
     "svg.fonttype": "none", "pdf.fonttype": 42, "axes.linewidth": 0.6,
@@ -18,7 +32,7 @@ MM = 1 / 25.4
 C = {"liv": "#4a3aa7", "lun": "#199e70", "kid": "#d95926", "ink": "#0b0b0b",
      "muted": "#898781", "rule": "#c3c2b7", "id": "#4a3aa7", "co": "#c99a12",
      "bad": "#d03b3b", "pt": "#8d9bb5"}
-R = "/home/claude/rsi/results"
+R = f"{IR_RESULTS}"
 B = {k: json.load(open(f"{R}/SIGNATURE_BENCHMARK_{v}.json"))
      for k, v in [("liver", "GSE14520"), ("lung", "TCGA_LUAD"), ("kidney", "TCGA_KIRC")]}
 PK = json.load(open(f"{R}/TCGA_KIRC/PREMISE_6x.json"))
@@ -183,7 +197,7 @@ for xx, yy, L in [(0.004, 0.985, "a"), (0.505, 0.985, "b"),
     fig.text(xx, yy, L, fontsize=10, fontweight="bold", color=C["ink"],
              ha="left", va="top")
 
-stem = "/home/claude/Figure9_three_tissues"
+stem = f"{IR_DOCS}/Figure9_three_tissues"
 fig.savefig(stem + ".png", dpi=300, facecolor="white")
 fig.savefig(stem + ".svg", facecolor="white")
 plt.close(fig)

@@ -7,8 +7,22 @@ Same scoring and adjustment as the archived pipeline."""
 import sys, json, os
 import numpy as np, pandas as pd
 from scipy.stats import wilcoxon
-sys.path.insert(0, "/home/claude/rsi/code")
+import os as _os, sys as _sys
+_here = _os.path.dirname(_os.path.abspath(__file__))
+_cands = [_here, _os.path.join(_here, "rsi", "code"), _os.path.join(_here, "code"),
+          _os.path.join(_os.path.dirname(_here), "code")]
+if _os.environ.get("IR_ROOT"):
+    _cands.insert(0, _os.path.join(_os.environ["IR_ROOT"], "code"))
+for _c in _cands:
+    if _os.path.exists(_os.path.join(_c, "paths.py")):
+        if _c not in _sys.path:
+            _sys.path.insert(0, _c)
+        break
+from paths import ROOT as IR_ROOT, RESULTS as IR_RESULTS, GENESETS as IR_GENESETS, \
+    DATA as IR_DATA, CODE as IR_CODE, FIGURES as IR_FIGURES, DOCS as IR_DOCS
+sys.path.insert(0, f"{IR_ROOT}/code")
 import rsi_config as cfg
+
 
 D1 = ["ALB","TTR","TF","SERPINA1","AHSG","APOH","FGA","FGB","FGG","F2","CPS1","OTC","ARG1",
       "TAT","G6PC1","PCK1","ASGR1","HNF4A","HNF1A","FOXA1","FOXA2","NR1H4"]
@@ -22,8 +36,8 @@ TUMOR = {"GSE14520": "HCC tumor",
          "GSE76427": "primary hepatocellular carcinoma tumor"}
 
 def load(cohort):
-    expr = pd.read_csv(f"/home/claude/rsi/data/{cohort}_symbols.tsv.gz", sep="\t", index_col=0)
-    ph = pd.read_csv(f"/home/claude/rsi/results/{cohort}/phenotype.tsv", sep="\t")
+    expr = pd.read_csv(f"{IR_DATA}/{cohort}_symbols.tsv.gz", sep="\t", index_col=0)
+    ph = pd.read_csv(f"{IR_RESULTS}/{cohort}/phenotype.tsv", sep="\t")
     sc = SAMPLE_COL[cohort]
     ph = ph[ph[sc].isin(expr.columns)]
     tum = ph[ph.tissue == TUMOR[cohort]]
@@ -65,7 +79,7 @@ for cohort in ("GSE14520", "GSE76427"):
     #    (0.3349 against 0.3361) because the pipeline's own gene handling is not
     #    reproduced by a fresh z-mean, and the archive must carry the value the
     #    manuscript reports, not a near miss.
-    rsi_tab = pd.read_csv(f"/home/claude/rsi/results/{cohort}/rsi.tsv",
+    rsi_tab = pd.read_csv(f"{IR_RESULTS}/{cohort}/rsi.tsv",
                           sep="\t", index_col=0)
     s1, _ = zmean(expr, D1); c1, _ = zmean(expr, C1)
     sup = rsi_tab["z_supply"]
@@ -99,5 +113,5 @@ for c in ("TCGA_LIHC", "TCGA_LUAD", "TCGA_KIRC"):
     else:
         print(f"{c}: source matrix not present in this container")
 out["tcga_total_samples"] = tot
-json.dump(out, open("/home/claude/rsi/results/ARCHIVE_GAPS_2026-09-09.json", "w"), indent=1)
+json.dump(out, open(f"{IR_RESULTS}/ARCHIVE_GAPS_2026-09-09.json", "w"), indent=1)
 print("\nwrote results/ARCHIVE_GAPS_2026-09-09.json")

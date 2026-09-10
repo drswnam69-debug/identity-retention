@@ -23,9 +23,23 @@ import numpy as np
 import pandas as pd
 from scipy.stats import wilcoxon
 
+import os as _os, sys as _sys
+_here = _os.path.dirname(_os.path.abspath(__file__))
+_cands = [_here, _os.path.join(_here, "rsi", "code"), _os.path.join(_here, "code"),
+          _os.path.join(_os.path.dirname(_here), "code")]
+if _os.environ.get("IR_ROOT"):
+    _cands.insert(0, _os.path.join(_os.environ["IR_ROOT"], "code"))
+for _c in _cands:
+    if _os.path.exists(_os.path.join(_c, "paths.py")):
+        if _c not in _sys.path:
+            _sys.path.insert(0, _c)
+        break
+from paths import ROOT as IR_ROOT, RESULTS as IR_RESULTS, GENESETS as IR_GENESETS, \
+    DATA as IR_DATA, CODE as IR_CODE, FIGURES as IR_FIGURES, DOCS as IR_DOCS
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
-RES = "/home/claude/rsi/results"
+
+RES = f"{IR_RESULTS}"
 
 PANEL = ["CYB5R3", "CYB5R1", "AIFM2", "NQO1", "MTARC1", "MTARC2", "POR"]
 ALIAS = {"MTARC1": "MARC1", "MTARC2": "MARC2", "G6PC1": "G6PC"}
@@ -73,7 +87,7 @@ def proteome(path: str, label: str) -> dict:
 
 def tcga_lihc() -> dict:
     """TCGA-LIHC paired tumor and adjacent normal, barcode-matched by patient."""
-    df = pd.read_csv("/home/claude/rsi/data/TCGA_LIHC_symbols.tsv.gz",
+    df = pd.read_csv(f"{IR_DATA}/TCGA_LIHC_symbols.tsv.gz",
                      sep="\t", index_col=0, low_memory=False)
     df = df.apply(pd.to_numeric, errors="coerce")
     pt, pn = {}, {}
@@ -94,8 +108,8 @@ def tcga_lihc() -> dict:
 
 def main() -> None:
     out = {"note": "archive gap fill; recomputed, no reported result changes",
-           "Gao2019": proteome("/home/claude/gao_proteins.tsv", "Gao2019"),
-           "Jiang2019": proteome("/home/claude/jiang_proteins_renamed.tsv",
+           "Gao2019": proteome(f"{IR_DOCS}/gao_proteins.tsv", "Gao2019"),
+           "Jiang2019": proteome(f"{IR_DOCS}/jiang_proteins_renamed.tsv",
                                  "Jiang2019"),
            "TCGA_LIHC": tcga_lihc()}
     for k in ("Gao2019", "Jiang2019", "TCGA_LIHC"):

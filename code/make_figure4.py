@@ -10,6 +10,19 @@ from matplotlib import gridspec
 import numpy as np
 from PIL import Image
 
+import os as _os, sys as _sys
+_here = _os.path.dirname(_os.path.abspath(__file__))
+_cands = [_here, _os.path.join(_here, "rsi", "code"), _os.path.join(_here, "code"),
+          _os.path.join(_os.path.dirname(_here), "code")]
+if _os.environ.get("IR_ROOT"):
+    _cands.insert(0, _os.path.join(_os.environ["IR_ROOT"], "code"))
+for _c in _cands:
+    if _os.path.exists(_os.path.join(_c, "paths.py")):
+        if _c not in _sys.path:
+            _sys.path.insert(0, _c)
+        break
+from paths import ROOT as IR_ROOT, RESULTS as IR_RESULTS, GENESETS as IR_GENESETS, \
+    DATA as IR_DATA, CODE as IR_CODE, FIGURES as IR_FIGURES, DOCS as IR_DOCS
 plt.rcParams.update({
     "font.family": "Liberation Sans", "font.size": 7.2,
     "svg.fonttype": "none", "pdf.fonttype": 42, "axes.linewidth": 0.6,
@@ -21,7 +34,7 @@ C = {"red": "#199e70", "dra": "#d95926", "ink": "#0b0b0b",
      "muted": "#898781", "rule": "#c3c2b7", "bar": "#b8c4d9",
      "bar_lo": "#8d9bb5"}
 
-D = json.load(open("/home/claude/rsi/results/SIGNATURE_BENCHMARK_GSE14520.json"))
+D = json.load(open(f"{IR_RESULTS}/SIGNATURE_BENCHMARK_GSE14520.json"))
 ok = [r for r in D["signatures"] if r["status"] == "ok"]
 vals = np.array([r["retention_joint"] for r in ok], float)
 names = [r["name"] for r in ok]
@@ -52,6 +65,7 @@ for x, col, lab in [(DRA, C["dra"], "DRAIN"), (RED, C["red"], "REDUCTION")]:
 ax.axvline(S["median"], lw=1.0, color=C["ink"], ls=":")
 ax.axvline(1.0, ls=(0, (1, 2)), lw=0.7, color=C["muted"], zorder=2)
 from matplotlib.ticker import MaxNLocator
+
 ax.yaxis.set_major_locator(MaxNLocator(integer=True))
 ax.text(S["median"], top * 0.55, f"  median {S['median']:.3f}", fontsize=7.2,
         color=C["ink"], ha="left", va="center")
@@ -142,7 +156,7 @@ for xx, yy, L in [(0.004, 0.985, "a"), (0.505, 0.985, "b"),
     fig.text(xx, yy, L, fontsize=10, fontweight="bold", color=C["ink"],
              ha="left", va="top")
 
-stem = "/home/claude/Figure4_signature_benchmark"
+stem = f"{IR_DOCS}/Figure4_signature_benchmark"
 fig.savefig(stem + ".png", dpi=300, facecolor="white")
 fig.savefig(stem + ".svg", facecolor="white")
 plt.close(fig)

@@ -1,0 +1,31 @@
+{
+  "plan": "\u00a76d secondary endpoint and \u00a76d H6, both run late",
+  "note": "the manuscript previously reported these as unmet",
+  "rfs_secondary": {
+    "endpoint": "recurrence-free survival, \u00a76d secondary",
+    "source": "GSE76427 series matrix characteristics, event_rfs / duryears_rfs",
+    "n": 108,
+    "events": 48,
+    "hr_per_sd": 1.3142,
+    "ci95": [
+      0.964,
+      1.7917
+    ],
+    "p": 0.08392159761754445
+  },
+  "h6_GSE76427": {
+    "n_symbols_on_platform": 20757,
+    "sets": {
+      "GOBP_NEGATIVE_REGULATION_OF_FERROPTOSIS": {
+        "n_members_after_overlap_removal": 0,
+        "n_on_platform": 0,
+        "status": "fewer than 5 members on this platform"
+      },
+      "GOBP_POSITIVE_REGULATION_OF_FERROPTOSIS": {
+        "n_members_after_overlap_removal": 0,
+        "n_on_platform": 0,
+        "status": "fewer than 5 members on this platform"
+      }
+    }
+  }
+}

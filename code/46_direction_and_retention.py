@@ -5,7 +5,21 @@ import json
 import statistics as st
 from scipy.stats import spearmanr, mannwhitneyu
 
-R = "/home/claude/rsi/results"
+
+import os as _os, sys as _sys
+_here = _os.path.dirname(_os.path.abspath(__file__))
+_cands = [_here, _os.path.join(_here, "rsi", "code"), _os.path.join(_here, "code"),
+          _os.path.join(_os.path.dirname(_here), "code")]
+if _os.environ.get("IR_ROOT"):
+    _cands.insert(0, _os.path.join(_os.environ["IR_ROOT"], "code"))
+for _c in _cands:
+    if _os.path.exists(_os.path.join(_c, "paths.py")):
+        if _c not in _sys.path:
+            _sys.path.insert(0, _c)
+        break
+from paths import ROOT as IR_ROOT, RESULTS as IR_RESULTS, GENESETS as IR_GENESETS, \
+    DATA as IR_DATA, CODE as IR_CODE, FIGURES as IR_FIGURES, DOCS as IR_DOCS
+R = f"{IR_RESULTS}"
 COH = [("GSE14520", "liver, array, 213 pairs"), ("TCGA_LIHC", "liver, RNA-seq, 50 pairs"),
        ("GSE76427", "liver, array, 52 pairs"), ("TCGA_LUAD", "lung, 58 pairs"),
        ("TCGA_KIRC", "kidney, 72 pairs")]

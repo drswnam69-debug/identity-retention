@@ -11,6 +11,19 @@ import importlib.util, json, os, sys
 import numpy as np, pandas as pd
 from scipy.stats import spearmanr, wilcoxon, mannwhitneyu
 
+import os as _os, sys as _sys
+_here = _os.path.dirname(_os.path.abspath(__file__))
+_cands = [_here, _os.path.join(_here, "rsi", "code"), _os.path.join(_here, "code"),
+          _os.path.join(_os.path.dirname(_here), "code")]
+if _os.environ.get("IR_ROOT"):
+    _cands.insert(0, _os.path.join(_os.environ["IR_ROOT"], "code"))
+for _c in _cands:
+    if _os.path.exists(_os.path.join(_c, "paths.py")):
+        if _c not in _sys.path:
+            _sys.path.insert(0, _c)
+        break
+from paths import ROOT as IR_ROOT, RESULTS as IR_RESULTS, GENESETS as IR_GENESETS, \
+    DATA as IR_DATA, CODE as IR_CODE, FIGURES as IR_FIGURES, DOCS as IR_DOCS
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
 def _load(n, f):
     s = importlib.util.spec_from_file_location(n, os.path.join(HERE, f))
@@ -19,6 +32,7 @@ _da = _load("d", "12_differentiation_adjust.py"); _ca = _load("c", "18_compositi
 _bm = _load("b", "30_signature_benchmark.py")
 ols_ci, D1, C1, zmean = _da.ols_ci, _da.D1, _ca.C1, _bm.zmean
 import rsi_config as cfg
+
 MIN_SET, MAX_SET, NULL_P = _bm.MIN_SET, _bm.MAX_SET, _bm.NULL_P
 MIN_ON = 10
 ALIAS = {"MTARC1": "MARC1", "MTARC2": "MARC2", "G6PC1": "G6PC"}
@@ -48,7 +62,7 @@ d1v = [look(g) for g in D1]; d1v = [v for v in d1v if v is not None]
 print(f"    D1: {len(d1v)}/{len(D1)} genes, median rho {np.median(d1v):+.3f}")
 
 # --- A2: protein-level benchmark, then the association ----------------------
-df = pd.read_csv("/home/claude/gao_proteins.tsv", sep="\t", index_col=0, low_memory=False)
+df = pd.read_csv(f"{IR_DOCS}/gao_proteins.tsv", sep="\t", index_col=0, low_memory=False)
 df.index = [str(i).strip() for i in df.index]
 df = df[[c for c in df.columns if str(c).strip()]].apply(pd.to_numeric, errors="coerce")
 tum = [c for c in df.columns if str(c).startswith("T")]

@@ -9,12 +9,26 @@ import importlib.util, json, os, sys
 import numpy as np, pandas as pd
 from scipy.stats import wilcoxon
 
-HERE = "/home/claude/rsi/code"
+import os as _os, sys as _sys
+_here = _os.path.dirname(_os.path.abspath(__file__))
+_cands = [_here, _os.path.join(_here, "rsi", "code"), _os.path.join(_here, "code"),
+          _os.path.join(_os.path.dirname(_here), "code")]
+if _os.environ.get("IR_ROOT"):
+    _cands.insert(0, _os.path.join(_os.environ["IR_ROOT"], "code"))
+for _c in _cands:
+    if _os.path.exists(_os.path.join(_c, "paths.py")):
+        if _c not in _sys.path:
+            _sys.path.insert(0, _c)
+        break
+from paths import ROOT as IR_ROOT, RESULTS as IR_RESULTS, GENESETS as IR_GENESETS, \
+    DATA as IR_DATA, CODE as IR_CODE, FIGURES as IR_FIGURES, DOCS as IR_DOCS
+HERE = f"{IR_ROOT}/code"
 def imp(name, fname):
     spec = importlib.util.spec_from_file_location(name, os.path.join(HERE, fname))
     m = importlib.util.module_from_spec(spec); spec.loader.exec_module(m); return m
 sys.path.insert(0, HERE)
 import rsi_config as cfg
+
 sl = imp("stats_lite", "stats_lite.py")
 
 D1 = ["ALB","TTR","TF","SERPINA1","AHSG","APOH","FGA","FGB","FGG","F2","CPS1",
@@ -50,7 +64,7 @@ def ols(y, X):
 
 # ---------------------------------------------------------------- A. Gao
 print("=== A. per-protein retention, Gao 2019 (D1, 19 proteins) ===")
-df = pd.read_csv("/home/claude/gao_proteins.tsv", sep="\t", index_col=0, low_memory=False)
+df = pd.read_csv(f"{IR_DOCS}/gao_proteins.tsv", sep="\t", index_col=0, low_memory=False)
 df.index=[str(i).strip() for i in df.index]
 df = df[[c for c in df.columns if str(c).strip()]].apply(pd.to_numeric, errors="coerce")
 tum=[c for c in df.columns if str(c).startswith("T")]; non=[c for c in df.columns if str(c).startswith("N")]
@@ -73,7 +87,7 @@ for g in ["MTARC1","MTARC2","POR"]:
 
 # ---------------------------------------------------------------- B. GSE14520
 print("\n=== B. GSE14520, D1 restricted to the 19 genes measured as protein ===")
-expr = pd.read_csv("/home/claude/rsi/data/GSE14520_symbols.tsv.gz", sep="\t", index_col=0)
-ph = pd.read_csv("/home/claude/rsi/results/GSE14520/phenotype.tsv", sep="\t")
+expr = pd.read_csv(f"{IR_DATA}/GSE14520_symbols.tsv.gz", sep="\t", index_col=0)
+ph = pd.read_csv(f"{IR_RESULTS}/GSE14520/phenotype.tsv", sep="\t")
 print("  phenotype columns:", list(ph.columns)[:12])
-json.dump({"gao_per_protein_retention_D1":gao}, open("/home/claude/rsi/results/AUDIT_RECOMPUTE_2026-09-09.json","w"), indent=1)
+json.dump({"gao_per_protein_retention_D1":gao}, open(f"{IR_RESULTS}/AUDIT_RECOMPUTE_2026-09-09.json","w"), indent=1)

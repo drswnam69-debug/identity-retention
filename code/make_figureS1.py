@@ -5,12 +5,26 @@ import matplotlib; matplotlib.use("Agg")
 import matplotlib.pyplot as plt
 from matplotlib.patches import FancyBboxPatch, FancyArrowPatch
 from PIL import Image
+
+import os as _os, sys as _sys
+_here = _os.path.dirname(_os.path.abspath(__file__))
+_cands = [_here, _os.path.join(_here, "rsi", "code"), _os.path.join(_here, "code"),
+          _os.path.join(_os.path.dirname(_here), "code")]
+if _os.environ.get("IR_ROOT"):
+    _cands.insert(0, _os.path.join(_os.environ["IR_ROOT"], "code"))
+for _c in _cands:
+    if _os.path.exists(_os.path.join(_c, "paths.py")):
+        if _c not in _sys.path:
+            _sys.path.insert(0, _c)
+        break
+from paths import ROOT as IR_ROOT, RESULTS as IR_RESULTS, GENESETS as IR_GENESETS, \
+    DATA as IR_DATA, CODE as IR_CODE, FIGURES as IR_FIGURES, DOCS as IR_DOCS
 plt.rcParams.update({"font.family":"Liberation Sans","font.size":7.6,
     "svg.fonttype":"none","pdf.fonttype":42})
 MM=1/25.4
 C={"ink":"#0b0b0b","muted":"#898781","rule":"#c3c2b7","box":"#eef1f6",
    "liv":"#4a3aa7","lun":"#199e70","kid":"#d95926","out":"#f4e6e0","bad":"#d03b3b"}
-F=json.load(open("/home/claude/rsi/results/ENUMERATION_FLOW.json"))
+F=json.load(open(f"{IR_RESULTS}/ENUMERATION_FLOW.json"))
 
 fig=plt.figure(figsize=(174*MM,178*MM))
 ax=fig.add_axes([0,0,1,1]); ax.set_xlim(0,1); ax.set_ylim(0,1); ax.axis("off")
@@ -79,7 +93,7 @@ for i,r in enumerate(rules):
     ax.text(0.055,0.272-i*0.0205,r,ha="left",fontsize=7.2,
             color=C["muted"] if i>=6 else C["ink"])
 
-stem="/home/claude/FigureS1_enumeration"
+stem=f"{IR_DOCS}/FigureS1_enumeration"
 fig.savefig(stem+".png",dpi=300,facecolor="white"); fig.savefig(stem+".svg",facecolor="white")
 plt.close(fig)
 im=Image.open(stem+".png").convert("RGB")

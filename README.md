@@ -113,6 +113,41 @@ Expression matrices are not redistributed here. Every one is public:
 write the tidy matrices the rest of the pipeline reads. Place downloads under
 `data/` and run `run_all.sh`, or run the numbered scripts in order.
 
+## Paths, and what is not here
+
+Every script resolves the archive from its own location through `code/paths.py`,
+so the repository runs wherever it is unpacked and from whatever directory. Set
+`IR_ROOT` to point somewhere else. Earlier releases named absolute paths on the
+machine the analysis was run on, which meant a third of the code, including
+every figure script, failed for anyone but the author.
+
+The manuscript, its protocol and the cover letter are not deposited before
+publication. Three scripts read them, `50_consistency_check.py`,
+`51_check_the_checker.py` and `52_anchored_claims.py`; set `IR_DOCS` to the
+directory holding them. Everything else runs from the archive alone.
+
+## Testing
+
+    python3 code/test_stats.py            # the hand-written statistics
+    python3 code/test_survival.py         # the survival code
+    python3 code/test_pipeline.py         # the pipeline, on a synthetic cohort
+    python3 code/test_retentionfrac.py    # the package, against this archive
+
+`test_retentionfrac.py` needs `data/GSE14520_symbols.tsv.gz`; the other three
+run from the archive alone.
+
+An earlier `29_cross_document_check.py` targeted a manuscript from a previous
+submission and read files that are not in this archive. Its checks live in
+`50_consistency_check.py` now, and it has been removed rather than shipped as
+code that cannot run.
+
+One known gap: the ferroptosis set file that `08_phase_e.py` reads for
+hypothesis H6 (`--ferroptosis`) is not in this archive and is no longer on the
+author's disk, so that one test cannot be re-run from the deposit. Its inputs,
+outputs and the genes removed for overlap are recorded in
+`results/phase_e_h6.json`. Everything else in the pipeline runs from what is
+here plus the public matrices named above.
+
 ## Before you reuse a public matrix
 
 The study's own hardest finding is procedural. One deposited proteome showed

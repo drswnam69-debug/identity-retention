@@ -17,6 +17,7 @@ Exit code 0 when every check passes, 1 otherwise.
 from __future__ import annotations
 
 import argparse
+import glob
 import json
 import os
 import re
@@ -24,17 +25,36 @@ import sys
 import unicodedata
 from collections import defaultdict
 
-HOME = "/home/claude"
+
+# The manuscript, the protocol and the letter are not in the archive before
+# publication; IR_DOCS says where they are and defaults to the directory above
+# the archive, which is where they sit in the author's tree.
+import os as _os, sys as _sys
+_here = _os.path.dirname(_os.path.abspath(__file__))
+_cands = [_here, _os.path.join(_here, "rsi", "code"), _os.path.join(_here, "code"),
+          _os.path.join(_os.path.dirname(_here), "code")]
+if _os.environ.get("IR_ROOT"):
+    _cands.insert(0, _os.path.join(_os.environ["IR_ROOT"], "code"))
+for _c in _cands:
+    if _os.path.exists(_os.path.join(_c, "paths.py")):
+        if _c not in _sys.path:
+            _sys.path.insert(0, _c)
+        break
+from paths import ROOT as IR_ROOT, RESULTS as IR_RESULTS, CODE as IR_CODE, DOCS as IR_DOCS
+HOME = IR_DOCS
 MS = f"{HOME}/manuscript_v4.md"
 PROTOCOL = f"{HOME}/SupplementaryFile1_v2.md"
 LETTER = f"{HOME}/CoverLetter_GigaScience.md"
-RESULTS = f"{HOME}/rsi/results"
-FIGSCRIPTS = [f"{HOME}/{n}" for n in (
+RESULTS = IR_RESULTS
+CODE_DIR = IR_CODE
+FIGSCRIPTS = ([f"{HOME}/{n}" for n in (
     "make_figure1_concept.py", "make_figure3_v2.py", "make_figure4.py", "make_figure5.py",
     "make_figure6.py", "make_figure7.py", "make_figure8.py", "make_figure9.py",
-    "make_figure11.py", "make_figureS1.py")] + [f"{HOME}/rsi/code/22_figures_1_2.py"]
+    "make_figure11.py", "make_figureS1.py")] + [f"{CODE_DIR}/22_figures_1_2.py"])
+FIGSCRIPTS = [p for p in FIGSCRIPTS if os.path.exists(p)] or [
+    f"{CODE_DIR}/{n}" for n in sorted(os.path.basename(x) for x in
+                                      glob.glob(f"{CODE_DIR}/make_figure*.py"))]
 PACKAGE = f"{HOME}/submission_GigaScience"
-CODE_DIR = f"{HOME}/rsi/code"
 
 FAIL: list[str] = []
 NOTE: list[str] = []
@@ -174,7 +194,12 @@ SECTIONS = ["## Abstract", "## Background", "## Data Description", "## Analyses"
 def check_style(ms: str) -> None:
     head("A. Style and journal format")
     body = body_of(ms)
-    check(ms.count("—") == 0, f"no em dash anywhere ({ms.count(chr(0x2014))} found)")
+    # The no-em-dash rule governs what I write. A published title is quoted as
+    # published, so the reference list is out of scope; altering a title to
+    # satisfy a house rule of my own would misquote it.
+    _body = ms.split("## References", 1)[0]
+    check(_body.count("\u2014") == 0,
+          f"no em dash outside the reference list ({_body.count(chr(0x2014))} found)")
     hits = re.findall(BRITISH, body, re.I)
     check(not hits, f"American spelling outside reference titles ({sorted(set(hits))})")
     pl = re.findall(r"\b(we|our|us)\b", body, re.I)
@@ -303,10 +328,16 @@ def check_anchored(ms: str, proto: str) -> None:
     WORD = {"ninety": 90, "a hundred and two": 102,
             "a hundred and three": 103, "a hundred and four": 104,
             "a hundred and five": 105, "a hundred and six": 106,
+            "a hundred and seven": 107, "a hundred and eight": 108,
+            "a hundred and nine": 109, "a hundred and ten": 110,
+            "a hundred and eleven": 111, "a hundred and twelve": 112,
+            "a hundred and thirteen": 113, "a hundred and fourteen": 114,
+            "a hundred and fifteen": 115, "a hundred and sixteen": 116,
             "twenty-two": 22, "twenty-three": 23,
             "twenty-four": 24, "twenty-five": 25, "twenty-six": 26,
             "twenty-seven": 27, "twenty-eight": 28, "twenty-nine": 29,
-            "thirty": 30, "thirty-one": 31, "thirty-two": 32,
+            "thirty": 30, "thirty-one": 31, "thirty-two": 32, "thirty-three": 33, "thirty-four": 34,
+            "thirty-five": 35, "thirty-six": 36, "thirty-seven": 37,
             "five": 5, "six": 6}
     m = re.search(r"([\w ]+?) claims are bound one by one", ms)
     check(m is not None and WORD.get(m.group(1).strip()) == n,
@@ -549,6 +580,21 @@ def check_cover_letter(ms: str) -> None:
           "the cover letter closes with the American form")
     ms_title = re.search(r"^# (.+)$", ms, re.M).group(1).strip()
     check(ms_title in cl, "the cover letter carries the manuscript's exact title")
+    # The letter states a word count. It went stale twice, so it is computed
+    # here from the manuscript rather than trusted, on the same definition:
+    # Background through the end of Additional files, table rows excluded,
+    # figure legends included.
+    body = ms.split("## Background", 1)[1].split("## References", 1)[0]
+    body = "\n".join(l for l in body.split("\n") if not l.strip().startswith("|"))
+    txt_ = re.sub(r"`[^`]*`", " ", body)
+    txt_ = re.sub(r"[*_#|>-]", " ", txt_)
+    real_wc = len([w for w in txt_.split() if any(c.isalnum() for c in w)])
+    m_wc = re.search(r"about ([\d,]+) words", cl)
+    stated = int(m_wc.group(1).replace(",", "")) if m_wc else 0
+    check(m_wc is not None and abs(stated - real_wc) <= 400,
+          f"the letter's word count ({stated:,}) is within 400 of the "
+          f"manuscript's ({real_wc:,})")
+
     # counts the letter states must be the manuscript's counts
     # Derive the anchor wording from the manuscript rather than fixing it here,
     # so that adding an anchor cannot leave the letter quietly behind.
@@ -618,6 +664,98 @@ def check_alt_text(ms: str) -> None:
               f"Figure {n} alt text matches Figure {n}'s legend better than any "
               f"other ({own} shared terms; best is Figure {best[1]} with "
               f"{best[0]})")
+
+
+def check_registered_rules(ms: str, proto: str) -> None:
+    """Every registered decision rule must be answered in the manuscript.
+
+    Four compliance failures reached the pre-submission audit: a registered
+    verdict inverted in a heading, two pre-specified secondary analyses run and
+    archived but never reported, and an outcome branch that required a
+    statement in the abstract and did not get one. None of them was a wrong
+    number, so nothing here could see them. This finds each place the protocol
+    fixes an outcome in advance and requires that the amendment it belongs to
+    is discussed in the manuscript, so a rule cannot be silently skipped.
+    It cannot judge whether the verdict is right; it can insist the rule was
+    not forgotten."""
+    head("L. Registered decision rules are answered")
+    # locate every rule statement and attribute it to its amendment
+    rules = []
+    cur = "the locked plan"
+    for line in proto.split("\n"):
+        m = re.match(r"^#{1,3}\s+§?(6[a-z]+)[\.\s]", line)
+        if m:
+            cur = "§" + m.group(1)
+        if re.search(r"\*\*(Decision rule fixed in advance|Outcomes accepted "
+                     r"in advance|Rule fixed in advance|Decision rule)", line):
+            rules.append(cur)
+    seen = {}
+    for r in rules:
+        seen[r] = seen.get(r, 0) + 1
+    check(len(rules) >= 15,
+          f"the protocol still states its decision rules ({len(rules)} found)")
+    missing = [r for r in sorted(seen) if r.startswith("§") and r not in ms]
+    check(not missing,
+          f"every amendment that fixes an outcome is discussed in the "
+          f"manuscript ({len(missing)} are not: {missing})")
+    # a rule whose amendment says "in the abstract" must reach the abstract
+    abstract = ms.split("## Abstract", 1)[1].split("\n## ", 1)[0].lower()
+    for m in re.finditer(r"§?(6[a-z]+)", ""):
+        pass
+    blocks = re.split(r"^#{1,3}\s+§?(6[a-z]+)[\.\s]", proto, flags=re.M)
+    for i in range(1, len(blocks) - 1, 2):
+        sec, body = blocks[i], blocks[i + 1]
+        if re.search(r"in the abstract", body, re.I):
+            check("§" + sec in ms,
+                  f"§{sec}, which fixes an outcome for the abstract, is in the "
+                  f"manuscript")
+    # the four amendments that route an outcome to the abstract, and the words
+    # in the abstract that answer each. §6w's branch went unhonored for three
+    # revisions because nothing checked the abstract itself.
+    for sec, probe, what in (("6s", "premise", "the premise failure"),
+                             ("6w", "replicate", "the non-replication"),
+                             ("6ae", "random covariate", "the negative control")):
+        if "§" + sec in proto:
+            check(probe in abstract,
+                  f"the abstract carries {what} that §{sec} routes to it")
+
+
+def check_figure_glyphs() -> None:
+    """Every character a figure script draws must exist in the figure font.
+
+    Liberation Sans has no superscript minus and no superscript zero. Written
+    as literal characters they render as empty boxes, and "9.0 x 10 to the
+    minus ten" printed as "9.0 x 10[]1[]" in a submitted figure for three
+    revisions without anything noticing, because nothing here had ever looked
+    at a glyph. Mathtext is the fix and this is the guard."""
+    head("K. Figures use only characters the font can draw")
+    try:
+        from matplotlib import font_manager
+        from fontTools.ttLib import TTFont
+    except Exception as e:                                  # pragma: no cover
+        NOTE.append(f"    glyph check skipped ({e})")
+        return
+    path = font_manager.findfont("Liberation Sans")
+    cov = set()
+    for t in TTFont(path, fontNumber=0)["cmap"].tables:
+        cov |= set(t.cmap.keys())
+    bad_total = {}
+    for f in sorted(glob.glob(f"{HOME}/make_figure*.py")):
+        src = open(f, encoding="utf-8").read()
+        # literal text the script draws, plus any \uXXXX escape it writes
+        chars = set()
+        for a, b in re.findall(r'"([^"\\]*)"|\'([^\'\\]*)\'', src):
+            chars |= set(a or "") | set(b or "")
+        for m in re.findall(r"\\u([0-9a-fA-F]{4})", src):
+            chars.add(chr(int(m, 16)))
+        bad = sorted(c for c in chars if ord(c) > 127 and ord(c) not in cov)
+        if bad:
+            bad_total[os.path.basename(f)] = [f"U+{ord(c):04X}" for c in bad]
+    check(not bad_total,
+          f"every character drawn by a figure script is in {os.path.basename(path)} "
+          f"({len(bad_total)} script(s) use one that is not)")
+    for k, v in bad_total.items():
+        NOTE.append(f"    {k}: {', '.join(v)}")
 
 
 def check_figure_deposit() -> None:
@@ -736,6 +874,8 @@ def main() -> int:
     check_metadata(ms)
     check_cover_letter(ms)
     check_alt_text(ms)
+    check_registered_rules(ms, proto)
+    check_figure_glyphs()
     check_figure_deposit()
     if NOTE:
         print("\nDetail")

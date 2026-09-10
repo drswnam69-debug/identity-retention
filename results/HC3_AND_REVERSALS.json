@@ -1,0 +1,100 @@
+{
+  "plan": "archive gap fill for \u00a76q-D and for the sign of the intercept",
+  "note": "changes no reported result",
+  "hc3": {
+    "GSE76427": {
+      "n_pairs": 52,
+      "intercept": 0.5213,
+      "se_ols": 0.1396,
+      "se_hc3": 0.1795,
+      "se_increase_pct": 28.6,
+      "ci95_ols_t": [
+        0.2409,
+        0.8017
+      ],
+      "ci95_hc3_t": [
+        0.1607,
+        0.8819
+      ],
+      "ci95_hc3_normal_as_6q_wrote_it": [
+        0.1694,
+        0.8732
+      ],
+      "t_critical_value": 2.0086,
+      "residual_df": 50,
+      "hc3_excludes_zero": true,
+      "recorded_in_6q": {
+        "se_ols": 0.137,
+        "se_hc3": 0.16
+      },
+      "reproduces_6q": false
+    },
+    "GSE14520": {
+      "n_pairs": 213,
+      "intercept": 0.7916,
+      "se_ols": 0.0677,
+      "se_hc3": 0.1019,
+      "se_increase_pct": 50.4,
+      "ci95_ols_t": [
+        0.6581,
+        0.9251
+      ],
+      "ci95_hc3_t": [
+        0.5908,
+        0.9924
+      ],
+      "ci95_hc3_normal_as_6q_wrote_it": [
+        0.592,
+        0.9912
+      ],
+      "t_critical_value": 1.9713,
+      "residual_df": 211,
+      "hc3_excludes_zero": true,
+      "recorded_in_6q": {
+        "se_ols": 0.068,
+        "se_hc3": 0.102
+      },
+      "reproduces_6q": true
+    }
+  },
+  "sign_reversals": {
+    "GSE14520": {
+      "n_evaluable": 119,
+      "n_sign_reversal": 5,
+      "n_sign_reversal_intercept_ci_excludes_zero": 2,
+      "names_with_ci_excluding_zero": [
+        "ACEVEDO_NORMAL_TISSUE_ADJACENT_TO_LIVER_TUMOR_DN",
+        "CAIRO_HEPATOBLASTOMA_POOR_SURVIVAL"
+      ]
+    },
+    "GSE76427": {
+      "n_evaluable": 106,
+      "n_sign_reversal": 2,
+      "n_sign_reversal_intercept_ci_excludes_zero": 0,
+      "names_with_ci_excluding_zero": []
+    },
+    "TCGA_LIHC": {
+      "n_evaluable": 103,
+      "n_sign_reversal": 6,
+      "n_sign_reversal_intercept_ci_excludes_zero": 0,
+      "names_with_ci_excluding_zero": []
+    },
+    "TCGA_LUAD": {
+      "n_evaluable": 36,
+      "n_sign_reversal": 4,
+      "n_sign_reversal_intercept_ci_excludes_zero": 0,
+      "names_with_ci_excluding_zero": []
+    },
+    "TCGA_KIRC": {
+      "n_evaluable": 15,
+      "n_sign_reversal": 9,
+      "n_sign_reversal_intercept_ci_excludes_zero": 4,
+      "names_with_ci_excluding_zero": [
+        "FLECHNER_BIOPSY_KIDNEY_TRANSPLANT_OK_VS_DONOR_UP",
+        "FLECHNER_PBL_KIDNEY_TRANSPLANT_OK_VS_DONOR_DN",
+        "LI_WILMS_TUMOR_VS_FETAL_KIDNEY_2_UP",
+        "RODWELL_AGING_KIDNEY_NO_BLOOD_UP"
+      ]
+    }
+  }
+}

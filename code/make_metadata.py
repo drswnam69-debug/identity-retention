@@ -8,8 +8,22 @@ manuscript instead and verified against it by 50_consistency_check.py.
 """
 import re
 
-MS = "/home/claude/manuscript_v4.md"
-OUT = "/home/claude/submission_GigaScience/05_title_abstract_keywords.txt"
+
+import os as _os, sys as _sys
+_here = _os.path.dirname(_os.path.abspath(__file__))
+_cands = [_here, _os.path.join(_here, "rsi", "code"), _os.path.join(_here, "code"),
+          _os.path.join(_os.path.dirname(_here), "code")]
+if _os.environ.get("IR_ROOT"):
+    _cands.insert(0, _os.path.join(_os.environ["IR_ROOT"], "code"))
+for _c in _cands:
+    if _os.path.exists(_os.path.join(_c, "paths.py")):
+        if _c not in _sys.path:
+            _sys.path.insert(0, _c)
+        break
+from paths import ROOT as IR_ROOT, RESULTS as IR_RESULTS, GENESETS as IR_GENESETS, \
+    DATA as IR_DATA, CODE as IR_CODE, FIGURES as IR_FIGURES, DOCS as IR_DOCS
+MS = f"{IR_DOCS}/manuscript_v4.md"
+OUT = f"{IR_DOCS}/submission_GigaScience/05_title_abstract_keywords.txt"
 
 ms = open(MS, encoding="utf-8").read()
 title = re.search(r"^# (.+)$", ms, re.M).group(1).strip()
