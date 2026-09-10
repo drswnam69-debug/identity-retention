@@ -1,0 +1,72 @@
+{
+ "plan": "PREREGISTRATION 6q-C, post hoc relative to the lock",
+ "note": "archive gap fill; the values were in the amendment table only",
+ "GSE76427": {
+  "n_pairs": 52,
+  "resamples": 4000,
+  "seed": 20260901,
+  "denominator": "paired median, as \u00a76l fixes for the composite",
+  "D1": {
+   "retained": 0.4619,
+   "ci95": [
+    0.2262,
+    0.714
+   ],
+   "excludes_50pct": false,
+   "recorded_in_6q": [
+    0.503,
+    0.301,
+    0.759
+   ],
+   "reproduces_6q": false
+  },
+  "joint_D1_C1": {
+   "retained": 0.4032,
+   "ci95": [
+    0.0986,
+    0.6889
+   ],
+   "excludes_50pct": false,
+   "recorded_in_6q": [
+    0.399,
+    0.095,
+    0.706
+   ],
+   "reproduces_6q": true
+  }
+ },
+ "GSE14520": {
+  "n_pairs": 213,
+  "resamples": 4000,
+  "seed": 20260901,
+  "denominator": "paired median, as \u00a76l fixes for the composite",
+  "D1": {
+   "retained": 0.6275,
+   "ci95": [
+    0.4453,
+    0.7045
+   ],
+   "excludes_50pct": false,
+   "recorded_in_6q": [
+    0.628,
+    0.45,
+    0.704
+   ],
+   "reproduces_6q": true
+  },
+  "joint_D1_C1": {
+   "retained": 0.6452,
+   "ci95": [
+    0.4434,
+    0.7343
+   ],
+   "excludes_50pct": false,
+   "recorded_in_6q": [
+    0.645,
+    0.452,
+    0.736
+   ],
+   "reproduces_6q": true
+  }
+ }
+}

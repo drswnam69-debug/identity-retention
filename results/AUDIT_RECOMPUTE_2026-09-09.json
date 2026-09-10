@@ -1,0 +1,57 @@
+{
+ "gao_per_protein_retention_D1": {
+  "MTARC1": {
+   "unadjusted": -0.7343,
+   "wilcoxon_p": 6.222831488729964e-11,
+   "intercept": -0.6183,
+   "intercept_p": 8.718324843635374e-09,
+   "retention": 0.8421
+  },
+  "MTARC2": {
+   "unadjusted": -1.0552,
+   "wilcoxon_p": 7.648087173652412e-19,
+   "intercept": -0.9388,
+   "intercept_p": 1.5169962890198514e-18,
+   "retention": 0.8897
+  },
+  "POR": {
+   "unadjusted": -1.0433,
+   "wilcoxon_p": 9.202352838117958e-19,
+   "intercept": -0.9459,
+   "intercept_p": 7.508279646236522e-19,
+   "retention": 0.9066
+  }
+ },
+ "gse14520_restricted_D1_sensitivity": {
+  "D1_full": {
+   "n_D1_genes": 22,
+   "REDUCTION": {
+    "n_members": 3,
+    "unadjusted": 0.8575,
+    "intercept": 0.7166,
+    "retention": 0.8357
+   },
+   "DRAIN": {
+    "n_members": 3,
+    "unadjusted": -0.7997,
+    "intercept": -0.1972,
+    "retention": 0.2465
+   }
+  },
+  "D1_19_protein_measured": {
+   "n_D1_genes": 19,
+   "REDUCTION": {
+    "n_members": 3,
+    "unadjusted": 0.8575,
+    "intercept": 0.6978,
+    "retention": 0.8138
+   },
+   "DRAIN": {
+    "n_members": 3,
+    "unadjusted": -0.7997,
+    "intercept": -0.1762,
+    "retention": 0.2203
+   }
+  }
+ }
+}

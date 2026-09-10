@@ -1,0 +1,75 @@
+{
+ "plan": "PREREGISTRATION 6ae, post hoc; nothing here is pre-registered",
+ "cohort": "GSE14520",
+ "n_pairs": 213,
+ "n_sets": 119,
+ "reproduction_of_archive": {
+  "n": 119,
+  "max_abs_diff": 0.0011,
+  "median_abs_diff": 0.0001
+ },
+ "negative_control": {
+  "n_draws": 200,
+  "n_genes_per_draw": 22,
+  "matched_pool_size": 209,
+  "match_rule": "falls in tumor; |mean fall - D1 mean fall| < 0.35 z; |mean expression - D1 mean expression| < 1.5",
+  "D1_median": 0.7579,
+  "D1_n_below_50": 30,
+  "random_median_of_medians": 0.6973,
+  "random_median_ci95": [
+   0.635,
+   0.7577
+  ],
+  "random_n_below_50_median": 45,
+  "random_n_below_50_ci95": [
+   33,
+   50
+  ],
+  "median_r_with_D1_retention": 0.8776,
+  "fraction_random_at_or_below_D1_median": 0.975,
+  "other_pools": {
+   "unrestricted": {
+    "pool_size": 13141,
+    "median_of_medians": 1.0151,
+    "median_ci95": [
+     0.7354,
+     1.0535
+    ],
+    "n_below_50_median": 4
+   },
+   "no_tumor_shift": {
+    "pool_size": 651,
+    "median_of_medians": 1.0326,
+    "median_ci95": [
+     1.021,
+     1.0448
+    ],
+    "n_below_50_median": 4
+   },
+   "rises_in_tumor": {
+    "pool_size": 4500,
+    "median_of_medians": 0.5509,
+    "median_ci95": [
+     0.3571,
+     0.8139
+    ],
+    "n_below_50_median": 54
+   }
+  }
+ },
+ "curvature": {
+  "linear_median": 0.7579,
+  "linear_iqr": [
+   0.5056,
+   0.9449
+  ],
+  "linear_n_below_50": 30,
+  "quadratic_median": 0.714,
+  "quadratic_iqr": [
+   0.461,
+   0.9515
+  ],
+  "quadratic_n_below_50": 34,
+  "spearman_linear_quadratic": 0.9891
+ }
+}

@@ -14,7 +14,7 @@ for f in ("/usr/share/fonts/truetype/liberation/LiberationSans-Regular.ttf",
 
 plt.rcParams.update({
     "font.family": "Liberation Sans",
-    "font.size": 7.0,
+    "font.size": 7.2,
     "svg.fonttype": "none",      # keep text editable in the SVG
     "pdf.fonttype": 42,
     "axes.linewidth": 0.6,

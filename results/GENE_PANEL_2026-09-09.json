@@ -1,0 +1,144 @@
+{
+ "note": "archive gap fill; recomputed, no reported result changes",
+ "Gao2019": {
+  "source": "Gao2019",
+  "n_pairs_total": 159,
+  "per_gene": {
+   "CYB5R3": {
+    "symbol_used": "CYB5R3",
+    "n_pairs": 159,
+    "paired_mean_delta": -0.3867,
+    "wilcoxon_p": 0.00029858903437444533
+   },
+   "CYB5R1": {
+    "symbol_used": "CYB5R1",
+    "n_pairs": 159,
+    "paired_mean_delta": -0.1274,
+    "wilcoxon_p": 0.2614538019846515
+   },
+   "AIFM2": {
+    "symbol_used": "AIFM2",
+    "n_pairs": 159,
+    "paired_mean_delta": 0.3084,
+    "wilcoxon_p": 0.004875558793871107
+   },
+   "NQO1": {
+    "status": "not measured"
+   },
+   "MTARC1": {
+    "symbol_used": "MARC1",
+    "n_pairs": 159,
+    "paired_mean_delta": -0.7343,
+    "wilcoxon_p": 6.222831488729964e-11
+   },
+   "MTARC2": {
+    "symbol_used": "MARC2",
+    "n_pairs": 159,
+    "paired_mean_delta": -1.0552,
+    "wilcoxon_p": 7.648087173652412e-19
+   },
+   "POR": {
+    "symbol_used": "POR",
+    "n_pairs": 159,
+    "paired_mean_delta": -1.0433,
+    "wilcoxon_p": 9.202352838117958e-19
+   }
+  }
+ },
+ "Jiang2019": {
+  "source": "Jiang2019",
+  "n_pairs_total": 124,
+  "per_gene": {
+   "CYB5R3": {
+    "symbol_used": "CYB5R3",
+    "n_pairs": 124,
+    "paired_mean_delta": 0.5211,
+    "wilcoxon_p": 1.1728183278757856e-06
+   },
+   "CYB5R1": {
+    "symbol_used": "CYB5R1",
+    "n_pairs": 124,
+    "paired_mean_delta": 0.1382,
+    "wilcoxon_p": 0.05940022649542554
+   },
+   "AIFM2": {
+    "symbol_used": "AIFM2",
+    "n_pairs": 124,
+    "paired_mean_delta": 0.5565,
+    "wilcoxon_p": 2.620068708145276e-08
+   },
+   "NQO1": {
+    "symbol_used": "NQO1",
+    "n_pairs": 124,
+    "paired_mean_delta": 0.619,
+    "wilcoxon_p": 1.3107569991571917e-08
+   },
+   "MTARC1": {
+    "symbol_used": "MARC1",
+    "n_pairs": 124,
+    "paired_mean_delta": -0.7229,
+    "wilcoxon_p": 2.3295073639289106e-15
+   },
+   "MTARC2": {
+    "symbol_used": "MARC2",
+    "n_pairs": 124,
+    "paired_mean_delta": -0.9159,
+    "wilcoxon_p": 1.815436819477822e-14
+   },
+   "POR": {
+    "symbol_used": "POR",
+    "n_pairs": 124,
+    "paired_mean_delta": -0.5102,
+    "wilcoxon_p": 1.0882841509657013e-05
+   }
+  }
+ },
+ "TCGA_LIHC": {
+  "source": "TCGA-LIHC",
+  "n_pairs_total": 50,
+  "per_gene": {
+   "CYB5R3": {
+    "symbol_used": "CYB5R3",
+    "n_pairs": 50,
+    "paired_mean_delta": 1.0426,
+    "wilcoxon_p": 3.348859145546612e-08
+   },
+   "CYB5R1": {
+    "symbol_used": "CYB5R1",
+    "n_pairs": 50,
+    "paired_mean_delta": 1.572,
+    "wilcoxon_p": 1.7763568394002505e-15
+   },
+   "AIFM2": {
+    "symbol_used": "AIFM2",
+    "n_pairs": 50,
+    "paired_mean_delta": 1.396,
+    "wilcoxon_p": 3.375077994860476e-14
+   },
+   "NQO1": {
+    "symbol_used": "NQO1",
+    "n_pairs": 50,
+    "paired_mean_delta": 1.0344,
+    "wilcoxon_p": 2.994404724177002e-11
+   },
+   "MTARC1": {
+    "symbol_used": "MTARC1",
+    "n_pairs": 50,
+    "paired_mean_delta": -0.2483,
+    "wilcoxon_p": 0.20447619481721802
+   },
+   "MTARC2": {
+    "symbol_used": "MTARC2",
+    "n_pairs": 50,
+    "paired_mean_delta": -0.4756,
+    "wilcoxon_p": 0.012931948668784443
+   },
+   "POR": {
+    "symbol_used": "POR",
+    "n_pairs": 50,
+    "paired_mean_delta": 0.2835,
+    "wilcoxon_p": 0.06930163067169381
+   }
+  }
+ }
+}

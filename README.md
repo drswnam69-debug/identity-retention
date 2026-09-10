@@ -2,18 +2,19 @@
 
 Code, gene sets, result files and the locked protocol for:
 
-> **How much of a tumor expression signature is dedifferentiation? A pre-registered
-> measure in three tissues and its failure to transfer between transcriptome and
-> proteome.** Soon Woo Nam. *Preprint / under review.*
+> **How much of a tumor expression signature survives adjustment for the dominant
+> tumor-adjacent axis? A pre-registered measure in three tissues and its failure to
+> transfer between a transcriptome and a proteome.** Soon Woo Nam. *Under review.*
 
 The repository also contains **`retentionfrac`**, a one-function Python package
 that computes the quantity the article defines.
 
 Pre-registration locked **25 August 2026**, SHA-256
 `7a2bf934fe6e51184a573057c93e0cda0f3e79e2c538224efb35cf728b680046`,
-with 28 timestamped amendments (`docs/PREREGISTRATION_with_amendments.md`).
-Every amendment was written before the computation it governs, and several
-record predictions that failed.
+with 31 timestamped amendments (`docs/PREREGISTRATION_with_amendments.md`).
+Most were written before the computation they govern; five state in their own
+text that they are not pre-registered in any sense, and several record
+predictions that failed.
 
 ---
 
@@ -28,10 +29,17 @@ Delta signature = alpha + beta * Delta identity + epsilon
 ```
 
 The **identity-retention fraction** is `|alpha|` divided by the unadjusted paired
-shift: the share of the reported contrast that survives once the tumor's loss of
-differentiated character is taken out. A value near 1 means the signature is
-saying something beyond dedifferentiation. A value near 0 means it is largely
-restating it.
+shift: the share of the reported contrast that survives once the paired change in
+a pre-specified tissue-identity score is taken out. A value near 1 means the
+signature carries information beyond that axis. A value near 0 means it is
+largely restating it.
+
+The measure is named for the covariate used to compute it and not for a
+mechanism. Under amendment 6ae, a covariate drawn at random and matched to the
+identity score on the size of its own paired tumor shift removes as much as the
+identity score does, so what the quantity measures is alignment with a large
+paired tumor-adjacent axis. Loss of tissue identity is the pre-specified and
+interpretable instance of such an axis used here, not a demonstrated cause.
 
 ## Install and use
 
@@ -70,7 +78,7 @@ results/       every derived result file, including
                SupplementaryTable_S8_enumeration.csv, which lists all 223
                enumerated gene sets and the inclusion status of each
 figures/       the article's figures at 300 dpi
-docs/          the locked protocol with all 28 amendments
+docs/          the locked protocol with all 31 amendments
 SHA256SUMS.txt checksums for every file in this repository
 ```
 

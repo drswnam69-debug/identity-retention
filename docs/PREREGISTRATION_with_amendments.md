@@ -1536,6 +1536,22 @@ REDUCTION and DRAIN, not by the biosynthetic supply arm.
 Three of six were performed, two of those three were never reported, and three
 were not performed. All six are now accounted for in the manuscript.
 
+**Correction to §6r, recorded 9 September 2026 during a pre-submission audit.**
+The S2 and S3 rows above give two numbers each and the manuscript first
+described them as discovery and replication. That is wrong, and the original
+wording is left above rather than edited. Both columns of the PHASE B
+sensitivity table are GSE135251, the discovery cohort: the first is all 216
+samples and the second is the same cohort with the control group excluded.
+Neither variant was carried to GSE130970 or GSE167523, whose locked values are
+*z* = 3.56 and 2.95. The manuscript now says so.
+
+**Correction to §6r-A, same audit.** The SUPPLY retention in GSE14520 is stated
+above as 110%. Recomputed from the deposited matrix under the same joint model
+it is 109.5% (unadjusted +0.3349, intercept +0.3666), and the manuscript now
+reports 109.5%. The archived value is in `results/ARCHIVE_GAPS_2026-09-09.json`,
+which also carries the GSE14520 per-gene contrasts that Table 4 reports and that
+no earlier result file held.
+
 ## 7. Outcome-neutral stopping rule
 
 If H3 and H5 both fail, the index will **not** be redefined. The result will
@@ -2619,3 +2635,264 @@ coarse proxy for the instrument's dynamic range, and coverage is a property of
 the source study's pipeline as much as of the proteins. A negative result here
 does not exclude a measurement explanation; it excludes the two forms of it that
 these data can address.
+
+---
+
+# Amendment §6ac
+
+Added 9 September 2026, after a pre-submission audit of the manuscript against the
+archived result files. Post hoc relative to the 25 August 2026 lock, and post hoc
+relative to the results it concerns. This amendment records a defect in the
+enumeration rule of §6t and the sensitivity analysis it forces. It is written
+before that sensitivity was computed, but the defect itself was found after the
+lung results existed, and nothing here should be read as pre-registered.
+
+---
+
+## §6ac. The keyword rule admitted six sets that are not lung sets
+
+**Status.** Post hoc, and a correction rather than a new test.
+
+**What was found.** §6t fixed the comparator panel as every MSigDB C2:CGP gene set
+whose standard name contains a tissue keyword, and §6y carried that rule to lung
+with the keywords LUNG, PULMONARY and ALVEOLAR. A pre-submission audit of the
+enumeration, set by set, found that six of the 36 evaluable lung sets are not lung
+sets:
+
+- `MCCLUNG_COCAINE_REWARD_5D`
+- `MCCLUNG_COCAIN_REWARD_4WK`
+- `MCCLUNG_CREB1_TARGETS_DN`
+- `MCCLUNG_CREB1_TARGETS_UP`
+- `MCCLUNG_DELTA_FOSB_TARGETS_8WK`
+- `REN_ALVEOLAR_RHABDOMYOSARCOMA_UP`
+
+The first five are matched because the surname of their first author, McClung,
+contains the letters LUNG; they describe cocaine reward, *CREB1* targets and
+delta-FosB targets in rodent brain. The sixth is a soft-tissue sarcoma matched on
+the word alveolar and was already named in the manuscript as the single false
+positive. It was not the single false positive.
+
+The liver and kidney enumerations were audited the same way and contain no
+substring match of this kind.
+
+**What is not being changed.** The rule stands as fixed. No set is removed from
+the locked panel, no retention value is recomputed, and every number reported for
+the locked lung panel of 36 sets remains as it was. The rule was fixed before any
+set was scored, and removing sets from it after seeing their retention values is
+exactly the practice this study exists to argue against.
+
+**The sensitivity, and its outcome fixed before computing it.** The manuscript
+reports, as a post hoc sensitivity, the same lung quantities with the six sets
+removed, on 30 sets. Three outcomes were written down before the computation:
+
+1. If the lung median retention and the dispersion criteria are unchanged in
+   substance, the manuscript says so and the generality conclusion stands.
+2. If any comparison changes direction, the manuscript reports the locked result
+   and the reversal together, states that the locked result rests on sets that do
+   not belong to the tissue, and withdraws the claim that the reversal supports.
+3. If the sensitivity changes a conclusion in a way that cannot be reported
+   alongside the locked result, the affected claim is withdrawn.
+
+**Outcome, recorded after computing it.**
+
+| Quantity | Locked panel, 36 sets | Sensitivity, 30 sets |
+|---|---|---|
+| Median retention, joint D1 + C1 | 0.576 | 0.563 |
+| Median retention, identity only | 0.845 | 0.672 |
+| Median retention, composition only | 0.699 | 0.819 |
+| Signatures changing side of the 50% threshold | 26 of 36 | 22 of 30 |
+
+Outcome 1 holds for the distribution: the median moves by 0.013 and the
+dispersion conclusion of §6y is unaffected.
+
+Outcome 2 holds for one comparison. On the locked panel, composition adjustment
+leaves less standing than identity adjustment in lung, 0.699 against 0.845, the
+reverse of the liver ordering. With the six non-lung sets removed the ordering is
+the same as in liver, 0.819 against 0.672. The reversal was therefore carried by
+sets that are not lung sets, and the manuscript reports it as an artifact of what
+the keyword rule admitted rather than as a property of lung tissue. The claim
+that the two covariates change places between tissues is withdrawn.
+
+What survives in both versions is the disagreement between the covariates itself:
+the proportion of lung signatures that change side of the 50% threshold depending
+on which covariate is used is 72% on the locked panel and 73% on the sensitivity,
+the highest of any cohort either way.
+
+**Why this is recorded rather than quietly repaired.** The alternative was to
+change the keyword rule to require a word boundary, re-run the lung enumeration,
+and present the result as though the rule had always read that way. That would
+have produced a cleaner paper and a false record. A mechanical rule admits what
+it admits; the merit of fixing it in advance is not that it is never wrong but
+that its errors are countable afterwards, which is what happened here.
+
+**Amendment text digest.** SHA-256 `e76209a595364a2ff70d0ee48f5449ba7c489215fec0a6aa5bdf117a77714bad`, recorded 2026-09-09T04:04:51Z.
+
+---
+
+# Amendment §6ad
+
+Added 9 September 2026, after the pre-submission audit that produced §6ac. Post hoc
+in every sense: the question was asked because a reader of the draft challenged an
+unsupported sentence in it, and the answer was computed after the results it
+concerns already existed. Nothing here is pre-registered, and it is reported as
+what it is.
+
+---
+
+## §6ad. Does anything about a signature predict its retention?
+
+**Status.** Post hoc, and a correction of an unsupported claim.
+
+**The claim being corrected.** Three passages of the draft asserted that retention
+"cannot be predicted from a signature's name, size or subject." No analysis
+supporting that sentence was ever performed. It was an impression formed from
+looking at the ranked distribution, and it should not have been written.
+
+**What was computed.** For every cohort with an archived benchmark, the Spearman
+correlation between a signature's identity-retention fraction in the joint model
+and, separately, (i) the signed unadjusted paired shift and (ii) the number of
+genes in the set. In the largest cohort the retention of sets whose MSigDB name
+ends in `_UP` was compared with those ending in `_DN`. No new module score was
+computed and no set was reselected.
+
+**Outcome.**
+
+| Cohort | *n* | Retention vs signed shift | Retention vs set size |
+|---|---|---|---|
+| GSE14520, liver, 213 pairs | 119 | ρ = +0.548, *P* = 1.2 × 10⁻¹⁰ | ρ = +0.03, *P* = 0.73 |
+| TCGA-LIHC, liver, 50 pairs | 103 | ρ = +0.512, *P* = 3.2 × 10⁻⁸ | ρ = +0.01, *P* = 0.92 |
+| GSE76427, liver, 52 pairs | 106 | ρ = +0.267, *P* = 5.7 × 10⁻³ | ρ = +0.14, *P* = 0.17 |
+| TCGA-LUAD, lung, 58 pairs | 36 | ρ = +0.003, *P* = 0.99 | ρ = +0.30, *P* = 0.07 |
+| TCGA-KIRC, kidney, 72 pairs | 15 | ρ = −0.536, *P* = 0.040 | ρ = −0.07, *P* = 0.81 |
+
+Set size predicts nothing anywhere. The **direction** of a signature's unadjusted
+shift predicts a great deal in liver and nothing in lung, and the association
+reverses in kidney's 15 sets. In GSE14520 the 60 sets that rise in tumor have
+median retention 0.887 and the 59 that fall have 0.532; sets named `_UP` retain
+0.837 against 0.627 for `_DN` (*P* = 0.012).
+
+**Why this happens, and why it does not dissolve the result.** The identity
+covariate falls in tumor. A signature that also falls therefore shares sign with
+ΔD1 and can have a large share of its shift absorbed; a signature that rises
+cannot be absorbed the same way. That is a structural property of the estimator
+and it must be disclosed. It does not reduce the finding to an artifact, for
+three reasons recorded here rather than argued later:
+
+1. The spread survives within each direction. Among the 60 rising sets retention
+   still ranges 38-fold, and among the 59 falling sets 508-fold.
+2. It is not general. The association is absent in lung and inverted in kidney,
+   so it is a property of how a given tissue's identity covariate relates to the
+   signatures enumerated for it, not of the arithmetic alone.
+3. It does not change any verdict. Both arms of the worked example, the module
+   comparisons and the covariate comparison are unaffected, because none of them
+   compares sets moving in opposite directions.
+
+**What the manuscript must now say.** The unsupported sentence is removed from all
+three passages. In its place the manuscript reports that set size predicts
+nothing, that direction predicts retention in liver but not in lung and inversely
+in kidney, and that retention should be compared between signatures that move the
+same way. The limitation is stated in the Limitations paragraph as well, because
+a reader who takes only the median from this paper should know that it is not
+direction-free.
+
+**Amendment text digest.** SHA-256 `a0b32569337e49b3275bf98f322cd069605b703984d0d47d10a43742de3a696f`, recorded 2026-09-09T04:52:34Z.
+
+
+---
+
+# Amendment §6ae
+
+Added 9 September 2026, after a referee-style read of the complete manuscript.
+Post hoc relative to the 25 August 2026 lock and post hoc relative to every
+result it concerns. The question below was raised after the answers already
+existed. Nothing here is pre-registered, and it is reported as a control that
+qualifies the interpretation of a measure this study had already computed.
+
+---
+
+## §6ae. Is the identity covariate doing anything a covariate of its size would not?
+
+**Status.** Post hoc, and a control rather than a new test.
+
+**Why.** The measure is named for hepatocyte identity. Every interpretive claim
+in the manuscript rests on D1 being a differentiation covariate rather than a
+proxy for the dominant tumor-versus-adjacent contrast. §6ad had already shown
+that a signature's own direction predicts its retention in liver, and named the
+mechanism: the covariate itself falls in tumor, so a falling signature can share
+sign with it and be absorbed where a rising one cannot. That mechanism, taken
+seriously, predicts that any covariate falling by about as much as D1 does would
+remove about as much. No amendment had tested it.
+
+**What was done.** In GSE14520, 213 pairs, the 119 evaluable signatures were
+re-scored under the joint model with D1 replaced by a covariate of the same size
+drawn at random from the platform, with the redox panel, D1 and C1 excluded from
+the draw. Four pools were used: genes matched to D1 on the sign and magnitude of
+their own paired shift and on mean expression; genes with no paired shift; genes
+rising in tumor; and the platform unrestricted. Two hundred draws for the
+matched pool, one hundred for each other pool. Before any of this, the archived
+joint retention of all 119 signatures was reproduced from the expression matrix
+as a control on the recomputation, to 0.0011 at worst.
+
+**Outcome, recorded after computing it.**
+
+| Covariate, 22 genes | Median retention | Below 50% |
+|---|---|---|
+| D1, as locked | 0.7579 | 30 of 119 |
+| random, matched to D1's fall | 0.6973 (0.635 to 0.7577) | 45 |
+| random, rising in tumor | 0.5509 | 54 |
+| random, no paired shift | 1.0326 | 4 |
+| random, unrestricted | 1.0151 | 4 |
+
+The 119 retention values obtained under a matched random covariate correlate
+with those obtained under D1 at median Pearson *r* = 0.8776, and
+97.5% of matched random covariates leave a median at or below D1's.
+
+**What this establishes.** How much a covariate removes is governed by the size
+of that covariate's own paired tumor shift, not by which genes it contains. A
+covariate that does not move between tumor and adjacent tissue removes nothing,
+which is also what C1 does in this cohort. D1 is not distinguished from a random
+covariate of its size; if anything it removes slightly less than one. The
+identity-retention fraction therefore measures how much of a signature's
+tumor-adjacent contrast is carried by the dominant paired axis, of which loss of
+hepatocyte identity is the interpretable and pre-specified instance used here,
+and not a quantity specific to differentiation.
+
+**What this does not overturn.** The dispersion across signatures, the
+dependence of precision on the number of pairs, the distinctness of identity
+adjustment from composition adjustment, the premise-check recommendation and
+every reported number are unaffected. What changes is the interpretation the
+manuscript is entitled to place on the covariate's name.
+
+**What the manuscript must now say.** That the covariate is not shown to be
+specific to differentiation; that a matched random covariate behaves the same
+way; that the quantity should be read as alignment with a large paired
+tumor-adjacent axis, with D1 the pre-specified and interpretable choice of such
+an axis; and that this is stated in the Abstract, the Analyses and the
+Limitations rather than only here.
+
+---
+
+## §6ae-B. Does curvature change the benchmark distribution?
+
+**Status.** Post hoc, and a sensitivity rather than a new test.
+
+**Why.** §6q found a quadratic term in ΔD1 warranted in this cohort
+(*P* = 6.0 × 10⁻⁴) but tested it only on the composite index. The intercept is
+an extrapolation, so the 119-signature distribution that carries the paper's
+argument was refitted with a quadratic term in ΔD1 added to the joint model.
+
+**Outcome, recorded after computing it.**
+
+| Model | Median | Interquartile range | Below 50% |
+|---|---|---|---|
+| joint, linear | 0.7579 | 0.5056 to 0.9449 | 30 of 119 |
+| joint, with a quadratic term in ΔD1 | 0.714 | 0.461 to 0.9515 | 34 of 119 |
+
+Spearman correlation between the two sets of 119 values: 0.9891.
+
+**What this establishes.** The distribution is robust to the curvature §6q
+found. The median falls by 0.044 and four more signatures fall below
+half, and the ranking is essentially unchanged. No verdict in the manuscript
+depends on the linear form.
+
+**Amendment text digest.** SHA-256 `37b7bb1c720b0a34fecbb3636906ee67e6fa35bab37fd8d4047e9c4184e741d2`, recorded 2026-09-09T22:31:12Z.
