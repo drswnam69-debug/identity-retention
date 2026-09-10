@@ -325,6 +325,15 @@ def check_anchored(ms: str, proto: str) -> None:
     for t in tbad:
         NOTE.append("    " + t)
 
+    # A few numbers come from a cited paper rather than from this archive.
+    # They cannot be bound to a result file, so they are bound to the table
+    # and row they were read from instead.
+    ln, lbad = anchored.run_literature(ms)
+    check(not lbad, f"{ln} literature-sourced values match their stated source "
+                    f"({len(lbad)} do not)")
+    for b in lbad:
+        NOTE.append("    " + b)
+
 
 def check_protocol_numbers(proto: str) -> None:
     """The protocol quotes results too, and they must match the same archive."""

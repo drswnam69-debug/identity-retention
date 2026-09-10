@@ -21,6 +21,9 @@ MUTATIONS = [
      "Adjusting for identity is not what adjusting for tumor purity does. "
      "The premise check and the ratio-stability guard live inside that function",
      "/home/claude/CoverLetter_GigaScience.md"),
+    ("a literature-sourced percentage silently changed",
+     "cirrhosis was recorded in **54%** of the 115 patients",
+     "cirrhosis was recorded in **58%** of the 115 patients"),
     ("a British spelling the old word list missed",
      "the dotted gray lines mark", "the dotted grey lines mark"),
     ("Acknowledgements in the British form",

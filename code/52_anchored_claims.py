@@ -517,6 +517,40 @@ def run_tuples(ms_text: str, whole: bool = False):
     return checked, bad
 
 
+
+# ---------------------------------------------------------------------------
+# Values taken from a cited paper rather than from this study's archive.
+#
+# Every other number the manuscript reports is bound above to a result file.
+# A handful come from a reference instead, and those cannot be checked against
+# the archive because the archive does not contain them and should not. They
+# are written down here with where each was read from, so that a later edit
+# cannot change one silently and so that no reader of this checker mistakes a
+# literature figure for a computed one.
+LITERATURE_VALUES = [
+    (r"cirrhosis was recorded in \*\*(\d+)%\*\* of the 115 patients", 54,
+     "Grinchuk 2018 Mol Oncol Table 1, row 6, Singapore cohort: 62 of 115"),
+    (r"in \*\*(\d+)%\*\* of the 206 GSE14520 patients", 92,
+     "Grinchuk 2018 Mol Oncol Table 1, row 6, LCI cohort: 189 of 206"),
+    (r"of the (\d+) patients from whom GSE76427 was assembled", 115,
+     "Grinchuk 2018 Mol Oncol Table 1 header, Singapore (training) n = 115"),
+    (r"of the (\d+) GSE14520 patients", 206,
+     "Grinchuk 2018 Mol Oncol Table 1 header, LCI (validation) n = 206"),
+]
+
+
+def run_literature(ms: str):
+    """Confirm each literature-sourced figure still reads as its source says."""
+    bad = []
+    for pat, want, source in LITERATURE_VALUES:
+        m = re.search(pat, ms)
+        if m is None:
+            bad.append(f"no longer in the manuscript: {source}")
+        elif int(m.group(1)) != want:
+            bad.append(f"manuscript says {m.group(1)}, {source}")
+    return len(LITERATURE_VALUES), bad
+
+
 if __name__ == "__main__":
     txt = open("/home/claude/manuscript_v4.md", encoding="utf-8").read()
     n, fails, missing = run(txt)
@@ -531,3 +565,8 @@ if __name__ == "__main__":
     print(f"\n{tn} co-occurring groups checked; {len(tbad)} unsupported")
     for t in tbad:
         print("  UNSUPPORTED  " + t)
+    ln, lbad = run_literature(txt)
+    print(f"\n{ln} literature-sourced value(s) checked against their stated source; "
+          f"{len(lbad)} wrong")
+    for b in lbad:
+        print("  WRONG  " + b)
