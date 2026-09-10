@@ -10,7 +10,7 @@ abstract: >-
   returns a value, and refuses to return one when either fails.
 type: software
 license: MIT
-version: 1.0.1
+version: 1.0.2
 date-released: "2026-09-10"
 authors:
   - family-names: Nam
@@ -31,5 +31,5 @@ keywords:
 repository-code: "https://github.com/drswnam69-debug/identity-retention"
 identifiers:
   - type: doi
-    value: "10.5281/zenodo.22658670"
+    value: "10.5281/zenodo.22658669"
     description: "Concept DOI, all versions"

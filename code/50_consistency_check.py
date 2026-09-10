@@ -560,7 +560,7 @@ def check_cover_letter(ms: str) -> None:
     check(m is not None and ms_m is not None and m.group(1) == ms_m.group(1),
           "the cover letter and the manuscript agree on the injected-defect count")
     # every DOI, repository URL and identifier must match the manuscript
-    for tok in ("10.5281/zenodo.22658670",
+    for tok in ("10.5281/zenodo.22658669",
                 "https://github.com/drswnam69-debug/identity-retention",
                 "0000-0001-5562-4775", "drswnam@catholic.ac.kr"):
         check(tok in cl and tok in ms or tok in cl and tok not in ms and

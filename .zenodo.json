@@ -1,5 +1,5 @@
 {
-  "title": "retentionfrac: the identity-retention fraction for paired tumor-adjacent expression contrasts",
+  "title": "identity-retention: the pre-registered pipeline for the identity-retention fraction in paired tumor-adjacent expression contrasts, with the retentionfrac package",
   "upload_type": "software",
   "license": "mit",
   "creators": [
@@ -9,10 +9,11 @@
       "affiliation": "Incheon St. Mary's Hospital, College of Medicine, The Catholic University of Korea"
     }
   ],
-  "description": "<p>Analysis code, gene sets, result files and the locked protocol for the study <em>How much of a tumor expression signature is dedifferentiation? A pre-registered measure in three tissues and its failure to transfer between transcriptome and proteome</em>. Includes <code>retentionfrac</code>, a one-function Python package that computes the identity-retention fraction with a bootstrap interval and refuses to return a value when the identity premise or the ratio-stability guard fails.</p>",
+  "description": "<p>Analysis code, gene sets, result files and the locked protocol for the study <em>How much of a tumor expression signature survives adjustment for the dominant tumor-adjacent axis? A pre-registered measure in three tissues and its failure to transfer between a transcriptome and a proteome</em>. Includes <code>retentionfrac</code> 1.0.0, a one-function Python package that computes the identity-retention fraction with a bootstrap interval and refuses to return a value when the identity premise or the ratio-stability guard fails.</p><p>The measure is named for the covariate used to compute it and not for a mechanism. Under amendment 6ae a covariate drawn at random and matched to the identity score on the size of its own paired tumor shift removes as much as the identity score does, so the quantity measures alignment with a large paired tumor-adjacent axis rather than anything specific to differentiation.</p><p><code>SHA256SUMS.txt</code> at the root lists every file in the archive; <code>shasum -a 256 -c SHA256SUMS.txt</code> verifies the deposit.</p>",
   "keywords": [
-    "dedifferentiation",
     "gene expression signature",
+    "tumor-adjacent contrast",
+    "confounding",
     "tumor purity",
     "pre-registration",
     "reproducibility",
