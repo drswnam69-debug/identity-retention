@@ -1,0 +1,15 @@
+{
+  "plan": "PREREGISTRATION 6ad, reporting step",
+  "note": "Percentile position of this study's own two modules within the direction-matched part of the GSE14520 benchmark distribution. \u00a76ad established that retention tracks the direction of a signature's unadjusted shift in liver, so a percentile taken across both directions is a percentile against a mixture.",
+  "n_all": 119,
+  "n_falling": 59,
+  "n_rising": 60,
+  "median_falling": 0.5325,
+  "median_rising": 0.8866,
+  "DRAIN_retention_joint": 0.3103,
+  "REDUCTION_retention_joint": 0.8905,
+  "DRAIN_percentile_all": 8.4,
+  "DRAIN_percentile_falling": 11.9,
+  "REDUCTION_percentile_all": 66.4,
+  "REDUCTION_percentile_rising": 50.0
+}

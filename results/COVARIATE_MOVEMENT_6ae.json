@@ -1,0 +1,60 @@
+{
+  "plan": "PREREGISTRATION 6ae, reporting step",
+  "note": "Summed absolute paired shift of each cohort's identity and composition covariates, beside that cohort's median joint retention. Inputs are archived elsewhere; nothing is refitted.",
+  "cohorts": {
+    "TCGA_LIHC": {
+      "identity_paired_delta": -0.4799,
+      "C1_paired_delta": 0.2684,
+      "summed_absolute_movement": 0.7483,
+      "median_retention_joint": 0.8752
+    },
+    "GSE76427": {
+      "identity_paired_delta": -0.4808,
+      "C1_paired_delta": -0.3116,
+      "summed_absolute_movement": 0.7924,
+      "median_retention_joint": 0.608
+    },
+    "GSE14520": {
+      "identity_paired_delta": -0.7236,
+      "C1_paired_delta": -0.2164,
+      "summed_absolute_movement": 0.94,
+      "median_retention_joint": 0.7579
+    },
+    "TCGA_LUAD": {
+      "identity_paired_delta": -1.2303,
+      "C1_paired_delta": -0.4924,
+      "summed_absolute_movement": 1.7227,
+      "median_retention_joint": 0.5761
+    },
+    "TCGA_KIRC": {
+      "identity_paired_delta": -0.8428,
+      "C1_paired_delta": 0.9556,
+      "summed_absolute_movement": 1.7984,
+      "median_retention_joint": 0.4665
+    }
+  },
+  "ordered_by_movement": [
+    "TCGA_LIHC",
+    "GSE76427",
+    "GSE14520",
+    "TCGA_LUAD",
+    "TCGA_KIRC"
+  ],
+  "movement_ascending": [
+    0.7483,
+    0.7924,
+    0.94,
+    1.7227,
+    1.7984
+  ],
+  "median_retention_in_that_order": [
+    0.8752,
+    0.608,
+    0.7579,
+    0.5761,
+    0.4665
+  ],
+  "median_is_monotone_decreasing": false,
+  "spearman_movement_vs_median": -0.9,
+  "caveat_GSE76427": "median from the archived assembly this study reports as irreproducible; excluded from per-signature claims elsewhere"
+}

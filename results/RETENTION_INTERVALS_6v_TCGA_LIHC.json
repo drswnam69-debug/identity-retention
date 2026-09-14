@@ -1,0 +1,2637 @@
+{
+ "plan": "PREREGISTRATION 6v part A",
+ "amendment_sha256_of_text_as_written": "4b434bd2dc2af88fe04eb90cb04ec2a6e6dff39ed4de772b8261e5be5aead827",
+ "cohort": "TCGA_LIHC",
+ "n_pairs": 50,
+ "B": 2000,
+ "seed": 20260907,
+ "n_evaluable": 103,
+ "n_unstable": 0,
+ "unstable_names": [],
+ "n_below_50_point": 16,
+ "n_below_50_interval": 4,
+ "below_50_interval_names": [
+  "ANDERSEN_LIVER_CANCER_KRT19_DN",
+  "HSIAO_LIVER_SPECIFIC_GENES",
+  "SU_LIVER",
+  "YAMASHITA_LIVER_CANCER_STEM_CELL_DN"
+ ],
+ "median_ci_width": 0.3921,
+ "iqr_ci_width": [
+  0.3082,
+  0.5611
+ ],
+ "n_ci_contains_1": 76,
+ "own_modules": {
+  "REDUCTION": {
+   "name": "OWN_REDUCTION",
+   "n_genes": 4,
+   "n_on_platform": 4,
+   "unadjusted_mean_delta": 1.2612,
+   "wilcoxon_p": 1.7763568394002505e-15,
+   "status": "ok",
+   "retention_D1": 0.9203,
+   "retention_joint": 0.92,
+   "unadjusted_boot_ci95": [
+    1.0999,
+    1.4258
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.8514,
+    0.9684
+   ],
+   "boot_median_retention_joint": 0.9155,
+   "ci95_retention_D1": [
+    0.857,
+    0.9599
+   ],
+   "boot_median_retention_D1": 0.9168
+  },
+  "DRAIN": {
+   "name": "OWN_DRAIN",
+   "n_genes": 3,
+   "n_on_platform": 3,
+   "unadjusted_mean_delta": -0.1468,
+   "wilcoxon_p": 0.34720687274462314,
+   "status": "null_effect_excluded"
+  }
+ },
+ "signatures": [
+  {
+   "name": "ACEVEDO_LIVER_CANCER_UP",
+   "n_genes": 972,
+   "n_on_platform": 953,
+   "unadjusted_mean_delta": 1.0074,
+   "wilcoxon_p": 5.453415496958769e-13,
+   "status": "ok",
+   "retention_D1": 0.977,
+   "retention_joint": 0.9741,
+   "unadjusted_boot_ci95": [
+    0.852,
+    1.164
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.8673,
+    1.1243
+   ],
+   "boot_median_retention_joint": 0.9726,
+   "ci95_retention_D1": [
+    0.8896,
+    1.0555
+   ],
+   "boot_median_retention_D1": 0.978
+  },
+  {
+   "name": "ACEVEDO_LIVER_CANCER_WITH_H3K27ME3_DN",
+   "n_genes": 222,
+   "n_on_platform": 208,
+   "unadjusted_mean_delta": 0.6002,
+   "wilcoxon_p": 9.521272659185342e-13,
+   "status": "ok",
+   "retention_D1": 0.9201,
+   "retention_joint": 0.9171,
+   "unadjusted_boot_ci95": [
+    0.4956,
+    0.7077
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.7749,
+    1.0993
+   ],
+   "boot_median_retention_joint": 0.9181,
+   "ci95_retention_D1": [
+    0.7929,
+    1.0608
+   ],
+   "boot_median_retention_D1": 0.9201
+  },
+  {
+   "name": "ACEVEDO_LIVER_CANCER_WITH_H3K27ME3_UP",
+   "n_genes": 290,
+   "n_on_platform": 280,
+   "unadjusted_mean_delta": 0.2684,
+   "wilcoxon_p": 0.0002409992117797799,
+   "status": "ok",
+   "retention_D1": 0.548,
+   "retention_joint": 0.5353,
+   "unadjusted_boot_ci95": [
+    0.1389,
+    0.4044
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.2383,
+    1.0201
+   ],
+   "boot_median_retention_joint": 0.533,
+   "ci95_retention_D1": [
+    0.1498,
+    0.817
+   ],
+   "boot_median_retention_D1": 0.5445
+  },
+  {
+   "name": "ACEVEDO_LIVER_CANCER_WITH_H3K9ME3_DN",
+   "n_genes": 119,
+   "n_on_platform": 116,
+   "unadjusted_mean_delta": 0.7797,
+   "wilcoxon_p": 3.6770586575585185e-13,
+   "status": "ok",
+   "retention_D1": 0.9715,
+   "retention_joint": 0.9684,
+   "unadjusted_boot_ci95": [
+    0.6521,
+    0.9121
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.857,
+    1.1191
+   ],
+   "boot_median_retention_joint": 0.9671,
+   "ci95_retention_D1": [
+    0.8902,
+    1.0669
+   ],
+   "boot_median_retention_D1": 0.9717
+  },
+  {
+   "name": "ACEVEDO_LIVER_CANCER_WITH_H3K9ME3_UP",
+   "n_genes": 137,
+   "n_on_platform": 130,
+   "unadjusted_mean_delta": 0.3245,
+   "wilcoxon_p": 2.0810681753857807e-05,
+   "status": "ok",
+   "retention_D1": 0.64,
+   "retention_joint": 0.6311,
+   "unadjusted_boot_ci95": [
+    0.1988,
+    0.4546
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.3608,
+    1.0852
+   ],
+   "boot_median_retention_joint": 0.6333,
+   "ci95_retention_D1": [
+    0.3349,
+    0.9607
+   ],
+   "boot_median_retention_D1": 0.6435
+  },
+  {
+   "name": "ACEVEDO_LIVER_TUMOR_VS_NORMAL_ADJACENT_TISSUE_DN",
+   "n_genes": 274,
+   "n_on_platform": 272,
+   "unadjusted_mean_delta": -0.267,
+   "wilcoxon_p": 1.7394549622906652e-07,
+   "status": "ok",
+   "retention_D1": 0.8366,
+   "retention_joint": 0.8441,
+   "unadjusted_boot_ci95": [
+    -0.3574,
+    -0.1856
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.5641,
+    1.0561
+   ],
+   "boot_median_retention_joint": 0.8305,
+   "ci95_retention_D1": [
+    0.5966,
+    0.9333
+   ],
+   "boot_median_retention_D1": 0.826
+  },
+  {
+   "name": "ACEVEDO_LIVER_TUMOR_VS_NORMAL_ADJACENT_TISSUE_UP",
+   "n_genes": 863,
+   "n_on_platform": 847,
+   "unadjusted_mean_delta": 1.1048,
+   "wilcoxon_p": 7.638334409421077e-14,
+   "status": "ok",
+   "retention_D1": 0.9878,
+   "retention_joint": 0.9853,
+   "unadjusted_boot_ci95": [
+    0.9514,
+    1.258
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.8855,
+    1.1121
+   ],
+   "boot_median_retention_joint": 0.9843,
+   "ci95_retention_D1": [
+    0.9031,
+    1.0575
+   ],
+   "boot_median_retention_D1": 0.9885
+  },
+  {
+   "name": "ACEVEDO_METHYLATED_IN_LIVER_CANCER_DN",
+   "n_genes": 876,
+   "n_on_platform": 848,
+   "unadjusted_mean_delta": 0.3939,
+   "wilcoxon_p": 5.7649630846867694e-08,
+   "status": "ok",
+   "retention_D1": 0.7771,
+   "retention_joint": 0.7703,
+   "unadjusted_boot_ci95": [
+    0.2804,
+    0.5066
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.5728,
+    1.1033
+   ],
+   "boot_median_retention_joint": 0.7747,
+   "ci95_retention_D1": [
+    0.5841,
+    1.0204
+   ],
+   "boot_median_retention_D1": 0.7816
+  },
+  {
+   "name": "ACEVEDO_NORMAL_TISSUE_ADJACENT_TO_LIVER_TUMOR_DN",
+   "n_genes": 354,
+   "n_on_platform": 353,
+   "unadjusted_mean_delta": 0.4325,
+   "wilcoxon_p": 2.81308842886574e-09,
+   "status": "ok",
+   "retention_D1": 1.1555,
+   "retention_joint": 1.1518,
+   "unadjusted_boot_ci95": [
+    0.3234,
+    0.5342
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    1.0278,
+    1.372
+   ],
+   "boot_median_retention_joint": 1.1583,
+   "ci95_retention_D1": [
+    1.0753,
+    1.2861
+   ],
+   "boot_median_retention_D1": 1.1596
+  },
+  {
+   "name": "ACEVEDO_NORMAL_TISSUE_ADJACENT_TO_LIVER_TUMOR_UP",
+   "n_genes": 173,
+   "n_on_platform": 170,
+   "unadjusted_mean_delta": 0.634,
+   "wilcoxon_p": 1.4432899320127035e-10,
+   "status": "ok",
+   "retention_D1": 0.9993,
+   "retention_joint": 0.9954,
+   "unadjusted_boot_ci95": [
+    0.5027,
+    0.7662
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.8572,
+    1.2127
+   ],
+   "boot_median_retention_joint": 0.9974,
+   "ci95_retention_D1": [
+    0.8891,
+    1.121
+   ],
+   "boot_median_retention_D1": 1.0037
+  },
+  {
+   "name": "ANDERSEN_LIVER_CANCER_KRT19_DN",
+   "n_genes": 75,
+   "n_on_platform": 73,
+   "unadjusted_mean_delta": -0.3243,
+   "wilcoxon_p": 0.00010381446904439429,
+   "status": "ok",
+   "retention_D1": 0.074,
+   "retention_joint": 0.0737,
+   "unadjusted_boot_ci95": [
+    -0.4969,
+    -0.1649
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.005,
+    0.3679
+   ],
+   "boot_median_retention_joint": 0.1061,
+   "ci95_retention_D1": [
+    0.0058,
+    0.3601
+   ],
+   "boot_median_retention_D1": 0.1059
+  },
+  {
+   "name": "ANDERSEN_LIVER_CANCER_KRT19_UP",
+   "n_genes": 35,
+   "n_on_platform": 35,
+   "unadjusted_mean_delta": 1.0628,
+   "wilcoxon_p": 1.34718902700115e-11,
+   "status": "ok",
+   "retention_D1": 0.8617,
+   "retention_joint": 0.8577,
+   "unadjusted_boot_ci95": [
+    0.8497,
+    1.2711
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.6874,
+    1.0402
+   ],
+   "boot_median_retention_joint": 0.8533,
+   "ci95_retention_D1": [
+    0.6965,
+    0.9713
+   ],
+   "boot_median_retention_D1": 0.8596
+  },
+  {
+   "name": "BORLAK_LIVER_CANCER_EGF_UP",
+   "n_genes": 54,
+   "n_on_platform": 54,
+   "unadjusted_mean_delta": 0.3928,
+   "wilcoxon_p": 2.6885878247284722e-05,
+   "status": "ok",
+   "retention_D1": 0.7372,
+   "retention_joint": 0.7273,
+   "unadjusted_boot_ci95": [
+    0.2437,
+    0.5476
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.4513,
+    1.1422
+   ],
+   "boot_median_retention_joint": 0.7177,
+   "ci95_retention_D1": [
+    0.4389,
+    0.9515
+   ],
+   "boot_median_retention_D1": 0.7312
+  },
+  {
+   "name": "BOYAULT_LIVER_CANCER_SUBCLASS_G123_DN",
+   "n_genes": 51,
+   "n_on_platform": 51,
+   "unadjusted_mean_delta": -0.6733,
+   "wilcoxon_p": 5.310079487230723e-09,
+   "status": "ok",
+   "retention_D1": 0.5771,
+   "retention_joint": 0.5764,
+   "unadjusted_boot_ci95": [
+    -0.8641,
+    -0.4938
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.3933,
+    0.6856
+   ],
+   "boot_median_retention_joint": 0.5593,
+   "ci95_retention_D1": [
+    0.4033,
+    0.6822
+   ],
+   "boot_median_retention_D1": 0.562
+  },
+  {
+   "name": "BOYAULT_LIVER_CANCER_SUBCLASS_G123_UP",
+   "n_genes": 47,
+   "n_on_platform": 47,
+   "unadjusted_mean_delta": 1.265,
+   "wilcoxon_p": 3.375077994860476e-14,
+   "status": "ok",
+   "retention_D1": 0.9841,
+   "retention_joint": 0.9815,
+   "unadjusted_boot_ci95": [
+    1.0843,
+    1.4631
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.8706,
+    1.1063
+   ],
+   "boot_median_retention_joint": 0.978,
+   "ci95_retention_D1": [
+    0.893,
+    1.052
+   ],
+   "boot_median_retention_D1": 0.9821
+  },
+  {
+   "name": "BOYAULT_LIVER_CANCER_SUBCLASS_G12_DN",
+   "n_genes": 15,
+   "n_on_platform": 14,
+   "unadjusted_mean_delta": -0.4941,
+   "wilcoxon_p": 3.457260659445183e-05,
+   "status": "ok",
+   "retention_D1": 0.428,
+   "retention_joint": 0.4266,
+   "unadjusted_boot_ci95": [
+    -0.701,
+    -0.2882
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.0638,
+    0.6282
+   ],
+   "boot_median_retention_joint": 0.4037,
+   "ci95_retention_D1": [
+    0.0818,
+    0.6299
+   ],
+   "boot_median_retention_D1": 0.4063
+  },
+  {
+   "name": "BOYAULT_LIVER_CANCER_SUBCLASS_G12_UP",
+   "n_genes": 39,
+   "n_on_platform": 39,
+   "unadjusted_mean_delta": 1.1987,
+   "wilcoxon_p": 9.769962616701378e-14,
+   "status": "ok",
+   "retention_D1": 0.9943,
+   "retention_joint": 0.9918,
+   "unadjusted_boot_ci95": [
+    1.0151,
+    1.3884
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.8841,
+    1.1309
+   ],
+   "boot_median_retention_joint": 0.9923,
+   "ci95_retention_D1": [
+    0.9005,
+    1.0702
+   ],
+   "boot_median_retention_D1": 0.9948
+  },
+  {
+   "name": "BOYAULT_LIVER_CANCER_SUBCLASS_G1_UP",
+   "n_genes": 116,
+   "n_on_platform": 115,
+   "unadjusted_mean_delta": 0.9583,
+   "wilcoxon_p": 4.218847493575595e-12,
+   "status": "ok",
+   "retention_D1": 0.9083,
+   "retention_joint": 0.9047,
+   "unadjusted_boot_ci95": [
+    0.7675,
+    1.1665
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.7364,
+    1.1034
+   ],
+   "boot_median_retention_joint": 0.9013,
+   "ci95_retention_D1": [
+    0.7511,
+    1.029
+   ],
+   "boot_median_retention_D1": 0.9066
+  },
+  {
+   "name": "BOYAULT_LIVER_CANCER_SUBCLASS_G2",
+   "n_genes": 28,
+   "n_on_platform": 28,
+   "unadjusted_mean_delta": 0.85,
+   "wilcoxon_p": 6.616929226765933e-12,
+   "status": "ok",
+   "retention_D1": 0.9689,
+   "retention_joint": 0.9657,
+   "unadjusted_boot_ci95": [
+    0.6861,
+    1.0162
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.841,
+    1.1739
+   ],
+   "boot_median_retention_joint": 0.969,
+   "ci95_retention_D1": [
+    0.8645,
+    1.1349
+   ],
+   "boot_median_retention_D1": 0.9725
+  },
+  {
+   "name": "BOYAULT_LIVER_CANCER_SUBCLASS_G23_UP",
+   "n_genes": 53,
+   "n_on_platform": 51,
+   "unadjusted_mean_delta": 1.2467,
+   "wilcoxon_p": 2.4868995751603507e-14,
+   "status": "ok",
+   "retention_D1": 0.9936,
+   "retention_joint": 0.9917,
+   "unadjusted_boot_ci95": [
+    1.0769,
+    1.4264
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.8949,
+    1.1
+   ],
+   "boot_median_retention_joint": 0.9906,
+   "ci95_retention_D1": [
+    0.911,
+    1.0633
+   ],
+   "boot_median_retention_D1": 0.9942
+  },
+  {
+   "name": "BOYAULT_LIVER_CANCER_SUBCLASS_G3_DN",
+   "n_genes": 52,
+   "n_on_platform": 52,
+   "unadjusted_mean_delta": -0.2506,
+   "wilcoxon_p": 0.03286210881230289,
+   "status": "ok",
+   "retention_D1": 0.1512,
+   "retention_joint": 0.1476,
+   "unadjusted_boot_ci95": [
+    -0.4294,
+    -0.082
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.0084,
+    1.78
+   ],
+   "boot_median_retention_joint": 0.2112,
+   "ci95_retention_D1": [
+    0.0079,
+    1.7933
+   ],
+   "boot_median_retention_D1": 0.2101
+  },
+  {
+   "name": "BOYAULT_LIVER_CANCER_SUBCLASS_G3_UP",
+   "n_genes": 189,
+   "n_on_platform": 188,
+   "unadjusted_mean_delta": 1.2284,
+   "wilcoxon_p": 1.5631940186722204e-13,
+   "status": "ok",
+   "retention_D1": 0.9592,
+   "retention_joint": 0.9568,
+   "unadjusted_boot_ci95": [
+    1.0421,
+    1.4192
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.8473,
+    1.0769
+   ],
+   "boot_median_retention_joint": 0.9532,
+   "ci95_retention_D1": [
+    0.8697,
+    1.0274
+   ],
+   "boot_median_retention_D1": 0.958
+  },
+  {
+   "name": "BOYAULT_LIVER_CANCER_SUBCLASS_G56_DN",
+   "n_genes": 17,
+   "n_on_platform": 16,
+   "unadjusted_mean_delta": -0.255,
+   "wilcoxon_p": 0.017101069545240932,
+   "status": "ok",
+   "retention_D1": 1.3535,
+   "retention_joint": 1.3731,
+   "unadjusted_boot_ci95": [
+    -0.4441,
+    -0.0622
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.7406,
+    4.1828
+   ],
+   "boot_median_retention_joint": 1.3728,
+   "ci95_retention_D1": [
+    0.911,
+    2.6957
+   ],
+   "boot_median_retention_D1": 1.3665
+  },
+  {
+   "name": "BOYAULT_LIVER_CANCER_SUBCLASS_G6_UP",
+   "n_genes": 66,
+   "n_on_platform": 65,
+   "unadjusted_mean_delta": 0.8134,
+   "wilcoxon_p": 8.842704346534447e-12,
+   "status": "ok",
+   "retention_D1": 1.027,
+   "retention_joint": 1.0265,
+   "unadjusted_boot_ci95": [
+    0.6086,
+    1.0337
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.9082,
+    1.1308
+   ],
+   "boot_median_retention_joint": 1.0316,
+   "ci95_retention_D1": [
+    0.9056,
+    1.1114
+   ],
+   "boot_median_retention_D1": 1.0264
+  },
+  {
+   "name": "BREUHAHN_GROWTH_FACTOR_SIGNALING_IN_LIVER_CANCER",
+   "n_genes": 15,
+   "n_on_platform": 15,
+   "unadjusted_mean_delta": 0.4329,
+   "wilcoxon_p": 8.398093875428003e-06,
+   "status": "ok",
+   "retention_D1": 0.7782,
+   "retention_joint": 0.7678,
+   "unadjusted_boot_ci95": [
+    0.2608,
+    0.5981
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.482,
+    1.225
+   ],
+   "boot_median_retention_joint": 0.7597,
+   "ci95_retention_D1": [
+    0.4865,
+    0.9958
+   ],
+   "boot_median_retention_D1": 0.7747
+  },
+  {
+   "name": "CAIRO_HEPATOBLASTOMA_CLASSES_UP",
+   "n_genes": 609,
+   "n_on_platform": 606,
+   "unadjusted_mean_delta": 1.1694,
+   "wilcoxon_p": 1.5631940186722204e-13,
+   "status": "ok",
+   "retention_D1": 0.9675,
+   "retention_joint": 0.9649,
+   "unadjusted_boot_ci95": [
+    0.9956,
+    1.3466
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.8443,
+    1.0928
+   ],
+   "boot_median_retention_joint": 0.9611,
+   "ci95_retention_D1": [
+    0.8657,
+    1.0422
+   ],
+   "boot_median_retention_D1": 0.9652
+  },
+  {
+   "name": "CAIRO_HEPATOBLASTOMA_DN",
+   "n_genes": 267,
+   "n_on_platform": 264,
+   "unadjusted_mean_delta": -0.7654,
+   "wilcoxon_p": 8.881784197001252e-15,
+   "status": "ok",
+   "retention_D1": 0.7371,
+   "retention_joint": 0.7382,
+   "unadjusted_boot_ci95": [
+    -0.8995,
+    -0.637
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.6085,
+    0.8035
+   ],
+   "boot_median_retention_joint": 0.7247,
+   "ci95_retention_D1": [
+    0.6065,
+    0.7939
+   ],
+   "boot_median_retention_D1": 0.7241
+  },
+  {
+   "name": "CAIRO_HEPATOBLASTOMA_POOR_SURVIVAL",
+   "n_genes": 16,
+   "n_on_platform": 16,
+   "unadjusted_mean_delta": 0.238,
+   "wilcoxon_p": 9.915398697479816e-05,
+   "status": "ok",
+   "retention_D1": 1.6519,
+   "retention_joint": 1.6481,
+   "unadjusted_boot_ci95": [
+    0.1137,
+    0.352
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    1.1616,
+    3.024
+   ],
+   "boot_median_retention_joint": 1.6236,
+   "ci95_retention_D1": [
+    1.171,
+    3.0444
+   ],
+   "boot_median_retention_D1": 1.6313
+  },
+  {
+   "name": "CAIRO_HEPATOBLASTOMA_UP",
+   "n_genes": 213,
+   "n_on_platform": 211,
+   "unadjusted_mean_delta": 1.0553,
+   "wilcoxon_p": 3.6770586575585185e-13,
+   "status": "ok",
+   "retention_D1": 0.933,
+   "retention_joint": 0.9304,
+   "unadjusted_boot_ci95": [
+    0.8822,
+    1.2342
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.8193,
+    1.0593
+   ],
+   "boot_median_retention_joint": 0.9282,
+   "ci95_retention_D1": [
+    0.8364,
+    1.0027
+   ],
+   "boot_median_retention_D1": 0.9312
+  },
+  {
+   "name": "CAIRO_LIVER_DEVELOPMENT_UP",
+   "n_genes": 166,
+   "n_on_platform": 166,
+   "unadjusted_mean_delta": 0.5525,
+   "wilcoxon_p": 7.798730550234723e-08,
+   "status": "ok",
+   "retention_D1": 0.7493,
+   "retention_joint": 0.7417,
+   "unadjusted_boot_ci95": [
+    0.3886,
+    0.7163
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.5497,
+    1.0535
+   ],
+   "boot_median_retention_joint": 0.7418,
+   "ci95_retention_D1": [
+    0.5738,
+    0.938
+   ],
+   "boot_median_retention_D1": 0.7519
+  },
+  {
+   "name": "CARRILLOREIXACH_HEPATOBLASTOMA_VS_NORMAL_HYPERMETHYLATED_AND_DN",
+   "n_genes": 21,
+   "n_on_platform": 21,
+   "unadjusted_mean_delta": -0.4362,
+   "wilcoxon_p": 1.370373858833318e-08,
+   "status": "ok",
+   "retention_D1": 0.7141,
+   "retention_joint": 0.7161,
+   "unadjusted_boot_ci95": [
+    -0.5554,
+    -0.3149
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.4696,
+    0.8147
+   ],
+   "boot_median_retention_joint": 0.6981,
+   "ci95_retention_D1": [
+    0.4694,
+    0.8031
+   ],
+   "boot_median_retention_D1": 0.6977
+  },
+  {
+   "name": "CARRILLOREIXACH_HEPATOBLASTOMA_VS_NORMAL_HYPOMETHYLATED_AND_UP",
+   "n_genes": 162,
+   "n_on_platform": 162,
+   "unadjusted_mean_delta": 0.9742,
+   "wilcoxon_p": 4.4941828036826337e-13,
+   "status": "ok",
+   "retention_D1": 0.8593,
+   "retention_joint": 0.8551,
+   "unadjusted_boot_ci95": [
+    0.8053,
+    1.1507
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.7346,
+    1.0101
+   ],
+   "boot_median_retention_joint": 0.8479,
+   "ci95_retention_D1": [
+    0.7636,
+    0.9329
+   ],
+   "boot_median_retention_D1": 0.8547
+  },
+  {
+   "name": "CARRILLOREIXACH_HEPATOBLASTOMA_VS_NORMAL_UP",
+   "n_genes": 891,
+   "n_on_platform": 870,
+   "unadjusted_mean_delta": 0.9762,
+   "wilcoxon_p": 7.638334409421077e-14,
+   "status": "ok",
+   "retention_D1": 0.8493,
+   "retention_joint": 0.8458,
+   "unadjusted_boot_ci95": [
+    0.8114,
+    1.1425
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.7215,
+    0.9938
+   ],
+   "boot_median_retention_joint": 0.8411,
+   "ci95_retention_D1": [
+    0.7376,
+    0.9339
+   ],
+   "boot_median_retention_D1": 0.8451
+  },
+  {
+   "name": "CARRILLOREIXACH_MRS3_VS_LOWER_RISK_HEPATOBLASTOMA_UP",
+   "n_genes": 51,
+   "n_on_platform": 49,
+   "unadjusted_mean_delta": 0.6733,
+   "wilcoxon_p": 4.792291008470784e-10,
+   "status": "ok",
+   "retention_D1": 1.1326,
+   "retention_joint": 1.1313,
+   "unadjusted_boot_ci95": [
+    0.5084,
+    0.843
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.97,
+    1.3381
+   ],
+   "boot_median_retention_joint": 1.1346,
+   "ci95_retention_D1": [
+    0.9811,
+    1.3136
+   ],
+   "boot_median_retention_D1": 1.1297
+  },
+  {
+   "name": "CAVARD_LIVER_CANCER_MALIGNANT_VS_BENIGN",
+   "n_genes": 32,
+   "n_on_platform": 31,
+   "unadjusted_mean_delta": 0.4099,
+   "wilcoxon_p": 1.7394549622906652e-07,
+   "status": "ok",
+   "retention_D1": 1.1923,
+   "retention_joint": 1.1877,
+   "unadjusted_boot_ci95": [
+    0.2785,
+    0.5356
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.8788,
+    1.5547
+   ],
+   "boot_median_retention_joint": 1.1724,
+   "ci95_retention_D1": [
+    0.8758,
+    1.4878
+   ],
+   "boot_median_retention_D1": 1.1815
+  },
+  {
+   "name": "CHEN_LIVER_METABOLISM_QTL_CIS",
+   "n_genes": 95,
+   "n_on_platform": 95,
+   "unadjusted_mean_delta": 0.6209,
+   "wilcoxon_p": 3.40367733997482e-11,
+   "status": "ok",
+   "retention_D1": 1.0553,
+   "retention_joint": 1.0515,
+   "unadjusted_boot_ci95": [
+    0.4893,
+    0.7626
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.9338,
+    1.2525
+   ],
+   "boot_median_retention_joint": 1.0553,
+   "ci95_retention_D1": [
+    0.9734,
+    1.1574
+   ],
+   "boot_median_retention_D1": 1.0586
+  },
+  {
+   "name": "CHIANG_LIVER_CANCER_SUBCLASS_INTERFERON_DN",
+   "n_genes": 52,
+   "n_on_platform": 52,
+   "unadjusted_mean_delta": 0.457,
+   "wilcoxon_p": 2.8338981969966426e-06,
+   "status": "ok",
+   "retention_D1": 1.0431,
+   "retention_joint": 1.0431,
+   "unadjusted_boot_ci95": [
+    0.2749,
+    0.6421
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.9002,
+    1.2304
+   ],
+   "boot_median_retention_joint": 1.0531,
+   "ci95_retention_D1": [
+    0.8972,
+    1.1847
+   ],
+   "boot_median_retention_D1": 1.0427
+  },
+  {
+   "name": "CHIANG_LIVER_CANCER_SUBCLASS_INTERFERON_UP",
+   "n_genes": 26,
+   "n_on_platform": 26,
+   "unadjusted_mean_delta": -0.2782,
+   "wilcoxon_p": 0.0004153236253312542,
+   "status": "ok",
+   "retention_D1": 0.911,
+   "retention_joint": 0.9254,
+   "unadjusted_boot_ci95": [
+    -0.4067,
+    -0.1479
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.5762,
+    1.5712
+   ],
+   "boot_median_retention_joint": 0.9086,
+   "ci95_retention_D1": [
+    0.5244,
+    1.0664
+   ],
+   "boot_median_retention_D1": 0.9012
+  },
+  {
+   "name": "CHIANG_LIVER_CANCER_SUBCLASS_POLYSOMY7_DN",
+   "n_genes": 25,
+   "n_on_platform": 25,
+   "unadjusted_mean_delta": 0.6916,
+   "wilcoxon_p": 1.6183291151605772e-08,
+   "status": "ok",
+   "retention_D1": 0.8954,
+   "retention_joint": 0.8909,
+   "unadjusted_boot_ci95": [
+    0.4989,
+    0.8738
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.7077,
+    1.0648
+   ],
+   "boot_median_retention_joint": 0.8822,
+   "ci95_retention_D1": [
+    0.7377,
+    0.9805
+   ],
+   "boot_median_retention_D1": 0.8897
+  },
+  {
+   "name": "CHIANG_LIVER_CANCER_SUBCLASS_PROLIFERATION_DN",
+   "n_genes": 179,
+   "n_on_platform": 178,
+   "unadjusted_mean_delta": -0.55,
+   "wilcoxon_p": 4.788532343980023e-06,
+   "status": "ok",
+   "retention_D1": 0.3525,
+   "retention_joint": 0.3518,
+   "unadjusted_boot_ci95": [
+    -0.7683,
+    -0.3395
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.0713,
+    0.5085
+   ],
+   "boot_median_retention_joint": 0.3239,
+   "ci95_retention_D1": [
+    0.08,
+    0.5076
+   ],
+   "boot_median_retention_D1": 0.3265
+  },
+  {
+   "name": "CHIANG_LIVER_CANCER_SUBCLASS_PROLIFERATION_UP",
+   "n_genes": 179,
+   "n_on_platform": 178,
+   "unadjusted_mean_delta": 1.0438,
+   "wilcoxon_p": 4.4941828036826337e-13,
+   "status": "ok",
+   "retention_D1": 0.908,
+   "retention_joint": 0.9042,
+   "unadjusted_boot_ci95": [
+    0.8554,
+    1.2489
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.7592,
+    1.0634
+   ],
+   "boot_median_retention_joint": 0.8983,
+   "ci95_retention_D1": [
+    0.7876,
+    0.9953
+   ],
+   "boot_median_retention_D1": 0.9036
+  },
+  {
+   "name": "CHIANG_LIVER_CANCER_SUBCLASS_UNANNOTATED_DN",
+   "n_genes": 194,
+   "n_on_platform": 190,
+   "unadjusted_mean_delta": 1.0695,
+   "wilcoxon_p": 3.0020430585864233e-13,
+   "status": "ok",
+   "retention_D1": 0.981,
+   "retention_joint": 0.9782,
+   "unadjusted_boot_ci95": [
+    0.9019,
+    1.24
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.8349,
+    1.1232
+   ],
+   "boot_median_retention_joint": 0.9742,
+   "ci95_retention_D1": [
+    0.8566,
+    1.0777
+   ],
+   "boot_median_retention_D1": 0.9792
+  },
+  {
+   "name": "CHIANG_LIVER_CANCER_SUBCLASS_UNANNOTATED_UP",
+   "n_genes": 86,
+   "n_on_platform": 86,
+   "unadjusted_mean_delta": -0.1545,
+   "wilcoxon_p": 0.04193213473556767,
+   "status": "ok",
+   "retention_D1": 0.1094,
+   "retention_joint": 0.1191,
+   "unadjusted_boot_ci95": [
+    -0.2923,
+    -0.0173
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.0148,
+    5.3742
+   ],
+   "boot_median_retention_joint": 0.3107,
+   "ci95_retention_D1": [
+    0.0151,
+    5.8761
+   ],
+   "boot_median_retention_D1": 0.3224
+  },
+  {
+   "name": "DESERT_EXTRACELLULAR_MATRIX_HEPATOCELLULAR_CARCINOMA_SUBCLASS_UP",
+   "n_genes": 22,
+   "n_on_platform": 22,
+   "unadjusted_mean_delta": 0.4264,
+   "wilcoxon_p": 7.111603951059919e-06,
+   "status": "ok",
+   "retention_D1": 0.8258,
+   "retention_joint": 0.8162,
+   "unadjusted_boot_ci95": [
+    0.2772,
+    0.5796
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.5777,
+    1.1133
+   ],
+   "boot_median_retention_joint": 0.8017,
+   "ci95_retention_D1": [
+    0.6361,
+    0.9482
+   ],
+   "boot_median_retention_D1": 0.8196
+  },
+  {
+   "name": "DESERT_PERIPORTAL_HEPATOCELLULAR_CARCINOMA_SUBCLASS_UP",
+   "n_genes": 159,
+   "n_on_platform": 159,
+   "unadjusted_mean_delta": -0.7056,
+   "wilcoxon_p": 1.0206946399193839e-10,
+   "status": "ok",
+   "retention_D1": 0.5961,
+   "retention_joint": 0.5969,
+   "unadjusted_boot_ci95": [
+    -0.878,
+    -0.5379
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.4349,
+    0.6865
+   ],
+   "boot_median_retention_joint": 0.5759,
+   "ci95_retention_D1": [
+    0.4352,
+    0.6831
+   ],
+   "boot_median_retention_D1": 0.5762
+  },
+  {
+   "name": "DESERT_PERIVENOUS_HEPATOCELLULAR_CARCINOMA_SUBCLASS_UP",
+   "n_genes": 155,
+   "n_on_platform": 154,
+   "unadjusted_mean_delta": 0.7093,
+   "wilcoxon_p": 1.34718902700115e-11,
+   "status": "ok",
+   "retention_D1": 1.0923,
+   "retention_joint": 1.0907,
+   "unadjusted_boot_ci95": [
+    0.5561,
+    0.8632
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.979,
+    1.2136
+   ],
+   "boot_median_retention_joint": 1.0936,
+   "ci95_retention_D1": [
+    0.9894,
+    1.1835
+   ],
+   "boot_median_retention_D1": 1.0919
+  },
+  {
+   "name": "DESERT_STEM_CELL_HEPATOCELLULAR_CARCINOMA_SUBCLASS_UP",
+   "n_genes": 242,
+   "n_on_platform": 242,
+   "unadjusted_mean_delta": 1.015,
+   "wilcoxon_p": 9.521272659185342e-13,
+   "status": "ok",
+   "retention_D1": 0.8805,
+   "retention_joint": 0.8764,
+   "unadjusted_boot_ci95": [
+    0.8257,
+    1.2139
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.7404,
+    1.037
+   ],
+   "boot_median_retention_joint": 0.8688,
+   "ci95_retention_D1": [
+    0.7663,
+    0.9649
+   ],
+   "boot_median_retention_D1": 0.8767
+  },
+  {
+   "name": "HOSHIDA_LIVER_CANCER_LATE_RECURRENCE_DN",
+   "n_genes": 70,
+   "n_on_platform": 70,
+   "unadjusted_mean_delta": 0.1553,
+   "wilcoxon_p": 0.0004153236253312542,
+   "status": "ok",
+   "retention_D1": 1.1579,
+   "retention_joint": 1.147,
+   "unadjusted_boot_ci95": [
+    0.0613,
+    0.2452
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.7641,
+    2.3434
+   ],
+   "boot_median_retention_joint": 1.1922,
+   "ci95_retention_D1": [
+    0.8956,
+    1.8821
+   ],
+   "boot_median_retention_D1": 1.1729
+  },
+  {
+   "name": "HOSHIDA_LIVER_CANCER_LATE_RECURRENCE_UP",
+   "n_genes": 62,
+   "n_on_platform": 62,
+   "unadjusted_mean_delta": 0.5383,
+   "wilcoxon_p": 2.5156639491541455e-06,
+   "status": "ok",
+   "retention_D1": 0.6855,
+   "retention_joint": 0.6755,
+   "unadjusted_boot_ci95": [
+    0.3438,
+    0.7279
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.453,
+    1.049
+   ],
+   "boot_median_retention_joint": 0.6723,
+   "ci95_retention_D1": [
+    0.4491,
+    0.8879
+   ],
+   "boot_median_retention_D1": 0.6849
+  },
+  {
+   "name": "HOSHIDA_LIVER_CANCER_SUBCLASS_S1",
+   "n_genes": 235,
+   "n_on_platform": 235,
+   "unadjusted_mean_delta": 0.6236,
+   "wilcoxon_p": 2.1002898957789284e-06,
+   "status": "ok",
+   "retention_D1": 0.6087,
+   "retention_joint": 0.5983,
+   "unadjusted_boot_ci95": [
+    0.4026,
+    0.8532
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.4111,
+    0.9285
+   ],
+   "boot_median_retention_joint": 0.5947,
+   "ci95_retention_D1": [
+    0.3699,
+    0.7846
+   ],
+   "boot_median_retention_D1": 0.6075
+  },
+  {
+   "name": "HOSHIDA_LIVER_CANCER_SUBCLASS_S2",
+   "n_genes": 115,
+   "n_on_platform": 115,
+   "unadjusted_mean_delta": 0.9047,
+   "wilcoxon_p": 2.994404724177002e-11,
+   "status": "ok",
+   "retention_D1": 1.0273,
+   "retention_joint": 1.0245,
+   "unadjusted_boot_ci95": [
+    0.7147,
+    1.0982
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.8804,
+    1.1916
+   ],
+   "boot_median_retention_joint": 1.0261,
+   "ci95_retention_D1": [
+    0.9002,
+    1.14
+   ],
+   "boot_median_retention_D1": 1.0284
+  },
+  {
+   "name": "HOSHIDA_LIVER_CANCER_SUBCLASS_S3",
+   "n_genes": 266,
+   "n_on_platform": 265,
+   "unadjusted_mean_delta": -0.1929,
+   "wilcoxon_p": 0.01186723909238907,
+   "status": "ok",
+   "retention_D1": 0.1794,
+   "retention_joint": 0.1757,
+   "unadjusted_boot_ci95": [
+    -0.3257,
+    -0.0648
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.0097,
+    1.9002
+   ],
+   "boot_median_retention_joint": 0.2205,
+   "ci95_retention_D1": [
+    0.0108,
+    1.8769
+   ],
+   "boot_median_retention_D1": 0.223
+  },
+  {
+   "name": "HOSHIDA_LIVER_CANCER_SURVIVAL_DN",
+   "n_genes": 113,
+   "n_on_platform": 113,
+   "unadjusted_mean_delta": 0.2112,
+   "wilcoxon_p": 0.0013303578723942167,
+   "status": "ok",
+   "retention_D1": 1.6116,
+   "retention_joint": 1.6045,
+   "unadjusted_boot_ci95": [
+    0.0875,
+    0.3273
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    1.2701,
+    2.9356
+   ],
+   "boot_median_retention_joint": 1.6408,
+   "ci95_retention_D1": [
+    1.3108,
+    2.684
+   ],
+   "boot_median_retention_D1": 1.6393
+  },
+  {
+   "name": "HOSHIDA_LIVER_CANCER_SURVIVAL_UP",
+   "n_genes": 73,
+   "n_on_platform": 72,
+   "unadjusted_mean_delta": 0.4674,
+   "wilcoxon_p": 1.0451820186219152e-05,
+   "status": "ok",
+   "retention_D1": 0.6299,
+   "retention_joint": 0.6184,
+   "unadjusted_boot_ci95": [
+    0.286,
+    0.653
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.3991,
+    1.0333
+   ],
+   "boot_median_retention_joint": 0.6135,
+   "ci95_retention_D1": [
+    0.3474,
+    0.8327
+   ],
+   "boot_median_retention_D1": 0.632
+  },
+  {
+   "name": "HSIAO_LIVER_SPECIFIC_GENES",
+   "n_genes": 247,
+   "n_on_platform": 247,
+   "unadjusted_mean_delta": -0.4877,
+   "wilcoxon_p": 1.9077969426462005e-08,
+   "status": "ok",
+   "retention_D1": 0.2483,
+   "retention_joint": 0.2487,
+   "unadjusted_boot_ci95": [
+    -0.6808,
+    -0.311
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.1235,
+    0.3519
+   ],
+   "boot_median_retention_joint": 0.2361,
+   "ci95_retention_D1": [
+    0.121,
+    0.3477
+   ],
+   "boot_median_retention_D1": 0.234
+  },
+  {
+   "name": "IIZUKA_LIVER_CANCER_PROGRESSION_G1_G2_DN",
+   "n_genes": 25,
+   "n_on_platform": 25,
+   "unadjusted_mean_delta": 0.9946,
+   "wilcoxon_p": 3.40367733997482e-11,
+   "status": "ok",
+   "retention_D1": 0.9889,
+   "retention_joint": 0.9856,
+   "unadjusted_boot_ci95": [
+    0.8037,
+    1.1926
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.8564,
+    1.1488
+   ],
+   "boot_median_retention_joint": 0.9848,
+   "ci95_retention_D1": [
+    0.8879,
+    1.0682
+   ],
+   "boot_median_retention_D1": 0.9881
+  },
+  {
+   "name": "IIZUKA_LIVER_CANCER_PROGRESSION_L0_L1_DN",
+   "n_genes": 17,
+   "n_on_platform": 17,
+   "unadjusted_mean_delta": 0.8169,
+   "wilcoxon_p": 5.897913268881894e-10,
+   "status": "ok",
+   "retention_D1": 0.7193,
+   "retention_joint": 0.7134,
+   "unadjusted_boot_ci95": [
+    0.6149,
+    1.0204
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.5632,
+    0.926
+   ],
+   "boot_median_retention_joint": 0.7106,
+   "ci95_retention_D1": [
+    0.5703,
+    0.8565
+   ],
+   "boot_median_retention_D1": 0.7197
+  },
+  {
+   "name": "IIZUKA_LIVER_CANCER_PROGRESSION_L0_L1_UP",
+   "n_genes": 15,
+   "n_on_platform": 14,
+   "unadjusted_mean_delta": 0.6129,
+   "wilcoxon_p": 1.6183291151605772e-08,
+   "status": "ok",
+   "retention_D1": 0.9874,
+   "retention_joint": 0.9835,
+   "unadjusted_boot_ci95": [
+    0.4416,
+    0.7767
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.8194,
+    1.2434
+   ],
+   "boot_median_retention_joint": 0.988,
+   "ci95_retention_D1": [
+    0.8491,
+    1.1616
+   ],
+   "boot_median_retention_D1": 0.991
+  },
+  {
+   "name": "IIZUKA_LIVER_CANCER_PROGRESSION_L1_G1_UP",
+   "n_genes": 20,
+   "n_on_platform": 20,
+   "unadjusted_mean_delta": -0.6027,
+   "wilcoxon_p": 1.3535839116229909e-12,
+   "status": "ok",
+   "retention_D1": 0.8785,
+   "retention_joint": 0.8813,
+   "unadjusted_boot_ci95": [
+    -0.7197,
+    -0.4934
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.7033,
+    1.0085
+   ],
+   "boot_median_retention_joint": 0.8691,
+   "ci95_retention_D1": [
+    0.7151,
+    0.9572
+   ],
+   "boot_median_retention_D1": 0.872
+  },
+  {
+   "name": "KAPOSI_LIVER_CANCER_MET_UP",
+   "n_genes": 18,
+   "n_on_platform": 18,
+   "unadjusted_mean_delta": 1.0677,
+   "wilcoxon_p": 1.1368683772161603e-12,
+   "status": "ok",
+   "retention_D1": 0.8014,
+   "retention_joint": 0.7971,
+   "unadjusted_boot_ci95": [
+    0.8629,
+    1.2861
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.6469,
+    0.987
+   ],
+   "boot_median_retention_joint": 0.7935,
+   "ci95_retention_D1": [
+    0.665,
+    0.9283
+   ],
+   "boot_median_retention_D1": 0.8
+  },
+  {
+   "name": "KIM_LIVER_CANCER_POOR_SURVIVAL_DN",
+   "n_genes": 43,
+   "n_on_platform": 43,
+   "unadjusted_mean_delta": -0.3481,
+   "wilcoxon_p": 0.009116960633276605,
+   "status": "ok",
+   "retention_D1": 0.1641,
+   "retention_joint": 0.1664,
+   "unadjusted_boot_ci95": [
+    -0.5972,
+    -0.1371
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.0074,
+    1.1068
+   ],
+   "boot_median_retention_joint": 0.197,
+   "ci95_retention_D1": [
+    0.0089,
+    1.092
+   ],
+   "boot_median_retention_D1": 0.1935
+  },
+  {
+   "name": "KIM_LIVER_CANCER_POOR_SURVIVAL_UP",
+   "n_genes": 22,
+   "n_on_platform": 22,
+   "unadjusted_mean_delta": 0.5133,
+   "wilcoxon_p": 0.0002624791416003802,
+   "status": "ok",
+   "retention_D1": 0.4997,
+   "retention_joint": 0.4886,
+   "unadjusted_boot_ci95": [
+    0.2753,
+    0.7581
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.1728,
+    0.9043
+   ],
+   "boot_median_retention_joint": 0.4851,
+   "ci95_retention_D1": [
+    0.1132,
+    0.7733
+   ],
+   "boot_median_retention_D1": 0.5046
+  },
+  {
+   "name": "LEE_LIVER_CANCER_ACOX1_UP",
+   "n_genes": 65,
+   "n_on_platform": 64,
+   "unadjusted_mean_delta": 0.3447,
+   "wilcoxon_p": 1.3667570399888973e-06,
+   "status": "ok",
+   "retention_D1": 0.802,
+   "retention_joint": 0.7933,
+   "unadjusted_boot_ci95": [
+    0.2325,
+    0.4555
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.5752,
+    1.089
+   ],
+   "boot_median_retention_joint": 0.788,
+   "ci95_retention_D1": [
+    0.6106,
+    0.9369
+   ],
+   "boot_median_retention_D1": 0.802
+  },
+  {
+   "name": "LEE_LIVER_CANCER_CIPROFIBRATE_UP",
+   "n_genes": 60,
+   "n_on_platform": 59,
+   "unadjusted_mean_delta": 0.2319,
+   "wilcoxon_p": 3.457260659445183e-05,
+   "status": "ok",
+   "retention_D1": 0.9343,
+   "retention_joint": 0.924,
+   "unadjusted_boot_ci95": [
+    0.1311,
+    0.3242
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.6514,
+    1.4206
+   ],
+   "boot_median_retention_joint": 0.9356,
+   "ci95_retention_D1": [
+    0.7424,
+    1.1965
+   ],
+   "boot_median_retention_D1": 0.9413
+  },
+  {
+   "name": "LEE_LIVER_CANCER_DENA_DN",
+   "n_genes": 74,
+   "n_on_platform": 74,
+   "unadjusted_mean_delta": -0.1866,
+   "wilcoxon_p": 0.004757046552823496,
+   "status": "ok",
+   "retention_D1": 0.0584,
+   "retention_joint": 0.0573,
+   "unadjusted_boot_ci95": [
+    -0.3055,
+    -0.0682
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.0098,
+    1.2539
+   ],
+   "boot_median_retention_joint": 0.1845,
+   "ci95_retention_D1": [
+    0.0087,
+    1.2353
+   ],
+   "boot_median_retention_D1": 0.1831
+  },
+  {
+   "name": "LEE_LIVER_CANCER_DENA_UP",
+   "n_genes": 60,
+   "n_on_platform": 59,
+   "unadjusted_mean_delta": 0.5197,
+   "wilcoxon_p": 3.623269506647375e-08,
+   "status": "ok",
+   "retention_D1": 0.7589,
+   "retention_joint": 0.7508,
+   "unadjusted_boot_ci95": [
+    0.3758,
+    0.6704
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.5698,
+    1.0092
+   ],
+   "boot_median_retention_joint": 0.7447,
+   "ci95_retention_D1": [
+    0.594,
+    0.8782
+   ],
+   "boot_median_retention_D1": 0.7586
+  },
+  {
+   "name": "LEE_LIVER_CANCER_E2F1_UP",
+   "n_genes": 63,
+   "n_on_platform": 63,
+   "unadjusted_mean_delta": 0.4447,
+   "wilcoxon_p": 6.3368066349767105e-09,
+   "status": "ok",
+   "retention_D1": 0.895,
+   "retention_joint": 0.8874,
+   "unadjusted_boot_ci95": [
+    0.3307,
+    0.5592
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.7137,
+    1.1524
+   ],
+   "boot_median_retention_joint": 0.8832,
+   "ci95_retention_D1": [
+    0.7685,
+    1.0051
+   ],
+   "boot_median_retention_D1": 0.8965
+  },
+  {
+   "name": "LEE_LIVER_CANCER_MYC_E2F1_DN",
+   "n_genes": 64,
+   "n_on_platform": 64,
+   "unadjusted_mean_delta": -0.2083,
+   "wilcoxon_p": 0.002356807144249018,
+   "status": "ok",
+   "retention_D1": 0.0144,
+   "retention_joint": 0.0115,
+   "unadjusted_boot_ci95": [
+    -0.3317,
+    -0.0936
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.0055,
+    0.8034
+   ],
+   "boot_median_retention_joint": 0.136,
+   "ci95_retention_D1": [
+    0.007,
+    0.8445
+   ],
+   "boot_median_retention_D1": 0.1369
+  },
+  {
+   "name": "LEE_LIVER_CANCER_MYC_E2F1_UP",
+   "n_genes": 56,
+   "n_on_platform": 56,
+   "unadjusted_mean_delta": 0.5153,
+   "wilcoxon_p": 1.3149694666481082e-09,
+   "status": "ok",
+   "retention_D1": 0.8783,
+   "retention_joint": 0.8715,
+   "unadjusted_boot_ci95": [
+    0.3888,
+    0.6424
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.7089,
+    1.1055
+   ],
+   "boot_median_retention_joint": 0.8668,
+   "ci95_retention_D1": [
+    0.7548,
+    0.9774
+   ],
+   "boot_median_retention_D1": 0.8769
+  },
+  {
+   "name": "LEE_LIVER_CANCER_MYC_TGFA_DN",
+   "n_genes": 65,
+   "n_on_platform": 65,
+   "unadjusted_mean_delta": -0.147,
+   "wilcoxon_p": 0.02237794255729675,
+   "status": "ok",
+   "retention_D1": 0.3171,
+   "retention_joint": 0.3116,
+   "unadjusted_boot_ci95": [
+    -0.2633,
+    -0.0389
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.0179,
+    2.8683
+   ],
+   "boot_median_retention_joint": 0.3798,
+   "ci95_retention_D1": [
+    0.0175,
+    2.8993
+   ],
+   "boot_median_retention_D1": 0.3918
+  },
+  {
+   "name": "LEE_LIVER_CANCER_MYC_TGFA_UP",
+   "n_genes": 61,
+   "n_on_platform": 61,
+   "unadjusted_mean_delta": 0.4057,
+   "wilcoxon_p": 1.507920117660433e-07,
+   "status": "ok",
+   "retention_D1": 0.8523,
+   "retention_joint": 0.8444,
+   "unadjusted_boot_ci95": [
+    0.28,
+    0.5279
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.6161,
+    1.1699
+   ],
+   "boot_median_retention_joint": 0.8318,
+   "ci95_retention_D1": [
+    0.6344,
+    1.0054
+   ],
+   "boot_median_retention_D1": 0.8487
+  },
+  {
+   "name": "LEE_LIVER_CANCER_MYC_UP",
+   "n_genes": 54,
+   "n_on_platform": 54,
+   "unadjusted_mean_delta": 0.525,
+   "wilcoxon_p": 3.8819791825517314e-10,
+   "status": "ok",
+   "retention_D1": 0.9902,
+   "retention_joint": 0.9854,
+   "unadjusted_boot_ci95": [
+    0.4066,
+    0.6321
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.817,
+    1.2091
+   ],
+   "boot_median_retention_joint": 0.9839,
+   "ci95_retention_D1": [
+    0.8505,
+    1.1007
+   ],
+   "boot_median_retention_D1": 0.9894
+  },
+  {
+   "name": "LEE_LIVER_CANCER_SURVIVAL_DN",
+   "n_genes": 180,
+   "n_on_platform": 179,
+   "unadjusted_mean_delta": 1.0053,
+   "wilcoxon_p": 2.239985974483716e-12,
+   "status": "ok",
+   "retention_D1": 0.8857,
+   "retention_joint": 0.8817,
+   "unadjusted_boot_ci95": [
+    0.8172,
+    1.1954
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.7255,
+    1.063
+   ],
+   "boot_median_retention_joint": 0.8758,
+   "ci95_retention_D1": [
+    0.7509,
+    0.9932
+   ],
+   "boot_median_retention_D1": 0.8838
+  },
+  {
+   "name": "LIU_LIVER_CANCER",
+   "n_genes": 35,
+   "n_on_platform": 34,
+   "unadjusted_mean_delta": 0.5413,
+   "wilcoxon_p": 3.134559278805682e-10,
+   "status": "ok",
+   "retention_D1": 0.9456,
+   "retention_joint": 0.9408,
+   "unadjusted_boot_ci95": [
+    0.4286,
+    0.6467
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.8115,
+    1.1357
+   ],
+   "boot_median_retention_joint": 0.9439,
+   "ci95_retention_D1": [
+    0.8479,
+    1.0534
+   ],
+   "boot_median_retention_D1": 0.9481
+  },
+  {
+   "name": "MARTORIATI_MDM4_TARGETS_FETAL_LIVER_DN",
+   "n_genes": 516,
+   "n_on_platform": 513,
+   "unadjusted_mean_delta": 0.6711,
+   "wilcoxon_p": 6.917133532624575e-09,
+   "status": "ok",
+   "retention_D1": 0.9411,
+   "retention_joint": 0.9361,
+   "unadjusted_boot_ci95": [
+    0.5007,
+    0.8386
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.7764,
+    1.1938
+   ],
+   "boot_median_retention_joint": 0.9372,
+   "ci95_retention_D1": [
+    0.8211,
+    1.0913
+   ],
+   "boot_median_retention_D1": 0.9417
+  },
+  {
+   "name": "MARTORIATI_MDM4_TARGETS_FETAL_LIVER_UP",
+   "n_genes": 239,
+   "n_on_platform": 231,
+   "unadjusted_mean_delta": 0.6726,
+   "wilcoxon_p": 1.1727507853720454e-11,
+   "status": "ok",
+   "retention_D1": 0.8795,
+   "retention_joint": 0.8752,
+   "unadjusted_boot_ci95": [
+    0.5384,
+    0.8074
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.738,
+    1.0797
+   ],
+   "boot_median_retention_joint": 0.8772,
+   "ci95_retention_D1": [
+    0.7608,
+    1.017
+   ],
+   "boot_median_retention_D1": 0.8799
+  },
+  {
+   "name": "MIDORIKAWA_AMPLIFIED_IN_LIVER_CANCER",
+   "n_genes": 55,
+   "n_on_platform": 55,
+   "unadjusted_mean_delta": 0.7242,
+   "wilcoxon_p": 6.535714192068554e-10,
+   "status": "ok",
+   "retention_D1": 0.8659,
+   "retention_joint": 0.8613,
+   "unadjusted_boot_ci95": [
+    0.5496,
+    0.8974
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.6896,
+    1.1236
+   ],
+   "boot_median_retention_joint": 0.8644,
+   "ci95_retention_D1": [
+    0.7059,
+    1.058
+   ],
+   "boot_median_retention_D1": 0.8666
+  },
+  {
+   "name": "MINGUEZ_LIVER_CANCER_VASCULAR_INVASION_DN",
+   "n_genes": 21,
+   "n_on_platform": 21,
+   "unadjusted_mean_delta": -0.7764,
+   "wilcoxon_p": 1.192391962945294e-09,
+   "status": "ok",
+   "retention_D1": 0.5782,
+   "retention_joint": 0.5778,
+   "unadjusted_boot_ci95": [
+    -0.9856,
+    -0.5681
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.3587,
+    0.7075
+   ],
+   "boot_median_retention_joint": 0.5598,
+   "ci95_retention_D1": [
+    0.3613,
+    0.7049
+   ],
+   "boot_median_retention_D1": 0.5614
+  },
+  {
+   "name": "NABA_MATRISOME_METASTATIC_COLORECTAL_LIVER_METASTASIS",
+   "n_genes": 30,
+   "n_on_platform": 30,
+   "unadjusted_mean_delta": 0.345,
+   "wilcoxon_p": 0.0015962870115284744,
+   "status": "ok",
+   "retention_D1": 0.5344,
+   "retention_joint": 0.5194,
+   "unadjusted_boot_ci95": [
+    0.166,
+    0.5267
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.2285,
+    1.0803
+   ],
+   "boot_median_retention_joint": 0.5088,
+   "ci95_retention_D1": [
+    0.0907,
+    0.8321
+   ],
+   "boot_median_retention_D1": 0.5369
+  },
+  {
+   "name": "OHGUCHI_LIVER_HNF4A_TARGETS_DN",
+   "n_genes": 170,
+   "n_on_platform": 169,
+   "unadjusted_mean_delta": -0.242,
+   "wilcoxon_p": 0.001539555129280501,
+   "status": "ok",
+   "retention_D1": 0.0384,
+   "retention_joint": 0.0409,
+   "unadjusted_boot_ci95": [
+    -0.3728,
+    -0.1169
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.0042,
+    0.54
+   ],
+   "boot_median_retention_joint": 0.1098,
+   "ci95_retention_D1": [
+    0.0035,
+    0.5359
+   ],
+   "boot_median_retention_D1": 0.1088
+  },
+  {
+   "name": "PATIL_LIVER_CANCER",
+   "n_genes": 660,
+   "n_on_platform": 648,
+   "unadjusted_mean_delta": 1.225,
+   "wilcoxon_p": 1.7763568394002505e-14,
+   "status": "ok",
+   "retention_D1": 0.9707,
+   "retention_joint": 0.9685,
+   "unadjusted_boot_ci95": [
+    1.0669,
+    1.3908
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.8754,
+    1.0813
+   ],
+   "boot_median_retention_joint": 0.9665,
+   "ci95_retention_D1": [
+    0.8938,
+    1.0308
+   ],
+   "boot_median_retention_D1": 0.9703
+  },
+  {
+   "name": "ROESSLER_LIVER_CANCER_METASTASIS_DN",
+   "n_genes": 51,
+   "n_on_platform": 51,
+   "unadjusted_mean_delta": 0.757,
+   "wilcoxon_p": 7.237197507947712e-10,
+   "status": "ok",
+   "retention_D1": 0.8806,
+   "retention_joint": 0.8756,
+   "unadjusted_boot_ci95": [
+    0.5828,
+    0.9328
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.7019,
+    1.1406
+   ],
+   "boot_median_retention_joint": 0.876,
+   "ci95_retention_D1": [
+    0.7351,
+    1.0654
+   ],
+   "boot_median_retention_D1": 0.8817
+  },
+  {
+   "name": "ROESSLER_LIVER_CANCER_METASTASIS_UP",
+   "n_genes": 106,
+   "n_on_platform": 106,
+   "unadjusted_mean_delta": 0.6273,
+   "wilcoxon_p": 1.4492140820721033e-09,
+   "status": "ok",
+   "retention_D1": 0.8464,
+   "retention_joint": 0.841,
+   "unadjusted_boot_ci95": [
+    0.4714,
+    0.7832
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.6713,
+    1.0818
+   ],
+   "boot_median_retention_joint": 0.8416,
+   "ci95_retention_D1": [
+    0.6978,
+    1.0017
+   ],
+   "boot_median_retention_D1": 0.846
+  },
+  {
+   "name": "SAKAI_CHRONIC_HEPATITIS_VS_LIVER_CANCER_DN",
+   "n_genes": 36,
+   "n_on_platform": 36,
+   "unadjusted_mean_delta": 0.3234,
+   "wilcoxon_p": 4.878706765687468e-05,
+   "status": "ok",
+   "retention_D1": 0.6252,
+   "retention_joint": 0.6135,
+   "unadjusted_boot_ci95": [
+    0.1872,
+    0.4689
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.3503,
+    1.1263
+   ],
+   "boot_median_retention_joint": 0.6336,
+   "ci95_retention_D1": [
+    0.2741,
+    0.9625
+   ],
+   "boot_median_retention_D1": 0.6434
+  },
+  {
+   "name": "SAKAI_CHRONIC_HEPATITIS_VS_LIVER_CANCER_UP",
+   "n_genes": 82,
+   "n_on_platform": 81,
+   "unadjusted_mean_delta": 0.828,
+   "wilcoxon_p": 8.855280952957401e-10,
+   "status": "ok",
+   "retention_D1": 0.9711,
+   "retention_joint": 0.9665,
+   "unadjusted_boot_ci95": [
+    0.6357,
+    1.0211
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.8193,
+    1.1868
+   ],
+   "boot_median_retention_joint": 0.9653,
+   "ci95_retention_D1": [
+    0.8584,
+    1.0867
+   ],
+   "boot_median_retention_D1": 0.9707
+  },
+  {
+   "name": "SERVITJA_LIVER_HNF1A_TARGETS_UP",
+   "n_genes": 138,
+   "n_on_platform": 138,
+   "unadjusted_mean_delta": 0.4791,
+   "wilcoxon_p": 3.134559278805682e-10,
+   "status": "ok",
+   "retention_D1": 1.0007,
+   "retention_joint": 0.9959,
+   "unadjusted_boot_ci95": [
+    0.3779,
+    0.5758
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.8656,
+    1.1897
+   ],
+   "boot_median_retention_joint": 0.9967,
+   "ci95_retention_D1": [
+    0.9354,
+    1.0925
+   ],
+   "boot_median_retention_D1": 1.0016
+  },
+  {
+   "name": "SHETH_LIVER_CANCER_VS_TXNIP_LOSS_PAM1",
+   "n_genes": 260,
+   "n_on_platform": 258,
+   "unadjusted_mean_delta": 0.7225,
+   "wilcoxon_p": 2.3080204414327454e-11,
+   "status": "ok",
+   "retention_D1": 0.8731,
+   "retention_joint": 0.8685,
+   "unadjusted_boot_ci95": [
+    0.5777,
+    0.8697
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.7177,
+    1.0668
+   ],
+   "boot_median_retention_joint": 0.8649,
+   "ci95_retention_D1": [
+    0.7383,
+    0.9893
+   ],
+   "boot_median_retention_D1": 0.8721
+  },
+  {
+   "name": "SHETH_LIVER_CANCER_VS_TXNIP_LOSS_PAM2",
+   "n_genes": 168,
+   "n_on_platform": 167,
+   "unadjusted_mean_delta": 0.6166,
+   "wilcoxon_p": 2.0232171493717033e-10,
+   "status": "ok",
+   "retention_D1": 0.8581,
+   "retention_joint": 0.8523,
+   "unadjusted_boot_ci95": [
+    0.4758,
+    0.7568
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.6963,
+    1.0833
+   ],
+   "boot_median_retention_joint": 0.8495,
+   "ci95_retention_D1": [
+    0.7235,
+    0.9836
+   ],
+   "boot_median_retention_D1": 0.8585
+  },
+  {
+   "name": "SHETH_LIVER_CANCER_VS_TXNIP_LOSS_PAM3",
+   "n_genes": 75,
+   "n_on_platform": 75,
+   "unadjusted_mean_delta": 0.4926,
+   "wilcoxon_p": 5.897913268881894e-10,
+   "status": "ok",
+   "retention_D1": 0.8668,
+   "retention_joint": 0.8605,
+   "unadjusted_boot_ci95": [
+    0.3723,
+    0.6166
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.6857,
+    1.1311
+   ],
+   "boot_median_retention_joint": 0.8623,
+   "ci95_retention_D1": [
+    0.7249,
+    1.0229
+   ],
+   "boot_median_retention_D1": 0.8704
+  },
+  {
+   "name": "SHETH_LIVER_CANCER_VS_TXNIP_LOSS_PAM4",
+   "n_genes": 288,
+   "n_on_platform": 287,
+   "unadjusted_mean_delta": 0.1239,
+   "wilcoxon_p": 0.004459422606641894,
+   "status": "ok",
+   "retention_D1": 1.4879,
+   "retention_joint": 1.4709,
+   "unadjusted_boot_ci95": [
+    0.0287,
+    0.2151
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    1.0182,
+    4.3412
+   ],
+   "boot_median_retention_joint": 1.5126,
+   "ci95_retention_D1": [
+    1.2496,
+    3.1351
+   ],
+   "boot_median_retention_D1": 1.5204
+  },
+  {
+   "name": "SHETH_LIVER_CANCER_VS_TXNIP_LOSS_PAM5",
+   "n_genes": 111,
+   "n_on_platform": 111,
+   "unadjusted_mean_delta": 0.4333,
+   "wilcoxon_p": 1.3054913772236887e-07,
+   "status": "ok",
+   "retention_D1": 0.7828,
+   "retention_joint": 0.7752,
+   "unadjusted_boot_ci95": [
+    0.2969,
+    0.5698
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.5646,
+    1.1172
+   ],
+   "boot_median_retention_joint": 0.7724,
+   "ci95_retention_D1": [
+    0.5806,
+    0.9752
+   ],
+   "boot_median_retention_D1": 0.7819
+  },
+  {
+   "name": "SHETH_LIVER_CANCER_VS_TXNIP_LOSS_PAM6",
+   "n_genes": 55,
+   "n_on_platform": 55,
+   "unadjusted_mean_delta": 0.6459,
+   "wilcoxon_p": 2.1246773229677274e-09,
+   "status": "ok",
+   "retention_D1": 0.8965,
+   "retention_joint": 0.8909,
+   "unadjusted_boot_ci95": [
+    0.4916,
+    0.7949
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.7177,
+    1.1608
+   ],
+   "boot_median_retention_joint": 0.8909,
+   "ci95_retention_D1": [
+    0.744,
+    1.0506
+   ],
+   "boot_median_retention_D1": 0.8962
+  },
+  {
+   "name": "SMITH_LIVER_CANCER",
+   "n_genes": 47,
+   "n_on_platform": 47,
+   "unadjusted_mean_delta": 0.9414,
+   "wilcoxon_p": 4.4941828036826337e-13,
+   "status": "ok",
+   "retention_D1": 1.1357,
+   "retention_joint": 1.1343,
+   "unadjusted_boot_ci95": [
+    0.7887,
+    1.0954
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    1.041,
+    1.2673
+   ],
+   "boot_median_retention_joint": 1.1343,
+   "ci95_retention_D1": [
+    1.0489,
+    1.2431
+   ],
+   "boot_median_retention_D1": 1.1341
+  },
+  {
+   "name": "SU_LIVER",
+   "n_genes": 58,
+   "n_on_platform": 57,
+   "unadjusted_mean_delta": -0.5547,
+   "wilcoxon_p": 6.337863567296154e-11,
+   "status": "ok",
+   "retention_D1": 0.3418,
+   "retention_joint": 0.3416,
+   "unadjusted_boot_ci95": [
+    -0.7527,
+    -0.3719
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.2001,
+    0.4717
+   ],
+   "boot_median_retention_joint": 0.3304,
+   "ci95_retention_D1": [
+    0.2052,
+    0.4711
+   ],
+   "boot_median_retention_D1": 0.329
+  },
+  {
+   "name": "VILLANUEVA_LIVER_CANCER_KRT19_UP",
+   "n_genes": 175,
+   "n_on_platform": 173,
+   "unadjusted_mean_delta": 1.0788,
+   "wilcoxon_p": 7.94031507211912e-13,
+   "status": "ok",
+   "retention_D1": 0.943,
+   "retention_joint": 0.9399,
+   "unadjusted_boot_ci95": [
+    0.8897,
+    1.2803
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.8163,
+    1.1032
+   ],
+   "boot_median_retention_joint": 0.9373,
+   "ci95_retention_D1": [
+    0.8342,
+    1.0371
+   ],
+   "boot_median_retention_D1": 0.9429
+  },
+  {
+   "name": "WANG_RECURRENT_LIVER_CANCER_UP",
+   "n_genes": 20,
+   "n_on_platform": 19,
+   "unadjusted_mean_delta": 1.0899,
+   "wilcoxon_p": 1.3535839116229909e-12,
+   "status": "ok",
+   "retention_D1": 0.9217,
+   "retention_joint": 0.9194,
+   "unadjusted_boot_ci95": [
+    0.8905,
+    1.2896
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.749,
+    1.0802
+   ],
+   "boot_median_retention_joint": 0.9188,
+   "ci95_retention_D1": [
+    0.7643,
+    1.0395
+   ],
+   "boot_median_retention_D1": 0.9191
+  },
+  {
+   "name": "WENG_POR_TARGETS_LIVER_DN",
+   "n_genes": 23,
+   "n_on_platform": 23,
+   "unadjusted_mean_delta": -0.2778,
+   "wilcoxon_p": 4.028586058524297e-06,
+   "status": "ok",
+   "retention_D1": 0.5319,
+   "retention_joint": 0.5348,
+   "unadjusted_boot_ci95": [
+    -0.3803,
+    -0.1756
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.176,
+    0.6949
+   ],
+   "boot_median_retention_joint": 0.5046,
+   "ci95_retention_D1": [
+    0.1742,
+    0.6857
+   ],
+   "boot_median_retention_D1": 0.5063
+  },
+  {
+   "name": "WENG_POR_TARGETS_LIVER_UP",
+   "n_genes": 44,
+   "n_on_platform": 43,
+   "unadjusted_mean_delta": 0.1504,
+   "wilcoxon_p": 0.006325487527247375,
+   "status": "ok",
+   "retention_D1": 1.8986,
+   "retention_joint": 1.8933,
+   "unadjusted_boot_ci95": [
+    0.0368,
+    0.2564
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    1.3448,
+    5.8734
+   ],
+   "boot_median_retention_joint": 1.931,
+   "ci95_retention_D1": [
+    1.3384,
+    5.5963
+   ],
+   "boot_median_retention_D1": 1.9248
+  },
+  {
+   "name": "WOO_LIVER_CANCER_RECURRENCE_DN",
+   "n_genes": 78,
+   "n_on_platform": 78,
+   "unadjusted_mean_delta": -0.3691,
+   "wilcoxon_p": 0.0004153236253312542,
+   "status": "ok",
+   "retention_D1": 0.0601,
+   "retention_joint": 0.058,
+   "unadjusted_boot_ci95": [
+    -0.579,
+    -0.1735
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.007,
+    0.5166
+   ],
+   "boot_median_retention_joint": 0.1251,
+   "ci95_retention_D1": [
+    0.0054,
+    0.5067
+   ],
+   "boot_median_retention_D1": 0.1263
+  },
+  {
+   "name": "WOO_LIVER_CANCER_RECURRENCE_UP",
+   "n_genes": 105,
+   "n_on_platform": 105,
+   "unadjusted_mean_delta": 0.5704,
+   "wilcoxon_p": 1.5207189122179443e-05,
+   "status": "ok",
+   "retention_D1": 0.533,
+   "retention_joint": 0.5225,
+   "unadjusted_boot_ci95": [
+    0.3433,
+    0.8
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.2966,
+    0.8544
+   ],
+   "boot_median_retention_joint": 0.5124,
+   "ci95_retention_D1": [
+    0.2088,
+    0.7486
+   ],
+   "boot_median_retention_D1": 0.5269
+  },
+  {
+   "name": "YAMASHITA_LIVER_CANCER_STEM_CELL_DN",
+   "n_genes": 76,
+   "n_on_platform": 76,
+   "unadjusted_mean_delta": -0.2835,
+   "wilcoxon_p": 0.0006715891126169993,
+   "status": "ok",
+   "retention_D1": 0.2197,
+   "retention_joint": 0.224,
+   "unadjusted_boot_ci95": [
+    -0.4271,
+    -0.1431
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.0104,
+    0.4806
+   ],
+   "boot_median_retention_joint": 0.2031,
+   "ci95_retention_D1": [
+    0.0132,
+    0.4826
+   ],
+   "boot_median_retention_D1": 0.205
+  },
+  {
+   "name": "YAMASHITA_LIVER_CANCER_STEM_CELL_UP",
+   "n_genes": 47,
+   "n_on_platform": 47,
+   "unadjusted_mean_delta": 0.5388,
+   "wilcoxon_p": 5.310079487230723e-09,
+   "status": "ok",
+   "retention_D1": 0.9024,
+   "retention_joint": 0.8962,
+   "unadjusted_boot_ci95": [
+    0.3972,
+    0.6863
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.6755,
+    1.2046
+   ],
+   "boot_median_retention_joint": 0.8925,
+   "ci95_retention_D1": [
+    0.7092,
+    1.0818
+   ],
+   "boot_median_retention_D1": 0.905
+  },
+  {
+   "name": "YAMASHITA_LIVER_CANCER_WITH_EPCAM_UP",
+   "n_genes": 53,
+   "n_on_platform": 53,
+   "unadjusted_mean_delta": 0.8919,
+   "wilcoxon_p": 7.65609797781508e-12,
+   "status": "ok",
+   "retention_D1": 0.8943,
+   "retention_joint": 0.8909,
+   "unadjusted_boot_ci95": [
+    0.7104,
+    1.0774
+   ],
+   "ratio_unstable": false,
+   "ci95_retention_joint": [
+    0.7194,
+    1.061
+   ],
+   "boot_median_retention_joint": 0.8861,
+   "ci95_retention_D1": [
+    0.7322,
+    1.006
+   ],
+   "boot_median_retention_D1": 0.8916
+  }
+ ]
+}

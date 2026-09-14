@@ -10,8 +10,8 @@ abstract: >-
   returns a value, and refuses to return one when either fails.
 type: software
 license: MIT
-version: 1.0.2
-date-released: "2026-09-10"
+version: 1.2.1
+date-released: "2026-09-14"
 authors:
   - family-names: Nam
     given-names: Soon Woo
@@ -22,7 +22,7 @@ authors:
       University of Korea, Seoul, Republic of Korea
     email: drswnam@catholic.ac.kr
 keywords:
-  - dedifferentiation
+  - tumor-adjacent contrast
   - gene expression signature
   - tumor purity
   - pre-registration

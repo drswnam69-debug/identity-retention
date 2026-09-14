@@ -1,0 +1,446 @@
+sample	tissue	patient_id	lcs_id
+GSM362958	HCC tumor	02-271	079
+GSM362959	HCC tumor	02-301	092
+GSM362960	HCC tumor	02-321	101
+GSM362961	Adjacent non-tumor liver	02-271	079
+GSM362962	Adjacent non-tumor liver	02-301	092
+GSM362963	Adjacent non-tumor liver	02-321	101
+GSM362964	HCC tumor	02-284	083
+GSM362965	HCC tumor	02-307	095
+GSM362966	HCC tumor	02-323	102
+GSM362967	Adjacent non-tumor liver	02-284	083
+GSM362968	Adjacent non-tumor liver	02-307	095
+GSM362969	Adjacent non-tumor liver	02-323	102
+GSM362970	HCC tumor	02-286	085
+GSM362971	HCC tumor	02-309	096
+GSM362972	HCC tumor	02-325	103
+GSM362973	Adjacent non-tumor liver	02-286	085
+GSM362974	Adjacent non-tumor liver	02-309	096
+GSM362975	Adjacent non-tumor liver	02-325	103
+GSM362976	HCC tumor	02-298	091
+GSM362977	HCC tumor	02-315	099
+GSM362978	HCC tumor	02-337	105
+GSM362979	Adjacent non-tumor liver	02-298	091
+GSM362980	Adjacent non-tumor liver	02-315	099
+GSM362981	Adjacent non-tumor liver	02-337	105
+GSM362982	HCC tumor	02-380	122
+GSM362983	HCC tumor	02-404	004
+GSM362984	HCC tumor	02-429	130
+GSM362985	Adjacent non-tumor liver	02-404	004
+GSM362986	HCC tumor	02-384	123
+GSM362987	HCC tumor	02-421	007
+GSM362988	HCC tumor	02-445	135
+GSM362989	Adjacent non-tumor liver	02-384	123
+GSM362990	Adjacent non-tumor liver	02-421	007
+GSM362991	Adjacent non-tumor liver	02-445	135
+GSM362992	HCC tumor	02-396	125
+GSM362993	HCC tumor	02-423	127
+GSM362994	HCC tumor	02-447	136
+GSM362995	Adjacent non-tumor liver	02-396	125
+GSM362996	Adjacent non-tumor liver	02-423	127
+GSM362997	Adjacent non-tumor liver	02-447	136
+GSM362998	Adjacent non-tumor liver	02-380	122
+GSM362999	Adjacent non-tumor liver	02-429	130
+GSM363000	Adjacent non-tumor liver	03-088	024
+GSM363001	Adjacent non-tumor liver	03-235	212
+GSM363002	Adjacent non-tumor liver	03-139	180
+GSM363003	Adjacent non-tumor liver	03-162	183
+GSM363004	Adjacent non-tumor liver	03-025	153
+GSM363005	Adjacent non-tumor liver	03-206	042
+GSM363006	Adjacent non-tumor liver	03-051	018
+GSM363007	Adjacent non-tumor liver	03-345	062
+GSM363008	HCC tumor	03-180	188
+GSM363009	HCC tumor	03-165	185
+GSM363010	HCC tumor	03-033	154
+GSM363011	HCC tumor	02-370	120
+GSM363012	HCC tumor	03-422	286
+GSM363013	HCC tumor	02-287	086
+GSM363014	HCC tumor	03-082	023
+GSM363015	HCC tumor	03-131	177
+GSM363016	HCC tumor	02-455	140
+GSM363017	HCC tumor	03-186	035
+GSM363018	Adjacent non-tumor liver	03-180	188
+GSM363019	Adjacent non-tumor liver	03-165	185
+GSM363020	Adjacent non-tumor liver	03-033	154
+GSM363021	Adjacent non-tumor liver	02-370	120
+GSM363022	Adjacent non-tumor liver	03-422	286
+GSM363023	Adjacent non-tumor liver	03-285	238
+GSM363024	Adjacent non-tumor liver	02-287	086
+GSM363025	Adjacent non-tumor liver	03-082	023
+GSM363026	Adjacent non-tumor liver	03-131	177
+GSM363027	Adjacent non-tumor liver	03-186	035
+GSM363028	Adjacent non-tumor liver	03-439	275
+GSM363029	HCC tumor	02-431	132
+GSM363030	HCC tumor	03-226	205
+GSM363031	HCC tumor	03-438	274
+GSM363032	HCC tumor	03-049	159
+GSM363033	HCC tumor	03-017	150
+GSM363034	HCC tumor	03-062	014
+GSM363035	HCC tumor	03-270	227
+GSM363036	HCC tumor	03-460	283
+GSM363037	HCC tumor	03-057	162
+GSM363038	HCC tumor	02-335	104
+GSM363039	HCC tumor	03-434	272
+GSM363040	Adjacent non-tumor liver	02-431	132
+GSM363041	Adjacent non-tumor liver	03-226	205
+GSM363042	Adjacent non-tumor liver	03-438	274
+GSM363043	Adjacent non-tumor liver	03-049	159
+GSM363044	Adjacent non-tumor liver	03-270	227
+GSM363045	Adjacent non-tumor liver	03-311	046
+GSM363046	Adjacent non-tumor liver	03-460	283
+GSM363047	Adjacent non-tumor liver	03-434	272
+GSM363048	HCC tumor	03-284	237
+GSM363049	HCC tumor	03-024	152
+GSM363050	HCC tumor	03-365	067
+GSM363051	HCC tumor	03-231	209
+GSM363052	HCC tumor	03-363	065
+GSM363053	HCC tumor	03-234	211
+GSM363054	HCC tumor	03-384	073
+GSM363055	HCC tumor	03-274	230
+GSM363056	HCC tumor	03-397	262
+GSM363057	HCC tumor	02-459	144
+GSM363058	Adjacent non-tumor liver	03-047	158
+GSM363059	Adjacent non-tumor liver	03-284	237
+GSM363060	Adjacent non-tumor liver	03-024	152
+GSM363061	Adjacent non-tumor liver	03-365	067
+GSM363062	Adjacent non-tumor liver	03-231	209
+GSM363063	Adjacent non-tumor liver	03-363	065
+GSM363064	Adjacent non-tumor liver	03-234	211
+GSM363065	Adjacent non-tumor liver	03-384	073
+GSM363066	Adjacent non-tumor liver	03-274	230
+GSM363067	Adjacent non-tumor liver	03-397	262
+GSM363068	Adjacent non-tumor liver	02-459	144
+GSM363069	HCC tumor	03-088	024
+GSM363070	HCC tumor	03-235	212
+GSM363071	HCC tumor	03-139	180
+GSM363072	HCC tumor	03-162	183
+GSM363073	HCC tumor	03-025	153
+GSM363074	HCC tumor	03-206	042
+GSM363075	HCC tumor	03-051	018
+GSM363076	HCC tumor	03-345	062
+GSM363077	HCC tumor	03-439	275
+GSM363078	HCC tumor	03-071	015
+GSM363079	HCC tumor	02-363	118
+GSM363080	HCC tumor	03-364	069
+GSM363081	HCC tumor	03-280	234
+GSM363082	HCC tumor	03-233	210
+GSM363083	HCC tumor	03-407	265
+GSM363084	HCC tumor	03-015	149
+GSM363085	HCC tumor	03-215	040
+GSM363086	HCC tumor	03-093	169
+GSM363087	HCC tumor	03-374	256
+GSM363088	Adjacent non-tumor liver	03-071	015
+GSM363089	Adjacent non-tumor liver	03-187	190
+GSM363090	Adjacent non-tumor liver	02-363	118
+GSM363091	Adjacent non-tumor liver	03-364	069
+GSM363092	Adjacent non-tumor liver	03-280	234
+GSM363093	Adjacent non-tumor liver	03-233	210
+GSM363094	Adjacent non-tumor liver	03-407	265
+GSM363095	Adjacent non-tumor liver	03-015	149
+GSM363096	Adjacent non-tumor liver	03-215	040
+GSM363097	Adjacent non-tumor liver	03-093	169
+GSM363098	HCC tumor	03-237	213
+GSM363099	HCC tumor	03-150	033
+GSM363100	HCC tumor	03-061	164
+GSM363101	HCC tumor	03-263	223
+GSM363102	HCC tumor	03-314	245
+GSM363103	Adjacent non-tumor liver	03-453	281
+GSM363104	HCC tumor	03-361	061
+GSM363105	HCC tumor	03-188	191
+GSM363106	HCC tumor	03-102	171
+GSM363107	HCC tumor	03-336	249
+GSM363108	HCC tumor	03-070	020
+GSM363109	HCC tumor	03-306	045
+GSM363110	Adjacent non-tumor liver	03-237	213
+GSM363111	Adjacent non-tumor liver	03-150	033
+GSM363112	Adjacent non-tumor liver	03-061	164
+GSM363113	Adjacent non-tumor liver	03-314	245
+GSM363114	Adjacent non-tumor liver	02-304	094
+GSM363115	HCC tumor	02-304	094
+GSM363116	Adjacent non-tumor liver	03-188	191
+GSM363117	Adjacent non-tumor liver	03-102	171
+GSM363118	Adjacent non-tumor liver	03-336	249
+GSM363119	Adjacent non-tumor liver	03-070	020
+GSM363120	Adjacent non-tumor liver	03-306	045
+GSM363121	HCC tumor	02-430	131
+GSM363122	HCC tumor	03-295	241
+GSM363123	HCC tumor	03-326	057
+GSM363124	HCC tumor	03-398	074
+GSM363125	HCC tumor	03-054	160
+GSM363126	HCC tumor	03-138	179
+GSM363127	HCC tumor	02-437	134
+GSM363128	HCC tumor	02-409	009
+GSM363129	HCC tumor	03-265	224
+GSM363130	HCC tumor	02-269	078
+GSM363131	Adjacent non-tumor liver	02-430	131
+GSM363132	Adjacent non-tumor liver	03-220	201
+GSM363133	Adjacent non-tumor liver	03-326	057
+GSM363134	Adjacent non-tumor liver	03-398	074
+GSM363135	Adjacent non-tumor liver	03-054	160
+GSM363136	Adjacent non-tumor liver	03-138	179
+GSM363137	Adjacent non-tumor liver	02-437	134
+GSM363138	Adjacent non-tumor liver	02-409	009
+GSM363139	Adjacent non-tumor liver	02-466	147
+GSM363140	Adjacent non-tumor liver	03-265	224
+GSM363141	Adjacent non-tumor liver	02-269	078
+GSM363142	HCC tumor	02-302	093
+GSM363143	HCC tumor	03-350	253
+GSM363144	HCC tumor	03-450	279
+GSM363145	HCC tumor	02-416	008
+GSM363146	HCC tumor	03-317	049
+GSM363147	HCC tumor	AN	291
+GSM363148	HCC tumor	03-453	281
+GSM363149	HCC tumor	03-042	156
+GSM363150	HCC tumor	03-456	282
+GSM363151	HCC tumor	02-295	090
+GSM363152	HCC tumor	03-023	151
+GSM363153	Adjacent non-tumor liver	03-350	253
+GSM363154	Adjacent non-tumor liver	03-450	279
+GSM363155	Adjacent non-tumor liver	02-416	008
+GSM363156	Adjacent non-tumor liver	03-105	172
+GSM363157	Adjacent non-tumor liver	03-317	049
+GSM363158	Adjacent non-tumor liver	AN	291
+GSM363159	Adjacent non-tumor liver	03-361	061
+GSM363160	Adjacent non-tumor liver	03-042	156
+GSM363161	Adjacent non-tumor liver	03-456	282
+GSM363162	Adjacent non-tumor liver	02-295	090
+GSM363163	Adjacent non-tumor liver	03-023	151
+GSM363164	HCC tumor	03-309	047
+GSM363165	Adjacent non-tumor liver	03-309	047
+GSM363166	HCC tumor	03-381	075
+GSM363167	Adjacent non-tumor liver	03-381	075
+GSM363168	HCC tumor	03-383	259
+GSM363169	HCC tumor	02-424	010
+GSM363170	HCC tumor	03-405	264
+GSM363171	Adjacent non-tumor liver	03-405	264
+GSM363172	HCC tumor	03-058	163
+GSM363173	Adjacent non-tumor liver	03-058	163
+GSM363174	HCC tumor	02-291	089
+GSM363175	Adjacent non-tumor liver	02-291	089
+GSM363176	HCC tumor	02-458	143
+GSM363177	Adjacent non-tumor liver	02-458	143
+GSM363178	HCC tumor	03-218	199
+GSM363179	Adjacent non-tumor liver	03-218	199
+GSM363180	HCC tumor	03-149	034
+GSM363181	Adjacent non-tumor liver	03-149	034
+GSM363182	HCC tumor	03-444	278
+GSM363183	Adjacent non-tumor liver	03-444	278
+GSM363184	HCC tumor	02-366	119
+GSM363185	Adjacent non-tumor liver	02-366	119
+GSM363186	HCC tumor	03-164	184
+GSM363187	Adjacent non-tumor liver	03-164	184
+GSM363188	HCC tumor	03-223	203
+GSM363189	Adjacent non-tumor liver	03-223	203
+GSM363190	HCC tumor	03-133	178
+GSM363191	Adjacent non-tumor liver	03-133	178
+GSM363192	HCC tumor	03-467	284
+GSM363193	Adjacent non-tumor liver	03-467	284
+GSM363194	HCC tumor	02-345	108
+GSM363195	Adjacent non-tumor liver	03-394	261
+GSM363196	HCC tumor	03-208	043
+GSM363197	Adjacent non-tumor liver	03-208	043
+GSM363198	HCC tumor	03-197	041
+GSM363199	Adjacent non-tumor liver	03-197	041
+GSM363200	HCC tumor	03-241	044
+GSM363201	Adjacent non-tumor liver	03-241	044
+GSM363202	HCC tumor	03-112	174
+GSM363203	Adjacent non-tumor liver	03-112	174
+GSM363204	HCC tumor	03-081	166
+GSM363205	HCC tumor	03-195	193
+GSM363206	Adjacent non-tumor liver	03-195	193
+GSM363207	HCC tumor	03-243	215
+GSM363208	Adjacent non-tumor liver	03-243	215
+GSM363209	HCC tumor	03-077	021
+GSM363210	Adjacent non-tumor liver	03-077	021
+GSM363211	HCC tumor	02-428	129
+GSM363212	Adjacent non-tumor liver	02-428	129
+GSM363213	HCC tumor	03-211	198
+GSM363214	Adjacent non-tumor liver	03-211	198
+GSM363215	HCC tumor	02-285	084
+GSM363216	Adjacent non-tumor liver	02-285	084
+GSM363217	HCC tumor	03-342	250
+GSM363218	HCC tumor	02-461	011
+GSM363219	Adjacent non-tumor liver	02-345	108
+GSM363220	HCC tumor	03-370	071
+GSM363221	Adjacent non-tumor liver	02-461	011
+GSM363222	HCC tumor	03-255	219
+GSM363223	Adjacent non-tumor liver	03-255	219
+GSM363224	HCC tumor	03-199	194
+GSM363225	Adjacent non-tumor liver	03-199	194
+GSM363226	HCC tumor	03-098	170
+GSM363227	Adjacent non-tumor liver	03-098	170
+GSM363228	HCC tumor	03-225	204
+GSM363229	Adjacent non-tumor liver	03-225	204
+GSM363230	HCC tumor	03-394	261
+GSM363231	Adjacent non-tumor liver	03-370	071
+GSM363232	HCC tumor	03-200	195
+GSM363233	Adjacent non-tumor liver	03-200	195
+GSM363234	Adjacent non-tumor liver	03-219	200
+GSM363235	HCC tumor	03-227	206
+GSM363236	Adjacent non-tumor liver	03-227	206
+GSM363237	HCC tumor	03-214	036
+GSM363238	Adjacent non-tumor liver	03-055	161
+GSM363239	HCC tumor	02-460	145
+GSM363240	Adjacent non-tumor liver	02-460	145
+GSM363241	HCC tumor	03-360	064
+GSM363242	Adjacent non-tumor liver	03-360	064
+GSM363243	HCC tumor	03-282	236
+GSM363244	Adjacent non-tumor liver	03-282	236
+GSM363245	HCC tumor	03-213	038
+GSM363246	Adjacent non-tumor liver	03-213	038
+GSM363247	HCC tumor	03-425	270
+GSM363248	Adjacent non-tumor liver	03-425	270
+GSM363249	HCC tumor	03-151	182
+GSM363250	Adjacent non-tumor liver	03-151	182
+GSM363251	HCC tumor	02-395	002
+GSM363252	Adjacent non-tumor liver	03-210	197
+GSM363253	Adjacent non-tumor liver	03-108	173
+GSM363254	Adjacent non-tumor liver	03-291	240
+GSM363255	Adjacent non-tumor liver	03-416	266
+GSM363256	Adjacent non-tumor liver	03-087	167
+GSM363257	Adjacent non-tumor liver	03-121	028
+GSM363258	Adjacent non-tumor liver	03-148	032
+GSM363259	Adjacent non-tumor liver	03-319	050
+GSM363260	Adjacent non-tumor liver	03-468	285
+GSM363261	Adjacent non-tumor liver	03-141	031
+GSM363262	Adjacent non-tumor liver	03-064	016
+GSM363263	HCC tumor	03-182	189
+GSM363264	HCC tumor	03-443	277
+GSM363265	HCC tumor	02-361	117
+GSM363266	HCC tumor	03-418	267
+GSM363267	HCC tumor	02-318	100
+GSM363268	HCC tumor	03-272	228
+GSM363269	HCC tumor	03-322	054
+GSM363270	HCC tumor	03-346	063
+GSM363271	HCC tumor	03-419	268
+GSM363272	HCC tumor	03-262	222
+GSM363273	HCC tumor	03-192	192
+GSM363274	HCC tumor	03-099	022
+GSM363275	HCC tumor	03-125	175
+GSM363276	Adjacent non-tumor liver	03-443	277
+GSM363277	Adjacent non-tumor liver	02-361	117
+GSM363278	Adjacent non-tumor liver	03-418	267
+GSM363279	Adjacent non-tumor liver	02-318	100
+GSM363280	Adjacent non-tumor liver	03-272	228
+GSM363281	Adjacent non-tumor liver	03-322	054
+GSM363282	Adjacent non-tumor liver	03-346	063
+GSM363283	Adjacent non-tumor liver	03-419	268
+GSM363284	Adjacent non-tumor liver	03-262	222
+GSM363285	Adjacent non-tumor liver	03-192	192
+GSM363286	Adjacent non-tumor liver	03-099	022
+GSM363287	Adjacent non-tumor liver	03-214	036
+GSM363288	HCC tumor	03-101	025
+GSM363289	HCC tumor	03-354	066
+GSM363290	HCC tumor	03-334	248
+GSM363291	HCC tumor	02-375	121
+GSM363292	HCC tumor	03-119	027
+GSM363293	HCC tumor	03-043	157
+GSM363294	HCC tumor	03-012	148
+GSM363295	HCC tumor	03-321	048
+GSM363296	HCC tumor	03-196	012
+GSM363297	HCC tumor	02-415	126
+GSM363298	HCC tumor	03-387	260
+GSM363299	Adjacent non-tumor liver	03-263	223
+GSM363300	Adjacent non-tumor liver	03-101	025
+GSM363301	Adjacent non-tumor liver	03-354	066
+GSM363302	Adjacent non-tumor liver	02-375	121
+GSM363303	Adjacent non-tumor liver	03-119	027
+GSM363304	Adjacent non-tumor liver	03-043	157
+GSM363305	Adjacent non-tumor liver	03-012	148
+GSM363306	Adjacent non-tumor liver	03-321	048
+GSM363307	Adjacent non-tumor liver	03-196	012
+GSM363308	Adjacent non-tumor liver	03-387	260
+GSM363309	HCC tumor	03-316	247
+GSM363310	HCC tumor	02-290	088
+GSM363311	HCC tumor	03-292	051
+GSM363312	HCC tumor	03-303	243
+GSM363313	HCC tumor	03-073	165
+GSM363314	HCC tumor	03-230	208
+GSM363315	HCC tumor	02-347	110
+GSM363316	HCC tumor	03-333	056
+GSM363317	HCC tumor	02-462	146
+GSM363318	Adjacent non-tumor liver	03-316	247
+GSM363319	Adjacent non-tumor liver	03-292	051
+GSM363320	Adjacent non-tumor liver	03-303	243
+GSM363321	Adjacent non-tumor liver	03-073	165
+GSM363322	Adjacent non-tumor liver	03-230	208
+GSM363323	Adjacent non-tumor liver	02-347	110
+GSM363324	Adjacent non-tumor liver	03-333	056
+GSM363325	Adjacent non-tumor liver	02-462	146
+GSM363326	HCC tumor	02-466	147
+GSM363327	HCC tumor	03-108	173
+GSM363328	HCC tumor	03-291	240
+GSM363329	HCC tumor	03-416	266
+GSM363330	HCC tumor	03-087	167
+GSM363331	HCC tumor	03-121	028
+GSM363332	HCC tumor	03-148	032
+GSM363333	HCC tumor	03-319	050
+GSM363334	HCC tumor	03-468	285
+GSM363335	HCC tumor	03-141	031
+GSM363336	HCC tumor	03-064	016
+GSM363337	HCC tumor	02-339	106
+GSM363338	Adjacent non-tumor liver	02-339	106
+GSM363339	HCC tumor	02-344	107
+GSM363340	Adjacent non-tumor liver	02-344	107
+GSM363341	HCC tumor	02-346	109
+GSM363342	Adjacent non-tumor liver	02-346	109
+GSM363343	HCC tumor	02-359	116
+GSM363344	HCC tumor	02-448	137
+GSM363345	Adjacent non-tumor liver	02-448	137
+GSM363346	HCC tumor	02-452	138
+GSM363347	Adjacent non-tumor liver	02-452	138
+GSM363348	HCC tumor	02-454	139
+GSM363349	Adjacent non-tumor liver	02-454	139
+GSM363350	HCC tumor	02-457	142
+GSM363351	Adjacent non-tumor liver	02-457	142
+GSM363352	HCC tumor	03-205	196
+GSM363353	Adjacent non-tumor liver	03-205	196
+GSM363354	HCC tumor	03-228	207
+GSM363355	HCC tumor	03-277	231
+GSM363356	Adjacent non-tumor liver	03-277	231
+GSM363357	HCC tumor	03-343	251
+GSM363358	HCC tumor	03-375	072
+GSM363359	Adjacent non-tumor liver	03-375	072
+GSM363360	HCC tumor	03-404	263
+GSM363361	Adjacent non-tumor liver	03-404	263
+GSM363362	HCC tumor	03-424	269
+GSM363363	Adjacent non-tumor liver	03-424	269
+GSM363364	HCC tumor	03-435	273
+GSM363365	Adjacent non-tumor liver	03-435	273
+GSM363366	HCC tumor	03-457	289
+GSM363367	Adjacent non-tumor liver	03-457	289
+GSM363368	HCC tumor	03-469	290
+GSM363369	Adjacent non-tumor liver	03-469	290
+GSM363370	Adjacent non-tumor liver	02-302	093
+GSM363371	HCC tumor	02-313	097
+GSM363372	Adjacent non-tumor liver	02-313	097
+GSM363373	Adjacent non-tumor liver	02-335	104
+GSM363374	Adjacent non-tumor liver	02-455	140
+GSM363375	Adjacent non-tumor liver	03-017	150
+GSM363376	HCC tumor	03-047	158
+GSM363378	HCC tumor	03-055	161
+GSM363380	Adjacent non-tumor liver	03-057	162
+GSM363381	Adjacent non-tumor liver	03-062	014
+GSM363382	Adjacent non-tumor liver	03-081	166
+GSM363384	HCC tumor	03-105	172
+GSM363386	HCC tumor	03-210	197
+GSM363388	HCC tumor	03-219	200
+GSM363391	HCC tumor	03-220	201
+GSM363393	HCC tumor	03-244	216
+GSM363397	Adjacent non-tumor liver	03-244	216
+GSM363400	HCC tumor	03-285	238
+GSM363402	Adjacent non-tumor liver	03-295	241
+GSM363404	HCC tumor	03-311	046
+GSM363407	Adjacent non-tumor liver	03-334	248
+GSM363417	Adjacent non-tumor liver	03-383	259
+GSM712532	HCC tumor	X02-342	-
+GSM712533	Adjacent non-tumor liver	X02-342	-
+GSM712534	HCC tumor	X02-362	-
+GSM712535	Adjacent non-tumor liver	X02-362	-
+GSM712536	Adjacent non-tumor liver	LCS-003	003
+GSM712537	Adjacent non-tumor liver	LCS-006	006
+GSM712538	Adjacent non-tumor liver	LCS-026	026
+GSM712539	Adjacent non-tumor liver	LCS-128	128
+GSM712540	Adjacent non-tumor liver	LCS-168	168
+GSM712541	Adjacent non-tumor liver	LCS-181	181
+GSM712542	HCC tumor	LCS-190	190

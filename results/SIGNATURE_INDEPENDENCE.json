@@ -1,0 +1,97 @@
+{
+  "note": "Source-study composition and pairwise gene overlap of each cohort's comparator panel. Across-signature statistics in the manuscript treat these as independent; they are not.",
+  "cohorts": {
+    "GSE14520": {
+      "n_sets": 119,
+      "n_source_prefixes": 33,
+      "largest_family": 16,
+      "largest_family_name": "LEE",
+      "top_families": [
+        [
+          "LEE",
+          16
+        ],
+        [
+          "BOYAULT",
+          14
+        ],
+        [
+          "ACEVEDO",
+          11
+        ],
+        [
+          "CHIANG",
+          10
+        ],
+        [
+          "CAIRO",
+          7
+        ]
+      ],
+      "n_sets_with_membership": 119,
+      "n_pairs_jaccard_over_0_10": 65,
+      "n_pairs_jaccard_over_0_25": 19,
+      "max_jaccard": 0.5238
+    },
+    "TCGA_KIRC": {
+      "n_sets": 15,
+      "n_source_prefixes": 4,
+      "largest_family": 8,
+      "largest_family_name": "FLECHNER",
+      "top_families": [
+        [
+          "FLECHNER",
+          8
+        ],
+        [
+          "RODWELL",
+          4
+        ],
+        [
+          "LI",
+          2
+        ],
+        [
+          "SU",
+          1
+        ]
+      ],
+      "n_sets_with_membership": 15,
+      "n_pairs_jaccard_over_0_10": 4,
+      "n_pairs_jaccard_over_0_25": 3,
+      "max_jaccard": 0.6264
+    },
+    "TCGA_LUAD": {
+      "n_sets": 36,
+      "n_source_prefixes": 19,
+      "largest_family": 5,
+      "largest_family_name": "MCCLUNG",
+      "top_families": [
+        [
+          "MCCLUNG",
+          5
+        ],
+        [
+          "SHEDDEN",
+          4
+        ],
+        [
+          "DING",
+          3
+        ],
+        [
+          "ZHONG",
+          3
+        ],
+        [
+          "BLANCO",
+          2
+        ]
+      ],
+      "n_sets_with_membership": 36,
+      "n_pairs_jaccard_over_0_10": 4,
+      "n_pairs_jaccard_over_0_25": 3,
+      "max_jaccard": 0.3529
+    }
+  }
+}

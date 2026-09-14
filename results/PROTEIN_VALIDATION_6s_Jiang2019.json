@@ -1,0 +1,226 @@
+{
+ "plan": "PREREGISTRATION 6s",
+ "source": "Jiang2019",
+ "n_proteins": 9086,
+ "n_pairs": 124,
+ "coverage": {
+  "REDUCTION": {
+   "n_found": 4,
+   "n_defined": 4,
+   "found": [
+    "CYB5R3",
+    "CYB5R1",
+    "AIFM2",
+    "NQO1"
+   ],
+   "missing": []
+  },
+  "DRAIN": {
+   "n_found": 3,
+   "n_defined": 3,
+   "found": [
+    "MARC1",
+    "MARC2",
+    "POR"
+   ],
+   "missing": []
+  },
+  "D1": {
+   "n_found": 21,
+   "n_defined": 22,
+   "found": [
+    "HNF4A",
+    "HNF1A",
+    "FOXA1",
+    "FOXA2",
+    "ALB",
+    "TTR",
+    "TF",
+    "SERPINA1",
+    "AHSG",
+    "APOH",
+    "FGA",
+    "FGB",
+    "FGG",
+    "F2",
+    "CPS1",
+    "OTC",
+    "ARG1",
+    "TAT",
+    "G6PC",
+    "PCK1",
+    "ASGR1"
+   ],
+   "missing": [
+    "NR1H4"
+   ]
+  },
+  "D2": {
+   "n_found": 25,
+   "n_defined": 26,
+   "found": [
+    "HNF4A",
+    "HNF1A",
+    "FOXA1",
+    "FOXA2",
+    "ALB",
+    "TTR",
+    "TF",
+    "SERPINA1",
+    "AHSG",
+    "APOH",
+    "FGA",
+    "FGB",
+    "FGG",
+    "F2",
+    "CPS1",
+    "OTC",
+    "ARG1",
+    "TAT",
+    "G6PC",
+    "PCK1",
+    "ASGR1",
+    "CYP2E1",
+    "CYP3A4",
+    "CYP1A2",
+    "CYP2C9"
+   ],
+   "missing": [
+    "NR1H4"
+   ]
+  },
+  "C1": {
+   "n_found": 19,
+   "n_defined": 21,
+   "found": [
+    "PTPRC",
+    "CD3E",
+    "CD2",
+    "CD68",
+    "AIF1",
+    "ITGAM",
+    "LCP1",
+    "PECAM1",
+    "VWF",
+    "CDH5",
+    "ENG",
+    "CLEC4G",
+    "COL1A1",
+    "COL1A2",
+    "COL3A1",
+    "DCN",
+    "LUM",
+    "ACTA2",
+    "PDGFRB"
+   ],
+   "missing": [
+    "CD53",
+    "LAPTM5"
+   ]
+  }
+ },
+ "positive_control_D1": {
+  "mean_paired_delta": 0.0882,
+  "p": 0.00785454904829026,
+  "direction": "HIGHER in tumor",
+  "identity_confound_present": false
+ },
+ "modules": {
+  "REDUCTION": {
+   "n_members": 4,
+   "unadjusted_mean_delta": 0.4587,
+   "unadjusted_median_delta": 0.4649,
+   "unadjusted_p": 1.8930647487046464e-12,
+   "D1": {
+    "intercept": {
+     "beta": 0.478,
+     "se": 0.059,
+     "ci95": [
+      0.3613,
+      0.5948
+     ],
+     "t": 8.106,
+     "p": 4.635436493646613e-13
+    },
+    "retention": 1.042
+   },
+   "D2": {
+    "intercept": {
+     "beta": 0.4392,
+     "se": 0.059,
+     "ci95": [
+      0.3224,
+      0.5559
+     ],
+     "t": 7.449,
+     "p": 1.487730953370072e-11
+    },
+    "retention": 0.9575
+   },
+   "joint_D1_C1": {
+    "intercept": {
+     "beta": 0.506,
+     "se": 0.0612,
+     "ci95": [
+      0.385,
+      0.6271
+     ],
+     "t": 8.274,
+     "p": 1.9693764134516414e-13
+    },
+    "retention": 1.1031
+   }
+  },
+  "DRAIN": {
+   "n_members": 3,
+   "unadjusted_mean_delta": -0.7163,
+   "unadjusted_median_delta": -0.4898,
+   "unadjusted_p": 8.307356520402664e-16,
+   "D1": {
+    "intercept": {
+     "beta": -0.7749,
+     "se": 0.08,
+     "ci95": [
+      -0.9334,
+      -0.6165
+     ],
+     "t": -9.682,
+     "p": 8.557280088405568e-17
+    },
+    "retention": 1.0817
+   },
+   "D2": {
+    "intercept": {
+     "beta": -0.6377,
+     "se": 0.0758,
+     "ci95": [
+      -0.7879,
+      -0.4876
+     ],
+     "t": -8.408,
+     "p": 9.141699797750064e-14
+    },
+    "retention": 0.8902
+   },
+   "joint_D1_C1": {
+    "intercept": {
+     "beta": -0.8969,
+     "se": 0.0744,
+     "ci95": [
+      -1.0443,
+      -0.7496
+     ],
+     "t": -12.052,
+     "p": 1.848808466399552e-22
+    },
+    "retention": 1.2521
+   }
+  }
+ },
+ "verdict": {
+  "directions_as_predicted": true,
+  "reduction_retention_D1": 1.042,
+  "drain_retention_D1": 1.0817,
+  "prediction_supported": false
+ }
+}

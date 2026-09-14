@@ -1,0 +1,29 @@
+{
+  "source": "NEGATIVE_CONTROL_6ae_draws.csv",
+  "pools": {
+    "matched": {
+      "n_draws": 200,
+      "median_own_paired_shift": -0.7263,
+      "min_own_paired_shift": -0.8143,
+      "max_own_paired_shift": -0.6207
+    },
+    "no_shift": {
+      "n_draws": 100,
+      "median_own_paired_shift": -0.0027,
+      "min_own_paired_shift": -0.0202,
+      "max_own_paired_shift": 0.0144
+    },
+    "rising": {
+      "n_draws": 100,
+      "median_own_paired_shift": 0.8567,
+      "min_own_paired_shift": 0.7124,
+      "max_own_paired_shift": 0.9958
+    },
+    "unrestricted": {
+      "n_draws": 100,
+      "median_own_paired_shift": 0.0546,
+      "min_own_paired_shift": -0.3685,
+      "max_own_paired_shift": 0.4878
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "plan": "PREREGISTRATION 6z, sensitivity added before submission",
+  "note": "The registered estimate is the all-signature one. The two restricted estimates show how much of it rests on signatures whose unadjusted hazard ratio is indistinguishable from zero, for which the surviving fraction is a ratio of two near-zero quantities.",
+  "subsets": {
+    "all": {
+      "n": 103,
+      "spearman_rho": 0.2964,
+      "spearman_p": 0.0022427350520564104
+    },
+    "prognostic_p05": {
+      "n": 82,
+      "spearman_rho": 0.2129,
+      "spearman_p": 0.05465660528699745
+    },
+    "prognostic_bh05": {
+      "n": 78,
+      "spearman_rho": 0.106,
+      "spearman_p": 0.35693825867420736
+    }
+  },
+  "registered_threshold": 0.3
+}

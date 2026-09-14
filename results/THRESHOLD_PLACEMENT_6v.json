@@ -1,0 +1,57 @@
+{
+  "plan": "PREREGISTRATION 6v, reporting step",
+  "threshold": 0.5,
+  "note": "A signature is placed against the threshold when its 95% interval lies entirely on one side of it. The manuscript previously counted only the below side.",
+  "cohorts": {
+    "GSE14520": {
+      "n_pairs": 213,
+      "n_with_interval": 118,
+      "entirely_below": 10,
+      "entirely_above": 60,
+      "spanning": 48,
+      "placed": 70,
+      "placed_fraction": 0.5932,
+      "median_ci_width": 0.3266
+    },
+    "GSE76427": {
+      "n_pairs": 52,
+      "n_with_interval": 106,
+      "entirely_below": 0,
+      "entirely_above": 12,
+      "spanning": 94,
+      "placed": 12,
+      "placed_fraction": 0.1132,
+      "median_ci_width": 0.6152
+    },
+    "TCGA_LIHC": {
+      "n_pairs": 50,
+      "n_with_interval": 103,
+      "entirely_below": 4,
+      "entirely_above": 72,
+      "spanning": 27,
+      "placed": 76,
+      "placed_fraction": 0.7379,
+      "median_ci_width": 0.3921
+    },
+    "TCGA_LUAD": {
+      "n_pairs": 58,
+      "n_with_interval": 35,
+      "entirely_below": 0,
+      "entirely_above": 2,
+      "spanning": 33,
+      "placed": 2,
+      "placed_fraction": 0.0571,
+      "median_ci_width": 1.4106
+    },
+    "TCGA_KIRC": {
+      "n_pairs": 72,
+      "n_with_interval": 15,
+      "entirely_below": 3,
+      "entirely_above": 3,
+      "spanning": 9,
+      "placed": 6,
+      "placed_fraction": 0.4,
+      "median_ci_width": 0.9016
+    }
+  }
+}

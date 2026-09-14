@@ -1,0 +1,905 @@
+{
+ "plan": "PREREGISTRATION 6aa part A",
+ "amendment_sha256_of_text_as_written": "2cbe2a9ab7928f33899312e5d52f72f7142859b4c0e453e5bbb0a53b2eebe42e",
+ "n_genes_with_correlation": 6203,
+ "all_genes_median_rho": 0.5435,
+ "all_genes_iqr": [
+  0.3758,
+  0.679
+ ],
+ "own_genes": {
+  "CYB5R3": 0.6385,
+  "CYB5R1": 0.5414,
+  "AIFM2": 0.5798,
+  "NQO1": null,
+  "MTARC1": 0.8309,
+  "MTARC2": 0.7625,
+  "POR": 0.7845
+ },
+ "D1_median_rho": 0.4749,
+ "D1_n_with_corr": 19,
+ "n_pairs": 159,
+ "n_signatures_both_levels": 97,
+ "spearman_rho": 0.0941,
+ "spearman_p": 0.3592877129039838,
+ "threshold": -0.3,
+ "verdict": "NOT_SUPPORTED",
+ "median_discrepancy": 0.4043,
+ "median_retention_protein": 0.9148,
+ "median_retention_transcript": 0.7175,
+ "signatures": [
+  {
+   "name": "ACEVEDO_LIVER_CANCER_DN",
+   "n_proteins": 345,
+   "retention_protein": 0.9638,
+   "retention_transcript": 0.6312,
+   "discrepancy": 0.3326,
+   "n_genes_with_corr": 331,
+   "mean_mrna_protein_rho": 0.6056
+  },
+  {
+   "name": "ACEVEDO_LIVER_CANCER_UP",
+   "n_proteins": 594,
+   "retention_protein": 0.8518,
+   "retention_transcript": 1.0305,
+   "discrepancy": 0.1787,
+   "n_genes_with_corr": 576,
+   "mean_mrna_protein_rho": 0.5059
+  },
+  {
+   "name": "ACEVEDO_LIVER_CANCER_WITH_H3K27ME3_DN",
+   "n_proteins": 38,
+   "retention_protein": 1.2846,
+   "retention_transcript": 0.8152,
+   "discrepancy": 0.4694,
+   "n_genes_with_corr": 38,
+   "mean_mrna_protein_rho": 0.5531
+  },
+  {
+   "name": "ACEVEDO_LIVER_CANCER_WITH_H3K27ME3_UP",
+   "n_proteins": 50,
+   "retention_protein": 0.2943,
+   "retention_transcript": 1.8271,
+   "discrepancy": 1.5328,
+   "n_genes_with_corr": 47,
+   "mean_mrna_protein_rho": 0.5409
+  },
+  {
+   "name": "ACEVEDO_LIVER_CANCER_WITH_H3K9ME3_DN",
+   "n_proteins": 23,
+   "retention_protein": 1.1171,
+   "retention_transcript": 0.7593,
+   "discrepancy": 0.3578,
+   "n_genes_with_corr": 22,
+   "mean_mrna_protein_rho": 0.5545
+  },
+  {
+   "name": "ACEVEDO_LIVER_CANCER_WITH_H3K9ME3_UP",
+   "n_proteins": 20,
+   "retention_protein": 0.4091,
+   "retention_transcript": 1.7457,
+   "discrepancy": 1.3366,
+   "n_genes_with_corr": 17,
+   "mean_mrna_protein_rho": 0.5318
+  },
+  {
+   "name": "ACEVEDO_LIVER_TUMOR_VS_NORMAL_ADJACENT_TISSUE_DN",
+   "n_proteins": 151,
+   "retention_protein": 0.8938,
+   "retention_transcript": 0.7579,
+   "discrepancy": 0.1359,
+   "n_genes_with_corr": 146,
+   "mean_mrna_protein_rho": 0.6129
+  },
+  {
+   "name": "ACEVEDO_LIVER_TUMOR_VS_NORMAL_ADJACENT_TISSUE_UP",
+   "n_proteins": 541,
+   "retention_protein": 0.7931,
+   "retention_transcript": 1.0045,
+   "discrepancy": 0.2114,
+   "n_genes_with_corr": 521,
+   "mean_mrna_protein_rho": 0.493
+  },
+  {
+   "name": "ACEVEDO_METHYLATED_IN_LIVER_CANCER_DN",
+   "n_proteins": 175,
+   "retention_protein": 0.1861,
+   "retention_transcript": 1.4269,
+   "discrepancy": 1.2408,
+   "n_genes_with_corr": 166,
+   "mean_mrna_protein_rho": 0.5378
+  },
+  {
+   "name": "ACEVEDO_NORMAL_TISSUE_ADJACENT_TO_LIVER_TUMOR_DN",
+   "n_proteins": 233,
+   "retention_protein": 1.1805,
+   "retention_transcript": 2.1331,
+   "discrepancy": 0.9526,
+   "n_genes_with_corr": 226,
+   "mean_mrna_protein_rho": 0.581
+  },
+  {
+   "name": "ACEVEDO_NORMAL_TISSUE_ADJACENT_TO_LIVER_TUMOR_UP",
+   "n_proteins": 115,
+   "retention_protein": 0.6566,
+   "retention_transcript": 1.5064,
+   "discrepancy": 0.8498,
+   "n_genes_with_corr": 112,
+   "mean_mrna_protein_rho": 0.5105
+  },
+  {
+   "name": "ANDERSEN_LIVER_CANCER_KRT19_DN",
+   "n_proteins": 63,
+   "retention_protein": 0.9641,
+   "retention_transcript": 0.4216,
+   "discrepancy": 0.5425,
+   "n_genes_with_corr": 63,
+   "mean_mrna_protein_rho": 0.7293
+  },
+  {
+   "name": "ANDERSEN_LIVER_CANCER_KRT19_UP",
+   "n_proteins": 25,
+   "retention_protein": 0.6913,
+   "retention_transcript": 0.7836,
+   "discrepancy": 0.0923,
+   "n_genes_with_corr": 25,
+   "mean_mrna_protein_rho": 0.3503
+  },
+  {
+   "name": "BOYAULT_LIVER_CANCER_SUBCLASS_G123_DN",
+   "n_proteins": 41,
+   "retention_protein": 0.9794,
+   "retention_transcript": 0.6413,
+   "discrepancy": 0.3381,
+   "n_genes_with_corr": 40,
+   "mean_mrna_protein_rho": 0.7377
+  },
+  {
+   "name": "BOYAULT_LIVER_CANCER_SUBCLASS_G123_UP",
+   "n_proteins": 31,
+   "retention_protein": 0.8535,
+   "retention_transcript": 0.8807,
+   "discrepancy": 0.0272,
+   "n_genes_with_corr": 31,
+   "mean_mrna_protein_rho": 0.6038
+  },
+  {
+   "name": "BOYAULT_LIVER_CANCER_SUBCLASS_G12_UP",
+   "n_proteins": 20,
+   "retention_protein": 0.9049,
+   "retention_transcript": 1.0185,
+   "discrepancy": 0.1136,
+   "n_genes_with_corr": 20,
+   "mean_mrna_protein_rho": 0.5779
+  },
+  {
+   "name": "BOYAULT_LIVER_CANCER_SUBCLASS_G1_DN",
+   "n_proteins": 25,
+   "retention_protein": 0.9915,
+   "retention_transcript": 0.5904,
+   "discrepancy": 0.4011,
+   "n_genes_with_corr": 24,
+   "mean_mrna_protein_rho": 0.6879
+  },
+  {
+   "name": "BOYAULT_LIVER_CANCER_SUBCLASS_G1_UP",
+   "n_proteins": 61,
+   "retention_protein": 0.9384,
+   "retention_transcript": 0.8685,
+   "discrepancy": 0.0699,
+   "n_genes_with_corr": 60,
+   "mean_mrna_protein_rho": 0.5915
+  },
+  {
+   "name": "BOYAULT_LIVER_CANCER_SUBCLASS_G23_UP",
+   "n_proteins": 23,
+   "retention_protein": 0.8179,
+   "retention_transcript": 0.837,
+   "discrepancy": 0.0191,
+   "n_genes_with_corr": 23,
+   "mean_mrna_protein_rho": 0.6263
+  },
+  {
+   "name": "BOYAULT_LIVER_CANCER_SUBCLASS_G3_DN",
+   "n_proteins": 46,
+   "retention_protein": 0.8677,
+   "retention_transcript": 0.4165,
+   "discrepancy": 0.4512,
+   "n_genes_with_corr": 44,
+   "mean_mrna_protein_rho": 0.628
+  },
+  {
+   "name": "BOYAULT_LIVER_CANCER_SUBCLASS_G3_UP",
+   "n_proteins": 135,
+   "retention_protein": 0.8099,
+   "retention_transcript": 0.8503,
+   "discrepancy": 0.0404,
+   "n_genes_with_corr": 132,
+   "mean_mrna_protein_rho": 0.4978
+  },
+  {
+   "name": "BOYAULT_LIVER_CANCER_SUBCLASS_G5_DN",
+   "n_proteins": 16,
+   "retention_protein": 0.0257,
+   "retention_transcript": 0.9647,
+   "discrepancy": 0.939,
+   "n_genes_with_corr": 16,
+   "mean_mrna_protein_rho": 0.6703
+  },
+  {
+   "name": "BOYAULT_LIVER_CANCER_SUBCLASS_G6_DN",
+   "n_proteins": 11,
+   "retention_protein": 0.3669,
+   "retention_transcript": 0.7229,
+   "discrepancy": 0.356,
+   "n_genes_with_corr": 11,
+   "mean_mrna_protein_rho": 0.615
+  },
+  {
+   "name": "CAIRO_HEPATOBLASTOMA_CLASSES_DN",
+   "n_proteins": 122,
+   "retention_protein": 0.7872,
+   "retention_transcript": 0.5803,
+   "discrepancy": 0.2069,
+   "n_genes_with_corr": 116,
+   "mean_mrna_protein_rho": 0.6662
+  },
+  {
+   "name": "CAIRO_HEPATOBLASTOMA_CLASSES_UP",
+   "n_proteins": 428,
+   "retention_protein": 0.7524,
+   "retention_transcript": 0.8403,
+   "discrepancy": 0.0879,
+   "n_genes_with_corr": 413,
+   "mean_mrna_protein_rho": 0.4834
+  },
+  {
+   "name": "CAIRO_HEPATOBLASTOMA_DN",
+   "n_proteins": 179,
+   "retention_protein": 0.915,
+   "retention_transcript": 0.6784,
+   "discrepancy": 0.2366,
+   "n_genes_with_corr": 175,
+   "mean_mrna_protein_rho": 0.6878
+  },
+  {
+   "name": "CAIRO_HEPATOBLASTOMA_UP",
+   "n_proteins": 124,
+   "retention_protein": 0.8818,
+   "retention_transcript": 0.9054,
+   "discrepancy": 0.0236,
+   "n_genes_with_corr": 119,
+   "mean_mrna_protein_rho": 0.6063
+  },
+  {
+   "name": "CAIRO_LIVER_DEVELOPMENT_DN",
+   "n_proteins": 165,
+   "retention_protein": 0.6791,
+   "retention_transcript": 0.321,
+   "discrepancy": 0.3581,
+   "n_genes_with_corr": 162,
+   "mean_mrna_protein_rho": 0.6222
+  },
+  {
+   "name": "CAIRO_LIVER_DEVELOPMENT_UP",
+   "n_proteins": 65,
+   "retention_protein": 1.2555,
+   "retention_transcript": 0.1699,
+   "discrepancy": 1.0856,
+   "n_genes_with_corr": 64,
+   "mean_mrna_protein_rho": 0.5817
+  },
+  {
+   "name": "CARRILLOREIXACH_HEPATOBLASTOMA_VS_NORMAL_HYPOMETHYLATED_AND_UP",
+   "n_proteins": 70,
+   "retention_protein": 1.3841,
+   "retention_transcript": 0.7358,
+   "discrepancy": 0.6483,
+   "n_genes_with_corr": 70,
+   "mean_mrna_protein_rho": 0.6486
+  },
+  {
+   "name": "CARRILLOREIXACH_HEPATOBLASTOMA_VS_NORMAL_UP",
+   "n_proteins": 236,
+   "retention_protein": 1.0241,
+   "retention_transcript": 0.593,
+   "discrepancy": 0.4311,
+   "n_genes_with_corr": 232,
+   "mean_mrna_protein_rho": 0.5394
+  },
+  {
+   "name": "CARRILLOREIXACH_MRS3_VS_LOWER_RISK_HEPATOBLASTOMA_DN",
+   "n_proteins": 54,
+   "retention_protein": 0.0365,
+   "retention_transcript": 1.1775,
+   "discrepancy": 1.141,
+   "n_genes_with_corr": 54,
+   "mean_mrna_protein_rho": 0.625
+  },
+  {
+   "name": "CAVARD_LIVER_CANCER_MALIGNANT_VS_BENIGN",
+   "n_proteins": 18,
+   "retention_protein": 1.0107,
+   "retention_transcript": 2.3451,
+   "discrepancy": 1.3344,
+   "n_genes_with_corr": 18,
+   "mean_mrna_protein_rho": 0.5734
+  },
+  {
+   "name": "CHEN_LIVER_METABOLISM_QTL_CIS",
+   "n_proteins": 48,
+   "retention_protein": 1.6055,
+   "retention_transcript": 1.5309,
+   "discrepancy": 0.0746,
+   "n_genes_with_corr": 46,
+   "mean_mrna_protein_rho": 0.5964
+  },
+  {
+   "name": "CHIANG_LIVER_CANCER_SUBCLASS_CTNNB1_DN",
+   "n_proteins": 78,
+   "retention_protein": 0.0605,
+   "retention_transcript": 0.7116,
+   "discrepancy": 0.6511,
+   "n_genes_with_corr": 77,
+   "mean_mrna_protein_rho": 0.7215
+  },
+  {
+   "name": "CHIANG_LIVER_CANCER_SUBCLASS_CTNNB1_UP",
+   "n_proteins": 75,
+   "retention_protein": 1.0806,
+   "retention_transcript": 0.3427,
+   "discrepancy": 0.7379,
+   "n_genes_with_corr": 72,
+   "mean_mrna_protein_rho": 0.7464
+  },
+  {
+   "name": "CHIANG_LIVER_CANCER_SUBCLASS_INTERFERON_DN",
+   "n_proteins": 12,
+   "retention_protein": 2.3585,
+   "retention_transcript": 0.1549,
+   "discrepancy": 2.2036,
+   "n_genes_with_corr": 12,
+   "mean_mrna_protein_rho": 0.6821
+  },
+  {
+   "name": "CHIANG_LIVER_CANCER_SUBCLASS_INTERFERON_UP",
+   "n_proteins": 15,
+   "retention_protein": 0.6807,
+   "retention_transcript": 0.3221,
+   "discrepancy": 0.3586,
+   "n_genes_with_corr": 15,
+   "mean_mrna_protein_rho": 0.7381
+  },
+  {
+   "name": "CHIANG_LIVER_CANCER_SUBCLASS_POLYSOMY7_DN",
+   "n_proteins": 11,
+   "retention_protein": 1.0632,
+   "retention_transcript": 0.7916,
+   "discrepancy": 0.2716,
+   "n_genes_with_corr": 11,
+   "mean_mrna_protein_rho": 0.7722
+  },
+  {
+   "name": "CHIANG_LIVER_CANCER_SUBCLASS_POLYSOMY7_UP",
+   "n_proteins": 32,
+   "retention_protein": 1.004,
+   "retention_transcript": 0.5997,
+   "discrepancy": 0.4043,
+   "n_genes_with_corr": 31,
+   "mean_mrna_protein_rho": 0.6945
+  },
+  {
+   "name": "CHIANG_LIVER_CANCER_SUBCLASS_PROLIFERATION_DN",
+   "n_proteins": 147,
+   "retention_protein": 0.9709,
+   "retention_transcript": 0.5145,
+   "discrepancy": 0.4564,
+   "n_genes_with_corr": 145,
+   "mean_mrna_protein_rho": 0.7486
+  },
+  {
+   "name": "CHIANG_LIVER_CANCER_SUBCLASS_PROLIFERATION_UP",
+   "n_proteins": 49,
+   "retention_protein": 1.1008,
+   "retention_transcript": 0.7075,
+   "discrepancy": 0.3933,
+   "n_genes_with_corr": 48,
+   "mean_mrna_protein_rho": 0.728
+  },
+  {
+   "name": "CHIANG_LIVER_CANCER_SUBCLASS_UNANNOTATED_DN",
+   "n_proteins": 134,
+   "retention_protein": 0.74,
+   "retention_transcript": 0.9556,
+   "discrepancy": 0.2156,
+   "n_genes_with_corr": 131,
+   "mean_mrna_protein_rho": 0.4465
+  },
+  {
+   "name": "CHIANG_LIVER_CANCER_SUBCLASS_UNANNOTATED_UP",
+   "n_proteins": 47,
+   "retention_protein": 0.9284,
+   "retention_transcript": 0.5823,
+   "discrepancy": 0.3461,
+   "n_genes_with_corr": 45,
+   "mean_mrna_protein_rho": 0.6248
+  },
+  {
+   "name": "DESERT_PERIPORTAL_HEPATOCELLULAR_CARCINOMA_SUBCLASS_UP",
+   "n_proteins": 118,
+   "retention_protein": 0.9148,
+   "retention_transcript": 0.5775,
+   "discrepancy": 0.3373,
+   "n_genes_with_corr": 114,
+   "mean_mrna_protein_rho": 0.7124
+  },
+  {
+   "name": "DESERT_STEM_CELL_HEPATOCELLULAR_CARCINOMA_SUBCLASS_UP",
+   "n_proteins": 125,
+   "retention_protein": 1.0703,
+   "retention_transcript": 0.7598,
+   "discrepancy": 0.3105,
+   "n_genes_with_corr": 123,
+   "mean_mrna_protein_rho": 0.6418
+  },
+  {
+   "name": "HOSHIDA_LIVER_CANCER_LATE_RECURRENCE_DN",
+   "n_proteins": 33,
+   "retention_protein": 1.1095,
+   "retention_transcript": 0.8423,
+   "discrepancy": 0.2672,
+   "n_genes_with_corr": 33,
+   "mean_mrna_protein_rho": 0.6236
+  },
+  {
+   "name": "HOSHIDA_LIVER_CANCER_LATE_RECURRENCE_UP",
+   "n_proteins": 32,
+   "retention_protein": 1.2624,
+   "retention_transcript": 0.9387,
+   "discrepancy": 0.3237,
+   "n_genes_with_corr": 32,
+   "mean_mrna_protein_rho": 0.6225
+  },
+  {
+   "name": "HOSHIDA_LIVER_CANCER_SUBCLASS_S2",
+   "n_proteins": 90,
+   "retention_protein": 0.7118,
+   "retention_transcript": 0.9993,
+   "discrepancy": 0.2875,
+   "n_genes_with_corr": 88,
+   "mean_mrna_protein_rho": 0.5219
+  },
+  {
+   "name": "HOSHIDA_LIVER_CANCER_SUBCLASS_S3",
+   "n_proteins": 209,
+   "retention_protein": 0.9245,
+   "retention_transcript": 0.4139,
+   "discrepancy": 0.5106,
+   "n_genes_with_corr": 203,
+   "mean_mrna_protein_rho": 0.6866
+  },
+  {
+   "name": "HOSHIDA_LIVER_CANCER_SURVIVAL_DN",
+   "n_proteins": 79,
+   "retention_protein": 1.0464,
+   "retention_transcript": 0.2981,
+   "discrepancy": 0.7483,
+   "n_genes_with_corr": 79,
+   "mean_mrna_protein_rho": 0.5756
+  },
+  {
+   "name": "HSIAO_LIVER_SPECIFIC_GENES",
+   "n_proteins": 219,
+   "retention_protein": 0.8283,
+   "retention_transcript": 0.3187,
+   "discrepancy": 0.5096,
+   "n_genes_with_corr": 215,
+   "mean_mrna_protein_rho": 0.669
+  },
+  {
+   "name": "IIZUKA_LIVER_CANCER_PROGRESSION_G1_G2_DN",
+   "n_proteins": 19,
+   "retention_protein": 0.7124,
+   "retention_transcript": 1.0108,
+   "discrepancy": 0.2984,
+   "n_genes_with_corr": 19,
+   "mean_mrna_protein_rho": 0.4803
+  },
+  {
+   "name": "IIZUKA_LIVER_CANCER_PROGRESSION_G2_G3_UP",
+   "n_proteins": 22,
+   "retention_protein": 0.9355,
+   "retention_transcript": 0.0042,
+   "discrepancy": 0.9313,
+   "n_genes_with_corr": 21,
+   "mean_mrna_protein_rho": 0.6078
+  },
+  {
+   "name": "IIZUKA_LIVER_CANCER_PROGRESSION_L0_L1_DN",
+   "n_proteins": 15,
+   "retention_protein": 0.0734,
+   "retention_transcript": 1.0206,
+   "discrepancy": 0.9472,
+   "n_genes_with_corr": 15,
+   "mean_mrna_protein_rho": 0.4657
+  },
+  {
+   "name": "KAPOSI_LIVER_CANCER_MET_UP",
+   "n_proteins": 12,
+   "retention_protein": 1.8943,
+   "retention_transcript": 0.708,
+   "discrepancy": 1.1863,
+   "n_genes_with_corr": 12,
+   "mean_mrna_protein_rho": 0.5516
+  },
+  {
+   "name": "KIM_LIVER_CANCER_POOR_SURVIVAL_DN",
+   "n_proteins": 39,
+   "retention_protein": 0.9981,
+   "retention_transcript": 0.259,
+   "discrepancy": 0.7391,
+   "n_genes_with_corr": 39,
+   "mean_mrna_protein_rho": 0.6865
+  },
+  {
+   "name": "KIM_LIVER_CANCER_POOR_SURVIVAL_UP",
+   "n_proteins": 11,
+   "retention_protein": 2.2512,
+   "retention_transcript": 0.4032,
+   "discrepancy": 1.848,
+   "n_genes_with_corr": 10,
+   "mean_mrna_protein_rho": 0.6356
+  },
+  {
+   "name": "LEE_LIVER_CANCER_ACOX1_DN",
+   "n_proteins": 46,
+   "retention_protein": 0.852,
+   "retention_transcript": 0.4742,
+   "discrepancy": 0.3778,
+   "n_genes_with_corr": 46,
+   "mean_mrna_protein_rho": 0.6749
+  },
+  {
+   "name": "LEE_LIVER_CANCER_CIPROFIBRATE_DN",
+   "n_proteins": 39,
+   "retention_protein": 0.9397,
+   "retention_transcript": 0.4994,
+   "discrepancy": 0.4403,
+   "n_genes_with_corr": 39,
+   "mean_mrna_protein_rho": 0.7348
+  },
+  {
+   "name": "LEE_LIVER_CANCER_CIPROFIBRATE_UP",
+   "n_proteins": 33,
+   "retention_protein": 0.3329,
+   "retention_transcript": 0.2658,
+   "discrepancy": 0.0671,
+   "n_genes_with_corr": 33,
+   "mean_mrna_protein_rho": 0.6579
+  },
+  {
+   "name": "LEE_LIVER_CANCER_DENA_DN",
+   "n_proteins": 49,
+   "retention_protein": 0.9974,
+   "retention_transcript": 0.5617,
+   "discrepancy": 0.4357,
+   "n_genes_with_corr": 49,
+   "mean_mrna_protein_rho": 0.7636
+  },
+  {
+   "name": "LEE_LIVER_CANCER_DENA_UP",
+   "n_proteins": 30,
+   "retention_protein": 2.5875,
+   "retention_transcript": 0.9126,
+   "discrepancy": 1.6749,
+   "n_genes_with_corr": 30,
+   "mean_mrna_protein_rho": 0.6221
+  },
+  {
+   "name": "LEE_LIVER_CANCER_E2F1_DN",
+   "n_proteins": 41,
+   "retention_protein": 0.9522,
+   "retention_transcript": 0.4287,
+   "discrepancy": 0.5235,
+   "n_genes_with_corr": 41,
+   "mean_mrna_protein_rho": 0.6988
+  },
+  {
+   "name": "LEE_LIVER_CANCER_E2F1_UP",
+   "n_proteins": 38,
+   "retention_protein": 0.1578,
+   "retention_transcript": 1.3529,
+   "discrepancy": 1.1951,
+   "n_genes_with_corr": 38,
+   "mean_mrna_protein_rho": 0.6552
+  },
+  {
+   "name": "LEE_LIVER_CANCER_MYC_DN",
+   "n_proteins": 37,
+   "retention_protein": 0.7921,
+   "retention_transcript": 0.4061,
+   "discrepancy": 0.386,
+   "n_genes_with_corr": 36,
+   "mean_mrna_protein_rho": 0.6475
+  },
+  {
+   "name": "LEE_LIVER_CANCER_MYC_E2F1_DN",
+   "n_proteins": 44,
+   "retention_protein": 0.9668,
+   "retention_transcript": 0.4988,
+   "discrepancy": 0.468,
+   "n_genes_with_corr": 44,
+   "mean_mrna_protein_rho": 0.7369
+  },
+  {
+   "name": "LEE_LIVER_CANCER_MYC_TGFA_DN",
+   "n_proteins": 43,
+   "retention_protein": 0.9489,
+   "retention_transcript": 0.4792,
+   "discrepancy": 0.4697,
+   "n_genes_with_corr": 43,
+   "mean_mrna_protein_rho": 0.7405
+  },
+  {
+   "name": "LEE_LIVER_CANCER_MYC_TGFA_UP",
+   "n_proteins": 36,
+   "retention_protein": 0.0,
+   "retention_transcript": 0.8045,
+   "discrepancy": 0.8045,
+   "n_genes_with_corr": 34,
+   "mean_mrna_protein_rho": 0.6494
+  },
+  {
+   "name": "LEE_LIVER_CANCER_MYC_UP",
+   "n_proteins": 34,
+   "retention_protein": 1.8103,
+   "retention_transcript": 1.0829,
+   "discrepancy": 0.7274,
+   "n_genes_with_corr": 33,
+   "mean_mrna_protein_rho": 0.5151
+  },
+  {
+   "name": "LEE_LIVER_CANCER_SURVIVAL_DN",
+   "n_proteins": 106,
+   "retention_protein": 0.9294,
+   "retention_transcript": 0.7819,
+   "discrepancy": 0.1475,
+   "n_genes_with_corr": 103,
+   "mean_mrna_protein_rho": 0.512
+  },
+  {
+   "name": "LEE_LIVER_CANCER_SURVIVAL_UP",
+   "n_proteins": 126,
+   "retention_protein": 1.0051,
+   "retention_transcript": 0.3882,
+   "discrepancy": 0.6169,
+   "n_genes_with_corr": 122,
+   "mean_mrna_protein_rho": 0.7057
+  },
+  {
+   "name": "MARTORIATI_MDM4_TARGETS_FETAL_LIVER_DN",
+   "n_proteins": 301,
+   "retention_protein": 0.9895,
+   "retention_transcript": 1.0734,
+   "discrepancy": 0.0839,
+   "n_genes_with_corr": 294,
+   "mean_mrna_protein_rho": 0.4972
+  },
+  {
+   "name": "MIDORIKAWA_AMPLIFIED_IN_LIVER_CANCER",
+   "n_proteins": 24,
+   "retention_protein": 0.1877,
+   "retention_transcript": 0.9046,
+   "discrepancy": 0.7169,
+   "n_genes_with_corr": 23,
+   "mean_mrna_protein_rho": 0.4085
+  },
+  {
+   "name": "MINGUEZ_LIVER_CANCER_VASCULAR_INVASION_DN",
+   "n_proteins": 17,
+   "retention_protein": 0.9529,
+   "retention_transcript": 0.5118,
+   "discrepancy": 0.4411,
+   "n_genes_with_corr": 17,
+   "mean_mrna_protein_rho": 0.6845
+  },
+  {
+   "name": "NABA_MATRISOME_METASTATIC_COLORECTAL_LIVER_METASTASIS",
+   "n_proteins": 18,
+   "retention_protein": 2.748,
+   "retention_transcript": 0.8911,
+   "discrepancy": 1.8569,
+   "n_genes_with_corr": 18,
+   "mean_mrna_protein_rho": 0.5445
+  },
+  {
+   "name": "OHGUCHI_LIVER_HNF4A_TARGETS_DN",
+   "n_proteins": 103,
+   "retention_protein": 0.9019,
+   "retention_transcript": 0.4753,
+   "discrepancy": 0.4266,
+   "n_genes_with_corr": 101,
+   "mean_mrna_protein_rho": 0.699
+  },
+  {
+   "name": "OHGUCHI_LIVER_HNF4A_TARGETS_UP",
+   "n_proteins": 24,
+   "retention_protein": 0.873,
+   "retention_transcript": 0.6665,
+   "discrepancy": 0.2065,
+   "n_genes_with_corr": 24,
+   "mean_mrna_protein_rho": 0.7321
+  },
+  {
+   "name": "PATIL_LIVER_CANCER",
+   "n_proteins": 353,
+   "retention_protein": 0.8599,
+   "retention_transcript": 0.8926,
+   "discrepancy": 0.0327,
+   "n_genes_with_corr": 348,
+   "mean_mrna_protein_rho": 0.5545
+  },
+  {
+   "name": "ROESSLER_LIVER_CANCER_METASTASIS_DN",
+   "n_proteins": 25,
+   "retention_protein": 0.7608,
+   "retention_transcript": 0.8479,
+   "discrepancy": 0.0871,
+   "n_genes_with_corr": 23,
+   "mean_mrna_protein_rho": 0.5666
+  },
+  {
+   "name": "ROESSLER_LIVER_CANCER_METASTASIS_UP",
+   "n_proteins": 55,
+   "retention_protein": 0.8405,
+   "retention_transcript": 0.247,
+   "discrepancy": 0.5935,
+   "n_genes_with_corr": 55,
+   "mean_mrna_protein_rho": 0.5183
+  },
+  {
+   "name": "SAKAI_CHRONIC_HEPATITIS_VS_LIVER_CANCER_UP",
+   "n_proteins": 59,
+   "retention_protein": 0.9436,
+   "retention_transcript": 1.0332,
+   "discrepancy": 0.0896,
+   "n_genes_with_corr": 59,
+   "mean_mrna_protein_rho": 0.4987
+  },
+  {
+   "name": "SERVITJA_LIVER_HNF1A_TARGETS_DN",
+   "n_proteins": 83,
+   "retention_protein": 0.7244,
+   "retention_transcript": 0.5312,
+   "discrepancy": 0.1932,
+   "n_genes_with_corr": 81,
+   "mean_mrna_protein_rho": 0.6365
+  },
+  {
+   "name": "SERVITJA_LIVER_HNF1A_TARGETS_UP",
+   "n_proteins": 55,
+   "retention_protein": 0.8568,
+   "retention_transcript": 0.9512,
+   "discrepancy": 0.0944,
+   "n_genes_with_corr": 55,
+   "mean_mrna_protein_rho": 0.7269
+  },
+  {
+   "name": "SHETH_LIVER_CANCER_VS_TXNIP_LOSS_PAM1",
+   "n_proteins": 115,
+   "retention_protein": 1.2296,
+   "retention_transcript": 0.7751,
+   "discrepancy": 0.4545,
+   "n_genes_with_corr": 112,
+   "mean_mrna_protein_rho": 0.5977
+  },
+  {
+   "name": "SHETH_LIVER_CANCER_VS_TXNIP_LOSS_PAM4",
+   "n_proteins": 167,
+   "retention_protein": 0.9862,
+   "retention_transcript": 0.5948,
+   "discrepancy": 0.3914,
+   "n_genes_with_corr": 163,
+   "mean_mrna_protein_rho": 0.662
+  },
+  {
+   "name": "SHETH_LIVER_CANCER_VS_TXNIP_LOSS_PAM6",
+   "n_proteins": 15,
+   "retention_protein": 0.9595,
+   "retention_transcript": 0.6264,
+   "discrepancy": 0.3331,
+   "n_genes_with_corr": 15,
+   "mean_mrna_protein_rho": 0.5609
+  },
+  {
+   "name": "SMITH_LIVER_CANCER",
+   "n_proteins": 34,
+   "retention_protein": 0.4363,
+   "retention_transcript": 1.1624,
+   "discrepancy": 0.7261,
+   "n_genes_with_corr": 34,
+   "mean_mrna_protein_rho": 0.6018
+  },
+  {
+   "name": "SU_LIVER",
+   "n_proteins": 49,
+   "retention_protein": 0.8202,
+   "retention_transcript": 0.4346,
+   "discrepancy": 0.3856,
+   "n_genes_with_corr": 49,
+   "mean_mrna_protein_rho": 0.6534
+  },
+  {
+   "name": "VILLANUEVA_LIVER_CANCER_KRT19_DN",
+   "n_proteins": 46,
+   "retention_protein": 1.0532,
+   "retention_transcript": 0.5325,
+   "discrepancy": 0.5207,
+   "n_genes_with_corr": 46,
+   "mean_mrna_protein_rho": 0.7257
+  },
+  {
+   "name": "VILLANUEVA_LIVER_CANCER_KRT19_UP",
+   "n_proteins": 46,
+   "retention_protein": 0.8891,
+   "retention_transcript": 0.7175,
+   "discrepancy": 0.1716,
+   "n_genes_with_corr": 45,
+   "mean_mrna_protein_rho": 0.586
+  },
+  {
+   "name": "WENG_POR_TARGETS_LIVER_DN",
+   "n_proteins": 14,
+   "retention_protein": 0.8342,
+   "retention_transcript": 0.627,
+   "discrepancy": 0.2072,
+   "n_genes_with_corr": 14,
+   "mean_mrna_protein_rho": 0.6952
+  },
+  {
+   "name": "WOO_LIVER_CANCER_RECURRENCE_DN",
+   "n_proteins": 71,
+   "retention_protein": 1.0266,
+   "retention_transcript": 0.4517,
+   "discrepancy": 0.5749,
+   "n_genes_with_corr": 70,
+   "mean_mrna_protein_rho": 0.7535
+  },
+  {
+   "name": "YAMASHITA_LIVER_CANCER_STEM_CELL_DN",
+   "n_proteins": 61,
+   "retention_protein": 0.8152,
+   "retention_transcript": 0.4232,
+   "discrepancy": 0.392,
+   "n_genes_with_corr": 61,
+   "mean_mrna_protein_rho": 0.7127
+  },
+  {
+   "name": "YAMASHITA_LIVER_CANCER_STEM_CELL_UP",
+   "n_proteins": 19,
+   "retention_protein": 0.3112,
+   "retention_transcript": 0.7926,
+   "discrepancy": 0.4814,
+   "n_genes_with_corr": 19,
+   "mean_mrna_protein_rho": 0.6155
+  },
+  {
+   "name": "YAMASHITA_LIVER_CANCER_WITH_EPCAM_DN",
+   "n_proteins": 14,
+   "retention_protein": 0.8892,
+   "retention_transcript": 0.1936,
+   "discrepancy": 0.6956,
+   "n_genes_with_corr": 14,
+   "mean_mrna_protein_rho": 0.7297
+  },
+  {
+   "name": "YAMASHITA_LIVER_CANCER_WITH_EPCAM_UP",
+   "n_proteins": 39,
+   "retention_protein": 0.1664,
+   "retention_transcript": 0.8378,
+   "discrepancy": 0.6714,
+   "n_genes_with_corr": 39,
+   "mean_mrna_protein_rho": 0.357
+  }
+ ]
+}

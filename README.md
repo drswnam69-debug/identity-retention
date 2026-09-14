@@ -107,6 +107,12 @@ Expression matrices are not redistributed here. Every one is public:
 | GEO series | GSE135251, GSE130970, GSE167523, GSE76427, GSE164760, GSE14520 | https://www.ncbi.nlm.nih.gov/geo/ |
 | TCGA (STAR-TPM, GENCODE v36 probemap) | TCGA-LIHC, TCGA-LUAD, TCGA-KIRC | https://xenabrowser.net/datapages/ (GDC hub) |
 | Proteome | Gao et al. 2019, Jiang et al. 2019 | the supplementary tables of the source articles |
+
+Two small derived tables from the first of those, the per-gene messenger RNA to
+protein correlations and the histological tumor purity, are in `data/` so that
+the proteome analyses can be rerun without recovering them by hand. They are the
+source article's material, not mine, and the MIT license below does not extend
+to them.
 | Gene sets | MSigDB human C2:CGP v2026.1.Hs | included in `genesets/` |
 
 `code/01_prepare.py` and `code/37_tcga_prepare.py` take the downloaded files and
@@ -164,4 +170,7 @@ See `CITATION.cff`. Please cite both the software (Zenodo DOI) and the article.
 
 ## License
 
-MIT. See `LICENSE`.
+MIT for the code, and see `LICENSE`. Two sets of files in this archive are
+redistributed under their own terms rather than under the MIT license: the
+MSigDB collection in `genesets/`, and the two derived tables in `data/` that
+come from the supplementary material of Gao et al. 2019.

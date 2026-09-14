@@ -1,0 +1,110 @@
+{
+ "plan": "PREREGISTRATION 6o",
+ "A_por_explains_D2_collapse": {
+  "per_cohort": {
+   "GSE76427": {
+    "DRAIN_locked": {
+     "genes": [
+      "MTARC1",
+      "MTARC2",
+      "POR"
+     ],
+     "unadjusted_mean": -0.7123,
+     "D1": {
+      "beta": -0.2952,
+      "p": 0.011540724746331284,
+      "ret": 0.4144
+     },
+     "D2": {
+      "beta": -0.1455,
+      "p": 0.21640693694118887,
+      "ret": 0.2043
+     }
+    },
+    "DRAIN_prime": {
+     "genes": [
+      "MTARC1",
+      "MTARC2"
+     ],
+     "unadjusted_mean": -0.6109,
+     "D1": {
+      "beta": -0.2009,
+      "p": 0.13850503619782953,
+      "ret": 0.3288
+     },
+     "D2": {
+      "beta": -0.0715,
+      "p": 0.6207586403021175,
+      "ret": 0.117
+     }
+    }
+   },
+   "GSE14520": {
+    "DRAIN_locked": {
+     "genes": [
+      "MTARC1",
+      "MTARC2",
+      "POR"
+     ],
+     "unadjusted_mean": -0.7997,
+     "D1": {
+      "beta": -0.1972,
+      "p": 0.0032061410960614084,
+      "ret": 0.2466
+     },
+     "D2": {
+      "beta": -0.0663,
+      "p": 0.36403887834617155,
+      "ret": 0.0829
+     }
+    },
+    "DRAIN_prime": {
+     "genes": [
+      "MTARC1",
+      "MTARC2"
+     ],
+     "unadjusted_mean": -0.7307,
+     "D1": {
+      "beta": -0.1318,
+      "p": 0.08606394099053341,
+      "ret": 0.1804
+     },
+     "D2": {
+      "beta": -0.0165,
+      "p": 0.8467460105359421,
+      "ret": 0.0226
+     }
+    }
+   }
+  },
+  "verdict": "FALSIFIED - DRAIN' loses significance under D2 in the same cohorts as the locked DRAIN, so the collapse is not attributable to POR"
+ },
+ "B_aifm2_direction": {
+  "GSE76427": {
+   "REDUCTION_4gene": {
+    "genes": [
+     "CYB5R3",
+     "CYB5R1",
+     "AIFM2",
+     "NQO1"
+    ],
+    "unadjusted_mean": 0.7281,
+    "D1_ret": 0.7108,
+    "joint_ret": 0.512
+   },
+   "REDUCTION_3gene_noAIFM2": {
+    "genes": [
+     "CYB5R3",
+     "CYB5R1",
+     "NQO1"
+    ],
+    "unadjusted_mean": 0.5209,
+    "D1_ret": 0.63,
+    "joint_ret": 0.3384
+   }
+  },
+  "delta_pp_D1": -8.08,
+  "delta_pp_joint": -17.36,
+  "verdict": "CONSERVATIVE SUPPORTED - dropping AIFM2 lowers retention"
+ }
+}

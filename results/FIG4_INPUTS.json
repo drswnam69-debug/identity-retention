@@ -1,0 +1,330 @@
+{
+ "GSE76427": {
+  "n_pairs": 52,
+  "composite_unadj_median": 1.1286,
+  "composite_unadj_mean": 1.0584,
+  "composite_D1": {
+   "beta": 0.5678,
+   "se": 0.1371,
+   "ci95": [
+    0.2925,
+    0.8431
+   ],
+   "t": 4.142,
+   "p": 0.00013239466184447832
+  },
+  "composite_D1_ret": 0.5031,
+  "composite_D2": {
+   "beta": 0.4134,
+   "se": 0.1463,
+   "ci95": [
+    0.1196,
+    0.7072
+   ],
+   "t": 2.826,
+   "p": 0.006754823774800514
+  },
+  "composite_D2_ret": 0.3663,
+  "composite_C1": {
+   "est": 1.1359,
+   "ci": [
+    0.7856,
+    1.4862
+   ],
+   "p": 3.463805803429119e-08,
+   "ret": 1.0065
+  },
+  "composite_joint": {
+   "est": 0.4505,
+   "ci": [
+    0.0936,
+    0.8074
+   ],
+   "p": 0.014428704786449361,
+   "ret": 0.3992
+  },
+  "composite_joint_C2": {
+   "est": 0.4804,
+   "ci": [
+    0.1379,
+    0.8229
+   ],
+   "p": 0.00693984786807742,
+   "ret": 0.4257
+  },
+  "module_reduction_C1": {
+   "est": 0.6992,
+   "ci": [
+    0.4211,
+    0.9773
+   ],
+   "p": 6.260451045855402e-06,
+   "ret": 0.9603
+  },
+  "module_reduction_joint": {
+   "est": 0.3728,
+   "ci": [
+    0.0308,
+    0.7148
+   ],
+   "p": 0.03328065608530417,
+   "ret": 0.512
+  },
+  "module_drain_C1": {
+   "est": -0.8894,
+   "ci": [
+    -1.1702,
+    -0.6087
+   ],
+   "p": 5.95279331739157e-08,
+   "ret": 1.2486
+  },
+  "module_drain_joint": {
+   "est": -0.3641,
+   "ci": [
+    -0.6587,
+    -0.0694
+   ],
+   "p": 0.016506624023383192,
+   "ret": 0.5112
+  },
+  "module_reduction": {
+   "unadj": 0.7281,
+   "adj": 0.5175,
+   "ci": [
+    0.2518,
+    0.7832
+   ],
+   "p": 0.00027695023927347114,
+   "ret": 0.7108
+  },
+  "module_drain": {
+   "unadj": -0.7123,
+   "adj": -0.2952,
+   "ci": [
+    -0.5213,
+    -0.0691
+   ],
+   "p": 0.011540724746331284,
+   "ret": 0.4144
+  },
+  "module_reduction_D2": {
+   "unadj": null,
+   "adj": 0.5049,
+   "ci": [
+    0.2061,
+    0.8036
+   ],
+   "p": 0.001353987360603349,
+   "ret": 0.6934
+  },
+  "module_drain_D2": {
+   "unadj": null,
+   "adj": -0.1455,
+   "ci": [
+    -0.3789,
+    0.0879
+   ],
+   "p": 0.21640693694118887,
+   "ret": 0.2043
+  },
+  "module_reduction_unadj": 0.7281,
+  "module_drain_unadj": -0.7123,
+  "_composition_keys": [
+   "cohort",
+   "collinearity",
+   "composite_C1",
+   "composite_joint",
+   "composite_joint_C2",
+   "genes",
+   "module_drain_C1",
+   "module_drain_joint",
+   "module_drain_joint_C2",
+   "module_drain_unadjusted",
+   "module_reduction_C1",
+   "module_reduction_joint",
+   "module_reduction_joint_C2",
+   "module_reduction_unadjusted",
+   "module_retention_gap",
+   "module_verdict_knife_edge",
+   "n_adjacent",
+   "n_pairs",
+   "n_tumour",
+   "no_unadjusted_effect",
+   "plan",
+   "positive_control",
+   "unadjusted_effect_p",
+   "unadjusted_paired",
+   "verdict_composite",
+   "verdict_module_split"
+  ]
+ },
+ "GSE14520": {
+  "n_pairs": 213,
+  "composite_unadj_median": 1.2615,
+  "composite_unadj_mean": 1.3965,
+  "composite_D1": {
+   "beta": 0.7916,
+   "se": 0.0677,
+   "ci95": [
+    0.6581,
+    0.9251
+   ],
+   "t": 11.687,
+   "p": 1.1680924998235047e-24
+  },
+  "composite_D1_ret": 0.6275,
+  "composite_D2": {
+   "beta": 0.6565,
+   "se": 0.0743,
+   "ci95": [
+    0.51,
+    0.803
+   ],
+   "t": 8.832,
+   "p": 4.0266159750061943e-16
+  },
+  "composite_D2_ret": 0.5204,
+  "composite_C1": {
+   "est": 1.4619,
+   "ci": [
+    1.3279,
+    1.5959
+   ],
+   "p": 4.6132632190835496e-55,
+   "ret": 1.1589
+  },
+  "composite_joint": {
+   "est": 0.8138,
+   "ci": [
+    0.6677,
+    0.9599
+   ],
+   "p": 1.793572839331982e-22,
+   "ret": 0.6451
+  },
+  "composite_joint_C2": {
+   "est": 0.812,
+   "ci": [
+    0.6669,
+    0.9571
+   ],
+   "p": 1.2255942401126088e-22,
+   "ret": 0.6437
+  },
+  "module_reduction_C1": {
+   "est": 0.8886,
+   "ci": [
+    0.7825,
+    0.9947
+   ],
+   "p": 6.6221277955661364e-40,
+   "ret": 1.0363
+  },
+  "module_reduction_joint": {
+   "est": 0.7636,
+   "ci": [
+    0.6142,
+    0.913
+   ],
+   "p": 1.0479943295603531e-19,
+   "ret": 0.8905
+  },
+  "module_drain_C1": {
+   "est": -0.8758,
+   "ci": [
+    -1.0057,
+    -0.7459
+   ],
+   "p": 1.171812171192889e-29,
+   "ret": 1.0952
+  },
+  "module_drain_joint": {
+   "est": -0.2481,
+   "ci": [
+    -0.3898,
+    -0.1064
+   ],
+   "p": 0.000677021288273685,
+   "ret": 0.3103
+  },
+  "module_reduction": {
+   "unadj": 0.8575,
+   "adj": 0.7166,
+   "ci": [
+    0.5802,
+    0.8531
+   ],
+   "p": 2.1576917783163463e-20,
+   "ret": 0.8357
+  },
+  "module_drain": {
+   "unadj": -0.7997,
+   "adj": -0.1972,
+   "ci": [
+    -0.3268,
+    -0.0675
+   ],
+   "p": 0.0032061410960614084,
+   "ret": 0.2466
+  },
+  "module_reduction_D2": {
+   "unadj": null,
+   "adj": 0.6921,
+   "ci": [
+    0.5415,
+    0.8427
+   ],
+   "p": 1.2810532588050212e-16,
+   "ret": 0.8071
+  },
+  "module_drain_D2": {
+   "unadj": null,
+   "adj": -0.0663,
+   "ci": [
+    -0.2092,
+    0.0766
+   ],
+   "p": 0.36403887834617155,
+   "ret": 0.0829
+  },
+  "module_reduction_unadj": 0.8575,
+  "module_drain_unadj": -0.7997,
+  "_composition_keys": [
+   "cohort",
+   "collinearity",
+   "composite_C1",
+   "composite_joint",
+   "composite_joint_C2",
+   "genes",
+   "module_drain_C1",
+   "module_drain_joint",
+   "module_drain_joint_C2",
+   "module_drain_unadjusted",
+   "module_reduction_C1",
+   "module_reduction_joint",
+   "module_reduction_joint_C2",
+   "module_reduction_unadjusted",
+   "module_retention_gap",
+   "n_adjacent",
+   "n_pairs",
+   "n_tumour",
+   "no_unadjusted_effect",
+   "plan",
+   "positive_control",
+   "unadjusted_effect_p",
+   "unadjusted_paired",
+   "verdict_composite",
+   "verdict_module_split"
+  ]
+ },
+ "phase_d_keys": [
+  "citation",
+  "cohorts",
+  "direction",
+  "gene_set",
+  "n_genes_in_set",
+  "pooled",
+  "status"
+ ]
+}

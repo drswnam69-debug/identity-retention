@@ -1,0 +1,27 @@
+{
+ "c2_cgp_total": 3555,
+ "liver": {
+  "keyword": 149,
+  "size_eligible": 126,
+  "excluded_by_size": 23,
+  "not_on_platform": 1,
+  "null_effect": 6,
+  "evaluable": 119
+ },
+ "lung": {
+  "keyword": 56,
+  "size_eligible": 41,
+  "excluded_by_size": 15,
+  "not_on_platform": 0,
+  "null_effect": 5,
+  "evaluable": 36
+ },
+ "kidney": {
+  "keyword": 18,
+  "size_eligible": 17,
+  "excluded_by_size": 1,
+  "not_on_platform": 0,
+  "null_effect": 2,
+  "evaluable": 15
+ }
+}

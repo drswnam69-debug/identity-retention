@@ -1,0 +1,945 @@
+{
+ "plan": "PREREGISTRATION 6t",
+ "cohort": "TCGA_KIRC",
+ "n_pairs": 72,
+ "genes": {
+  "D1": 22,
+  "C1": 21
+ },
+ "eligibility": {
+  "min_set": 15,
+  "max_set": 1000,
+  "min_on_platform": 10,
+  "null_effect_p": 0.05
+ },
+ "n_sets_supplied": 17,
+ "n_sets_evaluable": 15,
+ "n_sets_not_on_platform": 0,
+ "n_sets_null_effect": 2,
+ "controls_mode": "enforce",
+ "own_modules": {},
+ "signatures": [
+  {
+   "name": "FLECHNER_BIOPSY_KIDNEY_TRANSPLANT_OK_VS_DONOR_DN",
+   "kind": "published_signature",
+   "n_genes": 24,
+   "n_on_platform": 24,
+   "overlap_D1": 0,
+   "overlap_C1": 0,
+   "overlap_panel": 0,
+   "unadjusted_mean_delta": 0.345,
+   "unadjusted_median_delta": 0.3914,
+   "wilcoxon_p": 6.929582416243397e-05,
+   "status": "ok",
+   "D1_intercept": {
+    "beta": 0.2298,
+    "se": 0.1299,
+    "ci95": [
+     -0.0292,
+     0.4888
+    ],
+    "t": 1.769,
+    "p": 0.08119694465745296
+   },
+   "joint_intercept": {
+    "beta": -0.2386,
+    "se": 0.1304,
+    "ci95": [
+     -0.4987,
+     0.0215
+    ],
+    "t": -1.83,
+    "p": 0.07153799965400509
+   },
+   "retention_D1": 0.6661,
+   "retention_joint": 0.6916
+  },
+  {
+   "name": "FLECHNER_BIOPSY_KIDNEY_TRANSPLANT_OK_VS_DONOR_UP",
+   "kind": "published_signature",
+   "n_genes": 561,
+   "n_on_platform": 557,
+   "overlap_D1": 2,
+   "overlap_C1": 5,
+   "overlap_panel": 1,
+   "unadjusted_mean_delta": 0.2021,
+   "unadjusted_median_delta": 0.2927,
+   "wilcoxon_p": 0.01899200423713992,
+   "status": "ok",
+   "D1_intercept": {
+    "beta": 0.1568,
+    "se": 0.14,
+    "ci95": [
+     -0.1224,
+     0.436
+    ],
+    "t": 1.12,
+    "p": 0.26652244276361725
+   },
+   "joint_intercept": {
+    "beta": -0.3001,
+    "se": 0.1472,
+    "ci95": [
+     -0.5938,
+     -0.0064
+    ],
+    "t": -2.038,
+    "p": 0.04535215786962802
+   },
+   "retention_D1": 0.7758,
+   "retention_joint": 1.4848,
+   "sensitivity_no_covariate_genes": {
+    "name": "FLECHNER_BIOPSY_KIDNEY_TRANSPLANT_OK_VS_DONOR_UP__trimmed",
+    "kind": "sensitivity",
+    "n_genes": 554,
+    "n_on_platform": 550,
+    "overlap_D1": 0,
+    "overlap_C1": 0,
+    "overlap_panel": 1,
+    "unadjusted_mean_delta": 0.1998,
+    "unadjusted_median_delta": 0.2943,
+    "wilcoxon_p": 0.020166203854033414,
+    "status": "ok",
+    "D1_intercept": {
+     "beta": 0.1512,
+     "se": 0.1412,
+     "ci95": [
+      -0.1304,
+      0.4328
+     ],
+     "t": 1.071,
+     "p": 0.2878297013191506
+    },
+    "joint_intercept": {
+     "beta": -0.3023,
+     "se": 0.1494,
+     "ci95": [
+      -0.6004,
+      -0.0042
+     ],
+     "t": -2.023,
+     "p": 0.04696517826842352
+    },
+    "retention_D1": 0.7567,
+    "retention_joint": 1.5129
+   }
+  },
+  {
+   "name": "FLECHNER_BIOPSY_KIDNEY_TRANSPLANT_REJECTED_VS_OK_DN",
+   "kind": "published_signature",
+   "n_genes": 552,
+   "n_on_platform": 547,
+   "overlap_D1": 10,
+   "overlap_C1": 0,
+   "overlap_panel": 1,
+   "unadjusted_mean_delta": -0.3241,
+   "unadjusted_median_delta": -0.2283,
+   "wilcoxon_p": 1.0299365403762655e-05,
+   "status": "ok",
+   "D1_intercept": {
+    "beta": 0.0188,
+    "se": 0.0889,
+    "ci95": [
+     -0.1584,
+     0.196
+    ],
+    "t": 0.211,
+    "p": 0.8331606177408469
+   },
+   "joint_intercept": {
+    "beta": -0.1424,
+    "se": 0.1057,
+    "ci95": [
+     -0.3532,
+     0.0684
+    ],
+    "t": -1.347,
+    "p": 0.18226746441553518
+   },
+   "retention_D1": 0.058,
+   "retention_joint": 0.4394,
+   "sensitivity_no_covariate_genes": {
+    "name": "FLECHNER_BIOPSY_KIDNEY_TRANSPLANT_REJECTED_VS_OK_DN__trimmed",
+    "kind": "sensitivity",
+    "n_genes": 542,
+    "n_on_platform": 537,
+    "overlap_D1": 0,
+    "overlap_C1": 0,
+    "overlap_panel": 1,
+    "unadjusted_mean_delta": -0.3175,
+    "unadjusted_median_delta": -0.2393,
+    "wilcoxon_p": 2.0000335527544677e-05,
+    "status": "ok",
+    "D1_intercept": {
+     "beta": 0.0112,
+     "se": 0.0909,
+     "ci95": [
+      -0.1701,
+      0.1924
+     ],
+     "t": 0.123,
+     "p": 0.9024613948417158
+    },
+    "joint_intercept": {
+     "beta": -0.1524,
+     "se": 0.1082,
+     "ci95": [
+      -0.3682,
+      0.0633
+     ],
+     "t": -1.409,
+     "p": 0.1632202248423786
+    },
+    "retention_D1": 0.0353,
+    "retention_joint": 0.4801
+   }
+  },
+  {
+   "name": "FLECHNER_BIOPSY_KIDNEY_TRANSPLANT_REJECTED_VS_OK_UP",
+   "kind": "published_signature",
+   "n_genes": 88,
+   "n_on_platform": 88,
+   "overlap_D1": 0,
+   "overlap_C1": 6,
+   "overlap_panel": 0,
+   "unadjusted_mean_delta": 1.1827,
+   "unadjusted_median_delta": 1.2485,
+   "wilcoxon_p": 9.086095881838163e-13,
+   "status": "ok",
+   "D1_intercept": {
+    "beta": 0.9574,
+    "se": 0.1386,
+    "ci95": [
+     0.6809,
+     1.2338
+    ],
+    "t": 6.908,
+    "p": 1.8395339331856114e-09
+   },
+   "joint_intercept": {
+    "beta": 0.2239,
+    "se": 0.0855,
+    "ci95": [
+     0.0534,
+     0.3944
+    ],
+    "t": 2.62,
+    "p": 0.010800672018259145
+   },
+   "retention_D1": 0.8095,
+   "retention_joint": 0.1893,
+   "sensitivity_no_covariate_genes": {
+    "name": "FLECHNER_BIOPSY_KIDNEY_TRANSPLANT_REJECTED_VS_OK_UP__trimmed",
+    "kind": "sensitivity",
+    "n_genes": 82,
+    "n_on_platform": 82,
+    "overlap_D1": 0,
+    "overlap_C1": 0,
+    "overlap_panel": 0,
+    "unadjusted_mean_delta": 1.1619,
+    "unadjusted_median_delta": 1.2373,
+    "wilcoxon_p": 9.858900086092742e-13,
+    "status": "ok",
+    "D1_intercept": {
+     "beta": 0.9234,
+     "se": 0.1366,
+     "ci95": [
+      0.651,
+      1.1958
+     ],
+     "t": 6.761,
+     "p": 3.40034942201992e-09
+    },
+    "joint_intercept": {
+     "beta": 0.1995,
+     "se": 0.0838,
+     "ci95": [
+      0.0323,
+      0.3667
+     ],
+     "t": 2.38,
+     "p": 0.020079810291597583
+    },
+    "retention_D1": 0.7948,
+    "retention_joint": 0.1717
+   }
+  },
+  {
+   "name": "FLECHNER_PBL_KIDNEY_TRANSPLANT_OK_VS_DONOR_DN",
+   "kind": "published_signature",
+   "n_genes": 42,
+   "n_on_platform": 42,
+   "overlap_D1": 1,
+   "overlap_C1": 1,
+   "overlap_panel": 0,
+   "unadjusted_mean_delta": 0.3594,
+   "unadjusted_median_delta": 0.4653,
+   "wilcoxon_p": 0.0007598625459485163,
+   "status": "ok",
+   "D1_intercept": {
+    "beta": 0.1805,
+    "se": 0.1585,
+    "ci95": [
+     -0.1356,
+     0.4966
+    ],
+    "t": 1.139,
+    "p": 0.25860570589562565
+   },
+   "joint_intercept": {
+    "beta": -0.3771,
+    "se": 0.1612,
+    "ci95": [
+     -0.6986,
+     -0.0555
+    ],
+    "t": -2.339,
+    "p": 0.022215746907500066
+   },
+   "retention_D1": 0.5022,
+   "retention_joint": 1.0493,
+   "sensitivity_no_covariate_genes": {
+    "name": "FLECHNER_PBL_KIDNEY_TRANSPLANT_OK_VS_DONOR_DN__trimmed",
+    "kind": "sensitivity",
+    "n_genes": 40,
+    "n_on_platform": 40,
+    "overlap_D1": 0,
+    "overlap_C1": 0,
+    "overlap_panel": 0,
+    "unadjusted_mean_delta": 0.3684,
+    "unadjusted_median_delta": 0.4922,
+    "wilcoxon_p": 0.0006721692783185306,
+    "status": "ok",
+    "D1_intercept": {
+     "beta": 0.1915,
+     "se": 0.1603,
+     "ci95": [
+      -0.1282,
+      0.5112
+     ],
+     "t": 1.195,
+     "p": 0.23628534028451395
+    },
+    "joint_intercept": {
+     "beta": -0.3727,
+     "se": 0.163,
+     "ci95": [
+      -0.6979,
+      -0.0476
+     ],
+     "t": -2.287,
+     "p": 0.025266553320678085
+    },
+    "retention_D1": 0.5199,
+    "retention_joint": 1.0117
+   }
+  },
+  {
+   "name": "FLECHNER_PBL_KIDNEY_TRANSPLANT_OK_VS_DONOR_UP",
+   "kind": "published_signature",
+   "n_genes": 152,
+   "n_on_platform": 151,
+   "overlap_D1": 0,
+   "overlap_C1": 1,
+   "overlap_panel": 0,
+   "unadjusted_mean_delta": 0.4868,
+   "unadjusted_median_delta": 0.5642,
+   "wilcoxon_p": 2.866617952175261e-06,
+   "status": "ok",
+   "D1_intercept": {
+    "beta": 0.299,
+    "se": 0.1391,
+    "ci95": [
+     0.0217,
+     0.5764
+    ],
+    "t": 2.15,
+    "p": 0.034977085071713494
+   },
+   "joint_intercept": {
+    "beta": -0.2271,
+    "se": 0.1358,
+    "ci95": [
+     -0.4979,
+     0.0437
+    ],
+    "t": -1.673,
+    "p": 0.09885461498281431
+   },
+   "retention_D1": 0.6142,
+   "retention_joint": 0.4665,
+   "sensitivity_no_covariate_genes": {
+    "name": "FLECHNER_PBL_KIDNEY_TRANSPLANT_OK_VS_DONOR_UP__trimmed",
+    "kind": "sensitivity",
+    "n_genes": 151,
+    "n_on_platform": 150,
+    "overlap_D1": 0,
+    "overlap_C1": 0,
+    "overlap_panel": 0,
+    "unadjusted_mean_delta": 0.4807,
+    "unadjusted_median_delta": 0.5555,
+    "wilcoxon_p": 3.5649115485646444e-06,
+    "status": "ok",
+    "D1_intercept": {
+     "beta": 0.293,
+     "se": 0.1392,
+     "ci95": [
+      0.0154,
+      0.5705
+     ],
+     "t": 2.105,
+     "p": 0.03886019217924445
+    },
+    "joint_intercept": {
+     "beta": -0.2319,
+     "se": 0.1361,
+     "ci95": [
+      -0.5035,
+      0.0397
+     ],
+     "t": -1.703,
+     "p": 0.09298744607922131
+    },
+    "retention_D1": 0.6096,
+    "retention_joint": 0.4824
+   }
+  },
+  {
+   "name": "FLECHNER_PBL_KIDNEY_TRANSPLANT_REJECTED_VS_OK_DN",
+   "kind": "published_signature",
+   "n_genes": 51,
+   "n_on_platform": 51,
+   "overlap_D1": 0,
+   "overlap_C1": 0,
+   "overlap_panel": 0,
+   "unadjusted_mean_delta": 0.4773,
+   "unadjusted_median_delta": 0.5375,
+   "wilcoxon_p": 2.0595383344029605e-06,
+   "status": "ok",
+   "D1_intercept": {
+    "beta": 0.3742,
+    "se": 0.1352,
+    "ci95": [
+     0.1046,
+     0.6439
+    ],
+    "t": 2.768,
+    "p": 0.007211470192245999
+   },
+   "joint_intercept": {
+    "beta": -0.1085,
+    "se": 0.1364,
+    "ci95": [
+     -0.3807,
+     0.1636
+    ],
+    "t": -0.796,
+    "p": 0.4290132445457377
+   },
+   "retention_D1": 0.7839,
+   "retention_joint": 0.2273
+  },
+  {
+   "name": "FLECHNER_PBL_KIDNEY_TRANSPLANT_REJECTED_VS_OK_UP",
+   "kind": "published_signature",
+   "n_genes": 65,
+   "n_on_platform": 65,
+   "overlap_D1": 0,
+   "overlap_C1": 0,
+   "overlap_panel": 0,
+   "unadjusted_mean_delta": 0.4265,
+   "unadjusted_median_delta": 0.3844,
+   "wilcoxon_p": 7.794502508183921e-05,
+   "status": "ok",
+   "D1_intercept": {
+    "beta": 0.2265,
+    "se": 0.1468,
+    "ci95": [
+     -0.0663,
+     0.5192
+    ],
+    "t": 1.543,
+    "p": 0.12735863604451833
+   },
+   "joint_intercept": {
+    "beta": -0.2951,
+    "se": 0.1485,
+    "ci95": [
+     -0.5913,
+     0.0012
+    ],
+    "t": -1.987,
+    "p": 0.0508985967732506
+   },
+   "retention_D1": 0.5311,
+   "retention_joint": 0.692
+  },
+  {
+   "name": "LI_WILMS_TUMOR_VS_FETAL_KIDNEY_1_DN",
+   "kind": "published_signature",
+   "n_genes": 164,
+   "n_on_platform": 164,
+   "overlap_D1": 0,
+   "overlap_C1": 0,
+   "overlap_panel": 0,
+   "unadjusted_mean_delta": 0.6511,
+   "unadjusted_median_delta": 0.6888,
+   "wilcoxon_p": 4.076602277189357e-09,
+   "status": "ok",
+   "D1_intercept": {
+    "beta": 0.3533,
+    "se": 0.1332,
+    "ci95": [
+     0.0877,
+     0.6189
+    ],
+    "t": 2.653,
+    "p": 0.009872450550224177
+   },
+   "joint_intercept": {
+    "beta": -0.1802,
+    "se": 0.125,
+    "ci95": [
+     -0.4295,
+     0.0691
+    ],
+    "t": -1.442,
+    "p": 0.15385950611837948
+   },
+   "retention_D1": 0.5426,
+   "retention_joint": 0.2767
+  },
+  {
+   "name": "LI_WILMS_TUMOR_VS_FETAL_KIDNEY_1_UP",
+   "kind": "published_signature",
+   "n_genes": 183,
+   "n_on_platform": 183,
+   "overlap_D1": 0,
+   "overlap_C1": 2,
+   "overlap_panel": 0,
+   "unadjusted_mean_delta": -0.0928,
+   "unadjusted_median_delta": -0.0109,
+   "wilcoxon_p": 0.39056725212988164,
+   "status": "null_effect_excluded",
+   "sensitivity_no_covariate_genes": {
+    "name": "LI_WILMS_TUMOR_VS_FETAL_KIDNEY_1_UP__trimmed",
+    "kind": "sensitivity",
+    "n_genes": 181,
+    "n_on_platform": 181,
+    "overlap_D1": 0,
+    "overlap_C1": 0,
+    "overlap_panel": 0,
+    "unadjusted_mean_delta": -0.1073,
+    "unadjusted_median_delta": -0.0199,
+    "wilcoxon_p": 0.2888671449248549,
+    "status": "null_effect_excluded"
+   }
+  },
+  {
+   "name": "LI_WILMS_TUMOR_VS_FETAL_KIDNEY_2_DN",
+   "kind": "published_signature",
+   "n_genes": 48,
+   "n_on_platform": 48,
+   "overlap_D1": 0,
+   "overlap_C1": 0,
+   "overlap_panel": 0,
+   "unadjusted_mean_delta": 0.124,
+   "unadjusted_median_delta": 0.2346,
+   "wilcoxon_p": 0.050173595318613776,
+   "status": "null_effect_excluded"
+  },
+  {
+   "name": "LI_WILMS_TUMOR_VS_FETAL_KIDNEY_2_UP",
+   "kind": "published_signature",
+   "n_genes": 27,
+   "n_on_platform": 27,
+   "overlap_D1": 0,
+   "overlap_C1": 0,
+   "overlap_panel": 0,
+   "unadjusted_mean_delta": 0.2988,
+   "unadjusted_median_delta": 0.3348,
+   "wilcoxon_p": 0.0007295152015337355,
+   "status": "ok",
+   "D1_intercept": {
+    "beta": -0.0493,
+    "se": 0.1194,
+    "ci95": [
+     -0.2873,
+     0.1888
+    ],
+    "t": -0.413,
+    "p": 0.6809980017354546
+   },
+   "joint_intercept": {
+    "beta": -0.5332,
+    "se": 0.111,
+    "ci95": [
+     -0.7546,
+     -0.3119
+    ],
+    "t": -4.806,
+    "p": 8.685984609594087e-06
+   },
+   "retention_D1": 0.165,
+   "retention_joint": 1.7845
+  },
+  {
+   "name": "RODWELL_AGING_KIDNEY_DN",
+   "kind": "published_signature",
+   "n_genes": 148,
+   "n_on_platform": 143,
+   "overlap_D1": 1,
+   "overlap_C1": 0,
+   "overlap_panel": 0,
+   "unadjusted_mean_delta": -0.7099,
+   "unadjusted_median_delta": -0.6052,
+   "wilcoxon_p": 4.988017141581901e-11,
+   "status": "ok",
+   "D1_intercept": {
+    "beta": -0.6203,
+    "se": 0.1209,
+    "ci95": [
+     -0.8613,
+     -0.3792
+    ],
+    "t": -5.132,
+    "p": 2.453129712713149e-06
+   },
+   "joint_intercept": {
+    "beta": -0.6438,
+    "se": 0.1505,
+    "ci95": [
+     -0.944,
+     -0.3436
+    ],
+    "t": -4.278,
+    "p": 5.952693192630457e-05
+   },
+   "retention_D1": 0.8737,
+   "retention_joint": 0.9069,
+   "sensitivity_no_covariate_genes": {
+    "name": "RODWELL_AGING_KIDNEY_DN__trimmed",
+    "kind": "sensitivity",
+    "n_genes": 147,
+    "n_on_platform": 142,
+    "overlap_D1": 0,
+    "overlap_C1": 0,
+    "overlap_panel": 0,
+    "unadjusted_mean_delta": -0.7032,
+    "unadjusted_median_delta": -0.598,
+    "wilcoxon_p": 6.489229476162801e-11,
+    "status": "ok",
+    "D1_intercept": {
+     "beta": -0.614,
+     "se": 0.1211,
+     "ci95": [
+      -0.8555,
+      -0.3725
+     ],
+     "t": -5.071,
+     "p": 3.10467157499833e-06
+    },
+    "joint_intercept": {
+     "beta": -0.6389,
+     "se": 0.1508,
+     "ci95": [
+      -0.9396,
+      -0.3381
+     ],
+     "t": -4.238,
+     "p": 6.855592458330682e-05
+    },
+    "retention_D1": 0.8732,
+    "retention_joint": 0.9086
+   }
+  },
+  {
+   "name": "RODWELL_AGING_KIDNEY_NO_BLOOD_DN",
+   "kind": "published_signature",
+   "n_genes": 148,
+   "n_on_platform": 144,
+   "overlap_D1": 1,
+   "overlap_C1": 0,
+   "overlap_panel": 0,
+   "unadjusted_mean_delta": -0.7265,
+   "unadjusted_median_delta": -0.688,
+   "wilcoxon_p": 4.625515853946965e-11,
+   "status": "ok",
+   "D1_intercept": {
+    "beta": -0.6161,
+    "se": 0.124,
+    "ci95": [
+     -0.8633,
+     -0.3689
+    ],
+    "t": -4.971,
+    "p": 4.557210091188018e-06
+   },
+   "joint_intercept": {
+    "beta": -0.6198,
+    "se": 0.1544,
+    "ci95": [
+     -0.9279,
+     -0.3118
+    ],
+    "t": -4.014,
+    "p": 0.000149575510983574
+   },
+   "retention_D1": 0.8481,
+   "retention_joint": 0.8532,
+   "sensitivity_no_covariate_genes": {
+    "name": "RODWELL_AGING_KIDNEY_NO_BLOOD_DN__trimmed",
+    "kind": "sensitivity",
+    "n_genes": 147,
+    "n_on_platform": 143,
+    "overlap_D1": 0,
+    "overlap_C1": 0,
+    "overlap_panel": 0,
+    "unadjusted_mean_delta": -0.7199,
+    "unadjusted_median_delta": -0.6808,
+    "wilcoxon_p": 4.988017141581901e-11,
+    "status": "ok",
+    "D1_intercept": {
+     "beta": -0.6098,
+     "se": 0.1242,
+     "ci95": [
+      -0.8575,
+      -0.3622
+     ],
+     "t": -4.911,
+     "p": 5.723515916622649e-06
+    },
+    "joint_intercept": {
+     "beta": -0.6148,
+     "se": 0.1547,
+     "ci95": [
+      -0.9234,
+      -0.3062
+     ],
+     "t": -3.974,
+     "p": 0.00017158213375781866
+    },
+    "retention_D1": 0.8471,
+    "retention_joint": 0.854
+   }
+  },
+  {
+   "name": "RODWELL_AGING_KIDNEY_NO_BLOOD_UP",
+   "kind": "published_signature",
+   "n_genes": 223,
+   "n_on_platform": 223,
+   "overlap_D1": 0,
+   "overlap_C1": 4,
+   "overlap_panel": 0,
+   "unadjusted_mean_delta": 0.5655,
+   "unadjusted_median_delta": 0.6214,
+   "wilcoxon_p": 8.252938896239018e-09,
+   "status": "ok",
+   "D1_intercept": {
+    "beta": 0.3844,
+    "se": 0.1189,
+    "ci95": [
+     0.1474,
+     0.6215
+    ],
+    "t": 3.234,
+    "p": 0.0018623747368388237
+   },
+   "joint_intercept": {
+    "beta": -0.2263,
+    "se": 0.0795,
+    "ci95": [
+     -0.3849,
+     -0.0676
+    ],
+    "t": -2.846,
+    "p": 0.0058300802701088976
+   },
+   "retention_D1": 0.6798,
+   "retention_joint": 0.4002,
+   "sensitivity_no_covariate_genes": {
+    "name": "RODWELL_AGING_KIDNEY_NO_BLOOD_UP__trimmed",
+    "kind": "sensitivity",
+    "n_genes": 219,
+    "n_on_platform": 219,
+    "overlap_D1": 0,
+    "overlap_C1": 0,
+    "overlap_panel": 0,
+    "unadjusted_mean_delta": 0.5659,
+    "unadjusted_median_delta": 0.6284,
+    "wilcoxon_p": 8.252938896239018e-09,
+    "status": "ok",
+    "D1_intercept": {
+     "beta": 0.3888,
+     "se": 0.1186,
+     "ci95": [
+      0.1523,
+      0.6254
+     ],
+     "t": 3.278,
+     "p": 0.0016291485828860493
+    },
+    "joint_intercept": {
+     "beta": -0.2163,
+     "se": 0.0807,
+     "ci95": [
+      -0.3773,
+      -0.0554
+     ],
+     "t": -2.681,
+     "p": 0.009173256186870158
+    },
+    "retention_D1": 0.687,
+    "retention_joint": 0.3822
+   }
+  },
+  {
+   "name": "RODWELL_AGING_KIDNEY_UP",
+   "kind": "published_signature",
+   "n_genes": 500,
+   "n_on_platform": 493,
+   "overlap_D1": 0,
+   "overlap_C1": 7,
+   "overlap_panel": 0,
+   "unadjusted_mean_delta": 0.9196,
+   "unadjusted_median_delta": 1.0293,
+   "wilcoxon_p": 4.724850797127551e-12,
+   "status": "ok",
+   "D1_intercept": {
+    "beta": 0.7284,
+    "se": 0.1258,
+    "ci95": [
+     0.4774,
+     0.9793
+    ],
+    "t": 5.789,
+    "p": 1.8423575636572873e-07
+   },
+   "joint_intercept": {
+    "beta": 0.0501,
+    "se": 0.073,
+    "ci95": [
+     -0.0955,
+     0.1956
+    ],
+    "t": 0.686,
+    "p": 0.49470651301744795
+   },
+   "retention_D1": 0.7921,
+   "retention_joint": 0.0545,
+   "sensitivity_no_covariate_genes": {
+    "name": "RODWELL_AGING_KIDNEY_UP__trimmed",
+    "kind": "sensitivity",
+    "n_genes": 493,
+    "n_on_platform": 486,
+    "overlap_D1": 0,
+    "overlap_C1": 0,
+    "overlap_panel": 0,
+    "unadjusted_mean_delta": 0.919,
+    "unadjusted_median_delta": 1.0286,
+    "wilcoxon_p": 4.541433335530269e-12,
+    "status": "ok",
+    "D1_intercept": {
+     "beta": 0.7293,
+     "se": 0.1258,
+     "ci95": [
+      0.4783,
+      0.9802
+     ],
+     "t": 5.796,
+     "p": 1.7862627163838873e-07
+    },
+    "joint_intercept": {
+     "beta": 0.054,
+     "se": 0.0741,
+     "ci95": [
+      -0.0938,
+      0.2019
+     ],
+     "t": 0.729,
+     "p": 0.46838119455014154
+    },
+    "retention_D1": 0.7935,
+    "retention_joint": 0.0588
+   }
+  },
+  {
+   "name": "SU_KIDNEY",
+   "kind": "published_signature",
+   "n_genes": 15,
+   "n_on_platform": 15,
+   "overlap_D1": 4,
+   "overlap_C1": 0,
+   "overlap_panel": 0,
+   "unadjusted_mean_delta": -0.6217,
+   "unadjusted_median_delta": -0.6024,
+   "wilcoxon_p": 2.2448799291044376e-11,
+   "status": "ok",
+   "D1_intercept": {
+    "beta": -0.0154,
+    "se": 0.0426,
+    "ci95": [
+     -0.1004,
+     0.0696
+    ],
+    "t": -0.361,
+    "p": 0.7190230732678166
+   },
+   "joint_intercept": {
+    "beta": -0.0348,
+    "se": 0.053,
+    "ci95": [
+     -0.1404,
+     0.0709
+    ],
+    "t": -0.657,
+    "p": 0.5136615887909762
+   },
+   "retention_D1": 0.0248,
+   "retention_joint": 0.056,
+   "sensitivity_no_covariate_genes": {
+    "name": "SU_KIDNEY__trimmed",
+    "kind": "sensitivity",
+    "n_genes": 11,
+    "n_on_platform": 11,
+    "overlap_D1": 0,
+    "overlap_C1": 0,
+    "overlap_panel": 0,
+    "unadjusted_mean_delta": -0.5404,
+    "unadjusted_median_delta": -0.4857,
+    "wilcoxon_p": 5.416625306161934e-10,
+    "status": "ok",
+    "D1_intercept": {
+     "beta": 0.128,
+     "se": 0.0502,
+     "ci95": [
+      0.0278,
+      0.2281
+     ],
+     "t": 2.548,
+     "p": 0.013034861711609728
+    },
+    "joint_intercept": {
+     "beta": 0.1001,
+     "se": 0.0623,
+     "ci95": [
+      -0.0242,
+      0.2244
+     ],
+     "t": 1.607,
+     "p": 0.11266974773839501
+    },
+    "retention_D1": 0.2369,
+    "retention_joint": 0.1852
+   }
+  }
+ ],
+ "summary_joint": {
+  "median": 0.4665,
+  "q1": 0.252,
+  "q3": 0.88,
+  "n_below_50pct": 8,
+  "prop_below_50pct": 0.5333
+ },
+ "own_modules_note": "Removed under PREREGISTRATION 6x, which fixed before the kidney matrix was opened that no REDUCTION, DRAIN, SUPPLY or composite result from kidney would be computed or reported. The shared benchmark code path computes them as its built-in positive-control step; the values were discarded unread into the manuscript and are not reported anywhere."
+}

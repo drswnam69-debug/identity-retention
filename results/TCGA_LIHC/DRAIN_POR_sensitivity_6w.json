@@ -1,0 +1,22 @@
+{
+ "GSE14520|DRAIN (locked, 3 gene)": {
+  "shift": -0.7997,
+  "p": 1.895160682996015e-24,
+  "retention": 0.3103
+ },
+ "GSE14520|DRAIN without POR (6l)": {
+  "shift": -0.7307,
+  "p": 4.820399581288383e-18,
+  "retention": 0.3176
+ },
+ "TCGA_LIHC|DRAIN (locked, 3 gene)": {
+  "shift": -0.1468,
+  "p": 0.34720687274462314,
+  "retention": 1.3392
+ },
+ "TCGA_LIHC|DRAIN without POR (6l)": {
+  "shift": -0.362,
+  "p": 0.03453081197041463,
+  "retention": 0.0434
+ }
+}

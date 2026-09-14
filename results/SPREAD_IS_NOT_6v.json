@@ -1,0 +1,105 @@
+{
+  "plan": "PREREGISTRATION 6v, reporting step; NOT pre-registered",
+  "cohort": "GSE14520",
+  "scale": "natural log of the retention fraction",
+  "why_log": "on the ratio scale the within-signature variance is dominated by a few sets whose denominator approaches zero (mean 1.31 against a total of 0.14, giving a negative variance component); on the log scale the decomposition is stable under both estimators of the within term",
+  "n": 118,
+  "variance_of_log_point_estimates": 0.5145,
+  "mean_within_from_bootstrap_sd": 0.1383,
+  "mean_within_from_interval_width": 0.1356,
+  "between_signature_variance": 0.3762,
+  "between_signature_share": 0.7312,
+  "between_signature_share_interval_estimator": 0.7365,
+  "between_signature_sd_log": 0.6133,
+  "between_signature_fold": 1.85,
+  "ratio_scale_mean_within_variance": 1.313,
+  "share_ci95_signature_bootstrap": [
+    0.426,
+    0.859
+  ],
+  "n_source_studies": 33,
+  "share_ci95_cluster_bootstrap_by_source_study": [
+    0.44,
+    0.864
+  ],
+  "source_study_effect_log": {
+    "k_groups": 33,
+    "n": 118,
+    "eta_squared": 0.3222,
+    "F": 1.263,
+    "df": [
+      32,
+      85
+    ],
+    "eta_squared_expected_under_null": 0.2735,
+    "p": 0.19762709283187951
+  },
+  "source_study_effect_ratio": {
+    "k_groups": 33,
+    "n": 118,
+    "eta_squared": 0.4832,
+    "F": 2.484,
+    "df": [
+      32,
+      85
+    ],
+    "eta_squared_expected_under_null": 0.2735,
+    "p": 0.00047288444939497243
+  },
+  "retention_vs_absolute_shift": {
+    "all": {
+      "n": 119,
+      "spearman_rho": -0.2214,
+      "spearman_p": 0.015324193634493888,
+      "ci95": [
+        -0.386,
+        -0.0431
+      ]
+    },
+    "rising": {
+      "n": 60,
+      "spearman_rho": 0.0061,
+      "spearman_p": 0.9631891696426347,
+      "ci95": [
+        -0.2482,
+        0.2596
+      ]
+    },
+    "falling": {
+      "n": 59,
+      "spearman_rho": -0.2243,
+      "spearman_p": 0.08770271942238983,
+      "ci95": [
+        -0.4543,
+        0.0337
+      ]
+    }
+  },
+  "spread_under_the_negative_control": {
+    "n": 119,
+    "D1": {
+      "p05": 0.2578,
+      "p95": 1.4856,
+      "fold_p05_p95": 5.8,
+      "variance_of_log": 0.5239,
+      "sd_fold": 2.06
+    },
+    "matched_random": {
+      "p05": 0.1281,
+      "p95": 1.942,
+      "fold_p05_p95": 15.2,
+      "variance_of_log": 0.6666,
+      "sd_fold": 2.26
+    }
+  },
+  "spread": {
+    "min": 0.0042,
+    "second_smallest": 0.0611,
+    "max": 2.3451,
+    "fold_full": 558.4,
+    "fold_excluding_smallest": 38.4,
+    "p05": 0.258,
+    "p95": 1.486,
+    "fold_p05_p95": 5.8
+  }
+}

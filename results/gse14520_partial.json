@@ -1,0 +1,77 @@
+{
+  "plan": "PREREGISTRATION 6h",
+  "cohort": "GSE14520",
+  "status": "PARTIAL \u2014 differentiation covariate incomplete",
+  "n": 445,
+  "n_tumour": 225,
+  "n_adjacent": 220,
+  "d1_genes_available": [
+    "HNF4A",
+    "FOXA1",
+    "FOXA2",
+    "NR1H4",
+    "ALB"
+  ],
+  "d1_genes_missing": [
+    "HNF1A",
+    "TTR",
+    "TF",
+    "SERPINA1",
+    "AHSG",
+    "APOH",
+    "FGA",
+    "FGB",
+    "FGG",
+    "F2",
+    "CPS1",
+    "OTC",
+    "ARG1",
+    "TAT",
+    "G6PC1",
+    "PCK1",
+    "ASGR1"
+  ],
+  "adjustment_run": false,
+  "modules_unadjusted": {
+    "SUPPLY": {
+      "n_genes": 14,
+      "missing": [
+        "COQ5"
+      ],
+      "delta": 0.3375,
+      "p": 2.3266569744803173e-18
+    },
+    "REDUCTION": {
+      "n_genes": 3,
+      "missing": [
+        "AIFM2"
+      ],
+      "delta": 0.8362,
+      "p": 3.547774073341708e-41
+    },
+    "DRAIN": {
+      "n_genes": 3,
+      "missing": [],
+      "delta": -0.8361,
+      "p": 3.2914459391315392e-31
+    }
+  },
+  "H2_composite": {
+    "hodges_lehmann": 1.3451,
+    "cliffs_delta": 0.862,
+    "p": 9.504904538797671e-56
+  },
+  "n_pairs": 213,
+  "paired_rsi": {
+    "mean_diff": 1.3965,
+    "p": 8.54254584835077e-52
+  },
+  "paired_red": {
+    "mean_diff": 0.8575,
+    "p": 5.992862413757414e-39
+  },
+  "paired_dra": {
+    "mean_diff": -0.7997,
+    "p": 3.9018346938545555e-25
+  }
+}
