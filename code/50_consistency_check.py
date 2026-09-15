@@ -795,7 +795,7 @@ def check_figure_glyphs() -> None:
     for t in TTFont(path, fontNumber=0)["cmap"].tables:
         cov |= set(t.cmap.keys())
     bad_total = {}
-    for f in sorted(glob.glob(f"{HOME}/make_figure*.py")):
+    for f in sorted((glob.glob(f"{HOME}/make_figure*.py") + glob.glob(f"{HOME}/make_graphical_abstract.py"))):
         src = open(f, encoding="utf-8").read()
         # literal text the script draws, plus any \uXXXX escape it writes
         chars = set()
@@ -822,7 +822,7 @@ def check_figure_deposit(ms: str) -> None:
     deposit alone. That contradicted the Availability section."""
     head("J. The figures are regenerable from the deposit")
     import glob
-    scripts = sorted(os.path.basename(p) for p in glob.glob(f"{HOME}/make_figure*.py"))
+    scripts = sorted(os.path.basename(p) for p in (glob.glob(f"{HOME}/make_figure*.py") + glob.glob(f"{HOME}/make_graphical_abstract.py")))
     scripts.append("sync_figures.py")
     for d, label in ((f"{HOME}/release/identity-retention", "repository"),
                      (f"{HOME}/SF2build/SupplementaryFile2", "build tree")):
@@ -830,7 +830,7 @@ def check_figure_deposit(ms: str) -> None:
         check(not missing, f"the {label} carries every figure script "
                            f"({len(missing)} missing: {missing})")
     outside = []
-    for p_ in glob.glob(f"{HOME}/make_figure*.py") + glob.glob(f"{CODE_DIR}/*.py"):
+    for p_ in (glob.glob(f"{HOME}/make_figure*.py") + glob.glob(f"{HOME}/make_graphical_abstract.py")) + glob.glob(f"{CODE_DIR}/*.py"):
         for ln in open(p_, encoding="utf-8"):
             if ln.lstrip().startswith("#"):
                 continue
@@ -1114,7 +1114,8 @@ def check_package(ms: str) -> None:
             "04_Supplementary Material 2_Supplementary tables.xlsx",
             "05_Supplementary Material 3_Supplementary Note.pdf",
             "08_title_abstract_keywords.txt",
-            "06_Figure_alt_text.md", "07_Figure_legends.docx"]
+            "06_Figure_alt_text.md", "07_Figure_legends.docx",
+            "09_Graphical_Abstract.tif"]
     n_fig = len(re.findall(r"\*\*Figure (\d+)\.", ms))
     need += [f"Figure{i}.tif" for i in range(1, n_fig + 1)]
     need += ["Figure S1_Supplementary Material.tif"]

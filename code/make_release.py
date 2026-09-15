@@ -51,12 +51,16 @@ def write_figures() -> None:
     shutil.rmtree(d, ignore_errors=True)
     os.makedirs(d)
     rows, missing = [], []
-    for n, stem in MAP.items():
+    # the graphical abstract is an article item with no figure number, so it is
+    # not in sync_figures' map and has to be named here
+    ga = "GraphicalAbstract_identity_retention"
+    for n, stem in list(MAP.items()) + [("Graphical abstract", ga)]:
         for src in SEARCH:
             p = os.path.join(src, stem + ".png")
             if os.path.exists(p):
                 shutil.copy2(p, os.path.join(d, stem + ".png"))
-                rows.append((f"Figure {n}", stem + ".png"))
+                rows.append((n if n == "Graphical abstract" else f"Figure {n}",
+                             stem + ".png"))
                 break
         else:
             missing.append(stem)

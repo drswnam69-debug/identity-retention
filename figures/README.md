@@ -20,3 +20,4 @@ so the two cannot disagree.
 | Figure 11 | `Figure5_level_transfer.png` |
 | Figure 12 | `Figure11_gao_proteogenomic.png` |
 | Figure S1 | `FigureS1_enumeration.png` |
+| Graphical abstract | `GraphicalAbstract_identity_retention.png` |

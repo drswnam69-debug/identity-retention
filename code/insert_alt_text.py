@@ -34,6 +34,11 @@ def main():
     alts = {m.group(1): m.group(2).strip() for m in
             re.finditer(r"\*\*(?:Supplementary )?Figure (\d+|S\d+)\.\*\*(.*?)(?=\n\n|\Z)",
                         alt, re.S)}
+    # the graphical abstract is a submission item of its own and carries no
+    # figure number, so it is keyed by name rather than by the number pattern
+    ga = re.search(r"\*\*Graphical abstract\.\*\*(.*?)(?=\n\n|\Z)", alt, re.S)
+    if ga:
+        alts["GA"] = ga.group(1).strip()
     if not alts:
         raise SystemExit("no alt text entries found")
 
@@ -41,14 +46,21 @@ def main():
     ms = re.sub(r"\n\n\*\*Alt text:\*\*[^\n]*", "", ms)
 
     added = 0
-    for n in sorted(alts, key=lambda x: (x.startswith("S"), int(x.lstrip("S")))):
+    def order(x):
+        if x == "GA":
+            return (2, 0)
+        return (1 if x.startswith("S") else 0, int(x.lstrip("S")))
+
+    for n in sorted(alts, key=order):
         # the numbered legends read "**Figure 3. Title.** text"; the supplementary
         # entry in Additional files reads "**Supplementary Figure S1** (file name ...)"
-        pat = re.compile(r"(\*\*(?:Supplementary )?Figure " + re.escape(n) +
-                         r"[.*].*?)(?=\n\n)", re.S)
+        pat = re.compile(
+            r"(\*\*Graphical abstract\*\*.*?)(?=\n\n)" if n == "GA" else
+            r"(\*\*(?:Supplementary )?Figure " + re.escape(n) + r"[.*].*?)(?=\n\n)",
+            re.S)
         m = pat.search(ms)
         if not m:
-            print(f"  no legend for Figure {n}; skipped")
+            print(f"  no legend for {'the graphical abstract' if n == 'GA' else 'Figure ' + n}; skipped")
             continue
         block = "\n\n**Alt text:** " + " ".join(alts[n].split())
         ms = ms[:m.end()] + block + ms[m.end():]

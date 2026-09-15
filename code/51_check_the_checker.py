@@ -64,7 +64,7 @@ MUTATIONS = [
     ("an amendment that fixes an outcome dropped from the manuscript",
      "\u00a76ab", "that amendment"),
     ("the letter's word count left stale",
-     "about 23,200 words from Background", "about 15,000 words from Background",
+     "about 23,600 words from Background", "about 15,000 words from Background",
      f"{IR_DOCS}/CoverLetter_GigaScience.md"),
     ("a figure script using a glyph the font lacks",
      'r"$9.1 \\times 10^{-10}$"', '"9.1 \\u00d7 10\\u207b\\u00b9\\u2070"',

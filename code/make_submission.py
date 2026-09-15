@@ -39,6 +39,7 @@ SF1_PDF = "03_Supplementary Material 1_Preregistered protocol.pdf"
 SF2_XLSX = "04_Supplementary Material 2_Supplementary tables.xlsx"
 SF3_PDF = "05_Supplementary Material 3_Supplementary Note.pdf"
 FIGS1 = "Figure S1_Supplementary Material.tif"
+GA_TIF = "09_Graphical_Abstract.tif"
 # The code deposit is no longer a supplementary file. Editorial Manager unpacks
 # an uploaded archive into its members, so the 259-file code and result deposit
 # arrived as 259 separate submission items. It now reaches the reader through
@@ -91,7 +92,7 @@ def refresh_sf2():
     for f in ("build_preprint.py", "sync_figures.py", "make_metadata.py",
               "renumber_refs.py", "make_submission.py",
               "make_supp_tables_xlsx.py", "insert_alt_text.py",
-              "make_release.py"):
+              "make_release.py", "make_graphical_abstract.py"):
         src = os.path.join(HOME, f)
         if os.path.exists(src):
             shutil.copy(src, os.path.join(SF2, "code", f))
@@ -166,6 +167,15 @@ def main():
     shutil.copy(f"{HOME}/Figure_alt_text.md", f"{PKG}/06_Figure_alt_text.md")
     figure_legends_docx(ms, f"{PKG}/07_Figure_legends.docx")
 
+    # -- the graphical abstract, a submission item of its own ----------------
+    # It is not a supplementary file, so it does not carry the phrase the
+    # journal requires of those, and it is uploaded under the "Graphical
+    # Abstract" item type rather than as a figure.
+    run([_sys.executable, f"{HOME}/make_graphical_abstract.py"])
+    shutil.copy(f"{IR_ROOT}/figures/GraphicalAbstract_identity_retention.tiff",
+                f"{PKG}/{GA_TIF}")
+    print(f"  {GA_TIF}")
+
     # -- supplementary figure, under a compliant name ------------------------
     # sync_figures owns the figure copies, including the resolution that puts them
     # at the journal's 170 mm page width; do not overwrite its output with a
@@ -178,7 +188,7 @@ def main():
     keep = {"00_CoverLetter.docx", "00_CoverLetter.pdf", "01_Manuscript.docx",
             "02_Manuscript_typeset.pdf", SF1_PDF, SF2_XLSX,
             SF3_PDF, "08_title_abstract_keywords.txt", "06_Figure_alt_text.md",
-            "07_Figure_legends.docx", FIGS1}
+            "07_Figure_legends.docx", FIGS1, GA_TIF}
     keep |= {f"Figure{i}.tif" for i in range(1, n_fig + 1)}
     for f in sorted(os.listdir(PKG)):
         if f not in keep:
