@@ -40,6 +40,10 @@ SF2_XLSX = "04_Supplementary Material 2_Supplementary tables.xlsx"
 SF3_PDF = "05_Supplementary Material 3_Supplementary Note.pdf"
 FIGS1 = "Figure S1_Supplementary Material.tif"
 GA_TIF = "09_Graphical_Abstract.tif"
+# not uploaded: the journal caps the cover letter at 3,000 characters, so the
+# reviewer suggestions and exclusions go into the submission system's own
+# reviewer screens instead of into the letter
+REVIEWERS = "10_Reviewers_for_the_form.md"
 # The code deposit is no longer a supplementary file. Editorial Manager unpacks
 # an uploaded archive into its members, so the 259-file code and result deposit
 # arrived as 259 separate submission items. It now reaches the reader through
@@ -165,6 +169,7 @@ def main():
                   "-V", "mainfont=DejaVu Serif", "-V", "monofont=DejaVu Sans Mono",
                   "-V", "fontsize=10pt", "-V", "linestretch=1.15"])
     shutil.copy(f"{HOME}/Figure_alt_text.md", f"{PKG}/06_Figure_alt_text.md")
+    shutil.copy(f"{HOME}/Reviewers_for_submission_form.md", f"{PKG}/{REVIEWERS}")
     figure_legends_docx(ms, f"{PKG}/07_Figure_legends.docx")
 
     # -- the graphical abstract, a submission item of its own ----------------
@@ -188,7 +193,7 @@ def main():
     keep = {"00_CoverLetter.docx", "00_CoverLetter.pdf", "01_Manuscript.docx",
             "02_Manuscript_typeset.pdf", SF1_PDF, SF2_XLSX,
             SF3_PDF, "08_title_abstract_keywords.txt", "06_Figure_alt_text.md",
-            "07_Figure_legends.docx", FIGS1, GA_TIF}
+            "07_Figure_legends.docx", FIGS1, GA_TIF, REVIEWERS}
     keep |= {f"Figure{i}.tif" for i in range(1, n_fig + 1)}
     for f in sorted(os.listdir(PKG)):
         if f not in keep:

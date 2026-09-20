@@ -18,6 +18,38 @@ predictions that failed.
 
 ---
 
+
+## Correction, 20 September 2026
+
+The analyses in this archive up to v1.2.2 treat one of the two deposited liver
+proteomes as violating a hepatocyte-identity premise and the other as satisfying
+it, on the direction of a composite panel score. That reasoning is wrong, and the
+conclusion drawn from it, that one matrix is not testable, is withdrawn.
+
+Re-derived from the raw deposits, both proteomes behave the same way. The panel
+splits by protein class: its ten secreted plasma proteins rise in tumor and its
+metabolic enzymes fall, with no overlap between the two classes in either dataset
+(Mann-Whitney P = 0.00067 in each). The composite therefore averages to near zero,
+-0.139 in one and +0.106 in the other, and the sign of a near-zero composite is
+arbitrary. A paired test over 159 and 124 patients resolves that residue and
+returns a significant verdict either way, which is how the same phenomenon came to
+be recorded as a premise satisfied in one matrix and violated in the other. The
+split survives three normalizations of the raw dataset and the original authors'
+own processing of the other, and is explained neither by erythrocyte content nor
+by protein abundance.
+
+This also supplies the explanation the earlier work left open. The retention
+measure did not transfer between transcript and protein because the covariate is
+not one axis at protein level, not because retention is a level-specific quantity.
+The three pre-specified explanations tested under amendments 6aa and 6ab are all
+downstream of this one.
+
+`code/70_panel_coherence.py` writes every number to
+`results/PANEL_COHERENCE.json`, and `code/71_figures.py` draws the figures in
+`figures/panel_coherence/` from that file alone. Nothing else in the archive has
+been altered: the superseded analyses are left in place rather than removed, and
+this notice is what marks them.
+
 ## What the measure is
 
 For patient-matched tumor and adjacent tissue, regress the paired difference in

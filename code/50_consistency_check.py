@@ -1115,7 +1115,7 @@ def check_package(ms: str) -> None:
             "05_Supplementary Material 3_Supplementary Note.pdf",
             "08_title_abstract_keywords.txt",
             "06_Figure_alt_text.md", "07_Figure_legends.docx",
-            "09_Graphical_Abstract.tif"]
+            "09_Graphical_Abstract.tif", "10_Reviewers_for_the_form.md"]
     n_fig = len(re.findall(r"\*\*Figure (\d+)\.", ms))
     need += [f"Figure{i}.tif" for i in range(1, n_fig + 1)]
     need += ["Figure S1_Supplementary Material.tif"]

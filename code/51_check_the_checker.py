@@ -48,9 +48,9 @@ MUTATIONS = [
      "**Figure 8.** Four panels comparing an array cohort",
      f"{IR_DOCS}/Figure_alt_text.md"),
     ("the cover letter claiming a benchmark the manuscript declines",
-     "The premise check and the ratio-stability guard live inside that function",
+     "Everything is deposited and built to be run:",
      "Adjusting for identity is not what adjusting for tumor purity does. "
-     "The premise check and the ratio-stability guard live inside that function",
+     "Everything is deposited and built to be run:",
      f"{IR_DOCS}/CoverLetter_GigaScience.md"),
     # this sentence now lives in the supplementary note, which is part of the
     # same checked corpus; the mutation follows it there
@@ -64,7 +64,7 @@ MUTATIONS = [
     ("an amendment that fixes an outcome dropped from the manuscript",
      "\u00a76ab", "that amendment"),
     ("the letter's word count left stale",
-     "about 23,600 words from Background", "about 15,000 words from Background",
+     "runs to about 23,600 words", "runs to about 15,000 words",
      f"{IR_DOCS}/CoverLetter_GigaScience.md"),
     ("a figure script using a glyph the font lacks",
      'r"$9.1 \\times 10^{-10}$"', '"9.1 \\u00d7 10\\u207b\\u00b9\\u2070"',
@@ -86,8 +86,8 @@ MUTATIONS = [
      "These are the two sets \u00a76d named.",
      f"{IR_DOCS}/SupplementaryNote_v1.md"),
     ("a British spelling left in the cover letter",
-     "A tumor specimen and the adjacent tissue",
-     "A tumour specimen and the adjacent tissue",
+     "A tumor and its adjacent tissue differ",
+     "A tumour and its adjacent tissue differ",
      f"{IR_DOCS}/CoverLetter_GigaScience.md"),
     ("the cover letter left disagreeing with the manuscript's amendment count",
      "Five amendments in all are not pre-registered",

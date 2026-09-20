@@ -66,6 +66,14 @@ def write_figures() -> None:
             missing.append(stem)
     if missing:
         raise SystemExit("no PNG for: " + ", ".join(missing))
+    # the panel-coherence figures are drawn by 71_figures.py, not by the map
+    src_pc = os.path.join(os.environ.get("IR_FIGURES_SRC", ""), "")
+    pc = os.path.join(os.path.dirname(os.path.dirname(d)), "")
+    extra = f"{HOME}/rsi/figures/panel_coherence"
+    if os.path.isdir(extra):
+        shutil.copytree(extra, os.path.join(d, "panel_coherence"))
+        print(f"  figures/panel_coherence/: "
+              f"{len(os.listdir(os.path.join(d, 'panel_coherence')))} files")
     with open(os.path.join(d, "README.md"), "w", encoding="utf-8") as fh:
         fh.write("# Figures in this directory\n\n"
                  "The file names are the names the plotting scripts write. The "
