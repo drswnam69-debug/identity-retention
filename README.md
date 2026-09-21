@@ -19,7 +19,7 @@ predictions that failed.
 ---
 
 
-## Correction, 20 September 2026
+## Correction, 20 September 2026, revised 21 September 2026
 
 The analyses in this archive up to v1.2.2 treat one of the two deposited liver
 proteomes as violating a hepatocyte-identity premise and the other as satisfying
@@ -27,28 +27,72 @@ it, on the direction of a composite panel score. That reasoning is wrong, and th
 conclusion drawn from it, that one matrix is not testable, is withdrawn.
 
 Re-derived from the raw deposits, both proteomes behave the same way. The panel
-splits by protein class: its ten secreted plasma proteins rise in tumor and its
-metabolic enzymes fall, with no overlap between the two classes in either dataset
-(Mann-Whitney P = 0.00067 in each). The composite therefore averages to near zero,
--0.139 in one and +0.106 in the other, and the sign of a near-zero composite is
-arbitrary. A paired test over 159 and 124 patients resolves that residue and
-returns a significant verdict either way, which is how the same phenomenon came to
-be recorded as a premise satisfied in one matrix and violated in the other. The
-split survives three normalizations of the raw dataset and the original authors'
-own processing of the other, and is explained neither by erythrocyte content nor
-by protein abundance.
+splits in two. In Jiang the twelve members that rise are its ten secreted plasma
+proteins and the two transcription factors quantified there, and the six that
+fall are the five quantified metabolic enzymes and ASGR1, with no exception on
+either side; in Gao the same partition holds for 17 of the 18 quantified members,
+the exception being TTR. The secreted and metabolic classes do not overlap in
+either dataset. The composite therefore averages to near zero, -0.139 in one and
++0.106 in the other, and the sign of a near-zero composite is arbitrary.
 
-This also supplies the explanation the earlier work left open. The retention
-measure did not transfer between transcript and protein because the covariate is
-not one axis at protein level, not because retention is a level-specific quantity.
-The three pre-specified explanations tested under amendments 6aa and 6ab are all
-downstream of this one.
+That one raw Jiang file admits three normalizations and two member sets. Across
+those six pipelines the composite stays positive but its paired difference runs
+from +0.002 to +0.090 and its Wilcoxon P from 0.025 to 0.77, while the class
+separation is complete in every one of them. The split is the stable quantity;
+the composite built from it is not.
+
+Four points in the first version of this notice, dated 20 September, were stated
+more strongly than the data support, and are corrected here.
+
+  * Blood was excluded on erythrocyte proteins alone, which report cellular
+    blood rather than plasma exudation. The exudation control has now been run
+    on immunoglobulins and JCHAIN, plasma proteins the liver does not make:
+    they average -0.285 in Gao and +0.074 in Jiang, against +0.408 and +0.514
+    for the panel's secreted members. The conclusion stands; the earlier control
+    did not establish it.
+  * Abundance was excluded in both proteomes, and was described as pointing away
+    from the split. Neither is right. The Gao supplementary table is centered
+    within each protein, with 50.8% of its values below zero, so it carries no
+    abundance information and the control reported for it in v1.2.3 is
+    withdrawn. In Jiang abundance points the same way as the split and is far
+    too small to produce it: proteins sitting where the secreted members sit
+    move by +0.078 and those sitting where the metabolic members sit by -0.113,
+    a gap of 0.19 against an observed class difference of 1.41.
+  * Missingness was not examined. The Jiang matrix is 41% unquantified, and
+    unevenly, at 36.2% of values in tumor samples against 45.5% in adjacent.
+    Eleven panel members are quantified in both arms of all 124 pairs; among
+    those eleven the split is unchanged and the composite is +0.294, three times
+    its value over all 18, because dropping seven members changed the class
+    balance. Detection among the panel members follows the direction of the
+    shift rather than opposing it.
+  * The rising group includes HNF4A and HNF1A, which are nuclear. No mechanism
+    that appeals to secretion covers them, and no mechanism is proposed here.
+
+A constructive finding follows from the same computation and is new in this
+revision. The panel is not incoherent; three of its four classes hold together
+in every matrix. The metabolic enzymes have a surviving share of 1.000 in all
+five datasets and keep their direction at both measurement levels, ranking above
+the 94th percentile among the 114 comparison sets in each. The secreted proteins
+also hold together but reverse direction between levels. Only the union of the
+two cancels. An analyst needing one hepatocyte identity covariate that means the
+same thing in a liver transcriptome and a liver proteome can use the metabolic
+subset; that subset has five or six members, was chosen by looking at these five
+matrices, and was not tested on a held-out proteome.
+
+The earlier work's failure to transfer the retention measure between transcript
+and protein is consistent with this: a covariate whose members cancel barely
+moves. That is offered as an explanation the earlier work did not consider, not
+as proof that the three explanations it did test were the wrong ones.
 
 `code/70_panel_coherence.py` writes every number to
-`results/PANEL_COHERENCE.json`, and `code/71_figures.py` draws the figures in
-`figures/panel_coherence/` from that file alone. Nothing else in the archive has
-been altered: the superseded analyses are left in place rather than removed, and
-this notice is what marks them.
+`results/PANEL_COHERENCE.json`, including the surviving shares, the confidence
+intervals, the per-member detection counts, the control member lists and the
+panel's percentile among the 114 comparison sets, and `code/71_figures.py` draws
+the figures in `figures/panel_coherence/` from that file alone.
+`code/72_verify_manuscript.py` reads the manuscript and that JSON file and fails
+if any number printed in the text cannot be reproduced from the JSON. Nothing else in
+the archive has been altered: the superseded analyses are left in place rather
+than removed, and this notice is what marks them.
 
 ## What the measure is
 

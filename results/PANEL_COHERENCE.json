@@ -201,27 +201,264 @@
    "secreted_vs_metabolic": {
     "U": 55.0,
     "p": 0.004745254745254745,
+    "n_secreted": 10,
+    "n_metabolic": 6,
+    "min_attainable_p": 0.00024975024975024975,
+    "p_is_at_floor": false,
     "separation_complete": false
    },
+   "class_difference_secreted_minus_metabolic": 0.373572588370482,
+   "observed_sign_partition": {
+    "note": "post hoc grouping, defined after inspecting the member shifts; it merges two of the four pre-specified classes against the other two, so the choice was made among seven possible merges",
+    "group_up": [
+     "AHSG",
+     "ALB",
+     "APOH",
+     "F2",
+     "FGA",
+     "FGB",
+     "FGG",
+     "FOXA1",
+     "FOXA2",
+     "HNF1A",
+     "HNF4A",
+     "NR1H4",
+     "SERPINA1",
+     "TF",
+     "TTR"
+    ],
+    "group_down": [
+     "ARG1",
+     "ASGR1",
+     "CPS1",
+     "G6PC1",
+     "OTC",
+     "PCK1",
+     "TAT"
+    ],
+    "table_up_pos_neg_down_pos_neg": [
+     [
+      1,
+      14
+     ],
+     [
+      0,
+      7
+     ]
+    ],
+    "fisher_p": 1.0,
+    "min_attainable_p": 5.863589454920724e-06,
+    "p_is_at_floor": false,
+    "partition_is_perfect": false
+   },
    "panel_mean_z": -0.72979160942011,
+   "panel_coherence": {
+    "n": 22,
+    "sign_agreement": 0.9545454545454546,
+    "cancellation": 0.9237288477532082,
+    "mean_z": -0.72979160942011
+   },
+   "class_coherence": {
+    "secreted plasma protein": {
+     "n": 10,
+     "sign_agreement": 1.0,
+     "cancellation": 1.0,
+     "mean_z": -0.7096587039057455
+    },
+    "metabolic enzyme": {
+     "n": 6,
+     "sign_agreement": 1.0,
+     "cancellation": 1.0,
+     "mean_z": -1.0832312922762275
+    },
+    "transcription factor": {
+     "n": 5,
+     "sign_agreement": 0.8,
+     "cancellation": 0.5109172616920823,
+     "mean_z": -0.27697181939520754
+    },
+    "surface receptor": {
+     "n": 1,
+     "sign_agreement": 1.0,
+     "cancellation": 1.0,
+     "mean_z": -1.0745815175515636
+    }
+   },
    "panel_t_over_members": {
     "t": -7.97577708459638,
-    "p": 8.645247719980799e-08
+    "p": 8.645247719980799e-08,
+    "mean": -0.72979160942011,
+    "ci95": [
+     -0.9200783637537111,
+     -0.5395048550865089
+    ],
+    "note": "members are not independent; this interval is descriptive"
    },
    "panel_composite_sample_test": {
     "n_members_scored": 22,
     "n_pairs": 213,
-    "mean_paired_delta": -0.7235996517571386,
+    "standardized_on": "paired",
+    "mean_paired_delta": -0.72979160942011,
     "direction": "LOWER in tumor",
-    "wilcoxon_p": 5.667731851423505e-34
+    "wilcoxon_p": 5.984134523753048e-34
+   },
+   "panel_composite_variants": {
+    "paired_min_pairs": {
+     "n_members_scored": 22,
+     "n_pairs": 213,
+     "standardized_on": "paired",
+     "mean_paired_delta": -0.72979160942011,
+     "direction": "LOWER in tumor",
+     "wilcoxon_p": 5.984134523753048e-34
+    },
+    "paired_all_present": {
+     "n_members_scored": 22,
+     "n_pairs": 213,
+     "standardized_on": "paired",
+     "mean_paired_delta": -0.72979160942011,
+     "direction": "LOWER in tumor",
+     "wilcoxon_p": 5.984134523753048e-34
+    },
+    "all_columns_min_pairs": {
+     "n_members_scored": 22,
+     "n_pairs": 213,
+     "standardized_on": "all_columns",
+     "mean_paired_delta": -0.7235996517571386,
+     "direction": "LOWER in tumor",
+     "wilcoxon_p": 5.667731851423505e-34
+    },
+    "all_columns_all_present": {
+     "n_members_scored": 22,
+     "n_pairs": 213,
+     "standardized_on": "all_columns",
+     "mean_paired_delta": -0.7235996517571386,
+     "direction": "LOWER in tumor",
+     "wilcoxon_p": 5.667731851423505e-34
+    }
    },
    "erythrocyte_mean_z": -0.6705243530478083,
+   "erythrocyte_members": {
+    "HBB": {
+     "z": -1.2281,
+     "n_pairs": 213
+    },
+    "HBA1": {
+     "z": -1.3077,
+     "n_pairs": 213
+    },
+    "HBD": {
+     "z": -0.5638,
+     "n_pairs": 213
+    },
+    "CA1": {
+     "z": -0.4061,
+     "n_pairs": 213
+    },
+    "PRDX2": {
+     "z": 0.1531,
+     "n_pairs": 213
+    }
+   },
+   "immunoglobulin_mean_z": -0.7408148971927566,
+   "immunoglobulin_members": {
+    "IGHG1": {
+     "z": -0.4246,
+     "n_pairs": 213
+    },
+    "IGHA1": {
+     "z": -0.6351,
+     "n_pairs": 213
+    },
+    "IGHM": {
+     "z": -1.0696,
+     "n_pairs": 213
+    },
+    "IGKC": {
+     "z": -0.3611,
+     "n_pairs": 213
+    },
+    "JCHAIN": {
+     "z": -1.2138,
+     "n_pairs": 213
+    }
+   },
    "off_panel_plasma_mean_z": -0.8700167109142378,
+   "off_panel_plasma_members": {
+    "HP": {
+     "z": -1.022,
+     "n_pairs": 213
+    },
+    "HPX": {
+     "z": -1.1962,
+     "n_pairs": 213
+    },
+    "APOA1": {
+     "z": -0.9479,
+     "n_pairs": 213
+    },
+    "APOA2": {
+     "z": -0.0211,
+     "n_pairs": 213
+    },
+    "ORM1": {
+     "z": -0.8295,
+     "n_pairs": 213
+    },
+    "A2M": {
+     "z": -1.0834,
+     "n_pairs": 213
+    },
+    "SERPINC1": {
+     "z": -0.7516,
+     "n_pairs": 213
+    },
+    "AMBP": {
+     "z": -0.7897,
+     "n_pairs": 213
+    },
+    "ITIH4": {
+     "z": -1.2842,
+     "n_pairs": 213
+    },
+    "APCS": {
+     "z": -0.8804,
+     "n_pairs": 213
+    },
+    "CFB": {
+     "z": -0.7641,
+     "n_pairs": 213
+    }
+   },
+   "missingness": {
+    "fraction_unquantified_tumor": 0.0,
+    "fraction_unquantified_adjacent": 0.0,
+    "mean_features_per_tumor_sample": 13183.0,
+    "mean_features_per_adjacent_sample": 13183.0
+   },
+   "matrix_scale": {
+    "fraction_of_values_below_zero": 0.0,
+    "median_of_per_protein_medians": 4.913,
+    "share_of_proteins_with_median_within_0.5_of_zero": 0.0,
+    "on_an_abundance_scale": true
+   },
    "abundance": {
+    "interpretable": true,
     "spearman_shift_vs_abundance": 0.22902380596761088,
     "p": 1.8711580578332814e-156,
+    "n_proteins": 13183,
     "secreted_percentile_median": 99.90518091481454,
-    "metabolic_percentile_median": 95.65728589850565
+    "metabolic_percentile_median": 95.65728589850565,
+    "neighborhood_test": {
+     "secreted_neighborhood_percentile": 99.90518091481454,
+     "metabolic_neighborhood_percentile": 95.65728589850565,
+     "secreted_neighborhood_mean_z": 0.14729329826129423,
+     "metabolic_neighborhood_mean_z": 0.061519222477442584,
+     "n_secreted_neighborhood": 211,
+     "n_metabolic_neighborhood": 396,
+     "gap_expected_from_abundance": 0.08577407578385164,
+     "observed_class_gap": 0.373572588370482,
+     "share_of_class_gap_explained": 0.22960484375472212
+    }
    },
    "gene_set_coherence": {
     "ACEVEDO_LIVER_CANCER_DN": {
@@ -1142,27 +1379,252 @@
    "secreted_vs_metabolic": {
     "U": 40.0,
     "p": 0.31318681318681324,
+    "n_secreted": 10,
+    "n_metabolic": 6,
+    "min_attainable_p": 0.00024975024975024975,
+    "p_is_at_floor": false,
     "separation_complete": false
    },
+   "class_difference_secreted_minus_metabolic": 0.1852868693967804,
+   "observed_sign_partition": {
+    "note": "post hoc grouping, defined after inspecting the member shifts; it merges two of the four pre-specified classes against the other two, so the choice was made among seven possible merges",
+    "group_up": [
+     "AHSG",
+     "ALB",
+     "APOH",
+     "F2",
+     "FGA",
+     "FGB",
+     "FGG",
+     "FOXA1",
+     "FOXA2",
+     "HNF1A",
+     "HNF4A",
+     "NR1H4",
+     "SERPINA1",
+     "TF",
+     "TTR"
+    ],
+    "group_down": [
+     "ARG1",
+     "ASGR1",
+     "CPS1",
+     "G6PC1",
+     "OTC",
+     "PCK1",
+     "TAT"
+    ],
+    "table_up_pos_neg_down_pos_neg": [
+     [
+      2,
+      13
+     ],
+     [
+      0,
+      7
+     ]
+    ],
+    "fisher_p": 1.0,
+    "min_attainable_p": 5.863589454920724e-06,
+    "p_is_at_floor": false,
+    "partition_is_perfect": false
+   },
    "panel_mean_z": -0.528009003431774,
+   "panel_coherence": {
+    "n": 22,
+    "sign_agreement": 0.9090909090909091,
+    "cancellation": 0.8685924357093019,
+    "mean_z": -0.528009003431774
+   },
+   "class_coherence": {
+    "secreted plasma protein": {
+     "n": 10,
+     "sign_agreement": 1.0,
+     "cancellation": 1.0,
+     "mean_z": -0.5574454752582265
+    },
+    "metabolic enzyme": {
+     "n": 6,
+     "sign_agreement": 1.0,
+     "cancellation": 1.0,
+     "mean_z": -0.7427323446550069
+    },
+    "transcription factor": {
+     "n": 5,
+     "sign_agreement": 0.6,
+     "cancellation": 0.1889428657676674,
+     "mean_z": -0.08187991374453808
+    },
+    "surface receptor": {
+     "n": 1,
+     "sign_agreement": 1.0,
+     "cancellation": 1.0,
+     "mean_z": -1.175949686264031
+    }
+   },
    "panel_t_over_members": {
     "t": -5.907821609150251,
-    "p": 7.285902703738871e-06
+    "p": 7.285902703738871e-06,
+    "mean": -0.528009003431774,
+    "ci95": [
+     -0.713873592162225,
+     -0.3421444147013231
+    ],
+    "note": "members are not independent; this interval is descriptive"
    },
    "panel_composite_sample_test": {
     "n_members_scored": 22,
     "n_pairs": 52,
-    "mean_paired_delta": -0.5370490053606234,
+    "standardized_on": "paired",
+    "mean_paired_delta": -0.5280090034317739,
     "direction": "LOWER in tumor",
     "wilcoxon_p": 1.728559576931846e-08
    },
+   "panel_composite_variants": {
+    "paired_min_pairs": {
+     "n_members_scored": 22,
+     "n_pairs": 52,
+     "standardized_on": "paired",
+     "mean_paired_delta": -0.5280090034317739,
+     "direction": "LOWER in tumor",
+     "wilcoxon_p": 1.728559576931846e-08
+    },
+    "paired_all_present": {
+     "n_members_scored": 22,
+     "n_pairs": 52,
+     "standardized_on": "paired",
+     "mean_paired_delta": -0.5280090034317739,
+     "direction": "LOWER in tumor",
+     "wilcoxon_p": 1.728559576931846e-08
+    },
+    "all_columns_min_pairs": {
+     "n_members_scored": 22,
+     "n_pairs": 52,
+     "standardized_on": "all_columns",
+     "mean_paired_delta": -0.5370490053606234,
+     "direction": "LOWER in tumor",
+     "wilcoxon_p": 1.728559576931846e-08
+    },
+    "all_columns_all_present": {
+     "n_members_scored": 22,
+     "n_pairs": 52,
+     "standardized_on": "all_columns",
+     "mean_paired_delta": -0.5370490053606234,
+     "direction": "LOWER in tumor",
+     "wilcoxon_p": 1.728559576931846e-08
+    }
+   },
    "erythrocyte_mean_z": -0.40908168823355806,
+   "erythrocyte_members": {
+    "HBB": {
+     "z": -0.8043,
+     "n_pairs": 52
+    },
+    "HBA1": {
+     "z": -0.8747,
+     "n_pairs": 52
+    },
+    "HBD": {
+     "z": -0.2487,
+     "n_pairs": 52
+    },
+    "CA1": {
+     "z": 0.1307,
+     "n_pairs": 52
+    },
+    "SLC4A1": {
+     "z": -0.2484,
+     "n_pairs": 52
+    }
+   },
+   "immunoglobulin_mean_z": -0.03426492439122856,
+   "immunoglobulin_members": {
+    "JCHAIN": {
+     "z": -0.0343,
+     "n_pairs": 52
+    }
+   },
    "off_panel_plasma_mean_z": -0.630794415053443,
+   "off_panel_plasma_members": {
+    "HP": {
+     "z": -0.6729,
+     "n_pairs": 52
+    },
+    "HPX": {
+     "z": -1.1058,
+     "n_pairs": 52
+    },
+    "APOA1": {
+     "z": -0.9706,
+     "n_pairs": 52
+    },
+    "APOA2": {
+     "z": 0.612,
+     "n_pairs": 52
+    },
+    "C3": {
+     "z": 0.0651,
+     "n_pairs": 52
+    },
+    "ORM1": {
+     "z": -0.7713,
+     "n_pairs": 52
+    },
+    "A2M": {
+     "z": -1.1246,
+     "n_pairs": 52
+    },
+    "SERPINC1": {
+     "z": -0.3703,
+     "n_pairs": 52
+    },
+    "AMBP": {
+     "z": -0.7916,
+     "n_pairs": 52
+    },
+    "ITIH4": {
+     "z": -1.0322,
+     "n_pairs": 52
+    },
+    "APCS": {
+     "z": -0.6426,
+     "n_pairs": 52
+    },
+    "CFB": {
+     "z": -0.7648,
+     "n_pairs": 52
+    }
+   },
+   "missingness": {
+    "fraction_unquantified_tumor": 0.0,
+    "fraction_unquantified_adjacent": 0.0,
+    "mean_features_per_tumor_sample": 20757.0,
+    "mean_features_per_adjacent_sample": 20757.0
+   },
+   "matrix_scale": {
+    "fraction_of_values_below_zero": 0.0,
+    "median_of_per_protein_medians": 7.2426620018142085,
+    "share_of_proteins_with_median_within_0.5_of_zero": 0.0,
+    "on_an_abundance_scale": true
+   },
    "abundance": {
+    "interpretable": true,
     "spearman_shift_vs_abundance": -0.0320649695065671,
     "p": 3.826264688982878e-06,
+    "n_proteins": 20757,
     "secreted_percentile_median": 99.89401165871755,
-    "metabolic_percentile_median": 97.30211494917378
+    "metabolic_percentile_median": 97.30211494917378,
+    "neighborhood_test": {
+     "secreted_neighborhood_percentile": 99.89401165871755,
+     "metabolic_neighborhood_percentile": 97.30211494917378,
+     "secreted_neighborhood_mean_z": -0.16224866791235892,
+     "metabolic_neighborhood_mean_z": -0.10636940540396325,
+     "n_secreted_neighborhood": 334,
+     "n_metabolic_neighborhood": 623,
+     "gap_expected_from_abundance": -0.05587926250839567,
+     "observed_class_gap": 0.1852868693967804,
+     "share_of_class_gap_explained": -0.3015824202239268
+    }
    },
    "gene_set_coherence": {
     "ACEVEDO_LIVER_CANCER_DN": {
@@ -2089,27 +2551,288 @@
    "secreted_vs_metabolic": {
     "U": 36.0,
     "p": 0.5621878121878122,
+    "n_secreted": 10,
+    "n_metabolic": 6,
+    "min_attainable_p": 0.00024975024975024975,
+    "p_is_at_floor": false,
     "separation_complete": false
    },
+   "class_difference_secreted_minus_metabolic": 0.08282526420252734,
+   "observed_sign_partition": {
+    "note": "post hoc grouping, defined after inspecting the member shifts; it merges two of the four pre-specified classes against the other two, so the choice was made among seven possible merges",
+    "group_up": [
+     "AHSG",
+     "ALB",
+     "APOH",
+     "F2",
+     "FGA",
+     "FGB",
+     "FGG",
+     "FOXA1",
+     "FOXA2",
+     "HNF1A",
+     "HNF4A",
+     "NR1H4",
+     "SERPINA1",
+     "TF",
+     "TTR"
+    ],
+    "group_down": [
+     "ARG1",
+     "ASGR1",
+     "CPS1",
+     "G6PC1",
+     "OTC",
+     "PCK1",
+     "TAT"
+    ],
+    "table_up_pos_neg_down_pos_neg": [
+     [
+      4,
+      11
+     ],
+     [
+      0,
+      7
+     ]
+    ],
+    "fisher_p": 0.2631578947368421,
+    "min_attainable_p": 5.863589454920724e-06,
+    "p_is_at_floor": false,
+    "partition_is_perfect": false
+   },
    "panel_mean_z": -0.47988815970795484,
+   "panel_coherence": {
+    "n": 22,
+    "sign_agreement": 0.8181818181818182,
+    "cancellation": 0.7126034444976819,
+    "mean_z": -0.47988815970795484
+   },
+   "class_coherence": {
+    "secreted plasma protein": {
+     "n": 10,
+     "sign_agreement": 1.0,
+     "cancellation": 1.0,
+     "mean_z": -0.7354909866015934
+    },
+    "metabolic enzyme": {
+     "n": 6,
+     "sign_agreement": 1.0,
+     "cancellation": 1.0,
+     "mean_z": -0.8183162508041207
+    },
+    "transcription factor": {
+     "n": 5,
+     "sign_agreement": 0.8,
+     "cancellation": 0.9845438371240325,
+     "mean_z": 0.42247470762490363
+    },
+    "surface receptor": {
+     "n": 1,
+     "sign_agreement": 1.0,
+     "cancellation": 1.0,
+     "mean_z": -0.40510568085886556
+    }
+   },
    "panel_t_over_members": {
     "t": -4.089143524543888,
-    "p": 0.000525037918775444
+    "p": 0.000525037918775444,
+    "mean": -0.47988815970795484,
+    "ci95": [
+     -0.7239446607477092,
+     -0.23583165866820047
+    ],
+    "note": "members are not independent; this interval is descriptive"
    },
    "panel_composite_sample_test": {
     "n_members_scored": 22,
     "n_pairs": 50,
+    "standardized_on": "paired",
     "mean_paired_delta": -0.4798881597079548,
     "direction": "LOWER in tumor",
     "wilcoxon_p": 2.1002898957789284e-06
    },
+   "panel_composite_variants": {
+    "paired_min_pairs": {
+     "n_members_scored": 22,
+     "n_pairs": 50,
+     "standardized_on": "paired",
+     "mean_paired_delta": -0.4798881597079548,
+     "direction": "LOWER in tumor",
+     "wilcoxon_p": 2.1002898957789284e-06
+    },
+    "paired_all_present": {
+     "n_members_scored": 22,
+     "n_pairs": 50,
+     "standardized_on": "paired",
+     "mean_paired_delta": -0.4798881597079548,
+     "direction": "LOWER in tumor",
+     "wilcoxon_p": 2.1002898957789284e-06
+    },
+    "all_columns_min_pairs": {
+     "n_members_scored": 22,
+     "n_pairs": 50,
+     "standardized_on": "all_columns",
+     "mean_paired_delta": -0.4798881597079548,
+     "direction": "LOWER in tumor",
+     "wilcoxon_p": 2.1002898957789284e-06
+    },
+    "all_columns_all_present": {
+     "n_members_scored": 22,
+     "n_pairs": 50,
+     "standardized_on": "all_columns",
+     "mean_paired_delta": -0.4798881597079548,
+     "direction": "LOWER in tumor",
+     "wilcoxon_p": 2.1002898957789284e-06
+    }
+   },
    "erythrocyte_mean_z": -0.09231148063635479,
+   "erythrocyte_members": {
+    "HBB": {
+     "z": -1.0149,
+     "n_pairs": 50
+    },
+    "HBA1": {
+     "z": -0.5801,
+     "n_pairs": 50
+    },
+    "HBD": {
+     "z": -0.2823,
+     "n_pairs": 50
+    },
+    "CA1": {
+     "z": 0.1221,
+     "n_pairs": 50
+    },
+    "SLC4A1": {
+     "z": -0.1273,
+     "n_pairs": 50
+    },
+    "PRDX2": {
+     "z": 1.3286,
+     "n_pairs": 50
+    }
+   },
+   "immunoglobulin_mean_z": -0.9625100803772746,
+   "immunoglobulin_members": {
+    "IGHG1": {
+     "z": -0.7416,
+     "n_pairs": 50
+    },
+    "IGHG2": {
+     "z": -0.8762,
+     "n_pairs": 50
+    },
+    "IGHG3": {
+     "z": -0.7283,
+     "n_pairs": 50
+    },
+    "IGHG4": {
+     "z": -0.8782,
+     "n_pairs": 50
+    },
+    "IGHA1": {
+     "z": -1.2123,
+     "n_pairs": 50
+    },
+    "IGHM": {
+     "z": -1.223,
+     "n_pairs": 50
+    },
+    "IGKC": {
+     "z": -0.9044,
+     "n_pairs": 50
+    },
+    "IGLC2": {
+     "z": -0.8779,
+     "n_pairs": 50
+    },
+    "JCHAIN": {
+     "z": -1.2208,
+     "n_pairs": 50
+    }
+   },
    "off_panel_plasma_mean_z": -0.49433176384338134,
+   "off_panel_plasma_members": {
+    "HP": {
+     "z": -1.0107,
+     "n_pairs": 50
+    },
+    "HPX": {
+     "z": -0.8936,
+     "n_pairs": 50
+    },
+    "APOA1": {
+     "z": -0.8376,
+     "n_pairs": 50
+    },
+    "APOA2": {
+     "z": -0.0252,
+     "n_pairs": 50
+    },
+    "C3": {
+     "z": -0.4491,
+     "n_pairs": 50
+    },
+    "ORM1": {
+     "z": -0.8921,
+     "n_pairs": 50
+    },
+    "A2M": {
+     "z": -0.444,
+     "n_pairs": 50
+    },
+    "SERPINC1": {
+     "z": -0.3918,
+     "n_pairs": 50
+    },
+    "AMBP": {
+     "z": -0.6032,
+     "n_pairs": 50
+    },
+    "ITIH4": {
+     "z": 0.5226,
+     "n_pairs": 50
+    },
+    "APCS": {
+     "z": -0.8028,
+     "n_pairs": 50
+    },
+    "CFB": {
+     "z": -0.1044,
+     "n_pairs": 50
+    }
+   },
+   "missingness": {
+    "fraction_unquantified_tumor": 0.0,
+    "fraction_unquantified_adjacent": 0.0,
+    "mean_features_per_tumor_sample": 59427.0,
+    "mean_features_per_adjacent_sample": 59427.0
+   },
+   "matrix_scale": {
+    "fraction_of_values_below_zero": 0.0,
+    "median_of_per_protein_medians": 0.0,
+    "share_of_proteins_with_median_within_0.5_of_zero": 0.7444932438117354,
+    "on_an_abundance_scale": true
+   },
    "abundance": {
+    "interpretable": true,
     "spearman_shift_vs_abundance": 0.49953945295711616,
     "p": 0.0,
+    "n_proteins": 51845,
     "secreted_percentile_median": 99.94792168965185,
-    "metabolic_percentile_median": 99.4512489150352
+    "metabolic_percentile_median": 99.4512489150352,
+    "neighborhood_test": {
+     "secreted_neighborhood_percentile": 99.94792168965185,
+     "metabolic_neighborhood_percentile": 99.4512489150352,
+     "secreted_neighborhood_mean_z": 0.30940554282212956,
+     "metabolic_neighborhood_mean_z": 0.37040820525704393,
+     "n_secreted_neighborhood": 805,
+     "n_metabolic_neighborhood": 1063,
+     "gap_expected_from_abundance": -0.06100266243491437,
+     "observed_class_gap": 0.08282526420252734,
+     "share_of_class_gap_explained": -0.7365224007707171
+    }
    },
    "gene_set_coherence": {
     "ACEVEDO_LIVER_CANCER_DN": {
@@ -3012,27 +3735,272 @@
    "secreted_vs_metabolic": {
     "U": 50.0,
     "p": 0.000666000666000666,
+    "n_secreted": 10,
+    "n_metabolic": 5,
+    "min_attainable_p": 0.000666000666000666,
+    "p_is_at_floor": true,
     "separation_complete": true
    },
+   "class_difference_secreted_minus_metabolic": 1.8266125888475861,
+   "observed_sign_partition": {
+    "note": "post hoc grouping, defined after inspecting the member shifts; it merges two of the four pre-specified classes against the other two, so the choice was made among seven possible merges",
+    "group_up": [
+     "AHSG",
+     "ALB",
+     "APOH",
+     "F2",
+     "FGA",
+     "FGB",
+     "FGG",
+     "HNF1A",
+     "HNF4A",
+     "SERPINA1",
+     "TF",
+     "TTR"
+    ],
+    "group_down": [
+     "ARG1",
+     "ASGR1",
+     "CPS1",
+     "OTC",
+     "PCK1",
+     "TAT"
+    ],
+    "table_up_pos_neg_down_pos_neg": [
+     [
+      11,
+      1
+     ],
+     [
+      0,
+      6
+     ]
+    ],
+    "fisher_p": 0.00037707390648567126,
+    "min_attainable_p": 5.3867700926524454e-05,
+    "p_is_at_floor": false,
+    "partition_is_perfect": false
+   },
    "panel_mean_z": -0.138689506016981,
+   "panel_coherence": {
+    "n": 18,
+    "sign_agreement": 0.6111111111111112,
+    "cancellation": 0.17083967024070018,
+    "mean_z": -0.138689506016981
+   },
+   "class_coherence": {
+    "secreted plasma protein": {
+     "n": 10,
+     "sign_agreement": 0.9,
+     "cancellation": 0.8347763247731083,
+     "mean_z": 0.4078272892575968
+    },
+    "metabolic enzyme": {
+     "n": 5,
+     "sign_agreement": 1.0,
+     "cancellation": 1.0,
+     "mean_z": -1.4187852995899894
+    },
+    "transcription factor": {
+     "n": 2,
+     "sign_agreement": 1.0,
+     "cancellation": 1.0,
+     "mean_z": 0.7881110769845762
+    },
+    "surface receptor": {
+     "n": 1,
+     "sign_agreement": 1.0,
+     "cancellation": 1.0,
+     "mean_z": -1.0569796569008294
+    }
+   },
    "panel_t_over_members": {
     "t": -0.6066242541697359,
-    "p": 0.5521161527165116
+    "p": 0.5521161527165116,
+    "mean": -0.138689506016981,
+    "ci95": [
+     -0.6210462173837519,
+     0.34366720534978984
+    ],
+    "note": "members are not independent; this interval is descriptive"
    },
    "panel_composite_sample_test": {
     "n_members_scored": 18,
     "n_pairs": 159,
+    "standardized_on": "paired",
     "mean_paired_delta": -0.13868950601698096,
     "direction": "LOWER in tumor",
     "wilcoxon_p": 0.0001646567373941751
    },
+   "panel_composite_variants": {
+    "paired_min_pairs": {
+     "n_members_scored": 18,
+     "n_pairs": 159,
+     "standardized_on": "paired",
+     "mean_paired_delta": -0.13868950601698096,
+     "direction": "LOWER in tumor",
+     "wilcoxon_p": 0.0001646567373941751
+    },
+    "paired_all_present": {
+     "n_members_scored": 18,
+     "n_pairs": 159,
+     "standardized_on": "paired",
+     "mean_paired_delta": -0.13868950601698096,
+     "direction": "LOWER in tumor",
+     "wilcoxon_p": 0.0001646567373941751
+    },
+    "all_columns_min_pairs": {
+     "n_members_scored": 18,
+     "n_pairs": 159,
+     "standardized_on": "all_columns",
+     "mean_paired_delta": -0.13868950601698096,
+     "direction": "LOWER in tumor",
+     "wilcoxon_p": 0.0001646567373941751
+    },
+    "all_columns_all_present": {
+     "n_members_scored": 18,
+     "n_pairs": 159,
+     "standardized_on": "all_columns",
+     "mean_paired_delta": -0.13868950601698096,
+     "direction": "LOWER in tumor",
+     "wilcoxon_p": 0.0001646567373941751
+    }
+   },
    "erythrocyte_mean_z": -0.9273030772732941,
+   "erythrocyte_members": {
+    "HBB": {
+     "z": -0.738,
+     "n_pairs": 159
+    },
+    "HBA1": {
+     "z": -0.9385,
+     "n_pairs": 159
+    },
+    "CA1": {
+     "z": -0.9742,
+     "n_pairs": 159
+    },
+    "SLC4A1": {
+     "z": -0.906,
+     "n_pairs": 159
+    },
+    "PRDX2": {
+     "z": -1.0798,
+     "n_pairs": 159
+    }
+   },
+   "immunoglobulin_mean_z": -0.28528352733980533,
+   "immunoglobulin_members": {
+    "IGHG1": {
+     "z": -0.1556,
+     "n_pairs": 159
+    },
+    "IGHG2": {
+     "z": -0.1715,
+     "n_pairs": 159
+    },
+    "IGHG3": {
+     "z": 0.3839,
+     "n_pairs": 159
+    },
+    "IGHG4": {
+     "z": -0.384,
+     "n_pairs": 159
+    },
+    "IGHA1": {
+     "z": -0.4003,
+     "n_pairs": 159
+    },
+    "IGHM": {
+     "z": -0.5692,
+     "n_pairs": 159
+    },
+    "IGKC": {
+     "z": -0.5383,
+     "n_pairs": 159
+    },
+    "JCHAIN": {
+     "z": -0.4474,
+     "n_pairs": 159
+    }
+   },
    "off_panel_plasma_mean_z": -0.31526026112767475,
+   "off_panel_plasma_members": {
+    "HP": {
+     "z": -0.8014,
+     "n_pairs": 159
+    },
+    "HPX": {
+     "z": -0.196,
+     "n_pairs": 159
+    },
+    "APOA1": {
+     "z": -0.6174,
+     "n_pairs": 159
+    },
+    "C3": {
+     "z": -0.2234,
+     "n_pairs": 159
+    },
+    "ORM1": {
+     "z": -0.1424,
+     "n_pairs": 159
+    },
+    "A2M": {
+     "z": -0.5833,
+     "n_pairs": 159
+    },
+    "SERPINC1": {
+     "z": -0.2071,
+     "n_pairs": 159
+    },
+    "AMBP": {
+     "z": 0.8766,
+     "n_pairs": 159
+    },
+    "ITIH4": {
+     "z": -0.4576,
+     "n_pairs": 159
+    },
+    "APCS": {
+     "z": -1.4115,
+     "n_pairs": 159
+    },
+    "CFB": {
+     "z": 0.2957,
+     "n_pairs": 159
+    }
+   },
+   "missingness": {
+    "fraction_unquantified_tumor": 0.0,
+    "fraction_unquantified_adjacent": 0.0,
+    "mean_features_per_tumor_sample": 6478.0,
+    "mean_features_per_adjacent_sample": 6478.0
+   },
+   "matrix_scale": {
+    "fraction_of_values_below_zero": 0.5077334801291647,
+    "median_of_per_protein_medians": -0.00292731294876715,
+    "share_of_proteins_with_median_within_0.5_of_zero": 0.9779252855819698,
+    "on_an_abundance_scale": false
+   },
    "abundance": {
+    "interpretable": false,
     "spearman_shift_vs_abundance": 0.03663685654719183,
     "p": 0.0031862257331421754,
+    "n_proteins": 6478,
     "secreted_percentile_median": 7.185859833281878,
-    "metabolic_percentile_median": 4.075331892559432
+    "metabolic_percentile_median": 4.075331892559432,
+    "neighborhood_test": {
+     "secreted_neighborhood_percentile": 7.185859833281878,
+     "metabolic_neighborhood_percentile": 4.075331892559432,
+     "secreted_neighborhood_mean_z": -0.3945546371394095,
+     "metabolic_neighborhood_mean_z": -0.3464874578115079,
+     "n_secreted_neighborhood": 194,
+     "n_metabolic_neighborhood": 195,
+     "gap_expected_from_abundance": -0.04806717932790161,
+     "observed_class_gap": 1.8266125888475861,
+     "share_of_class_gap_explained": -0.026314928311222962
+    }
    },
    "gene_set_coherence": {
     "ACEVEDO_LIVER_CANCER_DN": {
@@ -3863,27 +4831,280 @@
    "secreted_vs_metabolic": {
     "U": 50.0,
     "p": 0.000666000666000666,
+    "n_secreted": 10,
+    "n_metabolic": 5,
+    "min_attainable_p": 0.000666000666000666,
+    "p_is_at_floor": true,
     "separation_complete": true
    },
+   "class_difference_secreted_minus_metabolic": 1.4135648642409022,
+   "observed_sign_partition": {
+    "note": "post hoc grouping, defined after inspecting the member shifts; it merges two of the four pre-specified classes against the other two, so the choice was made among seven possible merges",
+    "group_up": [
+     "AHSG",
+     "ALB",
+     "APOH",
+     "F2",
+     "FGA",
+     "FGB",
+     "FGG",
+     "HNF1A",
+     "HNF4A",
+     "SERPINA1",
+     "TF",
+     "TTR"
+    ],
+    "group_down": [
+     "ARG1",
+     "ASGR1",
+     "CPS1",
+     "OTC",
+     "PCK1",
+     "TAT"
+    ],
+    "table_up_pos_neg_down_pos_neg": [
+     [
+      12,
+      0
+     ],
+     [
+      0,
+      6
+     ]
+    ],
+    "fisher_p": 5.3867700926524454e-05,
+    "min_attainable_p": 5.3867700926524454e-05,
+    "p_is_at_floor": true,
+    "partition_is_perfect": true
+   },
    "panel_mean_z": 0.10618590019733619,
+   "panel_coherence": {
+    "n": 18,
+    "sign_agreement": 0.6666666666666666,
+    "cancellation": 0.1582884144413578,
+    "mean_z": 0.10618590019733619
+   },
+   "class_coherence": {
+    "secreted plasma protein": {
+     "n": 10,
+     "sign_agreement": 1.0,
+     "cancellation": 1.0,
+     "mean_z": 0.5142274348766348
+    },
+    "metabolic enzyme": {
+     "n": 5,
+     "sign_agreement": 1.0,
+     "cancellation": 1.0,
+     "mean_z": -0.8993374293642674
+    },
+    "transcription factor": {
+     "n": 2,
+     "sign_agreement": 1.0,
+     "cancellation": 1.0,
+     "mean_z": 0.9254708549761216
+    },
+    "surface receptor": {
+     "n": 1,
+     "sign_agreement": 1.0,
+     "cancellation": 1.0,
+     "mean_z": -0.5851827083452019
+    }
+   },
    "panel_t_over_members": {
     "t": 0.6038290317315256,
-    "p": 0.5539301978806448
+    "p": 0.5539301978806448,
+    "mean": 0.10618590019733619,
+    "ci95": [
+     -0.2648341313174835,
+     0.4772059317121559
+    ],
+    "note": "members are not independent; this interval is descriptive"
    },
    "panel_composite_sample_test": {
-    "n_members_scored": 20,
+    "n_members_scored": 18,
     "n_pairs": 124,
-    "mean_paired_delta": 0.0890759359244682,
+    "standardized_on": "paired",
+    "mean_paired_delta": 0.08929072741235639,
     "direction": "HIGHER in tumor",
-    "wilcoxon_p": 0.03361897603111694
+    "wilcoxon_p": 0.031788871754740974
+   },
+   "panel_composite_variants": {
+    "paired_min_pairs": {
+     "n_members_scored": 18,
+     "n_pairs": 124,
+     "standardized_on": "paired",
+     "mean_paired_delta": 0.08929072741235639,
+     "direction": "HIGHER in tumor",
+     "wilcoxon_p": 0.031788871754740974
+    },
+    "paired_all_present": {
+     "n_members_scored": 20,
+     "n_pairs": 124,
+     "standardized_on": "paired",
+     "mean_paired_delta": 0.08907593592446814,
+     "direction": "HIGHER in tumor",
+     "wilcoxon_p": 0.03361897603111694
+    },
+    "all_columns_min_pairs": {
+     "n_members_scored": 18,
+     "n_pairs": 124,
+     "standardized_on": "all_columns",
+     "mean_paired_delta": 0.08929072741235648,
+     "direction": "HIGHER in tumor",
+     "wilcoxon_p": 0.031788871754740974
+    },
+    "all_columns_all_present": {
+     "n_members_scored": 20,
+     "n_pairs": 124,
+     "standardized_on": "all_columns",
+     "mean_paired_delta": 0.0890759359244682,
+     "direction": "HIGHER in tumor",
+     "wilcoxon_p": 0.03361897603111694
+    }
    },
    "erythrocyte_mean_z": -0.5291726205379904,
+   "erythrocyte_members": {
+    "HBB": {
+     "z": -0.4514,
+     "n_pairs": 124
+    },
+    "HBA1": {
+     "z": -0.4761,
+     "n_pairs": 124
+    },
+    "HBD": {
+     "z": -0.5891,
+     "n_pairs": 124
+    },
+    "CA1": {
+     "z": -0.6355,
+     "n_pairs": 124
+    },
+    "SLC4A1": {
+     "z": -0.674,
+     "n_pairs": 122
+    },
+    "PRDX2": {
+     "z": -0.349,
+     "n_pairs": 124
+    }
+   },
+   "immunoglobulin_mean_z": 0.07372512673791239,
+   "immunoglobulin_members": {
+    "IGHG1": {
+     "z": 0.1761,
+     "n_pairs": 124
+    },
+    "IGHG2": {
+     "z": 0.2534,
+     "n_pairs": 123
+    },
+    "IGHG3": {
+     "z": 0.1412,
+     "n_pairs": 124
+    },
+    "IGHG4": {
+     "z": 0.0704,
+     "n_pairs": 123
+    },
+    "IGHA1": {
+     "z": -0.0257,
+     "n_pairs": 124
+    },
+    "IGHM": {
+     "z": -0.207,
+     "n_pairs": 124
+    },
+    "IGKC": {
+     "z": 0.1327,
+     "n_pairs": 124
+    },
+    "IGLC2": {
+     "z": 0.0487,
+     "n_pairs": 124
+    }
+   },
    "off_panel_plasma_mean_z": 0.2511741401325614,
+   "off_panel_plasma_members": {
+    "HP": {
+     "z": -0.5181,
+     "n_pairs": 124
+    },
+    "HPX": {
+     "z": 0.4568,
+     "n_pairs": 124
+    },
+    "APOA1": {
+     "z": -0.025,
+     "n_pairs": 124
+    },
+    "APOA2": {
+     "z": 0.4713,
+     "n_pairs": 123
+    },
+    "C3": {
+     "z": 0.6007,
+     "n_pairs": 124
+    },
+    "ORM1": {
+     "z": 0.2752,
+     "n_pairs": 124
+    },
+    "A2M": {
+     "z": 0.0878,
+     "n_pairs": 124
+    },
+    "SERPINC1": {
+     "z": 0.2046,
+     "n_pairs": 124
+    },
+    "AMBP": {
+     "z": 0.83,
+     "n_pairs": 124
+    },
+    "ITIH4": {
+     "z": 0.4815,
+     "n_pairs": 123
+    },
+    "APCS": {
+     "z": -0.5804,
+     "n_pairs": 119
+    },
+    "CFB": {
+     "z": 0.7296,
+     "n_pairs": 124
+    }
+   },
+   "missingness": {
+    "fraction_unquantified_tumor": 0.362224230116521,
+    "fraction_unquantified_adjacent": 0.4550185325882428,
+    "mean_features_per_tumor_sample": 5794.830645161291,
+    "mean_features_per_adjacent_sample": 4951.701612903225
+   },
+   "matrix_scale": {
+    "fraction_of_values_below_zero": 0.0,
+    "median_of_per_protein_medians": 19.705979089478863,
+    "share_of_proteins_with_median_within_0.5_of_zero": 0.0,
+    "on_an_abundance_scale": true
+   },
    "abundance": {
+    "interpretable": true,
     "spearman_shift_vs_abundance": -0.2747203818363157,
     "p": 3.594392657536373e-111,
+    "n_proteins": 6399,
     "secreted_percentile_median": 94.7726207219878,
-    "metabolic_percentile_median": 97.6558837318331
+    "metabolic_percentile_median": 97.6558837318331,
+    "neighborhood_test": {
+     "secreted_neighborhood_percentile": 94.7726207219878,
+     "metabolic_neighborhood_percentile": 97.6558837318331,
+     "secreted_neighborhood_mean_z": 0.07819567939521775,
+     "metabolic_neighborhood_mean_z": -0.11279064605050028,
+     "n_secreted_neighborhood": 192,
+     "n_metabolic_neighborhood": 191,
+     "gap_expected_from_abundance": 0.19098632544571803,
+     "observed_class_gap": 1.4135648642409022,
+     "share_of_class_gap_explained": 0.13510970050057058
+    }
    },
    "gene_set_coherence": {
     "ACEVEDO_LIVER_CANCER_DN": {
@@ -4590,19 +5811,629 @@
    "secreted_mean_z": 0.5142274348766348,
    "metabolic_mean_z": -0.8993374293642674,
    "panel_mean_z": 0.10618590019733619,
-   "separation_complete": true
+   "panel_coherence": {
+    "n": 18,
+    "sign_agreement": 0.6666666666666666,
+    "cancellation": 0.1582884144413578,
+    "mean_z": 0.10618590019733619
+   },
+   "separation_complete": true,
+   "members": {
+    "ALB": 0.2171,
+    "TTR": 0.1071,
+    "TF": 0.2231,
+    "SERPINA1": 0.7306,
+    "AHSG": 0.6237,
+    "APOH": 0.8312,
+    "FGA": 0.5106,
+    "FGB": 0.4058,
+    "FGG": 0.5128,
+    "F2": 0.9802,
+    "CPS1": -0.8714,
+    "OTC": -0.7926,
+    "ARG1": -0.9281,
+    "TAT": -0.6668,
+    "PCK1": -1.2378,
+    "HNF4A": 0.8428,
+    "HNF1A": 1.0081,
+    "ASGR1": -0.5852
+   },
+   "composite_sample_test": {
+    "n_members_scored": 18,
+    "n_pairs": 124,
+    "standardized_on": "paired",
+    "mean_paired_delta": 0.08929072741235639,
+    "direction": "HIGHER in tumor",
+    "wilcoxon_p": 0.031788871754740974
+   },
+   "composite_sample_test_unfiltered": {
+    "n_members_scored": 20,
+    "n_pairs": 124,
+    "standardized_on": "paired",
+    "mean_paired_delta": 0.08907593592446814,
+    "direction": "HIGHER in tumor",
+    "wilcoxon_p": 0.03361897603111694
+   },
+   "unfiltered_member_set": {
+    "by_class": {
+     "secreted plasma protein": {
+      "n": 10,
+      "mean_z": 0.5142274348766348,
+      "min": 0.10713447955860766,
+      "max": 0.9802109664610246
+     },
+     "metabolic enzyme": {
+      "n": 5,
+      "mean_z": -0.8993374293642674,
+      "min": -1.237796813684406,
+      "max": -0.6667979133297663
+     },
+     "transcription factor": {
+      "n": 2,
+      "mean_z": 0.9254708549761216,
+      "min": 0.8428340311469078,
+      "max": 1.0081076788053354
+     },
+     "surface receptor": {
+      "n": 1,
+      "mean_z": -0.5851827083452019,
+      "min": -0.5851827083452019,
+      "max": -0.5851827083452019
+     }
+    },
+    "separation_complete": true
+   }
   },
   "median": {
    "secreted_mean_z": 0.4177938128260973,
    "metabolic_mean_z": -0.9607751390980056,
    "panel_mean_z": 0.022906435405852618,
-   "separation_complete": true
+   "panel_coherence": {
+    "n": 18,
+    "sign_agreement": 0.6111111111111112,
+    "cancellation": 0.03563200814533046,
+    "mean_z": 0.022906435405852618
+   },
+   "separation_complete": true,
+   "members": {
+    "ALB": 0.0293,
+    "TTR": -0.0119,
+    "TF": 0.0606,
+    "SERPINA1": 0.6377,
+    "AHSG": 0.5358,
+    "APOH": 0.8107,
+    "FGA": 0.4049,
+    "FGB": 0.3016,
+    "FGG": 0.402,
+    "F2": 1.0071,
+    "CPS1": -0.9352,
+    "OTC": -0.8492,
+    "ARG1": -1.0195,
+    "TAT": -0.7149,
+    "PCK1": -1.2852,
+    "HNF4A": 0.829,
+    "HNF1A": 0.973,
+    "ASGR1": -0.7638
+   },
+   "composite_sample_test": {
+    "n_members_scored": 18,
+    "n_pairs": 124,
+    "standardized_on": "paired",
+    "mean_paired_delta": 0.002475954540864497,
+    "direction": "HIGHER in tumor",
+    "wilcoxon_p": 0.7420307591046778
+   },
+   "composite_sample_test_unfiltered": {
+    "n_members_scored": 20,
+    "n_pairs": 124,
+    "standardized_on": "paired",
+    "mean_paired_delta": 0.002681016279897806,
+    "direction": "HIGHER in tumor",
+    "wilcoxon_p": 0.7723774733279651
+   },
+   "unfiltered_member_set": {
+    "by_class": {
+     "secreted plasma protein": {
+      "n": 10,
+      "mean_z": 0.4177938128260973,
+      "min": -0.011893910073469724,
+      "max": 1.0071353956903257
+     },
+     "metabolic enzyme": {
+      "n": 5,
+      "mean_z": -0.9607751390980056,
+      "min": -1.2851801566281171,
+      "max": -0.7148643453004949
+     },
+     "transcription factor": {
+      "n": 2,
+      "mean_z": 0.9010383264105404,
+      "min": 0.8290400165756672,
+      "max": 0.9730366362454136
+     },
+     "surface receptor": {
+      "n": 1,
+      "mean_z": -0.7638232482866779,
+      "min": -0.7638232482866779,
+      "max": -0.7638232482866779
+     }
+    },
+    "separation_complete": true
+   }
   },
   "quantile": {
    "secreted_mean_z": 0.5851493563586465,
    "metabolic_mean_z": -0.9187332977005305,
    "panel_mean_z": 0.0577926111128065,
-   "separation_complete": true
+   "panel_coherence": {
+    "n": 18,
+    "sign_agreement": 0.6666666666666666,
+    "cancellation": 0.08799523581750023,
+    "mean_z": 0.0577926111128065
+   },
+   "separation_complete": true,
+   "members": {
+    "ALB": 0.7308,
+    "TTR": 0.1057,
+    "TF": 0.5232,
+    "SERPINA1": 0.7971,
+    "AHSG": 0.5386,
+    "APOH": 0.8498,
+    "FGA": 0.4253,
+    "FGB": 0.408,
+    "FGG": 0.5648,
+    "F2": 0.9081,
+    "CPS1": -0.8022,
+    "OTC": -0.7758,
+    "ARG1": -0.8832,
+    "TAT": -0.8378,
+    "PCK1": -1.2948,
+    "HNF4A": 0.2085,
+    "HNF1A": 0.3711,
+    "ASGR1": -0.7971
+   },
+   "composite_sample_test": {
+    "n_members_scored": 18,
+    "n_pairs": 124,
+    "standardized_on": "paired",
+    "mean_paired_delta": 0.06778422299952197,
+    "direction": "HIGHER in tumor",
+    "wilcoxon_p": 0.07831704526696422
+   },
+   "composite_sample_test_unfiltered": {
+    "n_members_scored": 20,
+    "n_pairs": 124,
+    "standardized_on": "paired",
+    "mean_paired_delta": 0.09008587757993712,
+    "direction": "HIGHER in tumor",
+    "wilcoxon_p": 0.025461100193481676
+   },
+   "unfiltered_member_set": {
+    "by_class": {
+     "secreted plasma protein": {
+      "n": 10,
+      "mean_z": 0.5851493563586465,
+      "min": 0.1056992543712914,
+      "max": 0.9081218841609934
+     },
+     "metabolic enzyme": {
+      "n": 5,
+      "mean_z": -0.9187332977005305,
+      "min": -1.2947824389864744,
+      "max": -0.7757970008596882
+     },
+     "transcription factor": {
+      "n": 4,
+      "mean_z": 0.3064601052167479,
+      "min": 0.2034853052643865,
+      "max": 0.4427872160508809
+     },
+     "surface receptor": {
+      "n": 1,
+      "mean_z": -0.797127974605019,
+      "min": -0.797127974605019,
+      "max": -0.797127974605019
+     }
+    },
+    "separation_complete": true
+   }
+  }
+ },
+ "jiang_complete_quantification": {
+  "note": "members quantified in both arms of all pairs, so no member is scored on a subset of patients",
+  "n_pairs": 124,
+  "n_members": 11,
+  "members": [
+   "AHSG",
+   "ALB",
+   "APOH",
+   "ARG1",
+   "CPS1",
+   "F2",
+   "FGA",
+   "FGB",
+   "FGG",
+   "SERPINA1",
+   "TF"
+  ],
+  "members_dropped": [
+   "ASGR1",
+   "HNF1A",
+   "HNF4A",
+   "OTC",
+   "PCK1",
+   "TAT",
+   "TTR"
+  ],
+  "secreted_mean_z": 0.5594599854675267,
+  "metabolic_mean_z": -0.8997460202037352,
+  "n_secreted": 9,
+  "n_metabolic": 2,
+  "separation_complete": true,
+  "mannwhitney_p": null,
+  "panel_coherence": {
+   "n": 11,
+   "sign_agreement": 0.8181818181818182,
+   "cancellation": 0.4734194718296742,
+   "mean_z": 0.2941498026182064
+  },
+  "composite_sample_test": {
+   "n_members_scored": 11,
+   "n_pairs": 124,
+   "standardized_on": "paired",
+   "mean_paired_delta": 0.29414980261820634,
+   "direction": "HIGHER in tumor",
+   "wilcoxon_p": 4.1452609657119245e-07
+  },
+  "per_member_detection": {
+   "AHSG": {
+    "n_pairs_both_arms": 124,
+    "n_tumor": 124,
+    "n_adjacent": 124
+   },
+   "ALB": {
+    "n_pairs_both_arms": 124,
+    "n_tumor": 124,
+    "n_adjacent": 124
+   },
+   "APOH": {
+    "n_pairs_both_arms": 124,
+    "n_tumor": 124,
+    "n_adjacent": 124
+   },
+   "ARG1": {
+    "n_pairs_both_arms": 124,
+    "n_tumor": 124,
+    "n_adjacent": 124
+   },
+   "ASGR1": {
+    "n_pairs_both_arms": 121,
+    "n_tumor": 121,
+    "n_adjacent": 124
+   },
+   "CPS1": {
+    "n_pairs_both_arms": 124,
+    "n_tumor": 124,
+    "n_adjacent": 124
+   },
+   "F2": {
+    "n_pairs_both_arms": 124,
+    "n_tumor": 124,
+    "n_adjacent": 124
+   },
+   "FGA": {
+    "n_pairs_both_arms": 124,
+    "n_tumor": 124,
+    "n_adjacent": 124
+   },
+   "FGB": {
+    "n_pairs_both_arms": 124,
+    "n_tumor": 124,
+    "n_adjacent": 124
+   },
+   "FGG": {
+    "n_pairs_both_arms": 124,
+    "n_tumor": 124,
+    "n_adjacent": 124
+   },
+   "HNF1A": {
+    "n_pairs_both_arms": 66,
+    "n_tumor": 103,
+    "n_adjacent": 76
+   },
+   "HNF4A": {
+    "n_pairs_both_arms": 82,
+    "n_tumor": 110,
+    "n_adjacent": 87
+   },
+   "OTC": {
+    "n_pairs_both_arms": 121,
+    "n_tumor": 121,
+    "n_adjacent": 124
+   },
+   "PCK1": {
+    "n_pairs_both_arms": 118,
+    "n_tumor": 118,
+    "n_adjacent": 124
+   },
+   "SERPINA1": {
+    "n_pairs_both_arms": 124,
+    "n_tumor": 124,
+    "n_adjacent": 124
+   },
+   "TAT": {
+    "n_pairs_both_arms": 85,
+    "n_tumor": 85,
+    "n_adjacent": 124
+   },
+   "TF": {
+    "n_pairs_both_arms": 124,
+    "n_tumor": 124,
+    "n_adjacent": 124
+   },
+   "TTR": {
+    "n_pairs_both_arms": 118,
+    "n_tumor": 121,
+    "n_adjacent": 120
+   }
+  }
+ },
+ "panel_on_shared_members": {
+  "members": [
+   "AHSG",
+   "ALB",
+   "APOH",
+   "ARG1",
+   "ASGR1",
+   "CPS1",
+   "F2",
+   "FGA",
+   "FGB",
+   "FGG",
+   "HNF1A",
+   "HNF4A",
+   "OTC",
+   "PCK1",
+   "SERPINA1",
+   "TAT",
+   "TF",
+   "TTR"
+  ],
+  "n_members": 18,
+  "surviving_share_transcriptome": {
+   "GSE14520 (array transcriptome)": 1.0,
+   "GSE76427 (array transcriptome)": 0.8623495256557988,
+   "TCGA-LIHC (RNA sequencing)": 0.8017355510354324
+  },
+  "surviving_share_proteome": {
+   "Gao 2019 proteome": 0.17083967024070015,
+   "Jiang 2019 proteome": 0.15828841444135777
+  },
+  "transcriptome_mean": 0.8880283588970771,
+  "proteome_mean": 0.16456404234102895,
+  "drop": 0.7234643165560481
+ },
+ "class_within_shared_sets": {
+  "GSE14520 (array transcriptome)": {
+   "secreted plasma protein": {
+    "surviving_share": 1.0,
+    "mean_z": -0.7096587039057455,
+    "n": 10,
+    "percentile_within_shared_sets": 96.49122807017544
+   },
+   "metabolic enzyme": {
+    "surviving_share": 1.0,
+    "mean_z": -1.0832312922762275,
+    "n": 6,
+    "percentile_within_shared_sets": 96.49122807017544
+   },
+   "transcription factor": {
+    "surviving_share": 0.5109172616920823,
+    "mean_z": -0.27697181939520754,
+    "n": 5,
+    "percentile_within_shared_sets": 39.473684210526315
+   },
+   "surface receptor": {
+    "surviving_share": 1.0,
+    "mean_z": -1.0745815175515636,
+    "n": 1,
+    "percentile_within_shared_sets": 96.49122807017544
+   }
+  },
+  "GSE76427 (array transcriptome)": {
+   "secreted plasma protein": {
+    "surviving_share": 1.0,
+    "mean_z": -0.5574454752582265,
+    "n": 10,
+    "percentile_within_shared_sets": 99.12280701754386
+   },
+   "metabolic enzyme": {
+    "surviving_share": 1.0,
+    "mean_z": -0.7427323446550069,
+    "n": 6,
+    "percentile_within_shared_sets": 99.12280701754386
+   },
+   "transcription factor": {
+    "surviving_share": 0.1889428657676674,
+    "mean_z": -0.08187991374453808,
+    "n": 5,
+    "percentile_within_shared_sets": 23.68421052631579
+   },
+   "surface receptor": {
+    "surviving_share": 1.0,
+    "mean_z": -1.175949686264031,
+    "n": 1,
+    "percentile_within_shared_sets": 99.12280701754386
+   }
+  },
+  "TCGA-LIHC (RNA sequencing)": {
+   "secreted plasma protein": {
+    "surviving_share": 1.0,
+    "mean_z": -0.7354909866015934,
+    "n": 10,
+    "percentile_within_shared_sets": 94.73684210526316
+   },
+   "metabolic enzyme": {
+    "surviving_share": 1.0,
+    "mean_z": -0.8183162508041207,
+    "n": 6,
+    "percentile_within_shared_sets": 94.73684210526316
+   },
+   "transcription factor": {
+    "surviving_share": 0.9845438371240325,
+    "mean_z": 0.42247470762490363,
+    "n": 5,
+    "percentile_within_shared_sets": 85.96491228070175
+   },
+   "surface receptor": {
+    "surviving_share": 1.0,
+    "mean_z": -0.40510568085886556,
+    "n": 1,
+    "percentile_within_shared_sets": 94.73684210526316
+   }
+  },
+  "Gao 2019 proteome": {
+   "secreted plasma protein": {
+    "surviving_share": 0.8347763247731083,
+    "mean_z": 0.4078272892575968,
+    "n": 10,
+    "percentile_within_shared_sets": 85.08771929824562
+   },
+   "metabolic enzyme": {
+    "surviving_share": 1.0,
+    "mean_z": -1.4187852995899894,
+    "n": 5,
+    "percentile_within_shared_sets": 99.12280701754386
+   },
+   "transcription factor": {
+    "surviving_share": 1.0,
+    "mean_z": 0.7881110769845762,
+    "n": 2,
+    "percentile_within_shared_sets": 99.12280701754386
+   },
+   "surface receptor": {
+    "surviving_share": 1.0,
+    "mean_z": -1.0569796569008294,
+    "n": 1,
+    "percentile_within_shared_sets": 99.12280701754386
+   }
+  },
+  "Jiang 2019 proteome": {
+   "secreted plasma protein": {
+    "surviving_share": 1.0,
+    "mean_z": 0.5142274348766348,
+    "n": 10,
+    "percentile_within_shared_sets": 97.36842105263158
+   },
+   "metabolic enzyme": {
+    "surviving_share": 1.0,
+    "mean_z": -0.8993374293642674,
+    "n": 5,
+    "percentile_within_shared_sets": 97.36842105263158
+   },
+   "transcription factor": {
+    "surviving_share": 1.0,
+    "mean_z": 0.9254708549761216,
+    "n": 2,
+    "percentile_within_shared_sets": 97.36842105263158
+   },
+   "surface receptor": {
+    "surviving_share": 1.0,
+    "mean_z": -0.5851827083452019,
+    "n": 1,
+    "percentile_within_shared_sets": 97.36842105263158
+   }
+  }
+ },
+ "class_sign_across_levels": {
+  "secreted plasma protein": {
+   "transcriptome_mean_z": [
+    -0.7096587039057455,
+    -0.5574454752582265,
+    -0.7354909866015934
+   ],
+   "proteome_mean_z": [
+    0.4078272892575968,
+    0.5142274348766348
+   ],
+   "keeps_its_sign_in_all_five": false
+  },
+  "metabolic enzyme": {
+   "transcriptome_mean_z": [
+    -1.0832312922762275,
+    -0.7427323446550069,
+    -0.8183162508041207
+   ],
+   "proteome_mean_z": [
+    -1.4187852995899894,
+    -0.8993374293642674
+   ],
+   "keeps_its_sign_in_all_five": true
+  },
+  "transcription factor": {
+   "transcriptome_mean_z": [
+    -0.27697181939520754,
+    -0.08187991374453808,
+    0.42247470762490363
+   ],
+   "proteome_mean_z": [
+    0.7881110769845762,
+    0.9254708549761216
+   ],
+   "keeps_its_sign_in_all_five": false
+  },
+  "surface receptor": {
+   "transcriptome_mean_z": [
+    -1.0745815175515636,
+    -1.175949686264031,
+    -0.40510568085886556
+   ],
+   "proteome_mean_z": [
+    -1.0569796569008294,
+    -0.5851827083452019
+   ],
+   "keeps_its_sign_in_all_five": true
+  }
+ },
+ "panel_within_shared_sets": {
+  "per_dataset": {
+   "GSE14520 (array transcriptome)": {
+    "panel_surviving_share": 0.9237288477532082,
+    "percentile_within_shared_sets": 79.82456140350877,
+    "n_shared_sets_compared": 114
+   },
+   "GSE76427 (array transcriptome)": {
+    "panel_surviving_share": 0.8685924357093019,
+    "percentile_within_shared_sets": 80.70175438596492,
+    "n_shared_sets_compared": 114
+   },
+   "TCGA-LIHC (RNA sequencing)": {
+    "panel_surviving_share": 0.7126034444976819,
+    "percentile_within_shared_sets": 54.3859649122807,
+    "n_shared_sets_compared": 114
+   },
+   "Gao 2019 proteome": {
+    "panel_surviving_share": 0.17083967024070018,
+    "percentile_within_shared_sets": 21.05263157894737,
+    "n_shared_sets_compared": 114
+   },
+   "Jiang 2019 proteome": {
+    "panel_surviving_share": 0.1582884144413578,
+    "percentile_within_shared_sets": 12.280701754385966,
+    "n_shared_sets_compared": 114
+   }
+  },
+  "panel_surviving_share_transcriptome_mean": 0.834974909320064,
+  "panel_surviving_share_proteome_mean": 0.164564042341029,
+  "panel_drop": 0.670410866979035,
+  "set_drop_median": 0.01242291299618703,
+  "set_drop_max": 0.40982798699149936,
+  "n_sets_dropping_at_least_as_much": 0,
+  "n_sets_compared": 114,
+  "n_sets_with_proteome_share_below_panel": 0,
+  "n_sets_below_panel_within_each_proteome": {
+   "Gao 2019 proteome": 24,
+   "Jiang 2019 proteome": 14
   }
  },
  "coherence_by_level": {
@@ -4614,6 +6445,16 @@
   "sign_agreement_median_transcriptome": 0.7209614474597351,
   "sign_agreement_median_proteome": 0.7219595902318443,
   "sign_agreement_wilcoxon_p": 0.2622613693845329,
+  "cancellation_mean_difference": 0.0170085968473038,
+  "cancellation_difference_ci95": [
+   -0.01323714180799903,
+   0.04725433550260663
+  ],
+  "sign_agreement_mean_difference": 0.012610134993927734,
+  "sign_agreement_difference_ci95": [
+   -0.002549091400579861,
+   0.02776936138843533
+  ],
   "per_set": [
    {
     "set": "ACEVEDO_LIVER_CANCER_DN",
