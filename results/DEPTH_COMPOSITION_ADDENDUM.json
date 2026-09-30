@@ -1,0 +1,50 @@
+{
+ "Jiang 2019": {
+  "background_z": 0.3214543784265811,
+  "composition_share_of_plasma_rise": 0.021583347455615118,
+  "lift": 0.011567482858726214,
+  "module_minus_background": -1.2212003986303164,
+  "module_n": 5,
+  "module_over_lift": 162.53603406193295,
+  "module_raw_log2": -1.8801327879367495,
+  "plasma_minus_background": 0.23800560704094564,
+  "plasma_n": 10,
+  "plasma_raw_log2": 0.5359448010793535
+ },
+ "MSKCC-ICC": {
+  "background_z": -0.04170714099553723,
+  "composition_share_of_plasma_rise": 0.09173097619336103,
+  "lift": 0.02566541951450117,
+  "module_minus_background": -1.8158653046334825,
+  "module_n": 4,
+  "module_over_lift": 229.83694615069606,
+  "module_raw_log2": -5.898861642889429,
+  "plasma_minus_background": 0.6973884378566219,
+  "plasma_n": 10,
+  "plasma_raw_log2": 0.2797901055844066
+ },
+ "UKF-ICC": {
+  "background_z": 0.549908931701361,
+  "composition_share_of_plasma_rise": 0.42476924731175897,
+  "lift": 0.025979151552886156,
+  "module_minus_background": -2.408253799267492,
+  "module_n": 4,
+  "module_over_lift": 172.731171771638,
+  "module_raw_log2": -4.487409289362994,
+  "plasma_minus_background": -0.49717485082107427,
+  "plasma_n": 10,
+  "plasma_raw_log2": 0.06116062242570678
+ },
+ "Yi 2023": {
+  "background_z": 0.20524709105951747,
+  "composition_share_of_plasma_rise": 0.25991111817689855,
+  "lift": 0.047899454721578395,
+  "module_minus_background": -0.920044529639209,
+  "module_n": 5,
+  "module_over_lift": 25.76950737019072,
+  "module_raw_log2": -1.2343453514758311,
+  "plasma_minus_background": -0.06308439637612884,
+  "plasma_n": 9,
+  "plasma_raw_log2": 0.18429167269780844
+ }
+}

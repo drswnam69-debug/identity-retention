@@ -1,0 +1,231 @@
+{
+ "cohorts": {
+  "MSKCC-ICC": {
+   "G1_module": {
+    "coherence": {
+     "cancellation": 1.0,
+     "mean_z": -1.8797977072780985,
+     "n": 4,
+     "sign_agreement": 1.0
+    },
+    "mean_z": -1.8797977072780985,
+    "members": {
+     "ARG1": -1.8515,
+     "CPS1": -1.8637,
+     "OTC": -1.9092,
+     "PCK1": -1.8948
+    },
+    "n": 4,
+    "passes": true
+   },
+   "G2_deeper_than_hcc": {
+    "deeper_than_all_three": true,
+    "deeper_than_the_median_hcc": true,
+    "hcc_values": {
+     "Gao 2019": -1.419,
+     "Jiang 2019": -0.899,
+     "Yi 2023": -0.715
+    },
+    "module_mean_z": -1.8797977072780985
+   },
+   "G3_plasma": {
+    "coherence": {
+     "cancellation": 0.640155588398264,
+     "mean_z": 0.4384973299687586,
+     "n": 10,
+     "sign_agreement": 0.6
+    },
+    "mean_z": 0.4384973299687586,
+    "members": {
+     "AHSG": 1.002,
+     "ALB": 1.1435,
+     "APOH": 0.9057,
+     "F2": -0.3247,
+     "FGA": -0.4313,
+     "FGB": -0.2156,
+     "FGG": -0.2609,
+     "SERPINA1": 1.1558,
+     "TF": 0.8214,
+     "TTR": 0.589
+    },
+    "n": 10,
+    "passes": false,
+    "prediction": "mean z < 0, the opposite of the HCC cohorts"
+   },
+   "G4_gap": {
+    "hcc_values": {
+     "Gao 2019": 1.827,
+     "Jiang 2019": 1.413,
+     "Yi 2023": 0.857
+    },
+    "secreted_minus_metabolic": 2.318295037246857,
+    "smaller_than_all_hcc": false
+   },
+   "G5_extremity": {
+    "median_percentile_of_members": 1.2629896083133492,
+    "n_non_secreted": 6255,
+    "passes": true,
+    "percentile_of_module_mean": 1.2310151878497202
+   },
+   "cohort": "MSKCC-ICC",
+   "gate_amended": {
+    "mean_z": 1.6190288657537153,
+    "members": {
+     "EPCAM": 1.743,
+     "KRT19": 1.803,
+     "KRT7": 1.7209,
+     "MCM2": 1.5879,
+     "PCNA": 1.6993,
+     "S100P": 1.1599
+    },
+    "n": 6,
+    "passes": true
+   },
+   "gate_preregistered": {
+    "mean_z": 1.643637642258509,
+    "members": {
+     "MCM2": 1.5879,
+     "PCNA": 1.6993
+    },
+    "n": 2,
+    "passes": false,
+    "rule": ">= 3 quantified members and mean z > 0",
+    "why_it_failed": "only PCNA and MCM2 reach 10 pairs; the other six are low-abundance nuclear proteins this assay does not quantify. The two that are quantified are strongly positive, so the count failed, not the direction."
+   },
+   "matrix_diagnostic": {
+    "fraction_of_values_below_zero": 0.4802146123467055,
+    "median_of_per_protein_medians": -0.392646426025076,
+    "on_an_abundance_scale": false,
+    "share_of_proteins_with_median_within_0.5_of_zero": 0.18495815159731227
+   },
+   "missingness": {
+    "fraction_unquantified_adjacent": 0.2739232512953368,
+    "fraction_unquantified_tumor": 0.16811042746113988,
+    "mean_features_per_adjacent_sample": 6165.84375,
+    "mean_features_per_tumor_sample": 7064.40625
+   },
+   "provenance": {
+    "map_rate": 0.8148,
+    "mapped_to_symbol": 8492,
+    "patients_with_both_arms": 64,
+    "proteins_in_file": 10422,
+    "samples_in_matrix": 149
+   },
+   "status": "EXPLORATORY: the pre-registered gate failed on coverage and was amended after the fact. The confirmatory validation is Yi 2023 alone."
+  },
+  "UKF-ICC": {
+   "G1_module": {
+    "coherence": {
+     "cancellation": 1.0,
+     "mean_z": -1.8189876179672968,
+     "n": 4,
+     "sign_agreement": 1.0
+    },
+    "mean_z": -1.8189876179672968,
+    "members": {
+     "ARG1": -1.8427,
+     "CPS1": -1.8583,
+     "OTC": -1.717,
+     "PCK1": -1.8579
+    },
+    "n": 4,
+    "passes": true
+   },
+   "G2_deeper_than_hcc": {
+    "deeper_than_all_three": true,
+    "deeper_than_the_median_hcc": true,
+    "hcc_values": {
+     "Gao 2019": -1.419,
+     "Jiang 2019": -0.899,
+     "Yi 2023": -0.715
+    },
+    "module_mean_z": -1.8189876179672968
+   },
+   "G3_plasma": {
+    "coherence": {
+     "cancellation": 0.21511531296751257,
+     "mean_z": 0.07565975775914735,
+     "n": 10,
+     "sign_agreement": 0.5
+    },
+    "mean_z": 0.07565975775914735,
+    "members": {
+     "AHSG": 0.4608,
+     "ALB": 0.6694,
+     "APOH": -0.1261,
+     "F2": -0.1471,
+     "FGA": -0.585,
+     "FGB": -0.212,
+     "FGG": -0.3101,
+     "SERPINA1": 0.8351,
+     "TF": 0.1133,
+     "TTR": 0.0583
+    },
+    "n": 10,
+    "passes": false,
+    "prediction": "mean z < 0, the opposite of the HCC cohorts"
+   },
+   "G4_gap": {
+    "hcc_values": {
+     "Gao 2019": 1.827,
+     "Jiang 2019": 1.413,
+     "Yi 2023": 0.857
+    },
+    "secreted_minus_metabolic": 1.8946473757264441,
+    "smaller_than_all_hcc": false
+   },
+   "G5_extremity": {
+    "median_percentile_of_members": 0.8664876739077374,
+    "n_non_secreted": 4097,
+    "passes": true,
+    "percentile_of_module_mean": 1.6109348303636806
+   },
+   "cohort": "UKF-ICC",
+   "gate_amended": {
+    "mean_z": 1.5782822955755105,
+    "members": {
+     "KRT19": 1.6947,
+     "KRT7": 1.5953,
+     "MCM2": 1.7032,
+     "PCNA": 1.5437,
+     "S100P": 1.3546
+    },
+    "n": 5,
+    "passes": true
+   },
+   "gate_preregistered": {
+    "mean_z": 1.6234438139008,
+    "members": {
+     "MCM2": 1.7032,
+     "PCNA": 1.5437
+    },
+    "n": 2,
+    "passes": false,
+    "rule": ">= 3 quantified members and mean z > 0",
+    "why_it_failed": "only PCNA and MCM2 reach 10 pairs; the other six are low-abundance nuclear proteins this assay does not quantify. The two that are quantified are strongly positive, so the count failed, not the direction."
+   },
+   "matrix_diagnostic": {
+    "fraction_of_values_below_zero": 0.49592826205406204,
+    "median_of_per_protein_medians": -0.8824783968111838,
+    "on_an_abundance_scale": false,
+    "share_of_proteins_with_median_within_0.5_of_zero": 0.15421430470619515
+   },
+   "missingness": {
+    "fraction_unquantified_adjacent": 0.4797721331066564,
+    "fraction_unquantified_tumor": 0.3416784394992501,
+    "mean_features_per_adjacent_sample": 3917.8360655737706,
+    "mean_features_per_tumor_sample": 4957.819672131148
+   },
+   "provenance": {
+    "map_rate": 0.8845,
+    "mapped_to_symbol": 7531,
+    "patients_with_both_arms": 61,
+    "proteins_in_file": 8514,
+    "samples_in_matrix": 123
+   },
+   "status": "EXPLORATORY: the pre-registered gate failed on coverage and was amended after the fact. The confirmatory validation is Yi 2023 alone."
+  }
+ },
+ "tumor_type": "intrahepatic cholangiocarcinoma (biliary, not hepatocellular)",
+ "what": "second pre-registered test; predictions recorded 2026-09-30 before the files were downloaded"
+}

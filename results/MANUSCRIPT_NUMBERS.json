@@ -1,0 +1,1238 @@
+{
+ "abundance": {
+  "GSE14520 (array transcriptome)": {
+   "interpretable": true,
+   "metabolic_percentile_median": 95.65728589850565,
+   "n_proteins": 13183,
+   "neighborhood_test": {
+    "gap_expected_from_abundance": 0.08577407578385164,
+    "metabolic_neighborhood_mean_z": 0.061519222477442584,
+    "metabolic_neighborhood_percentile": 95.65728589850565,
+    "n_metabolic_neighborhood": 396,
+    "n_secreted_neighborhood": 211,
+    "observed_class_gap": 0.373572588370482,
+    "secreted_neighborhood_mean_z": 0.14729329826129423,
+    "secreted_neighborhood_percentile": 99.90518091481454,
+    "share_of_class_gap_explained": 0.22960484375472212
+   },
+   "p": 1.8711580578332814e-156,
+   "secreted_percentile_median": 99.90518091481454,
+   "spearman_shift_vs_abundance": 0.22902380596761088
+  },
+  "GSE76427 (array transcriptome)": {
+   "interpretable": true,
+   "metabolic_percentile_median": 97.30211494917378,
+   "n_proteins": 20757,
+   "neighborhood_test": {
+    "gap_expected_from_abundance": -0.05587926250839567,
+    "metabolic_neighborhood_mean_z": -0.10636940540396325,
+    "metabolic_neighborhood_percentile": 97.30211494917378,
+    "n_metabolic_neighborhood": 623,
+    "n_secreted_neighborhood": 334,
+    "observed_class_gap": 0.1852868693967804,
+    "secreted_neighborhood_mean_z": -0.16224866791235892,
+    "secreted_neighborhood_percentile": 99.89401165871755,
+    "share_of_class_gap_explained": -0.3015824202239268
+   },
+   "p": 3.826264688982878e-06,
+   "secreted_percentile_median": 99.89401165871755,
+   "spearman_shift_vs_abundance": -0.0320649695065671
+  },
+  "Gao 2019 proteome": {
+   "interpretable": false,
+   "metabolic_percentile_median": 4.075331892559432,
+   "n_proteins": 6478,
+   "neighborhood_test": {
+    "gap_expected_from_abundance": -0.04806717932790161,
+    "metabolic_neighborhood_mean_z": -0.3464874578115079,
+    "metabolic_neighborhood_percentile": 4.075331892559432,
+    "n_metabolic_neighborhood": 195,
+    "n_secreted_neighborhood": 194,
+    "observed_class_gap": 1.8266125888475861,
+    "secreted_neighborhood_mean_z": -0.3945546371394095,
+    "secreted_neighborhood_percentile": 7.185859833281878,
+    "share_of_class_gap_explained": -0.026314928311222962
+   },
+   "p": 0.0031862257331421754,
+   "secreted_percentile_median": 7.185859833281878,
+   "spearman_shift_vs_abundance": 0.03663685654719183
+  },
+  "Jiang 2019 proteome": {
+   "interpretable": true,
+   "metabolic_percentile_median": 97.6558837318331,
+   "n_proteins": 6399,
+   "neighborhood_test": {
+    "gap_expected_from_abundance": 0.19098632544571803,
+    "metabolic_neighborhood_mean_z": -0.11279064605050028,
+    "metabolic_neighborhood_percentile": 97.6558837318331,
+    "n_metabolic_neighborhood": 191,
+    "n_secreted_neighborhood": 192,
+    "observed_class_gap": 1.4135648642409022,
+    "secreted_neighborhood_mean_z": 0.07819567939521775,
+    "secreted_neighborhood_percentile": 94.7726207219878,
+    "share_of_class_gap_explained": 0.13510970050057058
+   },
+   "p": 3.594392657536373e-111,
+   "secreted_percentile_median": 94.7726207219878,
+   "spearman_shift_vs_abundance": -0.2747203818363157
+  },
+  "TCGA-LIHC (RNA sequencing)": {
+   "interpretable": true,
+   "metabolic_percentile_median": 99.4512489150352,
+   "n_proteins": 51845,
+   "neighborhood_test": {
+    "gap_expected_from_abundance": -0.06100266243491437,
+    "metabolic_neighborhood_mean_z": 0.37040820525704393,
+    "metabolic_neighborhood_percentile": 99.4512489150352,
+    "n_metabolic_neighborhood": 1063,
+    "n_secreted_neighborhood": 805,
+    "observed_class_gap": 0.08282526420252734,
+    "secreted_neighborhood_mean_z": 0.30940554282212956,
+    "secreted_neighborhood_percentile": 99.94792168965185,
+    "share_of_class_gap_explained": -0.7365224007707171
+   },
+   "p": 0.0,
+   "secreted_percentile_median": 99.94792168965185,
+   "spearman_shift_vs_abundance": 0.49953945295711616
+  }
+ },
+ "cholangiocarcinoma": {
+  "cohorts": {
+   "MSKCC-ICC": {
+    "G1_module": {
+     "coherence": {
+      "cancellation": 1.0,
+      "mean_z": -1.8797977072780985,
+      "n": 4,
+      "sign_agreement": 1.0
+     },
+     "mean_z": -1.8797977072780985,
+     "members": {
+      "ARG1": -1.8515,
+      "CPS1": -1.8637,
+      "OTC": -1.9092,
+      "PCK1": -1.8948
+     },
+     "n": 4,
+     "passes": true
+    },
+    "G2_deeper_than_hcc": {
+     "deeper_than_all_three": true,
+     "deeper_than_the_median_hcc": true,
+     "hcc_values": {
+      "Gao 2019": -1.419,
+      "Jiang 2019": -0.899,
+      "Yi 2023": -0.715
+     },
+     "module_mean_z": -1.8797977072780985
+    },
+    "G3_plasma": {
+     "coherence": {
+      "cancellation": 0.640155588398264,
+      "mean_z": 0.4384973299687586,
+      "n": 10,
+      "sign_agreement": 0.6
+     },
+     "mean_z": 0.4384973299687586,
+     "members": {
+      "AHSG": 1.002,
+      "ALB": 1.1435,
+      "APOH": 0.9057,
+      "F2": -0.3247,
+      "FGA": -0.4313,
+      "FGB": -0.2156,
+      "FGG": -0.2609,
+      "SERPINA1": 1.1558,
+      "TF": 0.8214,
+      "TTR": 0.589
+     },
+     "n": 10,
+     "passes": false,
+     "prediction": "mean z < 0, the opposite of the HCC cohorts"
+    },
+    "G4_gap": {
+     "hcc_values": {
+      "Gao 2019": 1.827,
+      "Jiang 2019": 1.413,
+      "Yi 2023": 0.857
+     },
+     "secreted_minus_metabolic": 2.318295037246857,
+     "smaller_than_all_hcc": false
+    },
+    "G5_extremity": {
+     "median_percentile_of_members": 1.2629896083133492,
+     "n_non_secreted": 6255,
+     "passes": true,
+     "percentile_of_module_mean": 1.2310151878497202
+    },
+    "cohort": "MSKCC-ICC",
+    "gate_amended": {
+     "mean_z": 1.6190288657537153,
+     "members": {
+      "EPCAM": 1.743,
+      "KRT19": 1.803,
+      "KRT7": 1.7209,
+      "MCM2": 1.5879,
+      "PCNA": 1.6993,
+      "S100P": 1.1599
+     },
+     "n": 6,
+     "passes": true
+    },
+    "gate_preregistered": {
+     "mean_z": 1.643637642258509,
+     "members": {
+      "MCM2": 1.5879,
+      "PCNA": 1.6993
+     },
+     "n": 2,
+     "passes": false,
+     "rule": ">= 3 quantified members and mean z > 0",
+     "why_it_failed": "only PCNA and MCM2 reach 10 pairs; the other six are low-abundance nuclear proteins this assay does not quantify. The two that are quantified are strongly positive, so the count failed, not the direction."
+    },
+    "matrix_diagnostic": {
+     "fraction_of_values_below_zero": 0.4802146123467055,
+     "median_of_per_protein_medians": -0.392646426025076,
+     "on_an_abundance_scale": false,
+     "share_of_proteins_with_median_within_0.5_of_zero": 0.18495815159731227
+    },
+    "missingness": {
+     "fraction_unquantified_adjacent": 0.2739232512953368,
+     "fraction_unquantified_tumor": 0.16811042746113988,
+     "mean_features_per_adjacent_sample": 6165.84375,
+     "mean_features_per_tumor_sample": 7064.40625
+    },
+    "provenance": {
+     "map_rate": 0.8148,
+     "mapped_to_symbol": 8492,
+     "patients_with_both_arms": 64,
+     "proteins_in_file": 10422,
+     "samples_in_matrix": 149
+    },
+    "status": "EXPLORATORY: the pre-registered gate failed on coverage and was amended after the fact. The confirmatory validation is Yi 2023 alone."
+   },
+   "UKF-ICC": {
+    "G1_module": {
+     "coherence": {
+      "cancellation": 1.0,
+      "mean_z": -1.8189876179672968,
+      "n": 4,
+      "sign_agreement": 1.0
+     },
+     "mean_z": -1.8189876179672968,
+     "members": {
+      "ARG1": -1.8427,
+      "CPS1": -1.8583,
+      "OTC": -1.717,
+      "PCK1": -1.8579
+     },
+     "n": 4,
+     "passes": true
+    },
+    "G2_deeper_than_hcc": {
+     "deeper_than_all_three": true,
+     "deeper_than_the_median_hcc": true,
+     "hcc_values": {
+      "Gao 2019": -1.419,
+      "Jiang 2019": -0.899,
+      "Yi 2023": -0.715
+     },
+     "module_mean_z": -1.8189876179672968
+    },
+    "G3_plasma": {
+     "coherence": {
+      "cancellation": 0.21511531296751257,
+      "mean_z": 0.07565975775914735,
+      "n": 10,
+      "sign_agreement": 0.5
+     },
+     "mean_z": 0.07565975775914735,
+     "members": {
+      "AHSG": 0.4608,
+      "ALB": 0.6694,
+      "APOH": -0.1261,
+      "F2": -0.1471,
+      "FGA": -0.585,
+      "FGB": -0.212,
+      "FGG": -0.3101,
+      "SERPINA1": 0.8351,
+      "TF": 0.1133,
+      "TTR": 0.0583
+     },
+     "n": 10,
+     "passes": false,
+     "prediction": "mean z < 0, the opposite of the HCC cohorts"
+    },
+    "G4_gap": {
+     "hcc_values": {
+      "Gao 2019": 1.827,
+      "Jiang 2019": 1.413,
+      "Yi 2023": 0.857
+     },
+     "secreted_minus_metabolic": 1.8946473757264441,
+     "smaller_than_all_hcc": false
+    },
+    "G5_extremity": {
+     "median_percentile_of_members": 0.8664876739077374,
+     "n_non_secreted": 4097,
+     "passes": true,
+     "percentile_of_module_mean": 1.6109348303636806
+    },
+    "cohort": "UKF-ICC",
+    "gate_amended": {
+     "mean_z": 1.5782822955755105,
+     "members": {
+      "KRT19": 1.6947,
+      "KRT7": 1.5953,
+      "MCM2": 1.7032,
+      "PCNA": 1.5437,
+      "S100P": 1.3546
+     },
+     "n": 5,
+     "passes": true
+    },
+    "gate_preregistered": {
+     "mean_z": 1.6234438139008,
+     "members": {
+      "MCM2": 1.7032,
+      "PCNA": 1.5437
+     },
+     "n": 2,
+     "passes": false,
+     "rule": ">= 3 quantified members and mean z > 0",
+     "why_it_failed": "only PCNA and MCM2 reach 10 pairs; the other six are low-abundance nuclear proteins this assay does not quantify. The two that are quantified are strongly positive, so the count failed, not the direction."
+    },
+    "matrix_diagnostic": {
+     "fraction_of_values_below_zero": 0.49592826205406204,
+     "median_of_per_protein_medians": -0.8824783968111838,
+     "on_an_abundance_scale": false,
+     "share_of_proteins_with_median_within_0.5_of_zero": 0.15421430470619515
+    },
+    "missingness": {
+     "fraction_unquantified_adjacent": 0.4797721331066564,
+     "fraction_unquantified_tumor": 0.3416784394992501,
+     "mean_features_per_adjacent_sample": 3917.8360655737706,
+     "mean_features_per_tumor_sample": 4957.819672131148
+    },
+    "provenance": {
+     "map_rate": 0.8845,
+     "mapped_to_symbol": 7531,
+     "patients_with_both_arms": 61,
+     "proteins_in_file": 8514,
+     "samples_in_matrix": 123
+    },
+    "status": "EXPLORATORY: the pre-registered gate failed on coverage and was amended after the fact. The confirmatory validation is Yi 2023 alone."
+   }
+  },
+  "tumor_type": "intrahepatic cholangiocarcinoma (biliary, not hepatocellular)",
+  "what": "second pre-registered test; predictions recorded 2026-09-30 before the files were downloaded"
+ },
+ "class_difference_secreted_minus_metabolic": {
+  "GSE14520 (array transcriptome)": 0.373572588370482,
+  "GSE76427 (array transcriptome)": 0.1852868693967804,
+  "Gao 2019 proteome": 1.8266125888475861,
+  "Jiang 2019 proteome": 1.4135648642409022,
+  "TCGA-LIHC (RNA sequencing)": 0.08282526420252734
+ },
+ "comparison_sets": {
+  "difference_ci95": [
+   -0.01323714180799903,
+   0.04725433550260663
+  ],
+  "mean_difference": 0.0170085968473038,
+  "median_share_proteome": 0.5489206283527681,
+  "median_share_transcriptome": 0.529852552276711,
+  "n_sets": 114,
+  "panel_drop": {
+   "n_sets_below_panel_within_each_proteome": {
+    "Gao 2019 proteome": 24,
+    "Jiang 2019 proteome": 14
+   },
+   "n_sets_compared": 114,
+   "n_sets_dropping_at_least_as_much": 0,
+   "n_sets_with_proteome_share_below_panel": 0,
+   "panel_drop": 0.670410866979035,
+   "panel_surviving_share_proteome_mean": 0.164564042341029,
+   "panel_surviving_share_transcriptome_mean": 0.834974909320064,
+   "per_dataset": {
+    "GSE14520 (array transcriptome)": {
+     "n_shared_sets_compared": 114,
+     "panel_surviving_share": 0.9237288477532082,
+     "percentile_within_shared_sets": 79.82456140350877
+    },
+    "GSE76427 (array transcriptome)": {
+     "n_shared_sets_compared": 114,
+     "panel_surviving_share": 0.8685924357093019,
+     "percentile_within_shared_sets": 80.70175438596492
+    },
+    "Gao 2019 proteome": {
+     "n_shared_sets_compared": 114,
+     "panel_surviving_share": 0.17083967024070018,
+     "percentile_within_shared_sets": 21.05263157894737
+    },
+    "Jiang 2019 proteome": {
+     "n_shared_sets_compared": 114,
+     "panel_surviving_share": 0.1582884144413578,
+     "percentile_within_shared_sets": 12.280701754385966
+    },
+    "TCGA-LIHC (RNA sequencing)": {
+     "n_shared_sets_compared": 114,
+     "panel_surviving_share": 0.7126034444976819,
+     "percentile_within_shared_sets": 54.3859649122807
+    }
+   },
+   "set_drop_max": 0.40982798699149936,
+   "set_drop_median": 0.01242291299618703
+  },
+  "sign_agreement_median_proteome": 0.7219595902318443,
+  "sign_agreement_median_transcriptome": 0.7209614474597351,
+  "source": "70_panel_coherence.py",
+  "wilcoxon_p": 0.4947231381349889
+ },
+ "controls": {
+  "Gao 2019 proteome": {
+   "erythrocyte_mean_z": -0.9273030772732941,
+   "immunoglobulin_mean_z": -0.28528352733980533,
+   "off_panel_liver_plasma_mean_z": -0.31526026112767475
+  },
+  "Jiang 2019 proteome": {
+   "erythrocyte_mean_z": -0.5291726205379904,
+   "immunoglobulin_mean_z": 0.07372512673791239,
+   "off_panel_liver_plasma_mean_z": 0.2511741401325614
+  }
+ },
+ "datasets": [
+  {
+   "dataset": "GSE14520 (array transcriptome)",
+   "level": "transcriptome",
+   "metabolic_mean_z": -1.0832312922762275,
+   "metabolic_n": 6,
+   "metabolic_share": 1.0,
+   "n_pairs": 213,
+   "secreted_mean_z": -0.7096587039057455,
+   "secreted_n": 10,
+   "secreted_share": 1.0,
+   "source": "70_panel_coherence.py",
+   "tumor_type": "HCC"
+  },
+  {
+   "dataset": "GSE76427 (array transcriptome)",
+   "level": "transcriptome",
+   "metabolic_mean_z": -0.7427323446550069,
+   "metabolic_n": 6,
+   "metabolic_share": 1.0,
+   "n_pairs": 52,
+   "secreted_mean_z": -0.5574454752582265,
+   "secreted_n": 10,
+   "secreted_share": 1.0,
+   "source": "70_panel_coherence.py",
+   "tumor_type": "HCC"
+  },
+  {
+   "dataset": "TCGA-LIHC (RNA sequencing)",
+   "level": "transcriptome",
+   "metabolic_mean_z": -0.8183162508041207,
+   "metabolic_n": 6,
+   "metabolic_share": 1.0,
+   "n_pairs": 50,
+   "secreted_mean_z": -0.7354909866015934,
+   "secreted_n": 10,
+   "secreted_share": 1.0,
+   "source": "70_panel_coherence.py",
+   "tumor_type": "HCC"
+  },
+  {
+   "dataset": "Gao 2019 proteome",
+   "level": "proteome",
+   "metabolic_mean_z": -1.4187852995899894,
+   "metabolic_n": 5,
+   "metabolic_share": 1.0,
+   "n_pairs": 159,
+   "secreted_mean_z": 0.4078272892575968,
+   "secreted_n": 10,
+   "secreted_share": 0.8347763247731083,
+   "source": "70_panel_coherence.py",
+   "tumor_type": "HCC"
+  },
+  {
+   "dataset": "Jiang 2019 proteome",
+   "level": "proteome",
+   "metabolic_mean_z": -0.8993374293642674,
+   "metabolic_n": 5,
+   "metabolic_share": 1.0,
+   "n_pairs": 124,
+   "secreted_mean_z": 0.5142274348766348,
+   "secreted_n": 10,
+   "secreted_share": 1.0,
+   "source": "70_panel_coherence.py",
+   "tumor_type": "HCC"
+  },
+  {
+   "dataset": "Yi 2023 proteome (held out)",
+   "level": "proteome",
+   "metabolic_mean_z": -0.7147974385796916,
+   "metabolic_n": 5,
+   "metabolic_share": 0.9539867160066485,
+   "n_pairs": 41,
+   "secreted_mean_z": 0.14216269468338863,
+   "secreted_n": 9,
+   "secreted_share": 0.5970458378552677,
+   "source": "77_holdout_validation.py",
+   "tumor_type": "HCC"
+  },
+  {
+   "dataset": "MSKCC-ICC proteome (exploratory)",
+   "level": "proteome",
+   "metabolic_mean_z": -1.8797977072780985,
+   "metabolic_n": 4,
+   "metabolic_share": 1.0,
+   "n_pairs": 64,
+   "secreted_mean_z": 0.4384973299687586,
+   "secreted_n": 10,
+   "secreted_share": 0.640155588398264,
+   "source": "78_icca_validation.py",
+   "tumor_type": "intrahepatic cholangiocarcinoma"
+  },
+  {
+   "dataset": "UKF-ICC proteome (exploratory)",
+   "level": "proteome",
+   "metabolic_mean_z": -1.8189876179672968,
+   "metabolic_n": 4,
+   "metabolic_share": 1.0,
+   "n_pairs": 61,
+   "secreted_mean_z": 0.07565975775914735,
+   "secreted_n": 10,
+   "secreted_share": 0.21511531296751257,
+   "source": "78_icca_validation.py",
+   "tumor_type": "intrahepatic cholangiocarcinoma"
+  }
+ ],
+ "gap_secreted_minus_metabolic": {
+  "GSE14520 (array transcriptome)": 0.3736,
+  "GSE76427 (array transcriptome)": 0.1853,
+  "Gao 2019 proteome": 1.8266,
+  "Jiang 2019 proteome": 1.4136,
+  "MSKCC-ICC proteome (exploratory)": 2.3183,
+  "TCGA-LIHC (RNA sequencing)": 0.0828,
+  "UKF-ICC proteome (exploratory)": 1.8946,
+  "Yi 2023 proteome (held out)": 0.857
+ },
+ "held_out_primary_sheet": "EncyclopeDIA",
+ "held_out_test": {
+  "DIANN": {
+   "H1_metabolic_module": {
+    "coherence": {
+     "cancellation": 1.0,
+     "mean_z": 0.13041887541723884,
+     "n": 2,
+     "sign_agreement": 1.0
+    },
+    "mean_z": 0.13041887541723884,
+    "members_quantified": {
+     "OTC": 0.2591,
+     "PCK1": 0.0017
+    },
+    "n": 2,
+    "passes": false,
+    "prediction": "mean z < 0 and surviving share >= 0.9"
+   },
+   "H2_plasma_proteins": {
+    "coherence": {
+     "cancellation": 1.0,
+     "mean_z": 0.5468929943374811,
+     "n": 5,
+     "sign_agreement": 1.0
+    },
+    "mean_z": 0.5468929943374811,
+    "members_quantified": {
+     "AHSG": 0.7745,
+     "FGA": 0.9487,
+     "FGB": 0.5482,
+     "FGG": 0.1865,
+     "SERPINA1": 0.2766
+    },
+    "n": 5,
+    "passes": true,
+    "prediction": "mean z > 0"
+   },
+   "H3_extremity": {
+    "median_percentile_of_module_members": 36.25,
+    "module_mean_z": 0.13041887541723884,
+    "n_non_secreted_proteins": 3880,
+    "passes": false,
+    "percentile_of_module_mean_among_non_secreted": 35.41237113402062,
+    "prediction": "module mean below the 10th percentile"
+   },
+   "H4_composite": {
+    "composite": {
+     "direction": "HIGHER in tumor",
+     "mean_paired_delta": 0.3841555043651024,
+     "n_members_scored": 9,
+     "n_pairs": 41,
+     "standardized_on": "paired",
+     "wilcoxon_p": 0.002611676905871718
+    },
+    "prediction": "Wilcoxon P not significant, or sign opposite to the transcriptome sign (which is negative)"
+   },
+   "H5_abundance": {
+    "applicable": true,
+    "members": {
+     "OTC": {
+      "abundance_percentile": 53.05738476011289,
+      "expected_from_abundance_matched_neighbors": 0.1513824377652283,
+      "n_neighbors": 114,
+      "observed_z": 0.2591068073568597,
+      "share_explained": 0.5842472427084249
+     },
+     "PCK1": {
+      "abundance_percentile": 55.64440263405456,
+      "expected_from_abundance_matched_neighbors": 0.12722660452741102,
+      "n_neighbors": 112,
+      "observed_z": 0.0017309434776179955,
+      "share_explained": 73.50130502383097
+     }
+    },
+    "module_mean_expected_from_abundance": 0.13930452114631967,
+    "module_mean_observed": 0.13041887541723884,
+    "share_of_module_fall_explained_by_abundance": 1.0681315929205315,
+    "superseded_mean_of_per_member_ratios": 37.0427761332697
+   },
+   "gate": {
+    "mean_z": 0.02959478996971811,
+    "n_quantified": 3,
+    "passes": true,
+    "proliferation_members_quantified": {
+     "MKI67": -0.0378,
+     "RRM2": -0.2403,
+     "TYMS": 0.367
+    },
+    "required": ">= 3 members and mean z > 0"
+   },
+   "matrix_diagnostic": {
+    "fraction_of_values_below_zero": 0.0,
+    "median_of_per_protein_medians": 17.9054088832494,
+    "on_an_abundance_scale": true,
+    "share_of_proteins_with_median_within_0.5_of_zero": 0.0
+   },
+   "missingness": {
+    "fraction_unquantified_adjacent": 0.47042269791202057,
+    "fraction_unquantified_tumor": 0.4159818509117863,
+    "mean_features_per_adjacent_sample": 4025.317073170732,
+    "mean_features_per_tumor_sample": 4439.121951219512
+   },
+   "n_genes": 7601,
+   "n_pairs": 41,
+   "verdict": {
+    "decision_rule": "H1 and H3 must both pass for the module claim; H2 decides the framing; if H1 or H3 fails, \ubc29\ud5a52B is closed (recorded 2026-09-29)",
+    "module_claim_survives": false,
+    "two_opposing_axes_framing_survives": true
+   }
+  },
+  "EncyclopeDIA": {
+   "H1_metabolic_module": {
+    "coherence": {
+     "cancellation": 0.9539867160066485,
+     "mean_z": -0.7147974385796916,
+     "n": 5,
+     "sign_agreement": 0.8
+    },
+    "mean_z": -0.7147974385796916,
+    "members_quantified": {
+     "ARG1": -1.1569,
+     "CPS1": -0.9193,
+     "OTC": -0.9007,
+     "PCK1": -0.6832,
+     "TAT": 0.0862
+    },
+    "n": 5,
+    "passes": true,
+    "prediction": "mean z < 0 and surviving share >= 0.9"
+   },
+   "H2_plasma_proteins": {
+    "coherence": {
+     "cancellation": 0.5970458378552677,
+     "mean_z": 0.14216269468338863,
+     "n": 9,
+     "sign_agreement": 0.7777777777777778
+    },
+    "mean_z": 0.14216269468338863,
+    "members_quantified": {
+     "AHSG": 0.2187,
+     "APOH": -0.0148,
+     "F2": 0.4789,
+     "FGA": 0.2125,
+     "FGB": 0.2156,
+     "FGG": 0.2094,
+     "SERPINA1": 0.1958,
+     "TF": 0.1803,
+     "TTR": -0.417
+    },
+    "n": 9,
+    "passes": true,
+    "prediction": "mean z > 0"
+   },
+   "H3_extremity": {
+    "median_percentile_of_module_members": 4.764118057169417,
+    "module_mean_z": -0.7147974385796916,
+    "n_non_secreted_proteins": 4303,
+    "passes": true,
+    "percentile_of_module_mean_among_non_secreted": 7.5993492911921905,
+    "prediction": "module mean below the 10th percentile"
+   },
+   "H4_composite": {
+    "composite": {
+     "direction": "LOWER in tumor",
+     "mean_paired_delta": -0.14906961050541656,
+     "n_members_scored": 16,
+     "n_pairs": 41,
+     "standardized_on": "paired",
+     "wilcoxon_p": 0.10577401981299772
+    },
+    "prediction": "Wilcoxon P not significant, or sign opposite to the transcriptome sign (which is negative)"
+   },
+   "H5_abundance": {
+    "applicable": true,
+    "members": {
+     "ARG1": {
+      "abundance_percentile": 98.1286795626577,
+      "expected_from_abundance_matched_neighbors": -0.3656881528326039,
+      "n_neighbors": 106,
+      "observed_z": -1.1569420310636422,
+      "share_explained": 0.31608165579083175
+     },
+     "CPS1": {
+      "abundance_percentile": 99.97897392767031,
+      "expected_from_abundance_matched_neighbors": -0.46812586659103217,
+      "n_neighbors": 51,
+      "observed_z": -0.9193254994490635,
+      "share_explained": 0.5092057893222501
+     },
+     "OTC": {
+      "abundance_percentile": 97.47687132043734,
+      "expected_from_abundance_matched_neighbors": -0.2754235085179295,
+      "n_neighbors": 109,
+      "observed_z": -0.90068031982322,
+      "share_explained": 0.30579496682239926
+     },
+     "PCK1": {
+      "abundance_percentile": 82.73759461732548,
+      "expected_from_abundance_matched_neighbors": 0.15879626734415225,
+      "n_neighbors": 122,
+      "observed_z": -0.6832307354489146,
+      "share_explained": -0.23241967772397662
+     },
+     "TAT": {
+      "abundance_percentile": 47.83431455004205,
+      "expected_from_abundance_matched_neighbors": 0.32635730737491636,
+      "n_neighbors": 129,
+      "observed_z": 0.08619139288638263,
+      "share_explained": 3.7864257258856475
+     }
+    },
+    "module_mean_expected_from_abundance": -0.12481679064449938,
+    "module_mean_observed": -0.7147974385796916,
+    "share_of_module_fall_explained_by_abundance": 0.17461840782825325,
+    "superseded_mean_of_per_member_ratios": 0.9370176920194304
+   },
+   "gate": {
+    "mean_z": 0.5675624117891024,
+    "n_quantified": 5,
+    "passes": true,
+    "proliferation_members_quantified": {
+     "MCM2": 0.8403,
+     "MKI67": 0.9259,
+     "PCNA": 1.3174,
+     "RRM2": -0.0542,
+     "TOP2A": -0.1916
+    },
+    "required": ">= 3 members and mean z > 0"
+   },
+   "matrix_diagnostic": {
+    "fraction_of_values_below_zero": 0.0,
+    "median_of_per_protein_medians": 20.5077779895261,
+    "on_an_abundance_scale": true,
+    "share_of_proteins_with_median_within_0.5_of_zero": 0.0
+   },
+   "missingness": {
+    "fraction_unquantified_adjacent": 0.04365069454503679,
+    "fraction_unquantified_tumor": 0.04365069454503679,
+    "mean_features_per_adjacent_sample": 4669.8536585365855,
+    "mean_features_per_tumor_sample": 4669.8536585365855
+   },
+   "n_genes": 4883,
+   "n_pairs": 41,
+   "verdict": {
+    "decision_rule": "H1 and H3 must both pass for the module claim; H2 decides the framing; if H1 or H3 fails, \ubc29\ud5a52B is closed (recorded 2026-09-29)",
+    "module_claim_survives": true,
+    "two_opposing_axes_framing_survives": true
+   }
+  },
+  "Spectronaut": {
+   "gate": {
+    "mean_z": 1.2978483041800053,
+    "n_quantified": 2,
+    "passes": false,
+    "proliferation_members_quantified": {
+     "MCM2": 1.1862,
+     "PCNA": 1.4095
+    },
+    "required": ">= 3 members and mean z > 0"
+   },
+   "matrix_diagnostic": {
+    "fraction_of_values_below_zero": 0.0,
+    "median_of_per_protein_medians": 14.12,
+    "on_an_abundance_scale": true,
+    "share_of_proteins_with_median_within_0.5_of_zero": 0.0
+   },
+   "missingness": {
+    "fraction_unquantified_adjacent": 0.39556459267992927,
+    "fraction_unquantified_tumor": 0.34028936561385276,
+    "mean_features_per_adjacent_sample": 2950.8536585365855,
+    "mean_features_per_tumor_sample": 3220.7073170731705
+   },
+   "n_genes": 4882,
+   "n_pairs": 41,
+   "verdict": "NOT TESTABLE: the orthogonal sample-identity gate failed, so the tumor and adjacent labels or the pairing cannot be relied on. No contrast computed."
+  }
+ },
+ "jiang_normalization_sensitivity": {
+  "median": {
+   "composite_sample_test": {
+    "paired_delta": null,
+    "wilcoxon_p": 0.7420307591046778
+   },
+   "composite_sample_test_unfiltered": {
+    "paired_delta": null,
+    "wilcoxon_p": 0.7723774733279651
+   },
+   "members": {
+    "paired_delta": null,
+    "wilcoxon_p": null
+   },
+   "panel_coherence": {
+    "paired_delta": null,
+    "wilcoxon_p": null
+   },
+   "unfiltered_member_set": {
+    "paired_delta": null,
+    "wilcoxon_p": null
+   }
+  },
+  "quantile": {
+   "composite_sample_test": {
+    "paired_delta": null,
+    "wilcoxon_p": 0.07831704526696422
+   },
+   "composite_sample_test_unfiltered": {
+    "paired_delta": null,
+    "wilcoxon_p": 0.025461100193481676
+   },
+   "members": {
+    "paired_delta": null,
+    "wilcoxon_p": null
+   },
+   "panel_coherence": {
+    "paired_delta": null,
+    "wilcoxon_p": null
+   },
+   "unfiltered_member_set": {
+    "paired_delta": null,
+    "wilcoxon_p": null
+   }
+  },
+  "raw": {
+   "composite_sample_test": {
+    "paired_delta": null,
+    "wilcoxon_p": 0.031788871754740974
+   },
+   "composite_sample_test_unfiltered": {
+    "paired_delta": null,
+    "wilcoxon_p": 0.03361897603111694
+   },
+   "members": {
+    "paired_delta": null,
+    "wilcoxon_p": null
+   },
+   "panel_coherence": {
+    "paired_delta": null,
+    "wilcoxon_p": null
+   },
+   "unfiltered_member_set": {
+    "paired_delta": null,
+    "wilcoxon_p": null
+   }
+  }
+ },
+ "matrix_scale": {
+  "GSE14520 (array transcriptome)": {
+   "fraction_of_values_below_zero": 0.0,
+   "median_of_per_protein_medians": 4.913,
+   "on_an_abundance_scale": true,
+   "share_of_proteins_with_median_within_0.5_of_zero": 0.0
+  },
+  "GSE76427 (array transcriptome)": {
+   "fraction_of_values_below_zero": 0.0,
+   "median_of_per_protein_medians": 7.2426620018142085,
+   "on_an_abundance_scale": true,
+   "share_of_proteins_with_median_within_0.5_of_zero": 0.0
+  },
+  "Gao 2019 proteome": {
+   "fraction_of_values_below_zero": 0.5077334801291647,
+   "median_of_per_protein_medians": -0.00292731294876715,
+   "on_an_abundance_scale": false,
+   "share_of_proteins_with_median_within_0.5_of_zero": 0.9779252855819698
+  },
+  "Jiang 2019 proteome": {
+   "fraction_of_values_below_zero": 0.0,
+   "median_of_per_protein_medians": 19.705979089478863,
+   "on_an_abundance_scale": true,
+   "share_of_proteins_with_median_within_0.5_of_zero": 0.0
+  },
+  "TCGA-LIHC (RNA sequencing)": {
+   "fraction_of_values_below_zero": 0.0,
+   "median_of_per_protein_medians": 0.0,
+   "on_an_abundance_scale": true,
+   "share_of_proteins_with_median_within_0.5_of_zero": 0.7444932438117354
+  }
+ },
+ "n_datasets": 8,
+ "provenance_and_robustness": {
+  "annotation_coverage": {
+   "genes_in_the_eligible_sets": 8482,
+   "present_in_the_annotation": 8399,
+   "share_present": 0.9902145720348974,
+   "share_with_a_component_term": 0.943763263381278,
+   "with_at_least_one_component_term": 8005
+  },
+  "cholangiocarcinoma_extras": {
+   "MSKCC-ICC": {
+    "completeness": 0.7789831606217616,
+    "members": {
+     "ALB": {
+      "n_pairs": 64,
+      "n_pairs_rising": 55
+     },
+     "ARG1": {
+      "adjacent_median": 7.090359719312725,
+      "mean_raw_difference_log2": -5.450166712865828,
+      "n_pairs": 64,
+      "n_pairs_falling": 63,
+      "tumor_median": 1.66852079159465
+     },
+     "CPS1": {
+      "adjacent_median": 8.714581090803975,
+      "mean_raw_difference_log2": -6.821567689493677,
+      "n_pairs": 64,
+      "n_pairs_falling": 63,
+      "tumor_median": 1.552604826564085
+     },
+     "FGA": {
+      "n_pairs": 64,
+      "n_pairs_rising": 24
+     },
+     "OTC": {
+      "adjacent_median": 6.80134150688439,
+      "mean_raw_difference_log2": -6.047573306834691,
+      "n_pairs": 56,
+      "n_pairs_falling": 56,
+      "tumor_median": 0.6047060811650891
+     },
+     "PCK1": {
+      "adjacent_median": 4.039222422304725,
+      "mean_raw_difference_log2": -5.276138862363515,
+      "n_pairs": 30,
+      "n_pairs_falling": 30,
+      "tumor_median": -1.384701283316165
+     }
+    },
+    "module_raw_difference_range_log2": [
+     -6.821567689493677,
+     -5.276138862363515
+    ],
+    "provenance": {
+     "map_rate": 0.8148,
+     "mapped_to_symbol": 8492,
+     "patients_with_both_arms": 64,
+     "proteins_in_file": 10422,
+     "samples_in_matrix": 149
+    },
+    "sample_table": {
+     "n_adjacent": 69,
+     "n_patients": 85,
+     "n_patients_with_both_arms": 64,
+     "n_samples": 149,
+     "n_tumor": 80
+    }
+   },
+   "UKF-ICC": {
+    "completeness": 0.5892747136970466,
+    "members": {
+     "ALB": {
+      "n_pairs": 61,
+      "n_pairs_rising": 49
+     },
+     "ARG1": {
+      "adjacent_median": 7.04256720516323,
+      "mean_raw_difference_log2": -4.966848970762822,
+      "n_pairs": 57,
+      "n_pairs_falling": 57,
+      "tumor_median": 1.79593198052666
+     },
+     "CPS1": {
+      "adjacent_median": 8.13468643153056,
+      "mean_raw_difference_log2": -5.760400107465079,
+      "n_pairs": 61,
+      "n_pairs_falling": 61,
+      "tumor_median": 1.85615195427476
+     },
+     "FGA": {
+      "n_pairs": 61,
+      "n_pairs_rising": 18
+     },
+     "OTC": {
+      "adjacent_median": 5.99220106412099,
+      "mean_raw_difference_log2": -4.20951482737442,
+      "n_pairs": 29,
+      "n_pairs_falling": 29,
+      "tumor_median": 1.59313787575971
+     },
+     "PCK1": {
+      "adjacent_median": 2.95909002133856,
+      "mean_raw_difference_log2": -3.0128732518496557,
+      "n_pairs": 17,
+      "n_pairs_falling": 17,
+      "tumor_median": -0.296134714869904
+     }
+    },
+    "module_raw_difference_range_log2": [
+     -5.760400107465079,
+     -3.0128732518496557
+    ],
+    "provenance": {
+     "map_rate": 0.8845,
+     "mapped_to_symbol": 7531,
+     "patients_with_both_arms": 61,
+     "proteins_in_file": 8514,
+     "samples_in_matrix": 123
+    },
+    "sample_table": {
+     "n_adjacent": 61,
+     "n_patients": 62,
+     "n_patients_with_both_arms": 61,
+     "n_samples": 123,
+     "n_tumor": 62
+    }
+   }
+  },
+  "cholangiocarcinoma_module_raw_difference_range_log2": [
+   -6.821567689493677,
+   -3.0128732518496557
+  ],
+  "what": "numbers quoted in the manuscript that are provenance or robustness rather than primary results",
+  "yi2023_accession_map_rate": {
+   "mapped": 8918,
+   "protein_groups": 9464,
+   "rate": 0.9423076923076923
+  },
+  "yi2023_leave_one_out": {
+   "mean_z_max": -0.6042612904587038,
+   "mean_z_min": -0.9150446464462101,
+   "per_member": {
+    "without_ARG1": {
+     "mean_z": -0.6042612904587038,
+     "n": 4,
+     "surviving_share": 0.9334282361739268
+    },
+    "without_CPS1": {
+     "mean_z": -0.6636654233623485,
+     "n": 4,
+     "surviving_share": 0.9390236740031076
+    },
+    "without_OTC": {
+     "mean_z": -0.6683267182688094,
+     "n": 4,
+     "surviving_share": 0.9394231956261353
+    },
+    "without_PCK1": {
+     "mean_z": -0.7226891143623858,
+     "n": 4,
+     "surviving_share": 0.9437234901566458
+    },
+    "without_TAT": {
+     "mean_z": -0.9150446464462101,
+     "n": 4,
+     "surviving_share": 1.0
+    }
+   },
+   "share_max": 1.0,
+   "share_min": 0.9334282361739268
+  },
+  "yi2023_matrix_completeness": {
+   "DIANN": {
+    "completeness": 0.5539062059503449,
+    "n_symbols": 7601
+   },
+   "EncyclopeDIA": {
+    "completeness": 0.9563975600479798,
+    "n_symbols": 4883
+   },
+   "Spectronaut": {
+    "completeness": 0.627282436940364,
+    "n_symbols": 4882
+   }
+  },
+  "yi2023_per_pair_module": {
+   "mean_paired_delta": -0.7147974385796916,
+   "n_pairs": 41,
+   "n_pairs_falling": 31,
+   "wilcoxon_p": 6.452722300309688e-05
+  },
+  "yi2023_technical_replicates": {
+   "median_absolute_difference_log2": 0.40556894734470106,
+   "n_hcc_patients_with_a_replicate": 16,
+   "n_proteins_examined": 14,
+   "n_value_pairs": 266,
+   "pearson_r": 0.9855086004902766
+  }
+ },
+ "secretome_question": {
+  "abundance_matched": {
+   "GSE14520 (microarray)": {
+    "level": "transcriptome",
+    "mean_difference_from_abundance_matched_neighbors": -0.25897379028125567,
+    "median_difference_from_abundance_matched_neighbors": -0.18971569795668256,
+    "median_other_abundance_percentile": 50.8344079496321,
+    "median_secreted_abundance_percentile": 39.20958810589396,
+    "n_secreted_matched": 1191,
+    "wilcoxon_p": 7.637103710197207e-35
+   },
+   "GSE76427 (microarray)": {
+    "level": "transcriptome",
+    "mean_difference_from_abundance_matched_neighbors": -0.18950849529482075,
+    "median_difference_from_abundance_matched_neighbors": -0.15630672549111962,
+    "median_other_abundance_percentile": 50.57330057330057,
+    "median_secreted_abundance_percentile": 42.57358963241316,
+    "n_secreted_matched": 1661,
+    "wilcoxon_p": 5.079877992906718e-41
+   },
+   "Gao 2019 proteome": {
+    "fraction_of_values_below_zero": null,
+    "level": "proteome",
+    "skipped": "matrix is not on an abundance scale"
+   },
+   "Jiang 2019 proteome": {
+    "level": "proteome",
+    "mean_difference_from_abundance_matched_neighbors": -0.020951837277591593,
+    "median_difference_from_abundance_matched_neighbors": 0.04331383974834896,
+    "median_other_abundance_percentile": 48.9451476793249,
+    "median_secreted_abundance_percentile": 63.025472730114075,
+    "n_secreted_matched": 498,
+    "wilcoxon_p": 0.8519841560673072
+   },
+   "TCGA-LIHC (RNA sequencing)": {
+    "level": "transcriptome",
+    "mean_difference_from_abundance_matched_neighbors": -0.33717048446909903,
+    "median_difference_from_abundance_matched_neighbors": -0.17603086684683833,
+    "median_other_abundance_percentile": 49.01147651653969,
+    "median_secreted_abundance_percentile": 74.89728999903559,
+    "n_secreted_matched": 1724,
+    "wilcoxon_p": 1.944174686316111e-60
+   }
+  },
+  "annotation_check": {
+   "broad_incl_GO_0005576": {
+    "false_positives": [
+     "ARG1",
+     "ASGR1"
+    ],
+    "known_intracellular_called_secreted": "2/15",
+    "known_plasma_proteins_called_secreted": "22/22",
+    "missed": []
+   },
+   "genes_in_annotation": 39374,
+   "secreted_term": "GO:0005615",
+   "source": "data/Human.GRCh38.p13.annot.tsv.gz, GOComponentID",
+   "strict_GO_0005615": {
+    "false_positives": [
+     "ARG1"
+    ],
+    "known_intracellular_called_secreted": "1/15",
+    "known_plasma_proteins_called_secreted": "20/22",
+    "missed": [
+     "ITIH4",
+     "APOA2"
+    ]
+   }
+  },
+  "gene_level_secreted_minus_other": {
+   "GSE14520 (microarray)": {
+    "difference_of_means": -0.30952971295555637,
+    "level": "transcriptome",
+    "mannwhitney_p": 9.360261790103064e-49,
+    "mean_other": 0.0951892531322667,
+    "mean_secreted": -0.21434045982328967,
+    "n_genes_scored": 13183
+   },
+   "GSE76427 (microarray)": {
+    "difference_of_means": -0.1949313723359598,
+    "level": "transcriptome",
+    "mannwhitney_p": 1.1198216829483711e-36,
+    "mean_other": 0.04083518393063759,
+    "mean_secreted": -0.15409618840532222,
+    "n_genes_scored": 20757
+   },
+   "Gao 2019 proteome": {
+    "difference_of_means": -0.22592494766641164,
+    "level": "proteome",
+    "mannwhitney_p": 1.4428365986676547e-08,
+    "mean_other": 0.07454957447562482,
+    "mean_secreted": -0.1513753731907868,
+    "n_genes_scored": 6478
+   },
+   "Jiang 2019 proteome": {
+    "difference_of_means": -0.1127595359888594,
+    "level": "proteome",
+    "mannwhitney_p": 1.0543840176483786e-07,
+    "mean_other": 0.5042221775711957,
+    "mean_secreted": 0.3914626415823363,
+    "n_genes_scored": 6399
+   },
+   "TCGA-LIHC (RNA sequencing)": {
+    "difference_of_means": -0.19693337850274725,
+    "level": "transcriptome",
+    "mannwhitney_p": 1.8060741290767023e-26,
+    "mean_other": 0.3986361253943435,
+    "mean_secreted": 0.20170274689159626,
+    "n_genes_scored": 51845
+   }
+  },
+  "h1_drop_vs_secreted_fraction": {
+   "n_sets": 114,
+   "ols_with_log10_set_size": {
+    "beta_log10_size": 0.09307611440176554,
+    "beta_secreted_fraction": 0.05914226441762062,
+    "p_log10_size": 0.013482420402811146,
+    "p_secreted_fraction": 0.66623691566658
+   },
+   "panel": {
+    "drop": 0.670410866979035,
+    "secreted_fraction": 0.6111111111111112
+   },
+   "pearson_p": 0.7858231268539353,
+   "pearson_r": 0.025729985416977356,
+   "secreted_fraction_percentile_of_panel": 100.0,
+   "spearman_p": 0.3766959311160951,
+   "spearman_rho": -0.08357027720592008
+  },
+  "n_sets_in_gene_disjoint_subfamily": 2,
+  "set_overlap": {
+   "max_pairwise_jaccard": 0.5238095238095238,
+   "mean_pairwise_jaccard": 0.010466355761670309,
+   "median_pairwise_jaccard": 0.0031120331950207467,
+   "n_sets": 114,
+   "share_of_pairs_sharing_any_gene": 0.5539512498059308
+  },
+  "source": "75_secretome_transfer.py and 76_secretome_verify.py"
+ },
+ "what": "every number the manuscript prints, assembled from the result files; nothing is entered by hand"
+}

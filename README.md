@@ -4,7 +4,9 @@ Code, gene sets, result files and the locked protocol for:
 
 > **How much of a tumor expression signature survives adjustment for the dominant
 > tumor-adjacent axis? A pre-registered measure in three tissues and its failure to
-> transfer between a transcriptome and a proteome.** Soon Woo Nam. *Under review.*
+> transfer between a transcriptome and a proteome.** Soon Woo Nam.
+> **Not published; this line of work was closed on 30 September 2026. See
+> `docs/CLOSURE_2026-09-30.md`.**
 
 The repository also contains **`retentionfrac`**, a one-function Python package
 that computes the quantity the article defines.
@@ -18,6 +20,98 @@ predictions that failed.
 
 ---
 
+
+## What is new in v1.3.2, 30 September 2026
+
+**A deposit correction.** The releases labeled v1.3.0 and v1.3.1 never reached
+this repository. Their commits were built and tagged locally, the push did not
+complete, and the release was created through the hosting interface, which put
+the tag on the default branch's head. That head was still the v1.2.4 commit, so
+Zenodo archived the v1.2.4 tree twice under two later labels:
+
+| Version DOI | Labeled | Files actually deposited |
+|---|---|---|
+| 10.5281/zenodo.23052241 | v1.3.0 | the v1.2.4 tree, 259 files |
+| 10.5281/zenodo.23054376 | v1.3.1 | the v1.2.4 tree, 259 files |
+
+Zenodo versions cannot be withdrawn. Those records remain and their metadata now
+says what they contain. **Everything intended for v1.3.0 and v1.3.1 is in this
+version**, and section 7 of `docs/CLOSURE_2026-09-30.md` records the incident,
+why it was not caught, and what changed in the release procedure. The concept DOI
+10.5281/zenodo.22658669 is unaffected.
+
+No analysis, result or figure changed between v1.3.1 and v1.3.2. The differences
+are this notice, the closure notice's section 7, the Zenodo metadata and the
+version number.
+
+## What is new in v1.3.1, 30 September 2026
+
+**Read `docs/CLOSURE_2026-09-30.md` before relying on anything below it.** This
+version is a correction and closure release. It adds no new data.
+
+I stopped pursuing publication of this work. Four submissions were desk rejected
+without reviewer contact, and two further checks that I had not run changed what
+the archive can claim. Both checks are deposited here, with their decision rule
+written into the code above the numbers.
+
+* `code/84_depth_and_composition.py` excludes differential detection depth and
+  compositional renormalization as explanations for the metabolic module's fall.
+  Both are excluded, the second by a factor of 26 to 230.
+  Results in `results/DEPTH_AND_COMPOSITION.json` and
+  `results/DEPTH_COMPOSITION_ADDENDUM.json`.
+* `code/83_gao_within_sample.py` compares the classes on the transcript to
+  protein concordance that Gao et al. published for the same pairs. The metabolic
+  class is at the 96.8th percentile of 6,203 genes and *ALB* at the 0.4th.
+  Results in `results/GAO_WITHIN_SAMPLE.json`.
+
+Four claims are withdrawn or narrowed as a result, including the plasma protein
+and albumin framing, and one class of the panel that no earlier document
+reported is reported now. The closure file states each one, with the file and
+field that carries the contradicting number. Every sentence in the sections below
+this one is left as it was written, and the closure file is what marks them.
+
+## What is new in v1.3.0, 30 September 2026
+
+The correction below stands. Three things were added since v1.2.4, and one
+earlier idea was tested and failed.
+
+**A held-out cohort, predicted in advance.** The four enzymes that survive the
+change of measurement level, *CPS1*, *OTC*, *ARG1* and *PCK1*, were identified on
+five datasets. A third independent paired liver proteome (Yi et al. 2023,
+PXD043265, 41 hepatocellular carcinoma pairs) was then obtained, with the
+predictions and the decision rule written down first. All of them held.
+`code/77_holdout_validation.py` carries the thresholds as constants.
+[v1.3.1: they held in the primary matrix, EncyclopeDIA. In the DIA-NN matrix
+built from the same raw files, H1 and H3 both fail. See section 3 of
+`docs/CLOSURE_2026-09-30.md`.]
+
+**Two cholangiocarcinoma cohorts, and a prediction that failed usefully.** In
+Werner et al. 2026 (MassIVE MSV000095336, 64 and 61 pairs) the tumor cells are
+biliary and synthesize no albumin, so I predicted that plasma proteins would fall.
+They rise. That removes residual tumor secretion as the explanation for their rise
+in hepatocellular carcinoma and points instead to what the tissue retains. The
+module meanwhile falls further here than in any hepatocellular cohort, at the
+1.2th and 1.6th percentile of the quantified non-secreted proteins. These two
+cohorts are **exploratory**, because the sample identity gate failed on coverage
+and was replaced; see `docs/PROTOCOL_DEVIATIONS.md`.
+[v1.3.1: a second registered prediction, G4, also failed in both cohorts. It was
+directional only, so nothing is retracted, but it belongs here.]
+
+**An idea that did not work.** I asked whether a liver signature's secretome
+content predicts how much coherence it loses between measurement levels, across
+the 114 comparison sets. It does not: Spearman rho = -0.084, P = 0.38. At the
+level of every quantified gene, secreted proteins sit below the rest in all five
+datasets, in the proteomes as well, so there is no genome-wide reversal. The
+reversal belongs to this panel's particular membership.
+`code/75_secretome_transfer.py` and `code/76_secretome_verify.py` record both the
+positive set-level result and the three checks that undermine it.
+
+**The protocol documents are deposited.** `docs/PREREGISTRATION_HELD_OUT_COHORTS.md`
+holds the predictions for both held-out cohorts, with their amendments and the
+dates. `docs/PROTOCOL_DEVIATIONS.md` holds the one deviation and two corrections
+to my own code. That file states plainly what kind of record these are: my own
+dated records, not a third-party registration, and this archive's release date is
+after the cohorts were obtained.
 
 ## Correction, 20 September 2026, revised 21 September 2026
 
@@ -34,6 +128,11 @@ either side; in Gao the same partition holds for 17 of the 18 quantified members
 the exception being TTR. The secreted and metabolic classes do not overlap in
 either dataset. The composite therefore averages to near zero, -0.139 in one and
 +0.106 in the other, and the sign of a near-zero composite is arbitrary.
+[v1.3.1: withdrawn as stated.
+Three of the four proteome composites are statistically significant when
+recomputed from the raw matrices. The defensible claim is that the composite's
+sign is unstable across cohorts and pipelines, not that the test is
+uninformative. See section 3 of `docs/CLOSURE_2026-09-30.md`.]
 
 That one raw Jiang file admits three normalizations and two member sets. Across
 those six pipelines the composite stays positive but its paired difference runs
@@ -74,7 +173,11 @@ in every matrix. The metabolic enzymes have a surviving share of 1.000 in all
 five datasets and keep their direction at both measurement levels, ranking above
 the 94th percentile among the 114 comparison sets in each. The secreted proteins
 also hold together but reverse direction between levels. Only the union of the
-two cancels. An analyst needing one hepatocyte identity covariate that means the
+two cancels. [v1.3.1: the five transcription factors reverse more strongly than
+the ten plasma proteins, and against the background of its own matrix the plasma
+class is above background in two proteomes and below it in two. The claim about
+the plasma class is withdrawn; the claim about the metabolic class is not. See
+sections 2 and 3 of `docs/CLOSURE_2026-09-30.md`.] An analyst needing one hepatocyte identity covariate that means the
 same thing in a liver transcriptome and a liver proteome can use the metabolic
 subset; that subset has five or six members, was chosen by looking at these five
 matrices, and was not tested on a held-out proteome.
@@ -154,7 +257,8 @@ results/       every derived result file, including
                SupplementaryTable_S8_enumeration.csv, which lists all 223
                enumerated gene sets and the inclusion status of each
 figures/       the article's figures at 300 dpi
-docs/          the locked protocol with all 31 amendments
+docs/          the locked protocol with all 31 amendments, the held-out
+               predictions, the protocol deviations, and the closure notice
 SHA256SUMS.txt checksums for every file in this repository
 ```
 
@@ -173,6 +277,21 @@ Key scripts:
 | `code/40_prognostic_value.py` | retention against prognostic value (§6z) |
 | `code/41_gao_mrna_protein.py`, `code/42_gao_he_purity.py` | proteogenomic tests (§6aa) |
 | `code/43_ms_artifact.py` | mass-spectrometry artifact test (§6ab) |
+| `code/70_panel_coherence.py` | the panel split, all eight datasets |
+| `code/77_holdout_validation.py` | the held-out cohort; thresholds as constants |
+| `code/78_icca_validation.py` | the two cholangiocarcinoma cohorts, exploratory |
+| `code/83_gao_within_sample.py` | transcript to protein concordance by class (v1.3.1) |
+| `code/84_depth_and_composition.py` | detection depth and composition controls (v1.3.1) |
+
+Documents, in the order to read them:
+
+| File | What it holds |
+|---|---|
+| `docs/CLOSURE_2026-09-30.md` | **read first.** Publication status, the two final controls, the claims withdrawn, and the one that survives |
+| `docs/PREREGISTRATION.md` | the protocol locked 25 August 2026 |
+| `docs/PREREGISTRATION_with_amendments.md` | the same, with all 31 timestamped amendments |
+| `docs/PREREGISTRATION_HELD_OUT_COHORTS.md` | the predictions for the held-out cohorts, and what kind of record they are |
+| `docs/PROTOCOL_DEVIATIONS.md` | the one deviation, and two corrections to my own statistics |
 
 ## Data
 
@@ -183,12 +302,20 @@ Expression matrices are not redistributed here. Every one is public:
 | GEO series | GSE135251, GSE130970, GSE167523, GSE76427, GSE164760, GSE14520 | https://www.ncbi.nlm.nih.gov/geo/ |
 | TCGA (STAR-TPM, GENCODE v36 probemap) | TCGA-LIHC, TCGA-LUAD, TCGA-KIRC | https://xenabrowser.net/datapages/ (GDC hub) |
 | Proteome | Gao et al. 2019, Jiang et al. 2019 | the supplementary tables of the source articles |
+| Proteome | Yi et al. 2023 | the supplementary tables of the source article; raw data PXD043265 |
+| Proteome | Werner et al. 2026 | the supplementary data of the source article; raw data MassIVE MSV000095336 |
 
 Two small derived tables from the first of those, the per-gene messenger RNA to
 protein correlations and the histological tumor purity, are in `data/` so that
 the proteome analyses can be rerun without recovering them by hand. They are the
 source article's material, not mine, and the MIT license below does not extend
 to them.
+
+`data/uniprot_to_symbol.tsv.gz` maps 9,477 UniProt accessions to gene symbols. It
+was built from the `Protein IDs` and `Gene names` columns of the Jiang MaxQuant
+output, because the two newest proteomes are indexed by accession and UniProt's
+web service was unreachable from the analysis environment. It is a convenience,
+not a reference resource: check it before relying on it.
 | Gene sets | MSigDB human C2:CGP v2026.1.Hs | included in `genesets/` |
 
 `code/01_prepare.py` and `code/37_tcga_prepare.py` take the downloaded files and
@@ -204,9 +331,12 @@ machine the analysis was run on, which meant a third of the code, including
 every figure script, failed for anyone but the author.
 
 The manuscript, its protocol and the cover letter are not deposited before
-publication. Three scripts read them, `50_consistency_check.py`,
-`51_check_the_checker.py` and `52_anchored_claims.py`; set `IR_DOCS` to the
-directory holding them. Everything else runs from the archive alone.
+publication. Four scripts read them, `50_consistency_check.py`,
+`51_check_the_checker.py`, `52_anchored_claims.py` and `80_verify_MCP.py`; set
+`IR_DOCS` to the directory holding them. Everything else runs from the archive
+alone. `80_verify_MCP.py` checks that every number printed in the manuscript is
+reproducible from `results/MANUSCRIPT_NUMBERS.json`, and that file is deposited,
+so the numbers can be checked here even while the text is not.
 
 ## Testing
 

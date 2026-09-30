@@ -1,0 +1,483 @@
+{
+ "cohorts": {
+  "Jiang 2019": {
+   "A_detection": {
+    "AHSG": {
+     "detected_adjacent": 124,
+     "detected_both": 124,
+     "detected_tumor": 124
+    },
+    "ALB": {
+     "detected_adjacent": 124,
+     "detected_both": 124,
+     "detected_tumor": 124
+    },
+    "APOH": {
+     "detected_adjacent": 124,
+     "detected_both": 124,
+     "detected_tumor": 124
+    },
+    "ARG1": {
+     "detected_adjacent": 124,
+     "detected_both": 124,
+     "detected_tumor": 124
+    },
+    "CPS1": {
+     "detected_adjacent": 124,
+     "detected_both": 124,
+     "detected_tumor": 124
+    },
+    "F2": {
+     "detected_adjacent": 124,
+     "detected_both": 124,
+     "detected_tumor": 124
+    },
+    "FGA": {
+     "detected_adjacent": 124,
+     "detected_both": 124,
+     "detected_tumor": 124
+    },
+    "FGB": {
+     "detected_adjacent": 124,
+     "detected_both": 124,
+     "detected_tumor": 124
+    },
+    "FGG": {
+     "detected_adjacent": 124,
+     "detected_both": 124,
+     "detected_tumor": 124
+    },
+    "OTC": {
+     "detected_adjacent": 124,
+     "detected_both": 121,
+     "detected_tumor": 121
+    },
+    "PCK1": {
+     "detected_adjacent": 124,
+     "detected_both": 118,
+     "detected_tumor": 118
+    },
+    "SERPINA1": {
+     "detected_adjacent": 124,
+     "detected_both": 124,
+     "detected_tumor": 124
+    },
+    "TAT": {
+     "detected_adjacent": 124,
+     "detected_both": 85,
+     "detected_tumor": 85
+    },
+    "TF": {
+     "detected_adjacent": 124,
+     "detected_both": 124,
+     "detected_tumor": 124
+    },
+    "TTR": {
+     "detected_adjacent": 120,
+     "detected_both": 118,
+     "detected_tumor": 121
+    }
+   },
+   "B_complete_case": {
+    "background_mean_z": 0.3214543784265811,
+    "module_mean_z": -0.8997460202037352,
+    "module_members": {
+     "ARG1": -0.9281,
+     "CPS1": -0.8714
+    },
+    "module_n": 2,
+    "module_percentile_among_non_secreted": 6.244260789715335,
+    "module_surviving_share": 1.0,
+    "n_proteins_complete": 1229,
+    "plasma_mean_z": 0.5594599854675267,
+    "plasma_members": {
+     "AHSG": 0.6237,
+     "ALB": 0.2171,
+     "APOH": 0.8312,
+     "F2": 0.9802,
+     "FGA": 0.5106,
+     "FGB": 0.4058,
+     "FGG": 0.5128,
+     "SERPINA1": 0.7306,
+     "TF": 0.2231
+    },
+    "plasma_n": 9,
+    "share_complete": 0.13526304204270306
+   },
+   "C_composition": {
+    "implied_global_log2_lift": 0.011567482858726214,
+    "module_mass_share_lost_in_tumor": 0.00798590996091359,
+    "module_signal_share_adjacent": 0.018639692655807834,
+    "module_signal_share_tumor": 0.010653782694894245,
+    "observed_plasma_rise_complete_case": 0.5594599854675267,
+    "plasma_signal_share_adjacent": 0.02086779819790914,
+    "plasma_signal_share_tumor": 0.026876315298748583
+   },
+   "detections_per_adjacent_sample": 4951.701612903225,
+   "detections_per_tumor_sample": 5794.830645161291,
+   "n_pairs": 124,
+   "n_proteins": 9086,
+   "tumor_deeper_by": 0.17027056518531447
+  },
+  "MSKCC-ICC": {
+   "A_detection": {
+    "AHSG": {
+     "detected_adjacent": 63,
+     "detected_both": 63,
+     "detected_tumor": 64
+    },
+    "ALB": {
+     "detected_adjacent": 64,
+     "detected_both": 64,
+     "detected_tumor": 64
+    },
+    "APOH": {
+     "detected_adjacent": 63,
+     "detected_both": 63,
+     "detected_tumor": 64
+    },
+    "ARG1": {
+     "detected_adjacent": 64,
+     "detected_both": 64,
+     "detected_tumor": 64
+    },
+    "CPS1": {
+     "detected_adjacent": 64,
+     "detected_both": 64,
+     "detected_tumor": 64
+    },
+    "F2": {
+     "detected_adjacent": 63,
+     "detected_both": 63,
+     "detected_tumor": 64
+    },
+    "FGA": {
+     "detected_adjacent": 64,
+     "detected_both": 64,
+     "detected_tumor": 64
+    },
+    "FGB": {
+     "detected_adjacent": 63,
+     "detected_both": 63,
+     "detected_tumor": 64
+    },
+    "FGG": {
+     "detected_adjacent": 63,
+     "detected_both": 63,
+     "detected_tumor": 64
+    },
+    "G6PC1": {
+     "detected_adjacent": 16,
+     "detected_both": 0,
+     "detected_tumor": 2
+    },
+    "OTC": {
+     "detected_adjacent": 63,
+     "detected_both": 56,
+     "detected_tumor": 57
+    },
+    "PCK1": {
+     "detected_adjacent": 63,
+     "detected_both": 30,
+     "detected_tumor": 31
+    },
+    "SERPINA1": {
+     "detected_adjacent": 64,
+     "detected_both": 64,
+     "detected_tumor": 64
+    },
+    "TAT": {
+     "detected_adjacent": 63,
+     "detected_both": 0,
+     "detected_tumor": 0
+    },
+    "TF": {
+     "detected_adjacent": 64,
+     "detected_both": 64,
+     "detected_tumor": 64
+    },
+    "TTR": {
+     "detected_adjacent": 64,
+     "detected_both": 64,
+     "detected_tumor": 64
+    }
+   },
+   "B_complete_case": {
+    "background_mean_z": -0.04170714099553723,
+    "module_mean_z": -1.8575724456290197,
+    "module_members": {
+     "ARG1": -1.8515,
+     "CPS1": -1.8637
+    },
+    "module_n": 2,
+    "module_percentile_among_non_secreted": 2.73224043715847,
+    "module_surviving_share": 1.0,
+    "n_proteins_complete": 443,
+    "plasma_mean_z": 0.6556812968610847,
+    "plasma_members": {
+     "ALB": 1.1435,
+     "FGA": -0.4313,
+     "SERPINA1": 1.1558,
+     "TF": 0.8214,
+     "TTR": 0.589
+    },
+    "plasma_n": 5,
+    "share_complete": 0.05216674517192652
+   },
+   "C_composition": {
+    "implied_global_log2_lift": 0.02566541951450117,
+    "module_mass_share_lost_in_tumor": 0.017632606872067965,
+    "module_signal_share_adjacent": 0.018005465024143172,
+    "module_signal_share_tumor": 0.00037285815207520833,
+    "observed_plasma_rise_complete_case": 0.6556812968610847,
+    "plasma_signal_share_adjacent": 0.015704930564443824,
+    "plasma_signal_share_tumor": 0.024978981439780674
+   },
+   "detections_per_adjacent_sample": 6165.84375,
+   "detections_per_tumor_sample": 7064.40625,
+   "n_pairs": 64,
+   "n_proteins": 8492,
+   "tumor_deeper_by": 0.14573228522049386
+  },
+  "UKF-ICC": {
+   "A_detection": {
+    "AHSG": {
+     "detected_adjacent": 59,
+     "detected_both": 57,
+     "detected_tumor": 59
+    },
+    "ALB": {
+     "detected_adjacent": 61,
+     "detected_both": 61,
+     "detected_tumor": 61
+    },
+    "APOH": {
+     "detected_adjacent": 49,
+     "detected_both": 45,
+     "detected_tumor": 53
+    },
+    "ARG1": {
+     "detected_adjacent": 61,
+     "detected_both": 57,
+     "detected_tumor": 57
+    },
+    "CPS1": {
+     "detected_adjacent": 61,
+     "detected_both": 61,
+     "detected_tumor": 61
+    },
+    "F2": {
+     "detected_adjacent": 61,
+     "detected_both": 61,
+     "detected_tumor": 61
+    },
+    "FGA": {
+     "detected_adjacent": 61,
+     "detected_both": 61,
+     "detected_tumor": 61
+    },
+    "FGB": {
+     "detected_adjacent": 61,
+     "detected_both": 61,
+     "detected_tumor": 61
+    },
+    "FGG": {
+     "detected_adjacent": 61,
+     "detected_both": 61,
+     "detected_tumor": 61
+    },
+    "G6PC1": {
+     "detected_adjacent": 16,
+     "detected_both": 0,
+     "detected_tumor": 0
+    },
+    "OTC": {
+     "detected_adjacent": 61,
+     "detected_both": 29,
+     "detected_tumor": 29
+    },
+    "PCK1": {
+     "detected_adjacent": 61,
+     "detected_both": 17,
+     "detected_tumor": 17
+    },
+    "SERPINA1": {
+     "detected_adjacent": 61,
+     "detected_both": 61,
+     "detected_tumor": 61
+    },
+    "TAT": {
+     "detected_adjacent": 58,
+     "detected_both": 0,
+     "detected_tumor": 0
+    },
+    "TF": {
+     "detected_adjacent": 61,
+     "detected_both": 61,
+     "detected_tumor": 61
+    },
+    "TTR": {
+     "detected_adjacent": 61,
+     "detected_both": 61,
+     "detected_tumor": 61
+    }
+   },
+   "B_complete_case": {
+    "background_mean_z": 0.549908931701361,
+    "module_mean_z": -1.858344867566131,
+    "module_members": {
+     "CPS1": -1.8583
+    },
+    "module_n": 1,
+    "module_percentile_among_non_secreted": 0.33167495854063017,
+    "module_surviving_share": 1.0,
+    "n_proteins_complete": 1350,
+    "plasma_mean_z": 0.05273408088028678,
+    "plasma_members": {
+     "ALB": 0.6694,
+     "F2": -0.1471,
+     "FGA": -0.585,
+     "FGB": -0.212,
+     "FGG": -0.3101,
+     "SERPINA1": 0.8351,
+     "TF": 0.1133,
+     "TTR": 0.0583
+    },
+    "plasma_n": 8,
+    "share_complete": 0.17925906254149515
+   },
+   "C_composition": {
+    "implied_global_log2_lift": 0.025979151552886156,
+    "module_mass_share_lost_in_tumor": 0.0178462116931857,
+    "module_signal_share_adjacent": 0.018559397956463608,
+    "module_signal_share_tumor": 0.0007131862632779086,
+    "observed_plasma_rise_complete_case": 0.05273408088028678,
+    "plasma_signal_share_adjacent": 0.01624933370071546,
+    "plasma_signal_share_tumor": 0.02352922022027196
+   },
+   "detections_per_adjacent_sample": 3917.8360655737706,
+   "detections_per_tumor_sample": 4957.819672131148,
+   "n_pairs": 61,
+   "n_proteins": 7531,
+   "tumor_deeper_by": 0.26544847440038843
+  },
+  "Yi 2023": {
+   "A_detection": {
+    "AHSG": {
+     "detected_adjacent": 41,
+     "detected_both": 41,
+     "detected_tumor": 41
+    },
+    "APOH": {
+     "detected_adjacent": 41,
+     "detected_both": 41,
+     "detected_tumor": 41
+    },
+    "ARG1": {
+     "detected_adjacent": 41,
+     "detected_both": 41,
+     "detected_tumor": 41
+    },
+    "CPS1": {
+     "detected_adjacent": 41,
+     "detected_both": 41,
+     "detected_tumor": 41
+    },
+    "F2": {
+     "detected_adjacent": 41,
+     "detected_both": 41,
+     "detected_tumor": 41
+    },
+    "FGA": {
+     "detected_adjacent": 41,
+     "detected_both": 41,
+     "detected_tumor": 41
+    },
+    "FGB": {
+     "detected_adjacent": 41,
+     "detected_both": 41,
+     "detected_tumor": 41
+    },
+    "FGG": {
+     "detected_adjacent": 41,
+     "detected_both": 41,
+     "detected_tumor": 41
+    },
+    "OTC": {
+     "detected_adjacent": 41,
+     "detected_both": 41,
+     "detected_tumor": 41
+    },
+    "PCK1": {
+     "detected_adjacent": 41,
+     "detected_both": 41,
+     "detected_tumor": 41
+    },
+    "SERPINA1": {
+     "detected_adjacent": 41,
+     "detected_both": 41,
+     "detected_tumor": 41
+    },
+    "TAT": {
+     "detected_adjacent": 41,
+     "detected_both": 41,
+     "detected_tumor": 41
+    },
+    "TF": {
+     "detected_adjacent": 41,
+     "detected_both": 41,
+     "detected_tumor": 41
+    },
+    "TTR": {
+     "detected_adjacent": 41,
+     "detected_both": 41,
+     "detected_tumor": 41
+    }
+   },
+   "B_complete_case": {
+    "background_mean_z": 0.20524709105951747,
+    "module_mean_z": -0.7147974385796916,
+    "module_members": {
+     "ARG1": -1.1569,
+     "CPS1": -0.9193,
+     "OTC": -0.9007,
+     "PCK1": -0.6832,
+     "TAT": 0.0862
+    },
+    "module_n": 5,
+    "module_percentile_among_non_secreted": 8.820854804486208,
+    "module_surviving_share": 0.9539867160066485,
+    "n_proteins_complete": 3678,
+    "plasma_mean_z": 0.14216269468338863,
+    "plasma_members": {
+     "AHSG": 0.2187,
+     "APOH": -0.0148,
+     "F2": 0.4789,
+     "FGA": 0.2125,
+     "FGB": 0.2156,
+     "FGG": 0.2094,
+     "SERPINA1": 0.1958,
+     "TF": 0.1803,
+     "TTR": -0.417
+    },
+    "plasma_n": 9,
+    "share_complete": 0.7532254761417162
+   },
+   "C_composition": {
+    "implied_global_log2_lift": 0.047899454721578395,
+    "module_mass_share_lost_in_tumor": 0.032656255960858915,
+    "module_signal_share_adjacent": 0.07610408805959011,
+    "module_signal_share_tumor": 0.043447832098731196,
+    "observed_plasma_rise_complete_case": 0.14216269468338863,
+    "plasma_signal_share_adjacent": 0.014180954092816438,
+    "plasma_signal_share_tumor": 0.03295303736823031
+   },
+   "detections_per_adjacent_sample": 4669.8536585365855,
+   "detections_per_tumor_sample": 4669.8536585365855,
+   "n_pairs": 41,
+   "n_proteins": 4883,
+   "tumor_deeper_by": 0.0
+  }
+ },
+ "what": "depth and composition checks; the decision rule was written into this script before the numbers were seen"
+}

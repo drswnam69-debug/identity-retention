@@ -1,0 +1,153 @@
+{
+ "P1_plasma_vs_metabolic": {
+  "difference_of_medians": -0.5338410000000001,
+  "holds": true,
+  "mannwhitney_p": 0.0004995004995004995,
+  "median_metabolic": 0.8530405000000001,
+  "median_plasma": 0.31919949999999997,
+  "min_attainable_p": 0.00024975024975024975,
+  "n_metabolic": 6,
+  "n_plasma": 10
+ },
+ "P2_plasma_near_zero": {
+  "holds": false,
+  "max": 0.484007,
+  "median": 0.31919949999999997,
+  "median_percentile_in_background": 19.103659519587296,
+  "min": -0.07221,
+  "n_below_zero": 1,
+  "wilcoxon_p_against_zero": 0.00390625
+ },
+ "P3_metabolic_at_or_above_median": {
+  "background_median": 0.54348,
+  "holds": true,
+  "median": 0.8530405000000001
+ },
+ "background": {
+  "iqr": [
+   0.375803,
+   0.6790185
+  ],
+  "max": 0.938527,
+  "median": 0.54348,
+  "min": -0.21253,
+  "n_genes": 6203,
+  "share_below_zero": 0.013541834596163147
+ },
+ "by_class": {
+  "metabolic enzyme": {
+   "mean_rho": 0.7850716666666666,
+   "median_percentile": 96.8402385942286,
+   "median_rho": 0.8530405000000001,
+   "members": {
+    "ARG1": {
+     "percentile": 99.24230211188136,
+     "rho": 0.890279
+    },
+    "CPS1": {
+     "percentile": 99.03272610027406,
+     "rho": 0.88587
+    },
+    "G6PC1": {
+     "percentile": 38.884410768982754,
+     "rho": 0.479392
+    },
+    "OTC": {
+     "percentile": 99.06496856359826,
+     "rho": 0.886389
+    },
+    "PCK1": {
+     "percentile": 86.00677091729808,
+     "rho": 0.748289
+    },
+    "TAT": {
+     "percentile": 94.64775108818314,
+     "rho": 0.820211
+    }
+   },
+   "n": 6,
+   "n_below_zero": 0
+  },
+  "secreted plasma protein": {
+   "mean_rho": 0.307651,
+   "median_percentile": 19.103659519587296,
+   "median_rho": 0.31919949999999997,
+   "members": {
+    "AHSG": {
+     "percentile": 39.7710785103982,
+     "rho": 0.484007
+    },
+    "ALB": {
+     "percentile": 0.3869095598903756,
+     "rho": -0.07221
+    },
+    "APOH": {
+     "percentile": 14.170562630985007,
+     "rho": 0.264808
+    },
+    "F2": {
+     "percentile": 30.823794937933258,
+     "rho": 0.421961
+    },
+    "FGA": {
+     "percentile": 25.18136385619861,
+     "rho": 0.377621
+    },
+    "FGB": {
+     "percentile": 17.636627438336287,
+     "rho": 0.303305
+    },
+    "FGG": {
+     "percentile": 19.34547799451878,
+     "rho": 0.322021
+    },
+    "SERPINA1": {
+     "percentile": 24.181847493148474,
+     "rho": 0.366951
+    },
+    "TF": {
+     "percentile": 16.52426245365146,
+     "rho": 0.291668
+    },
+    "TTR": {
+     "percentile": 18.86184104465581,
+     "rho": 0.316378
+    }
+   },
+   "n": 10,
+   "n_below_zero": 1
+  },
+  "surface receptor": {
+   "mean_rho": 0.768325,
+   "median_percentile": 88.31210704497823,
+   "median_rho": 0.768325,
+   "members": {
+    "ASGR1": {
+     "percentile": 88.31210704497823,
+     "rho": 0.768325
+    }
+   },
+   "n": 1,
+   "n_below_zero": 0
+  },
+  "transcription factor": {
+   "mean_rho": 0.4779915,
+   "median_percentile": 38.74738029985491,
+   "median_rho": 0.4779915,
+   "members": {
+    "HNF1A": {
+     "percentile": 39.22295663388683,
+     "rho": 0.481087
+    },
+    "HNF4A": {
+     "percentile": 38.27180396582299,
+     "rho": 0.474896
+    }
+   },
+   "n": 2,
+   "n_below_zero": 0
+  }
+ },
+ "source": "data/gao_mrna_protein_corr.tsv, the source study's own per-gene Spearman correlation across the same 159 pairs",
+ "what": "within-cohort cross-level check in Gao 2019; the test was stated in this script's docstring before it was run"
+}

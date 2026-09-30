@@ -10,8 +10,8 @@ abstract: >-
   returns a value, and refuses to return one when either fails.
 type: software
 license: MIT
-version: 1.2.4
-date-released: "2026-09-21"
+version: 1.3.2
+date-released: "2026-09-30"
 authors:
   - family-names: Nam
     given-names: Soon Woo

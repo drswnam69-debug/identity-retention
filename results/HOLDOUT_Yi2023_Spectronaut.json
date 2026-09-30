@@ -1,0 +1,30 @@
+{
+ "premises": {
+  "matrix_diagnostic": {
+   "fraction_of_values_below_zero": 0.0,
+   "median_of_per_protein_medians": 14.12,
+   "on_an_abundance_scale": true,
+   "share_of_proteins_with_median_within_0.5_of_zero": 0.0
+  },
+  "missingness": {
+   "fraction_unquantified_adjacent": 0.39556459267992927,
+   "fraction_unquantified_tumor": 0.34028936561385276,
+   "mean_features_per_adjacent_sample": 2950.8536585365855,
+   "mean_features_per_tumor_sample": 3220.7073170731705
+  },
+  "n_genes": 4882,
+  "n_pairs": 41,
+  "sample_identity_gate": {
+   "mean_z": 1.2978483041800053,
+   "n_quantified": 2,
+   "passes": false,
+   "proliferation_members_quantified": {
+    "MCM2": 1.1862,
+    "PCNA": 1.4095
+   },
+   "required": ">= 3 members and mean z > 0"
+  }
+ },
+ "verdict": "NOT TESTABLE: the orthogonal sample-identity gate failed, so the tumor and adjacent labels or the pairing cannot be relied on. No contrast computed.",
+ "what": "pre-registered held-out validation, predictions recorded 2026-09-29 before the data were obtained"
+}

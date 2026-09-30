@@ -1,0 +1,142 @@
+{
+ "H1_metabolic_module": {
+  "coherence": {
+   "cancellation": 0.9539867160066485,
+   "mean_z": -0.7147974385796916,
+   "n": 5,
+   "sign_agreement": 0.8
+  },
+  "mean_z": -0.7147974385796916,
+  "members_quantified": {
+   "ARG1": -1.1569,
+   "CPS1": -0.9193,
+   "OTC": -0.9007,
+   "PCK1": -0.6832,
+   "TAT": 0.0862
+  },
+  "n": 5,
+  "passes": true,
+  "prediction": "mean z < 0 and surviving share >= 0.9"
+ },
+ "H2_plasma_proteins": {
+  "coherence": {
+   "cancellation": 0.5970458378552677,
+   "mean_z": 0.14216269468338863,
+   "n": 9,
+   "sign_agreement": 0.7777777777777778
+  },
+  "mean_z": 0.14216269468338863,
+  "members_quantified": {
+   "AHSG": 0.2187,
+   "APOH": -0.0148,
+   "F2": 0.4789,
+   "FGA": 0.2125,
+   "FGB": 0.2156,
+   "FGG": 0.2094,
+   "SERPINA1": 0.1958,
+   "TF": 0.1803,
+   "TTR": -0.417
+  },
+  "n": 9,
+  "passes": true,
+  "prediction": "mean z > 0"
+ },
+ "H3_extremity": {
+  "median_percentile_of_module_members": 4.764118057169417,
+  "module_mean_z": -0.7147974385796916,
+  "n_non_secreted_proteins": 4303,
+  "passes": true,
+  "percentile_of_module_mean_among_non_secreted": 7.5993492911921905,
+  "prediction": "module mean below the 10th percentile"
+ },
+ "H4_composite": {
+  "composite": {
+   "direction": "LOWER in tumor",
+   "mean_paired_delta": -0.14906961050541656,
+   "n_members_scored": 16,
+   "n_pairs": 41,
+   "standardized_on": "paired",
+   "wilcoxon_p": 0.10577401981299772
+  },
+  "prediction": "Wilcoxon P not significant, or sign opposite to the transcriptome sign (which is negative)"
+ },
+ "H5_abundance": {
+  "applicable": true,
+  "members": {
+   "ARG1": {
+    "abundance_percentile": 98.1286795626577,
+    "expected_from_abundance_matched_neighbors": -0.3656881528326039,
+    "n_neighbors": 106,
+    "observed_z": -1.1569420310636422,
+    "share_explained": 0.31608165579083175
+   },
+   "CPS1": {
+    "abundance_percentile": 99.97897392767031,
+    "expected_from_abundance_matched_neighbors": -0.46812586659103217,
+    "n_neighbors": 51,
+    "observed_z": -0.9193254994490635,
+    "share_explained": 0.5092057893222501
+   },
+   "OTC": {
+    "abundance_percentile": 97.47687132043734,
+    "expected_from_abundance_matched_neighbors": -0.2754235085179295,
+    "n_neighbors": 109,
+    "observed_z": -0.90068031982322,
+    "share_explained": 0.30579496682239926
+   },
+   "PCK1": {
+    "abundance_percentile": 82.73759461732548,
+    "expected_from_abundance_matched_neighbors": 0.15879626734415225,
+    "n_neighbors": 122,
+    "observed_z": -0.6832307354489146,
+    "share_explained": -0.23241967772397662
+   },
+   "TAT": {
+    "abundance_percentile": 47.83431455004205,
+    "expected_from_abundance_matched_neighbors": 0.32635730737491636,
+    "n_neighbors": 129,
+    "observed_z": 0.08619139288638263,
+    "share_explained": 3.7864257258856475
+   }
+  },
+  "module_mean_expected_from_abundance": -0.12481679064449938,
+  "module_mean_observed": -0.7147974385796916,
+  "share_of_module_fall_explained_by_abundance": 0.17461840782825325,
+  "superseded_mean_of_per_member_ratios": 0.9370176920194304
+ },
+ "premises": {
+  "matrix_diagnostic": {
+   "fraction_of_values_below_zero": 0.0,
+   "median_of_per_protein_medians": 20.5077779895261,
+   "on_an_abundance_scale": true,
+   "share_of_proteins_with_median_within_0.5_of_zero": 0.0
+  },
+  "missingness": {
+   "fraction_unquantified_adjacent": 0.04365069454503679,
+   "fraction_unquantified_tumor": 0.04365069454503679,
+   "mean_features_per_adjacent_sample": 4669.8536585365855,
+   "mean_features_per_tumor_sample": 4669.8536585365855
+  },
+  "n_genes": 4883,
+  "n_pairs": 41,
+  "sample_identity_gate": {
+   "mean_z": 0.5675624117891024,
+   "n_quantified": 5,
+   "passes": true,
+   "proliferation_members_quantified": {
+    "MCM2": 0.8403,
+    "MKI67": 0.9259,
+    "PCNA": 1.3174,
+    "RRM2": -0.0542,
+    "TOP2A": -0.1916
+   },
+   "required": ">= 3 members and mean z > 0"
+  }
+ },
+ "verdict": {
+  "decision_rule": "H1 and H3 must both pass for the module claim; H2 decides the framing; if H1 or H3 fails, \ubc29\ud5a52B is closed (recorded 2026-09-29)",
+  "module_claim_survives": true,
+  "two_opposing_axes_framing_survives": true
+ },
+ "what": "pre-registered held-out validation, predictions recorded 2026-09-29 before the data were obtained"
+}

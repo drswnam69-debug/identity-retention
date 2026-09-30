@@ -1,0 +1,199 @@
+{
+ "annotation_coverage": {
+  "genes_in_the_eligible_sets": 8482,
+  "present_in_the_annotation": 8399,
+  "share_present": 0.9902145720348974,
+  "share_with_a_component_term": 0.943763263381278,
+  "with_at_least_one_component_term": 8005
+ },
+ "cholangiocarcinoma_extras": {
+  "MSKCC-ICC": {
+   "completeness": 0.7789831606217616,
+   "members": {
+    "ALB": {
+     "n_pairs": 64,
+     "n_pairs_rising": 55
+    },
+    "ARG1": {
+     "adjacent_median": 7.090359719312725,
+     "mean_raw_difference_log2": -5.450166712865828,
+     "n_pairs": 64,
+     "n_pairs_falling": 63,
+     "tumor_median": 1.66852079159465
+    },
+    "CPS1": {
+     "adjacent_median": 8.714581090803975,
+     "mean_raw_difference_log2": -6.821567689493677,
+     "n_pairs": 64,
+     "n_pairs_falling": 63,
+     "tumor_median": 1.552604826564085
+    },
+    "FGA": {
+     "n_pairs": 64,
+     "n_pairs_rising": 24
+    },
+    "OTC": {
+     "adjacent_median": 6.80134150688439,
+     "mean_raw_difference_log2": -6.047573306834691,
+     "n_pairs": 56,
+     "n_pairs_falling": 56,
+     "tumor_median": 0.6047060811650891
+    },
+    "PCK1": {
+     "adjacent_median": 4.039222422304725,
+     "mean_raw_difference_log2": -5.276138862363515,
+     "n_pairs": 30,
+     "n_pairs_falling": 30,
+     "tumor_median": -1.384701283316165
+    }
+   },
+   "module_raw_difference_range_log2": [
+    -6.821567689493677,
+    -5.276138862363515
+   ],
+   "provenance": {
+    "map_rate": 0.8148,
+    "mapped_to_symbol": 8492,
+    "patients_with_both_arms": 64,
+    "proteins_in_file": 10422,
+    "samples_in_matrix": 149
+   },
+   "sample_table": {
+    "n_adjacent": 69,
+    "n_patients": 85,
+    "n_patients_with_both_arms": 64,
+    "n_samples": 149,
+    "n_tumor": 80
+   }
+  },
+  "UKF-ICC": {
+   "completeness": 0.5892747136970466,
+   "members": {
+    "ALB": {
+     "n_pairs": 61,
+     "n_pairs_rising": 49
+    },
+    "ARG1": {
+     "adjacent_median": 7.04256720516323,
+     "mean_raw_difference_log2": -4.966848970762822,
+     "n_pairs": 57,
+     "n_pairs_falling": 57,
+     "tumor_median": 1.79593198052666
+    },
+    "CPS1": {
+     "adjacent_median": 8.13468643153056,
+     "mean_raw_difference_log2": -5.760400107465079,
+     "n_pairs": 61,
+     "n_pairs_falling": 61,
+     "tumor_median": 1.85615195427476
+    },
+    "FGA": {
+     "n_pairs": 61,
+     "n_pairs_rising": 18
+    },
+    "OTC": {
+     "adjacent_median": 5.99220106412099,
+     "mean_raw_difference_log2": -4.20951482737442,
+     "n_pairs": 29,
+     "n_pairs_falling": 29,
+     "tumor_median": 1.59313787575971
+    },
+    "PCK1": {
+     "adjacent_median": 2.95909002133856,
+     "mean_raw_difference_log2": -3.0128732518496557,
+     "n_pairs": 17,
+     "n_pairs_falling": 17,
+     "tumor_median": -0.296134714869904
+    }
+   },
+   "module_raw_difference_range_log2": [
+    -5.760400107465079,
+    -3.0128732518496557
+   ],
+   "provenance": {
+    "map_rate": 0.8845,
+    "mapped_to_symbol": 7531,
+    "patients_with_both_arms": 61,
+    "proteins_in_file": 8514,
+    "samples_in_matrix": 123
+   },
+   "sample_table": {
+    "n_adjacent": 61,
+    "n_patients": 62,
+    "n_patients_with_both_arms": 61,
+    "n_samples": 123,
+    "n_tumor": 62
+   }
+  }
+ },
+ "cholangiocarcinoma_module_raw_difference_range_log2": [
+  -6.821567689493677,
+  -3.0128732518496557
+ ],
+ "what": "numbers quoted in the manuscript that are provenance or robustness rather than primary results",
+ "yi2023_accession_map_rate": {
+  "mapped": 8918,
+  "protein_groups": 9464,
+  "rate": 0.9423076923076923
+ },
+ "yi2023_leave_one_out": {
+  "mean_z_max": -0.6042612904587038,
+  "mean_z_min": -0.9150446464462101,
+  "per_member": {
+   "without_ARG1": {
+    "mean_z": -0.6042612904587038,
+    "n": 4,
+    "surviving_share": 0.9334282361739268
+   },
+   "without_CPS1": {
+    "mean_z": -0.6636654233623485,
+    "n": 4,
+    "surviving_share": 0.9390236740031076
+   },
+   "without_OTC": {
+    "mean_z": -0.6683267182688094,
+    "n": 4,
+    "surviving_share": 0.9394231956261353
+   },
+   "without_PCK1": {
+    "mean_z": -0.7226891143623858,
+    "n": 4,
+    "surviving_share": 0.9437234901566458
+   },
+   "without_TAT": {
+    "mean_z": -0.9150446464462101,
+    "n": 4,
+    "surviving_share": 1.0
+   }
+  },
+  "share_max": 1.0,
+  "share_min": 0.9334282361739268
+ },
+ "yi2023_matrix_completeness": {
+  "DIANN": {
+   "completeness": 0.5539062059503449,
+   "n_symbols": 7601
+  },
+  "EncyclopeDIA": {
+   "completeness": 0.9563975600479798,
+   "n_symbols": 4883
+  },
+  "Spectronaut": {
+   "completeness": 0.627282436940364,
+   "n_symbols": 4882
+  }
+ },
+ "yi2023_per_pair_module": {
+  "mean_paired_delta": -0.7147974385796916,
+  "n_pairs": 41,
+  "n_pairs_falling": 31,
+  "wilcoxon_p": 6.452722300309688e-05
+ },
+ "yi2023_technical_replicates": {
+  "median_absolute_difference_log2": 0.40556894734470106,
+  "n_hcc_patients_with_a_replicate": 16,
+  "n_proteins_examined": 14,
+  "n_value_pairs": 266,
+  "pearson_r": 0.9855086004902766
+ }
+}
